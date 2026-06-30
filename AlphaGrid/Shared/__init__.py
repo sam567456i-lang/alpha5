@@ -1,1 +1,1 @@
-"""Shared package placeholder."""
+"""AlphaGrid Shared models, DTOs, and enums package."""
