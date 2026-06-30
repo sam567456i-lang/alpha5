@@ -1,0 +1,97 @@
+"""AlphaGrid FastAPI application factory."""
+
+from __future__ import annotations
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from Backend.api.exceptions import register_exception_handlers
+from Backend.api.middleware import RequestTimingMiddleware, StructuredLoggingMiddleware
+from Backend.api.routers import (
+    ai_router,
+    dashboard_router,
+    features_router,
+    market_router,
+    options_router,
+    portfolio_router,
+    recommendations_router,
+    reports_router,
+    research_router,
+    strategies_router,
+    system_router,
+)
+from Backend.api.websocket import websocket_router
+
+_API_PREFIX = "/api/v1"
+
+
+def create_app(
+    title: str = "AlphaGrid Infinity X 5.0",
+    version: str = "5.0.0",
+    debug: bool = False,
+    cors_origins: list[str] | None = None,
+) -> FastAPI:
+    """Create and configure the AlphaGrid FastAPI application.
+
+    This factory is the single entry point for the entire API layer. It:
+    - Registers all 11 domain routers under /api/v1/
+    - Registers the 6 WebSocket channels under /ws/
+    - Attaches middleware (CORS, timing, logging)
+    - Registers global exception handlers
+    """
+    app = FastAPI(
+        title=title,
+        version=version,
+        debug=debug,
+        description=(
+            "AlphaGrid Infinity X 5.0 — Institutional-grade quantitative research, "
+            "options analytics, portfolio intelligence, and execution platform."
+        ),
+        docs_url="/api/docs",
+        redoc_url="/api/redoc",
+        openapi_url="/api/openapi.json",
+    )
+
+    # ------------------------------------------------------------------
+    # Middleware (outermost first)
+    # ------------------------------------------------------------------
+    allowed_origins = cors_origins or ["*"]
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=allowed_origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+    app.add_middleware(RequestTimingMiddleware)
+    app.add_middleware(StructuredLoggingMiddleware)
+
+    # ------------------------------------------------------------------
+    # Exception handlers
+    # ------------------------------------------------------------------
+    register_exception_handlers(app)
+
+    # ------------------------------------------------------------------
+    # REST routers — all mounted under /api/v1
+    # ------------------------------------------------------------------
+    for router in [
+        market_router,
+        options_router,
+        features_router,
+        strategies_router,
+        recommendations_router,
+        portfolio_router,
+        research_router,
+        ai_router,
+        reports_router,
+        dashboard_router,
+        system_router,
+    ]:
+        app.include_router(router, prefix=_API_PREFIX)
+
+    # ------------------------------------------------------------------
+    # WebSocket channels — mounted at root (no /api/v1 prefix)
+    # ------------------------------------------------------------------
+    app.include_router(websocket_router)
+
+    return app
