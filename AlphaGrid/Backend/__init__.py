@@ -1,0 +1,1 @@
+"""AlphaGrid backend package placeholder."""

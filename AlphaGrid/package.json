@@ -1,0 +1,26 @@
+{
+  "name": "alphagrid-infinity-x",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AlphaGrid Infinity X 5.0 project skeleton.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "@tanstack/react-query": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
+  }
+}

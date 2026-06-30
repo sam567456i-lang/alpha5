@@ -1,0 +1,35 @@
+[project]
+name = "alphagrid-infinity-x"
+version = "0.1.0"
+description = "AlphaGrid Infinity X 5.0 project skeleton."
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "sqlalchemy",
+  "pydantic",
+  "alembic",
+  "psycopg",
+  "duckdb",
+  "redis",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+  "black",
+  "mypy",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true

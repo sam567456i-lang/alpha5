@@ -1,0 +1,1 @@
+"""Shared DTO package placeholder."""
