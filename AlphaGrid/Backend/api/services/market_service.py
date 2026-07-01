@@ -1,15 +1,25 @@
-"""Market service stub.
+"""Market domain service shim.
 
-This is a typed interface contract. Real market logic will be implemented
-in Backend/market/ during the Market Platform phase. Routers call this
-service exclusively — they never touch the database or external APIs directly.
+This shim replaces the Phase 5 stub. It instantiates the concrete 
+MarketService from the Backend.market engine and forwards all calls to it,
+preserving the exact method signatures expected by the router.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
 from typing import Any
 
+from Backend.market import ConnectorManager, MarketService as CoreMarketService
+from Backend.market.providers.yahoo import YahooFinanceProvider
+
+# We instantiate the core engine here for simplicity in the shim.
+# In a full DI container setup, this would be injected.
+_manager = ConnectorManager()
+_manager.register(YahooFinanceProvider())
+_core_service = CoreMarketService(_manager)
+
+
+from dataclasses import dataclass
 
 @dataclass(frozen=True, slots=True)
 class MarketStatus:
@@ -22,22 +32,21 @@ class MarketStatus:
 
 
 class MarketService:
-    """Stub service for market domain operations."""
+    """Shim over the concrete Market Intelligence engine."""
 
     def get_market_status(self) -> MarketStatus:
-        """Return the current market session status."""
+        res = _core_service.get_market_status()
         return MarketStatus(
-            is_open=False,
-            session="CLOSED",
-            exchange="NSE",
-            message="Market service not yet implemented. Stub response.",
+            is_open=res["is_open"],
+            session=res["session"],
+            exchange=res["exchange"],
+            message=f"Server time: {res['server_time']}"
         )
 
     def get_instruments(
         self, exchange: str | None = None, segment: str | None = None
     ) -> list[dict[str, Any]]:
-        """Return the tradable instrument catalog."""
-        return []
+        return _core_service.get_instruments(exchange, segment)
 
     def get_ohlcv(
         self,
@@ -46,42 +55,31 @@ class MarketService:
         from_date: str | None = None,
         to_date: str | None = None,
     ) -> list[dict[str, Any]]:
-        """Return historical OHLCV candles for a given symbol and timeframe."""
-        return []
+        # The core service requires actual dates, so we provide defaults if omitted
+        from datetime import datetime, timezone, timedelta
+        if not from_date:
+            from_date = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+        if not to_date:
+            to_date = datetime.now(timezone.utc).isoformat()
+            
+        return _core_service.get_ohlcv(symbol, timeframe, from_date, to_date)
 
-    def get_live_quotes(
-        self, symbols: list[str] | None = None
-    ) -> list[dict[str, Any]]:
-        """Return the latest live price quotes."""
-        return []
+    def get_live_quotes(self, symbols: list[str] | None = None) -> list[dict[str, Any]]:
+        if not symbols:
+            # Default fallback for testing
+            symbols = ["NIFTY", "BANKNIFTY", "RELIANCE"]
+        return _core_service.get_live_quotes(symbols)
 
     def get_market_breadth(self) -> dict[str, Any]:
-        """Return current market breadth metrics."""
-        return {
-            "advances": 0,
-            "declines": 0,
-            "unchanged": 0,
-            "advance_decline_ratio": 0.0,
-            "breadth_score": 0.0,
-        }
+        return _core_service.get_market_breadth()
 
     def get_market_regime(self) -> dict[str, Any]:
-        """Return the currently detected market regime."""
-        return {
-            "regime": "UNKNOWN",
-            "confidence": 0.0,
-            "trend_strength": 0.0,
-            "volatility_score": 0.0,
-        }
+        return _core_service.get_market_regime()
 
     def get_economic_calendar(
         self, from_date: str | None = None, to_date: str | None = None
     ) -> list[dict[str, Any]]:
-        """Return upcoming macroeconomic events."""
-        return []
+        return _core_service.get_economic_calendar()
 
-    def get_news(
-        self, limit: int = 20, category: str | None = None
-    ) -> list[dict[str, Any]]:
-        """Return recent market news articles."""
-        return []
+    def get_news(self, limit: int = 20, category: str | None = None) -> list[dict[str, Any]]:
+        return _core_service.get_news(limit, category)
