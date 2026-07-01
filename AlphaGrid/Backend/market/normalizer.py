@@ -84,6 +84,6 @@ class DataNormalizer:
             open=cls._normalize_price(record.open),
             high=cls._normalize_price(record.high),
             low=cls._normalize_price(record.low),
-            close=cls._normalize_price(record.prev_close),
+            close=cls._normalize_price(record.last_price),
             volume=record.volume,
         )

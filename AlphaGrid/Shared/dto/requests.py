@@ -63,7 +63,7 @@ class CreateRecommendationRequest(AlphaGridBaseModel):
     direction: TradeDirection
     entry_price: Decimal
     stop_loss: Decimal
-    targets: list[Decimal] = Field(..., min_items=1)
+    targets: list[Decimal] = Field(..., min_length=1)
 
     @field_validator("entry_price", "stop_loss", mode="after")
     @classmethod

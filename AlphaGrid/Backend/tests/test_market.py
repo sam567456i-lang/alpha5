@@ -186,3 +186,63 @@ class SessionManagerTests(unittest.TestCase):
         mgr = MarketSessionManager()
         # Jan 26 is a holiday
         self.assertTrue(mgr.is_holiday(datetime(2026, 1, 26).date()))
+
+
+class ConcurrencyTests(unittest.TestCase):
+    def test_concurrent_provider_registration(self) -> None:
+        manager = ConnectorManager()
+        
+        def worker(i: int) -> None:
+            class DummyProvider(MockProvider):
+                @property
+                def provider_name(self) -> str:
+                    return f"dummy_{i}"
+            manager.register(DummyProvider())
+
+        import threading
+        for _ in range(50):
+            threads = [threading.Thread(target=worker, args=(i,)) for i in range(10)]
+            for t in threads:
+                t.start()
+            for t in threads:
+                t.join()
+            
+        self.assertEqual(len(manager._providers), 10)
+
+    def test_concurrent_cache_access(self) -> None:
+        manager = ConnectorManager()
+        manager.register(MockProvider())
+        catalog = InstrumentCatalog(manager)
+        engine = LiveQuoteEngine(manager, catalog)
+        
+        import threading
+        
+        def worker() -> None:
+            engine.get_live_quote("NIFTY")
+            
+        for _ in range(50):
+            threads = [threading.Thread(target=worker) for _ in range(10)]
+            for t in threads:
+                t.start()
+            for t in threads:
+                t.join()
+                
+        self.assertIn("NIFTY", engine._cache)
+
+    def test_concurrent_catalog_lazy_init(self) -> None:
+        import threading
+        for _ in range(50):
+            manager = ConnectorManager()
+            manager.register(MockProvider())
+            catalog = InstrumentCatalog(manager)
+            
+            def worker() -> None:
+                catalog.get_by_symbol("NIFTY")
+                
+            threads = [threading.Thread(target=worker) for _ in range(10)]
+            for t in threads:
+                t.start()
+            for t in threads:
+                t.join()
+                
+            self.assertIsNotNone(catalog._cache)

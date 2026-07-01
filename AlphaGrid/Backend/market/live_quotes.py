@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import threading
 from datetime import datetime, timezone
 from typing import TYPE_CHECKING
 
@@ -29,6 +30,7 @@ class LiveQuoteEngine:
         self._catalog = instrument_catalog
         # Simple memory cache: symbol -> MarketSnapshot
         self._cache: dict[str, MarketSnapshot] = {}
+        self._lock = threading.Lock()
 
     def get_live_quote(self, symbol: str) -> MarketSnapshot | None:
         """Fetch a single live quote."""
@@ -38,12 +40,14 @@ class LiveQuoteEngine:
         try:
             raw_record = self._manager.get_live_quote(symbol, exchange)
             snapshot = DataNormalizer.normalize_live_quote(raw_record)
-            self._cache[symbol.upper()] = snapshot
+            with self._lock:
+                self._cache[symbol.upper()] = snapshot
             return snapshot
         except Exception as exc:
             logger.error("Failed to fetch live quote for %s: %s", symbol, exc)
             # Fallback to cache
-            cached = self._cache.get(symbol.upper())
+            with self._lock:
+                cached = self._cache.get(symbol.upper())
             if cached:
                 logger.info("Using cached quote for %s", symbol)
                 return cached
@@ -65,16 +69,19 @@ class LiveQuoteEngine:
             snapshots = [DataNormalizer.normalize_live_quote(r) for r in raw_records]
             
             # Update cache
-            for s in snapshots:
-                self._cache[s.instrument.upper()] = s
+            with self._lock:
+                for s in snapshots:
+                    # NOTE: s.symbol is the correct field, instrument was used but didn't exist in the record, I'll fix it if needed, but it seems there's a bug in the original code `s.instrument.upper()`. MarketSnapshot has `symbol`.
+                    self._cache[s.symbol.upper()] = s
                 
             return snapshots
         except Exception as exc:
             logger.error("Failed to fetch batch quotes: %s", exc)
             # Fallback to cache for as many as possible
             cached = []
-            for sym in symbols:
-                c = self._cache.get(sym.upper())
-                if c:
-                    cached.append(c)
+            with self._lock:
+                for sym in symbols:
+                    c = self._cache.get(sym.upper())
+                    if c:
+                        cached.append(c)
             return cached

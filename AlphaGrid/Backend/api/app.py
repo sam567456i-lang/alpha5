@@ -24,6 +24,13 @@ from Backend.api.websocket import websocket_router
 
 _API_PREFIX = "/api/v1"
 
+_DEFAULT_CORS_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:5173",
+]
+
 
 def create_app(
     title: str = "AlphaGrid Infinity X 5.0",
@@ -55,7 +62,7 @@ def create_app(
     # ------------------------------------------------------------------
     # Middleware (outermost first)
     # ------------------------------------------------------------------
-    allowed_origins = cors_origins or ["*"]
+    allowed_origins = cors_origins or _DEFAULT_CORS_ORIGINS
     app.add_middleware(
         CORSMiddleware,
         allow_origins=allowed_origins,

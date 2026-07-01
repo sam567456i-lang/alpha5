@@ -185,5 +185,44 @@ class LoggingTests(unittest.TestCase):
         self.assertEqual(redacted["nested"]["safe"], "visible")
 
 
+class EventBusConcurrencyTests(unittest.IsolatedAsyncioTestCase):
+    async def test_concurrent_subscribe_and_publish(self) -> None:
+        import threading
+        for _ in range(50):
+            bus = EventBus()
+            errors = []
+            
+            def subscriber_worker(i: int) -> None:
+                def handler(event: EventEnvelope) -> None:
+                    pass
+                try:
+                    bus.subscribe(f"Event{i}", handler)
+                except Exception as e:
+                    errors.append(e)
+
+            threads = [threading.Thread(target=subscriber_worker, args=(i,)) for i in range(10)]
+            for t in threads:
+                t.start()
+                
+            for _ in range(10):
+                await bus.emit(event_type="Event0", producer="test")
+                
+            for t in threads:
+                t.join()
+                
+            self.assertEqual(len(errors), 0)
+
+    async def test_bounded_history_does_not_lose_recent(self) -> None:
+        bus = EventBus()
+        
+        for i in range(20000):
+            await bus.emit(event_type="BoundedEvent", producer="test", payload={"i": i})
+            
+        history = await bus.history()
+        self.assertEqual(len(history), 10000)
+        self.assertEqual(history[-1].payload["i"], 19999)
+        self.assertEqual(history[0].payload["i"], 10000)
+
+
 if __name__ == "__main__":
     unittest.main()

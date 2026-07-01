@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import threading
 from typing import TYPE_CHECKING
 
 from .normalizer import DataNormalizer
@@ -24,32 +25,37 @@ class InstrumentCatalog:
         self._manager = connector_manager
         self._cache: list[InstrumentRecord] | None = None
         self._symbol_map: dict[str, InstrumentRecord] = {}
+        self._lock = threading.Lock()
 
     def _ensure_loaded(self) -> None:
         if self._cache is not None:
             return
 
-        try:
-            raw_instruments = self._manager.get_instruments()
-            self._cache = []
-            
-            for inst in raw_instruments:
-                # Normalize the symbol and exchange before caching
-                norm_sym = DataNormalizer._normalize_symbol(inst.symbol)
-                norm_exch = DataNormalizer._normalize_exchange(inst.exchange)
+        with self._lock:
+            # Double check lock
+            if self._cache is not None:
+                return
+            try:
+                raw_instruments = self._manager.get_instruments()
+                self._cache = []
                 
-                # We mutate a copy for the cache
-                from dataclasses import replace
-                cached_inst = replace(inst, symbol=norm_sym, exchange=norm_exch)
-                
-                self._cache.append(cached_inst)
-                self._symbol_map[norm_sym] = cached_inst
-                
-            logger.info("Loaded %d instruments into catalog cache.", len(self._cache))
-        except Exception as exc:
-            logger.error("Failed to load instrument catalog: %s", exc)
-            self._cache = []
-            self._symbol_map = {}
+                for inst in raw_instruments:
+                    # Normalize the symbol and exchange before caching
+                    norm_sym = DataNormalizer._normalize_symbol(inst.symbol)
+                    norm_exch = DataNormalizer._normalize_exchange(inst.exchange)
+                    
+                    # We mutate a copy for the cache
+                    from dataclasses import replace
+                    cached_inst = replace(inst, symbol=norm_sym, exchange=norm_exch)
+                    
+                    self._cache.append(cached_inst)
+                    self._symbol_map[norm_sym] = cached_inst
+                    
+                logger.info("Loaded %d instruments into catalog cache.", len(self._cache))
+            except Exception as exc:
+                logger.error("Failed to load instrument catalog: %s", exc)
+                self._cache = []
+                self._symbol_map = {}
 
     def get_all(
         self, exchange: str | None = None, segment: str | None = None
