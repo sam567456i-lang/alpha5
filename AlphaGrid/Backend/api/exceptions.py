@@ -21,7 +21,7 @@ class APIError(Exception):
     status_code: int = 500
     error_code: str = "SYSTEM_ERROR"
 
-    def __init__(self, message: str, details: list | None = None) -> None:
+    def __init__(self, message: str, details: list | None = None) -> None:  # type: ignore
         super().__init__(message)
         self.message = message
         self.details = details or []
@@ -132,7 +132,8 @@ def _handle_unexpected_error(request: Request, exc: Exception) -> JSONResponse:
 
 def register_exception_handlers(app: FastAPI) -> None:
     """Attach all global exception handlers to the FastAPI application."""
-    app.add_exception_handler(APIError, _handle_api_error)  # type: ignore[arg-type]
-    app.add_exception_handler(RequestValidationError, _handle_validation_error)  # type: ignore[arg-type]
-    app.add_exception_handler(StarletteHTTPException, _handle_http_exception)  # type: ignore[arg-type]
-    app.add_exception_handler(Exception, _handle_unexpected_error)  # type: ignore[arg-type]
+    app.add_exception_handler(APIError, _handle_api_error)  # type: ignore
+    app.add_exception_handler(RequestValidationError, _handle_validation_error)  # type: ignore
+    app.add_exception_handler(StarletteHTTPException, _handle_http_exception)  # type: ignore
+    app.add_exception_handler(Exception, _handle_unexpected_error)
+

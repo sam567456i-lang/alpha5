@@ -20,19 +20,21 @@ class RequestTimingMiddleware(BaseHTTPMiddleware):
     timing is also available inside route handlers without re-measuring.
     """
 
-    async def dispatch(self, request: Request, call_next: Any) -> Response:  # type: ignore[override]
+    async def dispatch(self, request: Request, call_next: Any) -> Response:
+
         start = time.perf_counter()
         response = await call_next(request)
         elapsed = time.perf_counter() - start
         request.state.execution_time = elapsed
         response.headers["X-Execution-Time"] = f"{elapsed:.4f}s"
-        return response
+        return response  # type: ignore
 
 
 class StructuredLoggingMiddleware(BaseHTTPMiddleware):
     """Emits one structured log line per HTTP request."""
 
-    async def dispatch(self, request: Request, call_next: Any) -> Response:  # type: ignore[override]
+    async def dispatch(self, request: Request, call_next: Any) -> Response:
+
         response = await call_next(request)
         _logger.info(
             "%s %s → %s",
@@ -40,7 +42,7 @@ class StructuredLoggingMiddleware(BaseHTTPMiddleware):
             request.url.path,
             response.status_code,
         )
-        return response
+        return response  # type: ignore
 
 
 # typing alias used inside the class bodies

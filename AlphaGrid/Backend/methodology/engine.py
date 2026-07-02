@@ -3,52 +3,50 @@
 Evaluates all registered methodologies to produce signals.
 """
 
-from typing import Dict, List
+from typing import List
 import logging
 
-from Backend.concepts.base import Concept
 from Backend.methodology.base import AbstractMethodology
-from Backend.methodology.signals import Signal
+from Backend.methodology.evaluation import MethodologyEvaluation
+from Backend.signals.primitive.context import SignalContext
 
 logger = logging.getLogger(__name__)
 
 
 class MethodologyEngine:
     """
-    Evaluates multiple methodologies given the current concept state.
+    Executes a list of AbstractMethodology rules.
+    It passes the SignalContext to each methodology and aggregates their evaluations.
     """
 
     def __init__(self, methodologies: List[AbstractMethodology]) -> None:
-        self._methodologies = methodologies
+        """
+        Initializes the MethodologyEngine.
 
-    def evaluate(self, concepts: Dict[str, Concept]) -> List[Signal]:
+        Args:
+            methodologies: An ordered list of instantiated methodologies.
+        """
+        self.methodologies = methodologies
+
+    def evaluate(self, context: SignalContext) -> List[MethodologyEvaluation]:
         """
         Evaluates all registered methodologies.
 
         Args:
-            concepts: Dictionary of current concepts mapped by ID.
+            context: SignalContext containing PrimitiveSignals.
 
         Returns:
-            A list of actionable Signals (excludes WAIT signals).
+            A list of MethodologyEvaluation objects.
         """
-        signals = []
-        for methodology in self._methodologies:
-            # Check if all required concepts exist and have >0 confidence
-            required = methodology.get_required_concepts()
-            can_evaluate = all(
-                cid in concepts and concepts[cid].confidence > 0.0
-                for cid in required
-            )
-            
-            if not can_evaluate:
-                continue
-                
+        evaluations = []
+
+        for methodology in self.methodologies:
             try:
-                signal = methodology.evaluate(concepts)
-                if signal.direction != "WAIT":
-                    signals.append(signal)
+                evaluation = methodology.evaluate(context)
+                if evaluation.is_active:
+                    evaluations.append(evaluation)
             except Exception as e:
                 logger.error("Methodology '%s' evaluation failed: %s", methodology.get_name(), e)
                 raise RuntimeError(f"Methodology '{methodology.get_name()}' evaluation failed") from e
                 
-        return signals
+        return evaluations

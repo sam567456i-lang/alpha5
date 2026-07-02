@@ -11,21 +11,18 @@ class AbstractConceptGenerator(ABC):
     Base class for generating semantic concepts from feature values.
     """
 
-    @classmethod
     @abstractmethod
-    def get_id(cls) -> str:
+    def get_id(self) -> str:
         """Unique string identifier for this concept (e.g., 'MomentumExhaustion')."""
         pass
 
-    @classmethod
     @abstractmethod
-    def get_version(cls) -> str:
+    def get_version(self) -> str:
         """Version identifier."""
         pass
 
-    @classmethod
     @abstractmethod
-    def get_required_features(cls) -> List[str]:
+    def get_required_features(self) -> List[str]:
         """List of feature names required to compute this concept."""
         return []
 

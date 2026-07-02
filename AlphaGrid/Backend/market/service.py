@@ -5,7 +5,6 @@ from __future__ import annotations
 from typing import Any
 from datetime import datetime, timezone
 
-from Shared.models.market import MarketSnapshot
 
 from .breadth import MarketBreadthCalculator
 from .connector_manager import ConnectorManager

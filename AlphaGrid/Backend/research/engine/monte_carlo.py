@@ -2,7 +2,7 @@
 
 import logging
 import copy
-from typing import Any, Dict, List
+from typing import Any, Dict
 from concurrent.futures import ThreadPoolExecutor
 
 import numpy as np

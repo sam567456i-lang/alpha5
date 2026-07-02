@@ -6,7 +6,7 @@ from contextlib import contextmanager
 from dataclasses import dataclass, field
 from inspect import isawaitable
 import logging
-from typing import Any, Callable, Iterator
+from typing import Callable, Iterator
 
 from Backend.foundation import HealthCheckResult, HealthStatus
 
@@ -89,12 +89,12 @@ class PostgreSQLConnectionManager:
         session = self.session_factory()
         try:
             yield session
-            session.commit()
+            session.commit()  # type: ignore
         except Exception:
-            session.rollback()
+            session.rollback()  # type: ignore
             raise
         finally:
-            session.close()
+            session.close()  # type: ignore
 
     def health_check(self) -> HealthCheckResult:
         """Run a PostgreSQL health check."""
@@ -142,7 +142,7 @@ def _load_create_engine() -> EngineFactory:
         raise DatabaseDependencyError(
             "SQLAlchemy is required for PostgreSQL connections."
         ) from exc
-    return create_engine
+    return create_engine  # type: ignore
 
 
 def _load_sessionmaker() -> SessionMakerFactory:
@@ -152,7 +152,7 @@ def _load_sessionmaker() -> SessionMakerFactory:
         raise DatabaseDependencyError(
             "SQLAlchemy is required for PostgreSQL session factories."
         ) from exc
-    return sessionmaker
+    return sessionmaker  # type: ignore
 
 
 def _load_text() -> TextFactory:
@@ -162,4 +162,4 @@ def _load_text() -> TextFactory:
         raise DatabaseDependencyError(
             "SQLAlchemy is required for PostgreSQL health checks."
         ) from exc
-    return text
+    return text  # type: ignore

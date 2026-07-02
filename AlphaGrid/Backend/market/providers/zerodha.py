@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import os
 from datetime import datetime
-from typing import Any
 
 from .base import (
     InstrumentRecord,
@@ -22,7 +21,8 @@ from .base import (
 )
 
 try:
-    import kiteconnect  # type: ignore[import-untyped]
+    import kiteconnect
+
     _KITE_AVAILABLE = True
 except ImportError:
     _KITE_AVAILABLE = False
@@ -60,7 +60,7 @@ class ZerodhaProvider(MarketDataProvider):
 
         try:
             self._api = kiteconnect.KiteConnect(api_key=self.api_key)
-            self._api.set_access_token(self.access_token)
+            self._api.set_access_token(self.access_token)  # type: ignore
             self._is_connected = True
         except Exception as exc:
             raise ProviderUnavailable(self.provider_name, f"Connection failed: {exc}") from exc
@@ -86,7 +86,7 @@ class ZerodhaProvider(MarketDataProvider):
             start = time.perf_counter()
             self._ensure_connected()
             # Fetch profile to verify token
-            self._api.profile()
+            self._api.profile()  # type: ignore
             latency_ms = (time.perf_counter() - start) * 1000
             
             return ProviderHealth(

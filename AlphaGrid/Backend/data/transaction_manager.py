@@ -24,12 +24,12 @@ class TransactionManager:
         session = self.session_factory()
         try:
             yield session
-            session.commit()
+            session.commit()  # type: ignore
         except Exception as exc:
             try:
-                session.rollback()
+                session.rollback()  # type: ignore
             except Exception as rollback_error:
                 raise DatabaseTransactionError("Rollback failed.") from rollback_error
             raise DatabaseTransactionError("Transaction failed and was rolled back.") from exc
         finally:
-            session.close()
+            session.close()  # type: ignore

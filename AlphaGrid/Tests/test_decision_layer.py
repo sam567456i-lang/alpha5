@@ -11,7 +11,7 @@ Tests:
 import pytest
 from typing import Dict, Any, List
 
-from Backend.methodology.signals import Signal
+from Backend.methodology.signals import MethodologySignal
 from Backend.research.decision.base import AbstractDecisionProvider, Decision
 from Backend.research.decision.rule_provider import RuleDecisionProvider
 
@@ -23,7 +23,7 @@ from Backend.research.decision.rule_provider import RuleDecisionProvider
 class TestSignal:
 
     def test_signal_is_frozen(self):
-        s = Signal(
+        s = MethodologySignal(
             direction="LONG",
             confidence=0.85,
             strength=0.7,
@@ -35,7 +35,7 @@ class TestSignal:
             s.direction = "SHORT"  # type: ignore
 
     def test_signal_contains_metadata(self):
-        s = Signal(
+        s = MethodologySignal(
             direction="SHORT",
             confidence=0.6,
             strength=0.5,
@@ -77,7 +77,7 @@ class TestRuleDecisionProvider:
 
     def test_strong_signal_produces_decision(self):
         provider = RuleDecisionProvider()
-        signal = Signal(
+        signal = MethodologySignal(
             direction="LONG",
             confidence=0.85,
             strength=0.8,
@@ -91,7 +91,7 @@ class TestRuleDecisionProvider:
 
     def test_weak_signal_returns_wait(self):
         provider = RuleDecisionProvider()
-        signal = Signal(
+        signal = MethodologySignal(
             direction="SHORT",
             confidence=0.3,
             strength=0.2,
@@ -105,9 +105,9 @@ class TestRuleDecisionProvider:
     def test_multiple_signals_picks_strongest(self):
         provider = RuleDecisionProvider()
         signals = [
-            Signal(direction="SHORT", confidence=0.6, strength=0.4, reason="weak",
+            MethodologySignal(direction="SHORT", confidence=0.6, strength=0.4, reason="weak",
                    concept_ids=["A"], methodology="MR"),
-            Signal(direction="LONG", confidence=0.9, strength=0.8, reason="strong",
+            MethodologySignal(direction="LONG", confidence=0.9, strength=0.8, reason="strong",
                    concept_ids=["B"], methodology="TF"),
         ]
         decision = provider.evaluate(signals, context={})

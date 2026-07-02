@@ -30,17 +30,22 @@ class FeatureEngine:
             f.get_name(): 0 for f in self._feature_instances
         }
 
-    def process(self, snapshot: MarketSnapshot) -> Dict[str, Any]:
+    def process(self, snapshot: Any) -> Dict[str, Any]:
         """
         Processes a single market snapshot and computes all features.
         
         Args:
-            snapshot: The incoming market event.
+            snapshot: The incoming market event (dict or MarketSnapshot).
             
         Returns:
             Dictionary mapping feature names to their computed values.
         """
         self._cache.clear()
+        
+        # Normalize input to MarketSnapshot
+        if isinstance(snapshot, dict):
+            snapshot = MarketSnapshot(**snapshot)
+            
         
         for feature in self._feature_instances:
             name = feature.get_name()
@@ -53,8 +58,8 @@ class FeatureEngine:
                 # Feature is still warming up, update its internal state but return None
                 try:
                     feature.compute(snapshot, self._cache.get_all())
-                except Exception:
-                    pass # Ignore errors during warmup, features should handle insufficient data gracefully
+                except Exception as e:
+                    raise RuntimeError(f"Feature '{name}' failed during warmup compute.") from e
                 self._cache.set(name, None)
                 continue
                 

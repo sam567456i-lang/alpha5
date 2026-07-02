@@ -119,20 +119,20 @@ class TestResearchRegistry:
 
     def test_log_and_retrieve(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_001", config={"test": True}, status=ExperimentStatus.ACTIVE, metrics={"sharpe": 1.5})
+        reg.log_experiment("RH_TEST", "EXP_001", config={"test": True}, status=ExperimentStatus.ACTIVE, metrics={"sharpe": 1.5})
         record = reg.get_record("EXP_001")
         assert record["status"] == "Active"
         assert record["metrics"]["sharpe"] == 1.5
 
     def test_log_rejected(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_002", config={}, status=ExperimentStatus.REJECTED, metrics={"sharpe": -0.5})
+        reg.log_experiment("RH_TEST", "EXP_002", config={}, status=ExperimentStatus.REJECTED, metrics={"sharpe": -0.5})
         record = reg.get_record("EXP_002")
         assert record["status"] == "Rejected"
 
     def test_log_promoted(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_003", config={}, status=ExperimentStatus.PROMOTED, metrics={"sharpe": 2.1})
+        reg.log_experiment("RH_TEST", "EXP_003", config={}, status=ExperimentStatus.PROMOTED, metrics={"sharpe": 2.1})
         record = reg.get_record("EXP_003")
         assert record["status"] == "Promoted"
 
@@ -149,28 +149,28 @@ class TestResearchRegistry:
 
     def test_duplicate_experiment_rejected(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_DUP", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_DUP", config={}, status=ExperimentStatus.ACTIVE, metrics={})
         with pytest.raises(ValueError, match="already exists"):
-            reg.log_experiment("EXP_DUP", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+            reg.log_experiment("RH_TEST", "EXP_DUP", config={}, status=ExperimentStatus.ACTIVE, metrics={})
 
     def test_empty_experiment_id_rejected(self):
         reg = ResearchRegistry()
         with pytest.raises(ValueError, match="must not be empty"):
-            reg.log_experiment("", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+            reg.log_experiment("RH_TEST", "", config={}, status=ExperimentStatus.ACTIVE, metrics={})
 
     def test_nan_metric_rejected(self):
         reg = ResearchRegistry()
         with pytest.raises(ValueError, match="NaN"):
-            reg.log_experiment("EXP_NAN", config={}, status=ExperimentStatus.ACTIVE, metrics={"sharpe": float("nan")})
+            reg.log_experiment("RH_TEST", "EXP_NAN", config={}, status=ExperimentStatus.ACTIVE, metrics={"sharpe": float("nan")})
 
     def test_inf_metric_rejected(self):
         reg = ResearchRegistry()
         with pytest.raises(ValueError, match="Inf"):
-            reg.log_experiment("EXP_INF", config={}, status=ExperimentStatus.ACTIVE, metrics={"sharpe": float("inf")})
+            reg.log_experiment("RH_TEST", "EXP_INF", config={}, status=ExperimentStatus.ACTIVE, metrics={"sharpe": float("inf")})
 
     def test_update_status(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_UPD", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_UPD", config={}, status=ExperimentStatus.ACTIVE, metrics={})
         reg.update_status("EXP_UPD", ExperimentStatus.COMPLETED, notes="Finished")
         record = reg.get_record("EXP_UPD")
         assert record["status"] == "Completed"
@@ -183,23 +183,23 @@ class TestResearchRegistry:
 
     def test_get_by_status(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_A", config={}, status=ExperimentStatus.ACTIVE, metrics={})
-        reg.log_experiment("EXP_B", config={}, status=ExperimentStatus.REJECTED, metrics={})
-        reg.log_experiment("EXP_C", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_A", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_B", config={}, status=ExperimentStatus.REJECTED, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_C", config={}, status=ExperimentStatus.ACTIVE, metrics={})
         active = reg.get_by_status(ExperimentStatus.ACTIVE)
         assert len(active) == 2
 
     def test_get_all(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_1", config={}, status=ExperimentStatus.ACTIVE, metrics={})
-        reg.log_experiment("EXP_2", config={}, status=ExperimentStatus.REJECTED, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_1", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_2", config={}, status=ExperimentStatus.REJECTED, metrics={})
         assert len(reg.get_all()) == 2
 
     def test_count_by_status(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_1", config={}, status=ExperimentStatus.ACTIVE, metrics={})
-        reg.log_experiment("EXP_2", config={}, status=ExperimentStatus.ACTIVE, metrics={})
-        reg.log_experiment("EXP_3", config={}, status=ExperimentStatus.REJECTED, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_1", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_2", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_3", config={}, status=ExperimentStatus.REJECTED, metrics={})
         counts = reg.count_by_status()
         assert counts["Active"] == 2
         assert counts["Rejected"] == 1
@@ -207,12 +207,12 @@ class TestResearchRegistry:
     def test_len(self):
         reg = ResearchRegistry()
         assert len(reg) == 0
-        reg.log_experiment("EXP_1", config={}, status=ExperimentStatus.ACTIVE, metrics={})
+        reg.log_experiment("RH_TEST", "EXP_1", config={}, status=ExperimentStatus.ACTIVE, metrics={})
         assert len(reg) == 1
 
     def test_json_serialization_roundtrip(self):
         reg = ResearchRegistry()
-        reg.log_experiment("EXP_RT", config={"key": "val"}, status=ExperimentStatus.COMPLETED, metrics={"sharpe": 1.2})
+        reg.log_experiment("RH_TEST", "EXP_RT", config={"key": "val"}, status=ExperimentStatus.COMPLETED, metrics={"sharpe": 1.2})
         json_str = reg.to_json()
         reg2 = ResearchRegistry.from_json(json_str)
         record = reg2.get_record("EXP_RT")

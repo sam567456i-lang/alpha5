@@ -5,7 +5,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Query
 from fastapi.responses import JSONResponse
 
-from Backend.api.responses import success_response, paginated_response
+from Backend.api.responses import success_response
 from Backend.api.services.market_service import MarketService
 
 router = APIRouter(prefix="/market", tags=["Market"])

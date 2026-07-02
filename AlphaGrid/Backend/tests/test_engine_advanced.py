@@ -4,7 +4,6 @@ import json
 import hashlib
 import time
 import pytest
-import math
 import unicodedata
 from datetime import datetime, timezone, timedelta
 from typing import Any, List
@@ -14,7 +13,7 @@ import tracemalloc
 import threading
 
 from Backend.research.engine.strategy_interface import AbstractStrategy, STRATEGY_REGISTRY
-from Backend.research.engine.dataset_loader import DatasetLoader, DatasetIntegrityError
+from Backend.research.engine.dataset_loader import DatasetLoader
 from Backend.research.engine.backtest import BacktestEngine
 from Backend.research.models.experiment import Experiment
 

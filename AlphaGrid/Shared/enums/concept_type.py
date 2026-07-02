@@ -1,0 +1,12 @@
+from enum import StrEnum
+
+class ConceptType(StrEnum):
+    TREND = "TREND"
+    MOMENTUM = "MOMENTUM"
+    VOLATILITY = "VOLATILITY"
+    EXTREMUM = "EXTREMUM"
+    BREAKOUT = "BREAKOUT"
+    LIQUIDITY = "LIQUIDITY"
+    REGIME = "REGIME"
+    STRENGTH = "STRENGTH"
+    VOLUME = "VOLUME"

@@ -15,7 +15,6 @@ from Backend.market.live_quotes import LiveQuoteEngine
 from Backend.market.normalizer import DataNormalizer
 from Backend.market.ohlcv import OHLCVEngine
 from Backend.market.providers.base import (
-    ConnectorError,
     LiveQuoteRecord,
     OHLCVRecord,
     ValidationStatus,

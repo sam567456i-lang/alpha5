@@ -3,7 +3,7 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Dict, Any, List
-from Backend.methodology.signals import Signal
+from Backend.methodology.signals import MethodologySignal
 
 
 @dataclass(frozen=True)
@@ -26,7 +26,7 @@ class AbstractDecisionProvider(ABC):
     """
 
     @abstractmethod
-    def evaluate(self, signals: List[Signal], context: Dict[str, Any]) -> Decision:
+    def evaluate(self, signals: List[MethodologySignal], context: Dict[str, Any]) -> Decision:
         """
         Evaluates the current market context and signals to produce a Decision.
         

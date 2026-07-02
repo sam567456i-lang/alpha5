@@ -1,7 +1,7 @@
 """Walk-Forward Optimization Engine."""
 
 import logging
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 
@@ -117,7 +117,7 @@ class WalkForwardEngine:
     def _run_fold(self, base_exp: Experiment, storage_path: str, fold: Dict[str, Any]) -> Dict[str, Any]:
         """Runs the IS and OOS isolated backtests for a given fold."""
         # IS Backtest
-        is_engine = BacktestEngine(dataset_loader=self.dataset_loader)
+        is_engine = BacktestEngine()
         is_engine.execute(
             base_exp, 
             storage_path, 
@@ -125,7 +125,7 @@ class WalkForwardEngine:
             end_bound=fold["is_end"]
         )
         # OOS Backtest (Isolated instance, zero leakage)
-        oos_engine = BacktestEngine(dataset_loader=self.dataset_loader)
+        oos_engine = BacktestEngine()
         oos_engine.execute(
             base_exp, 
             storage_path, 

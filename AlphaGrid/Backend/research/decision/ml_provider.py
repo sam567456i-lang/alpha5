@@ -10,7 +10,7 @@ from typing import Any, Dict, List, Optional
 
 import numpy as np
 
-from Backend.methodology.signals import Signal
+from Backend.methodology.signals import MethodologySignal
 from Backend.research.decision.base import AbstractDecisionProvider, Decision
 from Backend.research.experiments.experiment import ModelArtifact
 from Backend.ai.inference import InferenceEngine
@@ -49,7 +49,8 @@ class MLDecisionProvider(AbstractDecisionProvider):
         )
         self._feature_names = feature_names or []
 
-    def _extract_features(self, context: Dict[str, Any]) -> np.ndarray:
+    def _extract_features(self, context: Dict[str, Any]) -> Any:
+
         """
         Extracts and orders feature values from the context dict
         into a numpy array matching the model's expected input shape.
@@ -91,7 +92,7 @@ class MLDecisionProvider(AbstractDecisionProvider):
 
         return np.array(values, dtype=np.float64).reshape(1, -1)
 
-    def evaluate(self, signals: List[Signal], context: Dict[str, Any]) -> Decision:
+    def evaluate(self, signals: List[MethodologySignal], context: Dict[str, Any]) -> Decision:
         """
         Evaluates the market context using the loaded ML model.
 

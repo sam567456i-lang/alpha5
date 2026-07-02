@@ -5,10 +5,11 @@ during backtesting and walk-forward validation. It enforces determinism
 via ComputeManager before every prediction.
 """
 
+from typing import Any
 import hashlib
 import logging
 import pickle
-from typing import Any, Optional, Tuple
+from typing import Optional, Tuple
 
 import numpy as np
 
@@ -102,7 +103,8 @@ class InferenceEngine:
         """Returns True if a trained model is loaded and ready for inference."""
         return self._model is not None
 
-    def predict(self, features: np.ndarray) -> Tuple[str, float]:
+    def predict(self, features: Any) -> Tuple[str, float]:
+
         """
         Runs deterministic inference on the provided features.
 

@@ -89,7 +89,8 @@ class Trainer:
         return model_bytes, model_hash
 
     @staticmethod
-    def _validate_training_data(features: np.ndarray, labels: np.ndarray) -> None:
+    def _validate_training_data(features: Any, labels: Any) -> None:
+
         """
         Validates training data before training begins.
 
@@ -113,8 +114,10 @@ class Trainer:
     def train_model(
         model: AbstractAIModel,
         config: Dict[str, Any],
-        features: np.ndarray,
-        labels: np.ndarray,
+        features: Any,
+
+        labels: Any,
+
         preprocessing_pipeline: Optional[Dict[str, Any]] = None,
     ) -> TrainingResult:
         """

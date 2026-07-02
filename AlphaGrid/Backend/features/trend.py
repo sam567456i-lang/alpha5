@@ -13,7 +13,7 @@ class SMAFeature(AbstractFeature):
 
     def __init__(self, period: int = 20) -> None:
         self.period = period
-        self._window = deque(maxlen=self.period)
+        self._window = deque(maxlen=self.period)  # type: ignore
 
     @classmethod
     def get_name(cls) -> str:
@@ -51,7 +51,7 @@ class EMAFeature(AbstractFeature):
         self.period = period
         self.alpha = 2 / (self.period + 1)
         self._ema = None
-        self._prices_buffer = []
+        self._prices_buffer = []  # type: ignore
         self._initialized = False
 
     @classmethod
@@ -80,5 +80,5 @@ class EMAFeature(AbstractFeature):
                 self._initialized = True
             return None
         
-        self._ema = (price - self._ema) * self.alpha + self._ema
+        self._ema = (price - self._ema) * self.alpha + self._ema  # type: ignore
         return self._ema

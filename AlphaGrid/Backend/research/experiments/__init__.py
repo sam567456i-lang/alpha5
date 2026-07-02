@@ -1,7 +1,7 @@
 """Experiments package."""
 
 from .experiment import ExperimentConfig, ModelArtifact
-from .registry import ResearchRegistry, ExperimentStatus, ExperimentRecord
+from .registry import ResearchRegistry, ExperimentStatus, ExperimentRecord  # type: ignore
 from .candidate_registry import CandidateRegistry, CandidateStatus, CandidateRecord
 
 __all__ = [

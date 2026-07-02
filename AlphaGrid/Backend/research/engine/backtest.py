@@ -1,14 +1,14 @@
 """Backtest execution engine (ADP Sec 1, 9)."""
 
-from typing import Any, Dict, Optional
+from typing import Optional
 from datetime import datetime
-from uuid import UUID
 import numpy as np
 
 from Backend.research.models.experiment import Experiment
 from Backend.research.models.result import BacktestResult
 from Backend.research.engine.dataset_loader import DatasetLoader
-from Backend.research.engine.strategy_interface import STRATEGY_REGISTRY
+from Backend.research.strategies.registry import StrategyRegistry
+STRATEGY_REGISTRY = StrategyRegistry()
 
 
 class BacktestEngine:
@@ -17,7 +17,8 @@ class BacktestEngine:
     Guarantees chronological event ordering and lookahead bias prevention.
     """
 
-    def __init__(self, dataset_loader: DatasetLoader = None) -> None:
+    def __init__(self, dataset_loader: DatasetLoader | None = None) -> None:
+
         self.dataset_loader = dataset_loader or DatasetLoader()
 
     def execute(self, experiment: Experiment, snapshot_storage_path: str, start_bound: Optional[datetime] = None, end_bound: Optional[datetime] = None) -> BacktestResult:
@@ -38,8 +39,10 @@ class BacktestEngine:
         root_rng = np.random.Generator(np.random.PCG64(experiment.random_seed))
 
         # 2. Resolve and Instantiate Strategy (ADP Section 10)
-        strategy_cls = STRATEGY_REGISTRY.get_strategy(experiment.strategy_id)
-        strategy = strategy_cls(parameters=experiment.parameters, random_generator=root_rng)
+        strategy_def = STRATEGY_REGISTRY.get(experiment.strategy_id)
+        
+        from Backend.research.strategies.factory import StrategyFactory
+        strategy = StrategyFactory.create(definition=strategy_def, random_generator=root_rng)
 
         # 3. Load and Verify Dataset (ADP Sections 3 & 4)
         # Returns an iterator that enforces chronological sequence.

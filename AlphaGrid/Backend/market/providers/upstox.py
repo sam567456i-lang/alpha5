@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import os
 from datetime import datetime
-from typing import Any
 
 from .base import (
     InstrumentRecord,
@@ -23,7 +22,8 @@ from .base import (
 )
 
 try:
-    import upstox_client  # type: ignore[import-untyped]
+    import upstox_client
+
     _UPSTOX_AVAILABLE = True
 except ImportError:
     _UPSTOX_AVAILABLE = False

@@ -8,6 +8,10 @@ from .generators import (
     MomentumConceptGenerator,
     TrendConceptGenerator,
     VolatilityConceptGenerator,
+    ExtremumConceptGenerator,
+    BreakoutConceptGenerator,
+    StrengthConceptGenerator,
+    VolumeConceptGenerator,
 )
 
 __all__ = [
@@ -18,4 +22,8 @@ __all__ = [
     'MomentumConceptGenerator',
     'TrendConceptGenerator',
     'VolatilityConceptGenerator',
+    'ExtremumConceptGenerator',
+    'BreakoutConceptGenerator',
+    'StrengthConceptGenerator',
+    'VolumeConceptGenerator',
 ]

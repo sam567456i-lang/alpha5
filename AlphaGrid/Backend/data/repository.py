@@ -12,7 +12,7 @@ IdentifierT = TypeVar("IdentifierT")
 
 
 @runtime_checkable
-class CRUDRepository(Protocol[EntityT, IdentifierT]):
+class CRUDRepository(Protocol[EntityT, IdentifierT]):  # type: ignore
     """CRUD interface that future business repositories must implement."""
 
     def add(self, entity: EntityT) -> EntityT:
@@ -51,7 +51,8 @@ class BaseRepository(Generic[EntityT, IdentifierT]):
         """Return an entity by primary key."""
 
         try:
-            return self.session.get(self.entity_type, identifier)  # type: ignore[attr-defined]
+            return self.session.get(self.entity_type, identifier)  # type: ignore
+
         except Exception as exc:
             raise RepositoryError("Could not get entity.") from exc
 

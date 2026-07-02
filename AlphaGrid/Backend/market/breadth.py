@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
-from decimal import Decimal, ROUND_HALF_UP
 
 if TYPE_CHECKING:
     from Shared.models.market import MarketSnapshot

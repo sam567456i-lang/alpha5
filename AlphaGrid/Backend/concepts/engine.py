@@ -17,10 +17,7 @@ class ConceptEngine:
 
     def __init__(self, registry: ConceptRegistry) -> None:
         self._registry = registry
-        # Instantiate generators
-        self._generators: List[AbstractConceptGenerator] = [
-            cls() for cls in self._registry.get_all()
-        ]
+        self._generators: List[AbstractConceptGenerator] = self._registry.get_all()
 
     def process(self, timestamp: datetime, feature_values: Dict[str, Any]) -> Dict[str, Concept]:
         """
@@ -46,15 +43,6 @@ class ConceptEngine:
                     break
                     
             if not can_evaluate:
-                # Output a zero-confidence concept or omit it
-                concepts[cid] = Concept(
-                    id=cid,
-                    version=generator.get_version(),
-                    timestamp=timestamp,
-                    confidence=0.0,
-                    inputs={},
-                    generator=generator.__class__.__name__
-                )
                 continue
                 
             try:

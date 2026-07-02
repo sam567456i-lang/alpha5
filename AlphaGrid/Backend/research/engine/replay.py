@@ -38,7 +38,7 @@ class ReplayEngine:
         self._lock = threading.RLock()
         self._play_event = threading.Event()
         
-        self._events_cache = []
+        self._events_cache = []  # type: ignore
         self._current_index = 0
         
         self._worker_thread: Optional[threading.Thread] = None
@@ -151,8 +151,6 @@ class ReplayEngine:
 
     def _replay_loop(self) -> None:
         """Background thread executing the replay schedule."""
-        last_real_time = time.perf_counter()
-        
         while not self._stop_requested:
             self._play_event.wait()
             if self._stop_requested:

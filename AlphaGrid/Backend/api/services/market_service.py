@@ -7,6 +7,7 @@ preserving the exact method signatures expected by the router.
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import Any
 
 from Backend.market import ConnectorManager, MarketService as CoreMarketService
@@ -18,8 +19,6 @@ _manager = ConnectorManager()
 _manager.register(YahooFinanceProvider())
 _core_service = CoreMarketService(_manager)
 
-
-from dataclasses import dataclass
 
 @dataclass(frozen=True, slots=True)
 class MarketStatus:

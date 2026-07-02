@@ -7,19 +7,18 @@ the Research Platform phase.
 from __future__ import annotations
 
 from typing import Any, Dict
-from uuid import UUID, uuid4
+from uuid import uuid4
 import threading
 import logging
 
 from Backend.research.engine.validators import StrategyValidator, WalkForwardValidator, MonteCarloValidator
-from Backend.research.models.experiment import Experiment
 
 logger = logging.getLogger(__name__)
 
 class ResearchService:
     """Service for research domain operations."""
 
-    def __init__(self, initial_state: Dict[str, str] = None):
+    def __init__(self, initial_state: Dict[str, str] = None):  # type: ignore
         self._pending_experiments = initial_state or {}
         # In a production system, this is called on startup to recover DB states
         self._recover_pending_experiments()

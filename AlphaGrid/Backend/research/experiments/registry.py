@@ -10,35 +10,33 @@ import json
 import logging
 import threading
 from datetime import datetime, timezone
-from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
+from Shared.enums.experiment_status import ExperimentStatus
 
 logger = logging.getLogger(__name__)
-
-
-class ExperimentStatus(Enum):
-    """Lifecycle states for a research experiment."""
-    ACTIVE = "Active"
-    COMPLETED = "Completed"
-    ARCHIVED = "Archived"
-    REJECTED = "Rejected"
-    PROMOTED = "Promoted"
 
 
 class ExperimentRecord:
     """A single record in the Research Registry."""
 
-    __slots__ = ("experiment_id", "config", "status", "metrics",
+    __slots__ = ("hypothesis_id", "experiment_id", "config", "status", "metrics",
                  "created_at", "updated_at", "notes")
 
     def __init__(
         self,
+        hypothesis_id: str,
         experiment_id: str,
         config: Any,
         status: ExperimentStatus,
         metrics: Dict[str, float],
         notes: str = "",
     ) -> None:
+        if not hypothesis_id.startswith("RH_"):
+            raise ValueError("hypothesis_id must start with 'RH_'")
+        if not experiment_id.startswith("EXP_"):
+            raise ValueError("experiment_id must start with 'EXP_'")
+            
+        self.hypothesis_id = hypothesis_id
         self.experiment_id = experiment_id
         self.config = config
         self.status = status
@@ -50,6 +48,7 @@ class ExperimentRecord:
     def to_dict(self) -> Dict[str, Any]:
         """Serializes the record to a JSON-compatible dictionary."""
         return {
+            "hypothesis_id": self.hypothesis_id,
             "experiment_id": self.experiment_id,
             "config": str(self.config),
             "status": self.status.value,
@@ -73,6 +72,7 @@ class ResearchRegistry:
 
     def log_experiment(
         self,
+        hypothesis_id: str,
         experiment_id: str,
         config: Any,
         status: ExperimentStatus,
@@ -83,14 +83,15 @@ class ResearchRegistry:
         Logs an experiment outcome to the permanent record.
 
         Args:
-            experiment_id: Unique identifier for the experiment.
+            hypothesis_id: Unique identifier for the Research Hypothesis (must start with RH_)
+            experiment_id: Unique identifier for the experiment run (must start with EXP_)
             config: The ExperimentConfig or dict used for the run.
             status: The lifecycle status of the experiment.
             metrics: Dictionary of evaluation metrics (e.g., sharpe, max_drawdown).
             notes: Optional free-text notes.
 
         Raises:
-            ValueError: If experiment_id is empty or already exists.
+            ValueError: If hypothesis_id or experiment_id is invalid or empty.
             ValueError: If metrics contain NaN or Inf values.
         """
         if not experiment_id:
@@ -110,6 +111,7 @@ class ResearchRegistry:
                     f"Use update_status() to modify existing experiments."
                 )
             record = ExperimentRecord(
+                hypothesis_id=hypothesis_id,
                 experiment_id=experiment_id,
                 config=config,
                 status=status,
@@ -204,6 +206,7 @@ class ResearchRegistry:
         for entry in records_list:
             status = ExperimentStatus(entry["status"])
             registry.log_experiment(
+                hypothesis_id=entry.get("hypothesis_id", "RH_UNKNOWN"),
                 experiment_id=entry["experiment_id"],
                 config=entry.get("config", ""),
                 status=status,

@@ -145,4 +145,4 @@ def _load_redis_factory() -> RedisFactory:
         import redis
     except ModuleNotFoundError as exc:
         raise DatabaseDependencyError("redis is required for Redis cache access.") from exc
-    return redis.Redis.from_url
+    return redis.Redis.from_url  # type: ignore

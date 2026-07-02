@@ -1,7 +1,7 @@
 """Rule-based Decision Provider."""
 
 from typing import Dict, Any, List
-from Backend.methodology.signals import Signal
+from Backend.methodology.signals import MethodologySignal
 from .base import AbstractDecisionProvider, Decision
 
 
@@ -10,7 +10,7 @@ class RuleDecisionProvider(AbstractDecisionProvider):
     Evaluates signals using deterministic logical rules.
     """
 
-    def evaluate(self, signals: List[Signal], context: Dict[str, Any]) -> Decision:
+    def evaluate(self, signals: List[MethodologySignal], context: Dict[str, Any]) -> Decision:
         if not signals:
             return Decision(direction="WAIT", confidence=0.0, reason="No signals provided")
 

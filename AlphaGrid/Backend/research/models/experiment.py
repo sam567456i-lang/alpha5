@@ -11,7 +11,7 @@ from Shared.models.common import AlphaGridBaseModel
 class ResearchParameterEncoder(json.JSONEncoder):
     """Custom JSON encoder to enforce exactly 8 decimal places for floats per ADP."""
     
-    def iterencode(self, o, _one_shot=False):
+    def iterencode(self, o, _one_shot=False):  # type: ignore
         # We override iterencode or use a custom dict transformation. 
         # But iterencode handles the stringification. 
         # It's easier to recursively format the dictionary before json.dumps
@@ -91,7 +91,7 @@ class Experiment(AlphaGridBaseModel):
         return v
 
     @model_serializer(mode="wrap")
-    def serialize_model(self, handler, _info):
+    def serialize_model(self, handler, _info):  # type: ignore
         """Custom serialization to ensure parameters are deterministically formatted if needed."""
         data = handler(self)
         return data

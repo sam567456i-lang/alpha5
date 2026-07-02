@@ -1,66 +1,83 @@
-"""Volatility Concept Generator.
+"""Volatility Concept Generator."""
 
-Interprets ATR and Relative Volume features to determine volatility state.
-"""
-
+from typing import Any, Dict, List, Deque
 from collections import deque
-from typing import Any, Dict, List
 from datetime import datetime
 from Backend.concepts.base import Concept
+from Shared.enums.concept_state import VolatilityState
+from Shared.enums.concept_type import ConceptType
 from Backend.concepts.generator import AbstractConceptGenerator
 
 
 class VolatilityConceptGenerator(AbstractConceptGenerator):
     """
     Generates a 'VolatilityState' Concept.
-    Requires ATR_14 and RelativeVolume_5.
+    Dynamically maps a volatility source (e.g. Bollinger_Metrics -> band_width) 
+    to EXPANDING, CONTRACTING, NORMAL.
     """
 
-    def __init__(self) -> None:
-        self._atr_history = deque(maxlen=20)
+    def __init__(self, source: str, field: str | None = None) -> None:
 
-    @classmethod
-    def get_id(cls) -> str:
+        """
+        Args:
+            source: The feature name (e.g., 'Bollinger_Metrics' or 'ATR_14')
+            field: Optional sub-field if the feature returns a dict (e.g., 'band_width')
+        """
+        self.source = source
+        self.field = field
+        self._history: Deque[float] = deque(maxlen=20)
+
+    def get_id(self) -> str:
         return "VolatilityState"
 
-    @classmethod
-    def get_version(cls) -> str:
-        return "v1"
+    def get_version(self) -> str:
+        return "v2"
 
-    @classmethod
-    def get_required_features(cls) -> List[str]:
-        return ["ATR_14", "RelativeVolume_5"]
+    def get_required_features(self) -> List[str]:
+        return [self.source]
 
     def evaluate(self, timestamp: datetime, feature_values: Dict[str, Any]) -> Concept:
-        atr = float(feature_values["ATR_14"])
-        rvol = float(feature_values["RelativeVolume_5"])
+        feat = feature_values[self.source]
+        val = float(feat[self.field]) if self.field and isinstance(feat, dict) else float(feat)
         
-        self._atr_history.append(atr)
+        self._history.append(val)
         
-        atr_expanding = len(self._atr_history) >= 3 and self._atr_history[-1] > self._atr_history[-3]
-        atr_contracting = len(self._atr_history) >= 3 and self._atr_history[-1] < self._atr_history[-3]
-        
-        state = "NORMAL_VOLATILITY"
-        confidence = 0.4
+        if len(self._history) < 20:
+            return Concept(
+                id=self.get_id(),
+                type=ConceptType.VOLATILITY,
+                version=self.get_version(),
+                timestamp=timestamp,
+                confidence=0.0,
+                inputs={"source": self.source, "value": val, "state": VolatilityState.WARMING_UP},
+                generator=self.__class__.__name__
+            )
 
-        if rvol > 1.5 and atr_expanding:
-            state = "HIGH_VOLATILITY"
-            confidence = min(1.0, rvol / 3.0)
-        elif rvol < 0.7 and atr_contracting:
-            state = "LOW_VOLATILITY"
-            confidence = 0.6
+        mean_vol = sum(self._history) / 20.0
+        current_vol = val
+        
+        state = VolatilityState.NORMAL
+        confidence = 0.5
+        
+        if current_vol > mean_vol * 1.5:
+            state = VolatilityState.EXPANDING
+            confidence = 0.9
+        elif current_vol < mean_vol * 0.5:
+            state = VolatilityState.CONTRACTING
+            confidence = 0.9
+        elif current_vol > mean_vol * 1.2:
+            state = VolatilityState.EXPANDING
+            confidence = 0.7
+        elif current_vol < mean_vol * 0.8:
+            state = VolatilityState.CONTRACTING
+            confidence = 0.7
 
         return Concept(
             id=self.get_id(),
+            type=ConceptType.VOLATILITY,
             version=self.get_version(),
             timestamp=timestamp,
             confidence=confidence,
-            inputs={
-                "atr": atr, 
-                "rvol": rvol, 
-                "state": state, 
-                "atr_expanding": atr_expanding,
-                "atr_contracting": atr_contracting
-            },
+            inputs={"source": self.source, "value": val, "state": state},
             generator=self.__class__.__name__
         )

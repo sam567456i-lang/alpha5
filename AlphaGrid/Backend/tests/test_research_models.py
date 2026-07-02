@@ -4,7 +4,6 @@ import json
 from datetime import datetime, timezone
 from uuid import uuid4
 import pytest
-from pydantic import ValidationError
 
 from Backend.research.models.dataset import DatasetSnapshot
 from Backend.research.models.experiment import Experiment

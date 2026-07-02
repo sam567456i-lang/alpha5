@@ -14,7 +14,7 @@ class ATRFeature(AbstractFeature):
     def __init__(self, period: int = 14) -> None:
         self.period = period
         self._prev_close = None
-        self._tr_values = deque()
+        self._tr_values = deque()  # type: ignore
         self._atr = None
         self._bar_count = 0
 
@@ -44,7 +44,7 @@ class ATRFeature(AbstractFeature):
         else:
             tr = max(high - low, abs(high - self._prev_close), abs(low - self._prev_close))
             
-        self._prev_close = close
+        self._prev_close = close  # type: ignore
         self._bar_count += 1
 
         if self._bar_count <= self.period:
@@ -55,7 +55,7 @@ class ATRFeature(AbstractFeature):
                 return self._atr
             return None
 
-        self._atr = (self._atr * (self.period - 1) + tr) / self.period
+        self._atr = (self._atr * (self.period - 1) + tr) / self.period  # type: ignore
         return self._atr
 
 
@@ -66,7 +66,7 @@ class RelativeVolumeFeature(AbstractFeature):
 
     def __init__(self, period: int = 5) -> None:
         self.period = period
-        self._volumes = deque(maxlen=self.period)
+        self._volumes = deque(maxlen=self.period)  # type: ignore
 
     @classmethod
     def get_name(cls) -> str:

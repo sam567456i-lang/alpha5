@@ -1,15 +1,14 @@
 """Methodology Framework."""
 
 from abc import ABC, abstractmethod
-from typing import Dict, List
-from Backend.concepts.base import Concept
-from .signals import Signal
+from Backend.signals.primitive.context import SignalContext
+from .evaluation import MethodologyEvaluation
 
 
 class AbstractMethodology(ABC):
     """
     Abstract template for a trading methodology (e.g., Trend Following, Mean Reversion).
-    Evaluates semantic concepts and produces a rich Signal.
+    Evaluates semantic concepts and produces a MethodologyEvaluation.
     """
 
     @classmethod
@@ -18,21 +17,16 @@ class AbstractMethodology(ABC):
         """Name of the methodology."""
         pass
 
-    @classmethod
-    @abstractmethod
-    def get_required_concepts(cls) -> List[str]:
-        """List of concept IDs required by this methodology."""
-        return []
 
     @abstractmethod
-    def evaluate(self, concepts: Dict[str, Concept]) -> Signal:
+    def evaluate(self, context: 'SignalContext') -> MethodologyEvaluation:
         """
-        Evaluates the methodology logic given the current concepts.
+        Evaluates the current methodology context containing primitive signals.
         
         Args:
-            concepts: Dictionary mapping concept IDs to immutable Concept objects.
+            context: The typed context containing all evaluated primitive signals.
             
         Returns:
-            A rich Signal object.
+            The evaluation result (direction, confidence, etc).
         """
         pass

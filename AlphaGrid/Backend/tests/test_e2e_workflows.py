@@ -13,12 +13,10 @@ Silent numerical adjustments are strictly prohibited.
 
 import os
 import json
-import math
 import hashlib
-import copy
 import pytest
 import numpy as np
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta
 from typing import Any, Dict, List
 from uuid import uuid4
 
@@ -29,7 +27,6 @@ os.environ["OPENBLAS_NUM_THREADS"] = "1"
 
 from Backend.research.engine.strategy_interface import AbstractStrategy, STRATEGY_REGISTRY
 from Backend.research.engine.dataset_loader import DatasetLoader
-from Backend.research.engine.backtest import BacktestEngine
 from Backend.research.engine.walkforward import WalkForwardEngine
 from Backend.research.engine.monte_carlo import MonteCarloEngine
 from Backend.research.engine.replay import ReplayEngine, ReplayState
@@ -145,7 +142,7 @@ def test_standard_backtest_regression():
     trade_hash = _compute_trade_sequence_hash(strategy.trades)
     
     # Record for visibility (not part of the oracle — informational only)
-    print(f"\n[Informational Summary]")
+    print("\n[Informational Summary]")
     print(f"  Trades: {len(strategy.trades)}")
     print(f"  Trade Sequence Hash: {trade_hash}")
     if strategy.trades:

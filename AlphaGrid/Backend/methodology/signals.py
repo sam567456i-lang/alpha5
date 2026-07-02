@@ -5,7 +5,7 @@ from typing import List, Optional
 
 
 @dataclass(frozen=True)
-class Signal:
+class MethodologySignal:
     """
     Rich signal object produced by a Methodology.
     """

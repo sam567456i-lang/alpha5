@@ -10,7 +10,7 @@ from typing import Any, Dict, Iterator, Optional
 try:
     import duckdb
 except ImportError:
-    duckdb = None
+    duckdb = None  # type: ignore
 
 
 class DatasetIntegrityError(Exception):
@@ -34,7 +34,7 @@ class DatasetLoader:
                 ts = ts.replace(tzinfo=timezone.utc)
             else:
                 ts = ts.astimezone(timezone.utc)
-            return ts.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
+            return ts.strftime("%Y-%m-%dT%H:%M:%S.%fZ")  # type: ignore
         # If it's already a string or NumPy datetime64, we might need to parse/format it.
         # For simplicity, assuming duckdb returns datetime objects for timestamp columns.
         raise ValueError(f"Expected datetime object, got {type(ts)}")

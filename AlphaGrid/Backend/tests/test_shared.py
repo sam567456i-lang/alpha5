@@ -2,7 +2,6 @@
 
 from datetime import datetime, timezone
 from decimal import Decimal
-import json
 import os
 import unittest
 from uuid import uuid4
@@ -17,34 +16,19 @@ from Shared.enums import (
     TradeStatus,
 )
 from Shared.models import (
-    AIModel,
     Evidence,
     MarketSnapshot,
-    Notification,
     Opportunity,
     Portfolio,
     Position,
     Recommendation,
-    ResearchProject,
     Trade,
 )
 from Shared.dto import (
-    CreatePortfolioRequest,
-    CreateRecommendationRequest,
-    CreateResearchProjectRequest,
     CreateTradeRequest,
     ErrorInfo,
     ErrorResponse,
     LoginRequest,
-    MarketUpdate,
-    NotificationUpdate,
-    PortfolioResponse,
-    PortfolioUpdate,
-    RecommendationResponse,
-    RecommendationUpdate,
-    ResearchProjectResponse,
-    StandardResponse,
-    TradeResponse,
 )
 
 

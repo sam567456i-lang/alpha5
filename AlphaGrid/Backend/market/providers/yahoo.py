@@ -32,11 +32,13 @@ from .base import (
 
 # Lazy import so that the package remains importable even when yfinance is absent.
 try:
-    import yfinance as _yf  # type: ignore[import-untyped]
+    import yfinance as _yf
+
 
     _YFINANCE_AVAILABLE = True
 except ImportError:
-    _yf = None  # type: ignore[assignment]
+    _yf = None
+
     _YFINANCE_AVAILABLE = False
 
 # ---------------------------------------------------------------------------

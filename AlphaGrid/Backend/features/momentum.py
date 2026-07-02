@@ -11,7 +11,7 @@ class ROCFeature(AbstractFeature):
 
     def __init__(self, lookback: int = 5) -> None:
         self.lookback = lookback
-        self._history = deque(maxlen=self.lookback + 1)
+        self._history = deque(maxlen=self.lookback + 1)  # type: ignore
 
     @classmethod
     def get_name(cls) -> str:
@@ -50,8 +50,8 @@ class RSIFeature(AbstractFeature):
 
     def __init__(self, period: int = 14) -> None:
         self.period = period
-        self._gains = deque()
-        self._losses = deque()
+        self._gains = deque()  # type: ignore
+        self._losses = deque()  # type: ignore
         self._avg_gain = None
         self._avg_loss = None
         self._prev_price = None
@@ -77,7 +77,7 @@ class RSIFeature(AbstractFeature):
         price = float(snapshot.close)
         
         if self._prev_price is None:
-            self._prev_price = price
+            self._prev_price = price  # type: ignore
             self._bar_count += 1
             return None
 
@@ -109,6 +109,8 @@ class RSIFeature(AbstractFeature):
 
     def _calculate_rsi(self) -> float:
         if self._avg_loss == 0:
+            if self._avg_gain == 0:
+                return 50.0
             return 100.0
-        rs = self._avg_gain / self._avg_loss
-        return 100.0 - (100.0 / (1.0 + rs))
+        rs = self._avg_gain / self._avg_loss  # type: ignore
+        return 100.0 - (100.0 / (1.0 + rs))  # type: ignore

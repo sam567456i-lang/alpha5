@@ -26,7 +26,8 @@ class EMACrossStrategy(AbstractStrategy):
         """Purely reactive — no forward-looking labels."""
         return timedelta(0)
 
-    def __init__(self, parameters: Dict[str, Any], random_generator: np.random.Generator = None) -> None:
+    def __init__(self, parameters: Dict[str, Any], random_generator: np.random.Generator | None = None) -> None:
+
         super().__init__(parameters, random_generator)
         self.short_window = parameters.get("short_window", 10)
         self.long_window = parameters.get("long_window", 50)

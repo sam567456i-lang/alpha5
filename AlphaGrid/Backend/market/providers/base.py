@@ -13,7 +13,6 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from decimal import Decimal
 from enum import StrEnum
-from typing import Any
 
 
 # ---------------------------------------------------------------------------

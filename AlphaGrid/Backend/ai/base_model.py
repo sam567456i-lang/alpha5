@@ -1,8 +1,8 @@
 """Base AI Model Interface."""
 
+from typing import Any
 from abc import ABC, abstractmethod
-from typing import Dict, Any, Tuple
-import numpy as np
+from typing import Dict, Tuple
 
 
 class AbstractAIModel(ABC):
@@ -18,7 +18,8 @@ class AbstractAIModel(ABC):
         pass
 
     @abstractmethod
-    def train(self, features: np.ndarray, labels: np.ndarray) -> Dict[str, float]:
+    def train(self, features: Any, labels: Any) -> Dict[str, float]:
+
         """
         Trains the model offline.
         
@@ -32,7 +33,7 @@ class AbstractAIModel(ABC):
         pass
 
     @abstractmethod
-    def predict(self, features: np.ndarray) -> Tuple[str, float]:
+    def predict(self, features: Any) -> Tuple[str, float]:
         """
         Runs inference on new data.
         

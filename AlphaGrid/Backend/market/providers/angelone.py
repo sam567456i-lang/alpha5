@@ -10,7 +10,8 @@ Requires credentials loaded from environment variables:
 from __future__ import annotations
 
 import os
-from datetime import datetime, timezone
+from typing import Any
+from datetime import datetime
 from decimal import Decimal, ROUND_HALF_UP
 
 from .base import (
@@ -25,8 +26,10 @@ from .base import (
 
 # Lazy import
 try:
-    from SmartApi import SmartConnect  # type: ignore[import-untyped]
-    import pyotp  # type: ignore[import-untyped]
+    from SmartApi import SmartConnect
+
+    import pyotp
+
     _ANGEL_AVAILABLE = True
 except ImportError:
     _ANGEL_AVAILABLE = False

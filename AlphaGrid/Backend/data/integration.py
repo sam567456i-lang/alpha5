@@ -80,7 +80,7 @@ def _register_database_services(
     context.container.register_factory(
         "database.transaction_manager",
         lambda container: TransactionManager(
-            container.resolve(
+            container.resolve(  # type: ignore
                 "database.postgresql",
                 PostgreSQLConnectionManager,
             ).session_factory
