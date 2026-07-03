@@ -30,6 +30,7 @@ class AppConfig:
     service_timeout_seconds: float
     health_timeout_seconds: float
     shutdown_timeout_seconds: float
+    historical_provider: str
 
     def as_dict(self) -> dict[str, str | float]:
         """Return a serializable representation of the configuration."""
@@ -42,6 +43,7 @@ class AppConfig:
             "service_timeout_seconds": self.service_timeout_seconds,
             "health_timeout_seconds": self.health_timeout_seconds,
             "shutdown_timeout_seconds": self.shutdown_timeout_seconds,
+            "historical_provider": self.historical_provider,
         }
 
 
@@ -81,6 +83,7 @@ def load_config(
         service_timeout_seconds=_read_float(values, "SERVICE_TIMEOUT_SECONDS", 30.0),
         health_timeout_seconds=_read_float(values, "HEALTH_TIMEOUT_SECONDS", 5.0),
         shutdown_timeout_seconds=_read_float(values, "SHUTDOWN_TIMEOUT_SECONDS", 30.0),
+        historical_provider=_read_string(values, "HISTORICAL_PROVIDER", "synthetic").lower(),
     )
 
 

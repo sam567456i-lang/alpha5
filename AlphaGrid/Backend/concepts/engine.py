@@ -14,18 +14,29 @@ class ConceptEngine:
     """
     Evaluates all registered concepts per market event, consuming Feature outputs.
     """
+    
+    ENGINE_METADATA = {
+        "owner": "Concept Domain",
+        "version": "1.0.0",
+        "consumes": "FeatureValue",
+        "produces": "Concept",
+        "registry": "concept_registry",
+        "contract_version": "v1",
+        "downstream": "PrimitiveSignals"
+    }
 
     def __init__(self, registry: ConceptRegistry) -> None:
         self._registry = registry
         self._generators: List[AbstractConceptGenerator] = self._registry.get_all()
 
-    def process(self, timestamp: datetime, feature_values: Dict[str, Any]) -> Dict[str, Concept]:
+    def process(self, timestamp: datetime, feature_values: Dict[str, Any], geometry_cache: Any = None) -> Dict[str, Concept]:
         """
-        Evaluates all concepts given the current feature values.
+        Evaluates all concepts given the current feature values and geometry.
         
         Args:
             timestamp: Event timestamp.
             feature_values: Dictionary of feature outputs.
+            geometry_cache: Geometry cache containing geometric objects.
             
         Returns:
             Dictionary mapping concept ID to immutable Concept instances.
@@ -46,7 +57,7 @@ class ConceptEngine:
                 continue
                 
             try:
-                concept = generator.evaluate(timestamp, feature_values)
+                concept = generator.evaluate(timestamp, feature_values, geometry_cache)
                 concepts[cid] = concept
             except Exception as e:
                 logger.error(f"Concept generation failed for '{cid}': {e}")

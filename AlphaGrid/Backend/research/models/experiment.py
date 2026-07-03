@@ -2,7 +2,7 @@
 
 import json
 from datetime import datetime, timezone
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, List
 from uuid import UUID
 from pydantic import Field, field_validator, model_serializer
 from Shared.models.common import AlphaGridBaseModel
@@ -61,9 +61,13 @@ class Experiment(AlphaGridBaseModel):
     patch_hash: Optional[str] = None
     patch_text: Optional[str] = None
     dataset_snapshot_id: str = Field(..., min_length=64, max_length=64)
+    dataset_hash: Optional[str] = None
+    feature_versions: Dict[str, str] = Field(default_factory=dict)
     environment_fingerprint: str = Field(..., min_length=64, max_length=64)
     random_seed: int
     parameters: Dict[str, Any]
+    parent_id: Optional[UUID] = None
+    lineage_path: List[UUID] = Field(default_factory=list)
     is_exploratory: bool
     is_archived: bool
     schema_version: int = Field(default=1)

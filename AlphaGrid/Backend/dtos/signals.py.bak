@@ -1,0 +1,7 @@
+from .base import BaseObject
+from typing import Dict, Any
+
+class SignalDTO(BaseObject):
+    owner: str = "Signal"
+    direction: int
+    signal_type: str

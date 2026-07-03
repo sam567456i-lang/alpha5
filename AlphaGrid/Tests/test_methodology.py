@@ -9,12 +9,13 @@ from Backend.methodology.trend_following import TrendFollowingMethodology
 from Backend.methodology.mean_reversion import MeanReversionMethodology
 from Backend.methodology.engine import MethodologyEngine
 
-def _make_signal(id_str: str, direction: int, conf: float = 1.0) -> PrimitiveSignal:
+def _make_signal(id_str: str, direction: int, conf: float = 1.0, signal_type: str = "GENERIC") -> PrimitiveSignal:
     return PrimitiveSignal(
         id=id_str,
         timestamp=datetime(2025, 1, 1, tzinfo=timezone.utc),
         direction=direction,
         confidence=conf,
+        signal_type=signal_type,
         supporting_concepts=(),
         generator="Test"
     )
@@ -25,17 +26,17 @@ class TestTrendFollowingMethodology:
 
     def test_long_signal(self):
         signals = (
-            _make_signal("STRONG_TREND", direction=1),
+            _make_signal("STRONG_TREND", direction=1, signal_type="TREND_LONG"),
             _make_signal("DIRECTIONAL_MOMENTUM", direction=0)
         )
         context = SignalContext(signals)
         signal = self.methodology.evaluate(context)
         assert signal.direction == 1
-        assert signal.methodology_id == "TrendFollowing"
+        assert signal.methodology_id == "TrendFollowingMethodology"
 
     def test_short_signal(self):
         signals = (
-            _make_signal("STRONG_TREND", direction=-1),
+            _make_signal("STRONG_TREND", direction=-1, signal_type="TREND_SHORT"),
             _make_signal("DIRECTIONAL_MOMENTUM", direction=0)
         )
         context = SignalContext(signals)
@@ -44,8 +45,8 @@ class TestTrendFollowingMethodology:
 
     def test_momentum_blocks_long(self):
         signals = (
-            _make_signal("STRONG_TREND", direction=1),
-            _make_signal("DIRECTIONAL_MOMENTUM", direction=-1)
+            _make_signal("STRONG_TREND", direction=1, signal_type="TREND_LONG"),
+            _make_signal("DIRECTIONAL_MOMENTUM", direction=-1, signal_type="MOMENTUM_SHORT")
         )
         context = SignalContext(signals)
         signal = self.methodology.evaluate(context)
@@ -57,7 +58,7 @@ class TestMeanReversionMethodology:
 
     def test_long_signal(self):
         signals = (
-            _make_signal("OVEREXTENDED", direction=1),
+            _make_signal("OVEREXTENDED", direction=-1),
         )
         context = SignalContext(signals)
         signal = self.methodology.evaluate(context)
@@ -68,7 +69,7 @@ class TestMethodologyEngine:
         engine = MethodologyEngine([TrendFollowingMethodology(), MeanReversionMethodology()])
         
         signals = (
-            _make_signal("STRONG_TREND", direction=1, conf=0.8),
+            _make_signal("STRONG_TREND", direction=1, conf=0.8, signal_type="TREND_LONG"),
         )
         context = SignalContext(signals)
         
@@ -77,4 +78,4 @@ class TestMethodologyEngine:
         # TrendFollowing should fire LONG, MeanReversion should WAIT
         assert len(evals) == 1
         assert evals[0].direction == 1
-        assert evals[0].methodology_id == "TrendFollowing"
+        assert evals[0].methodology_id == "TrendFollowingMethodology"

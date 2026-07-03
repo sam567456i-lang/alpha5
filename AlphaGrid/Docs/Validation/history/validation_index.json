@@ -1,0 +1,12 @@
+[
+    {
+        "timestamp": "2026-07-03T21:54:34.941812",
+        "phase": "10e",
+        "family": "momentum",
+        "profile": "family",
+        "duration_ms": 36491.70349998167,
+        "status": "PASS",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    }
+]

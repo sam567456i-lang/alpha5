@@ -1,0 +1,8 @@
+from .base import BaseObject
+from typing import Dict, Any
+
+class FeatureDTO(BaseObject):
+    owner: str = "Feature"
+    symbol: str
+    timeframe: str
+    values: Dict[str, Any]

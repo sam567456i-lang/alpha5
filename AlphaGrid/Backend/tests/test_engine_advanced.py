@@ -16,12 +16,20 @@ from Backend.research.engine.strategy_interface import AbstractStrategy, STRATEG
 from Backend.research.engine.dataset_loader import DatasetLoader
 from Backend.research.engine.backtest import BacktestEngine
 from Backend.research.models.experiment import Experiment
+from Backend.methodology.base import AbstractMethodology
+from Backend.methodology.evaluation import MethodologyEvaluation
 
 try:
     from hypothesis import given, settings, strategies as st
     HAS_HYPOTHESIS = True
 except ImportError:
     HAS_HYPOTHESIS = False
+
+class DummyMethodology(AbstractMethodology):
+    def __init__(self): pass
+    @classmethod
+    def get_name(cls): return "Dummy"
+    def evaluate(self, ctx): return MethodologyEvaluation("Dummy", datetime.now(timezone.utc), True, 1, 1.0)
 
 # Mock Utilities
 class MockDuckDBResult:
@@ -48,7 +56,7 @@ class MockDuckDBConnection:
 class AdvancedMockStrategy(AbstractStrategy):
     instances = {}
 
-    def __init__(self, parameters, random_generator):
+    def __init__(self, parameters: dict, random_generator: Any, **kwargs):
         super().__init__(parameters, random_generator)
         self.random_samples = []
         self.events_received = []
@@ -198,7 +206,18 @@ def _run_backtest_with_seed(seed: int) -> AdvancedMockStrategy:
     ]
     expected_hash = _compute_raw_hash(rows)
     
+    from Backend.research.strategies.definition import StrategyDefinition
+    from Backend.research.strategies.registry import StrategyRegistry as DefRegistry
     if "ADV_MOCK" not in STRATEGY_REGISTRY._registry:
+        DefRegistry._definitions["ADV_MOCK"] = StrategyDefinition(
+            id="ADV_MOCK",
+            strategy_class=AdvancedMockStrategy,
+            methodology=DummyMethodology,
+            features=[],
+            concepts=[],
+            primitive_signals=[],
+            parameters={}
+        )
         STRATEGY_REGISTRY.register("ADV_MOCK", AdvancedMockStrategy)
     
     exp = Experiment(

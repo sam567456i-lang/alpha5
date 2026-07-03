@@ -247,9 +247,11 @@ def test_monte_carlo_determinism():
     }
 
     exp1 = _make_experiment(seed=42)
+    exp1 = exp1.model_copy(update={"strategy_id": "MOCK_ML"})
     res1 = engine.execute(exp1, "golden", config)
 
     exp2 = _make_experiment(seed=42)
+    exp2 = exp2.model_copy(update={"strategy_id": "MOCK_ML"})
     res2 = engine.execute(exp2, "golden", config)
 
     # Sort by seed to normalize ThreadPoolExecutor completion order
@@ -263,6 +265,7 @@ def test_monte_carlo_determinism():
 
     # Different seed must produce deterministic difference
     exp3 = _make_experiment(seed=999)
+    exp3 = exp3.model_copy(update={"strategy_id": "MOCK_ML"})
     res3 = engine.execute(exp3, "golden", config)
     iters3 = sorted(res3["iterations"], key=lambda x: x["seed"])
     assert iters1[0]["seed"] != iters3[0]["seed"], "Different root seeds produced identical iteration seeds"
@@ -288,10 +291,11 @@ def test_walkforward_fold_isolation():
         "min_testing_period": 5,
         "step_size": 5,
         "mode": "expanding",
-        "embargo_period": timedelta(0)
+        "embargo_period": timedelta(hours=6)
     }
 
     exp = _make_experiment()
+    exp = exp.model_copy(update={"strategy_id": "MOCK_ML"})
     res = engine.execute(exp, "golden", config)
     folds = res["folds"]
 
@@ -317,7 +321,8 @@ def test_walkforward_fold_isolation():
 # ===================================================================
 
 class MockMLStrategy(AbstractStrategy):
-    """Synthetic strategy declaring a 6-hour forward-looking label horizon."""
+    def __init__(self, parameters: Dict[str, Any], random_generator: Any, **kwargs) -> None:
+        super().__init__(parameters, random_generator)
     @classmethod
     def get_parameter_schema(cls) -> Dict[str, Dict[str, Any]]:
         return {"lookback": {"type": int, "required": True, "min": 1, "max": 100}}
@@ -330,8 +335,38 @@ class MockMLStrategy(AbstractStrategy):
         pass
 
 # Register only if not already registered
-if "MOCK_ML" not in STRATEGY_REGISTRY._registry:
-    STRATEGY_REGISTRY.register("MOCK_ML", MockMLStrategy)
+from Backend.research.strategies.definition import StrategyDefinition
+from Backend.methodology.base import AbstractMethodology
+from Backend.methodology.evaluation import MethodologyEvaluation
+from datetime import timezone
+
+class DummyMethodology(AbstractMethodology):
+    def __init__(self): pass
+    @classmethod
+    def get_name(cls): return "Dummy"
+    def evaluate(self, ctx): return MethodologyEvaluation("Dummy", datetime.now(timezone.utc), True, 1, 1.0)
+
+from Backend.research.strategies.registry import StrategyRegistry as DefRegistry
+from Backend.research.strategies import register_all_strategies
+
+
+@pytest.fixture(scope="module", autouse=True)
+def setup_real_strategies():
+    register_all_strategies()
+
+@pytest.fixture(autouse=True)
+def setup_mock_ml_registry():
+    DefRegistry._definitions["MOCK_ML"] = StrategyDefinition(
+        id="MOCK_ML",
+        strategy_class=MockMLStrategy,
+        methodology=DummyMethodology,
+        features=[],
+        concepts=[],
+        primitive_signals=[],
+        parameters={}
+    )
+    if "MOCK_ML" not in STRATEGY_REGISTRY._registry:
+        STRATEGY_REGISTRY.register("MOCK_ML", MockMLStrategy)
 
 
 def test_embargo_rejects_insufficient_period():

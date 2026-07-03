@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from typing import Any
 
 from Backend.api.exceptions import register_exception_handlers
 from Backend.api.middleware import RequestTimingMiddleware, StructuredLoggingMiddleware
@@ -33,6 +34,7 @@ _DEFAULT_CORS_ORIGINS = [
 
 
 def create_app(
+    container: Any = None,
     title: str = "AlphaGrid Infinity X 5.0",
     version: str = "5.0.0",
     debug: bool = False,
@@ -58,6 +60,9 @@ def create_app(
         redoc_url="/api/redoc",
         openapi_url="/api/openapi.json",
     )
+
+    if container:
+        app.state.container = container
 
     # ------------------------------------------------------------------
     # Middleware (outermost first)

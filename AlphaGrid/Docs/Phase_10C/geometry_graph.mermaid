@@ -1,0 +1,45 @@
+```mermaid
+graph TD
+    classDef contract fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef event fill:#bbf,stroke:#333,stroke-width:2px;
+    
+    subgraph Core Contracts
+        AS[AbstractSwing]:::contract
+        AST[AbstractStructure]:::contract
+        AL[AbstractLiquidity]:::contract
+        AI[AbstractImbalance]:::contract
+        AZ[AbstractZone]:::contract
+    end
+
+    subgraph Data Flow
+        D[(OHLCV Dataset)] --> SE[Swing Engine]
+        
+        SE -->|Swing Event| Swing[Swing: High/Low]:::event
+        
+        Swing --> STR[Structure Engine]
+        STR -->|Structure Event| BOS[BOS/CHOCH/MSS]:::event
+        
+        Swing --> LIQ[Liquidity Engine]
+        LIQ -->|Liquidity Event| LP[Liquidity Pool: EQH/EQL]:::event
+        
+        D --> IMB[Imbalance Engine]
+        IMB -->|Imbalance Event| FVG[FVG/Volume Imb]:::event
+        
+        Swing --> ZE[Zone Engine]
+        ZE -->|Zone Event| ZONE[Premium/Discount/Eq]:::event
+        
+        BOS --> CE[Conflict Engine]
+        CE -->|Conflict Event| CONFLICT[MTF Conflict]:::event
+    end
+    
+    subgraph Persistence & Audit
+        Swing --> GS[(Geometry Store)]
+        BOS --> GS
+        LP --> GS
+        FVG --> GS
+        ZONE --> GS
+        CONFLICT --> GS
+        
+        GS --> TRACE[Traceability Validator]
+    end
+```

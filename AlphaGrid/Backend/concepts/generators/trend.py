@@ -26,7 +26,7 @@ class TrendConceptGenerator(AbstractConceptGenerator):
         self.price_field = price_field
 
     def get_id(self) -> str:
-        return "TrendState"
+        return f"TrendState_{self.source}"
 
     def get_version(self) -> str:
         return "v3"
@@ -34,7 +34,7 @@ class TrendConceptGenerator(AbstractConceptGenerator):
     def get_required_features(self) -> List[str]:
         return [self.source]
 
-    def evaluate(self, timestamp: datetime, feature_values: Dict[str, Any]) -> Concept:
+    def evaluate(self, timestamp: datetime, feature_values: Dict[str, Any], geometry_cache: Any = None) -> Concept:
         feat = feature_values[self.source]
         
         state = TrendState.UNKNOWN

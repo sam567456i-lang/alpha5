@@ -1,0 +1,22 @@
+{
+    "id": "deterministic_replay_validator",
+    "status": "PASS",
+    "reason": "",
+    "duration_ms": 1.6813999973237514,
+    "phase": "10e",
+    "family": "momentum",
+    "start_time": "",
+    "end_time": "",
+    "cpu_utilization_percent": 0.0,
+    "peak_heap_mb": 0.0,
+    "peak_rss_mb": 0.0,
+    "gc_collections": 0,
+    "evidence_id": "EV-10e-deterministic_replay_validator",
+    "validator_version": "1.0.0",
+    "warnings": [],
+    "errors": [],
+    "artifacts": [],
+    "metrics": {},
+    "summary": "DeterministicReplayValidator passed.",
+    "timestamp": "2026-07-03T21:54:34.936824"
+}

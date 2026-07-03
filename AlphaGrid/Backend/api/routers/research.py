@@ -10,10 +10,10 @@ from pydantic import BaseModel, Field
 
 from Backend.api.dependencies import PaginationParams, get_pagination
 from Backend.api.responses import created_response, paginated_response
+from Backend.api.dependencies import get_research_service
 from Backend.api.services.research_service import ResearchService
 
 router = APIRouter(prefix="/research", tags=["Research"])
-_service = ResearchService()
 
 
 class BacktestBody(BaseModel):
@@ -36,9 +36,10 @@ class ReplayBody(BaseModel):
 @router.get("", summary="Research experiments")
 def list_experiments(
     pagination: PaginationParams = Depends(get_pagination),
+    service: ResearchService = Depends(get_research_service)
 ) -> JSONResponse:
     """Return paginated research experiments and their results."""
-    records, total = _service.list_experiments(
+    records, total = service.list_experiments(
         page=pagination.page, page_size=pagination.page_size
     )
     return paginated_response(
@@ -50,9 +51,9 @@ def list_experiments(
 
 
 @router.post("/backtest", summary="Run research backtest", status_code=201)
-def run_backtest(body: BacktestBody) -> JSONResponse:
+def run_backtest(body: BacktestBody, service: ResearchService = Depends(get_research_service)) -> JSONResponse:
     """Trigger a historical backtest for research purposes."""
-    data = _service.run_backtest(
+    data = service.run_backtest(
         strategy=body.strategy,
         start_date=body.start_date,
         end_date=body.end_date,
@@ -62,9 +63,9 @@ def run_backtest(body: BacktestBody) -> JSONResponse:
 
 
 @router.post("/replay", summary="Start replay session", status_code=201)
-def start_replay(body: ReplayBody) -> JSONResponse:
+def start_replay(body: ReplayBody, service: ResearchService = Depends(get_research_service)) -> JSONResponse:
     """Start a market replay session for historical analysis."""
-    data = _service.start_replay(
+    data = service.start_replay(
         symbol=body.symbol,
         date=body.date,
         timeframe=body.timeframe,

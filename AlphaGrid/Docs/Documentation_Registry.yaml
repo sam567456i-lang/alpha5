@@ -1,0 +1,1960 @@
+registry_version: 1.0.0
+documents:
+- Document_ID: DOC-001
+  Title: "AlphaGrid Infinity X 5.0 \u2014 API & Service Contracts"
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: api_contracts.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-002
+  Title: Database Module
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: database.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-003
+  Title: Decision Log
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: decision_log.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-004
+  Title: Canonical Dependency Map
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: dependency_map.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-005
+  Title: Foundation Module
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: foundation.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-006
+  Title: AlphaGrid Glossary
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: glossary.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-007
+  Title: AlphaGrid GOVERNANCE INDEX
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: GOVERNANCE_INDEX.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-008
+  Title: Market Intelligence Platform
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: market_intelligence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-009
+  Title: AlphaGrid Master Roadmap & End-to-End Pipeline Contract
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: master_roadmap.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-010
+  Title: Phase 10 Original Architecture Plan Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: phase10_original_plan_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-011
+  Title: Phase 10 Readiness Audit
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: phase10_readiness_audit.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-012
+  Title: Phase 22 Evidence Artifact
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: phase_22_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-013
+  Title: Phase 23 Evidence Artifact
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: phase_23_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-014
+  Title: Phase 24 Evidence Artifact
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: phase_24_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-015
+  Title: Docs
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: README.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-016
+  Title: AlphaGrid Trading Research Library
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: research_library.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-017
+  Title: Shared Models Module
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: shared_models.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-018
+  Title: AlphaGrid Versioning & Lifecycle Policy
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Root
+  Path: versioning_policy.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-019
+  Title: 'ADR-001: Shared Models Strategy'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: adr
+  Path: adr/ADR-001-shared-models.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ADR-001
+  Title: 'ADR-001: Multi-Timeframe (MTF) Alignment & Deterministic Evaluation'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: ADRs
+  Path: ADRs/ADR-001-MTF-Alignment.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ADR-002
+  Title: 'ADR-003: Ownership of expected_bars'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: ADRs
+  Path: ADRs/ADR-003-Ownership-of-expected-bars.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-001
+  Title: Data Flow
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Data_Flow.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-002
+  Title: Dependency Graph
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Dependency_Graph.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-003
+  Title: Deployment
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Deployment.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-004
+  Title: Event Flow
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Event_Flow.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-005
+  Title: Logical
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Logical.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-006
+  Title: Physical
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Physical.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-007
+  Title: Runtime
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Runtime.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-008
+  Title: Sequence
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/Sequence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCH-009
+  Title: State Machines
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Architecture
+  Path: Architecture/State_Machines.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCHV-001
+  Title: Architecture Debt Ledger
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Archive
+  Path: Archive/architecture_debt.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCHV-002
+  Title: "Runtime Execution Phase 1 \u2014 Blocking Report: DatabaseManager"
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Archive
+  Path: Archive/blocking_report_database_manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCHV-003
+  Title: 'Execution Advancement Report #1'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Archive
+  Path: Archive/execution_advancement_report_1.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCHV-004
+  Title: 'Execution Advancement Report #2'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Archive
+  Path: Archive/execution_advancement_report_2.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ARCHV-005
+  Title: Family Summary
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Archive
+  Path: Archive/family_summary.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-020
+  Title: AlphaGrid Production Audit Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Audit
+  Path: Audit/production_audit_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-001
+  Title: Concurrency Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/concurrency_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-002
+  Title: Execution Engine Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/execution_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-003
+  Title: AlphaGrid Master AI Coding & Engineering Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/master_ai_coding_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-004
+  Title: AlphaGrid Master Implementation Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/master_implementation_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-005
+  Title: Monitoring Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/monitoring_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-006
+  Title: Research Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/research_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-007
+  Title: Risk Engine Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/risk_engine_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-008
+  Title: Runtime Engine Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/runtime_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-009
+  Title: Security Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/security_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-010
+  Title: Strategy Constitution
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/strategy_constitution.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-001
+  Title: Phase 10c Migration Audit Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/v5.0/Phase10/migration_audit_report_phase10c.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-002
+  Title: Phase 10 Cycle 3 Validation Evidence
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/v5.0/Phase10/phase10c_validation_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-003
+  Title: 'Phase 10d: Breakout Family Migration Evidence'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/v5.0/Phase10/phase10d_migration_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-004
+  Title: Phase 18 Evidence Artifact
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/v5.0/Phase10/phase_18_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-005
+  Title: Phase 19 Evidence Artifact
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/v5.0/Phase10/phase_19_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-006
+  Title: Phase 20 Evidence Artifact
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/v5.0/Phase10/phase_20_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-007
+  Title: Phase 21 Evidence Artifact
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/v5.0/Phase10/phase_21_evidence.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-001
+  Title: Broker Router
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Broker_Router.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-002
+  Title: Exchange Adapter
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Exchange_Adapter.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-003
+  Title: Execution Context
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Execution_Context.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-004
+  Title: Execution Planner
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Execution_Planner.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-005
+  Title: Execution State Machine
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Execution_State_Machine.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-006
+  Title: Fill Reconciliation
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Fill_Reconciliation.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-007
+  Title: Order Lifecycle
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Order_Lifecycle.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-008
+  Title: Order Recovery
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Order_Recovery.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-009
+  Title: Slippage Model
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Slippage_Model.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EXEC-010
+  Title: Smart Routing
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Execution
+  Path: Execution/Smart_Routing.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-001
+  Title: AI Agent Governance
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/ai_agent_governance.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-002
+  Title: Benchmark Framework
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/benchmark_framework.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-003
+  Title: Failure Injection Framework
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/failure_injection_framework.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-004
+  Title: Governance Dashboard
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/governance_dashboard.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-005
+  Title: Final Governance Freeze Walkthrough
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/governance_freeze_walkthrough.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-006
+  Title: Institutional Governance Upgrade Walkthrough (V3)
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/governance_upgrade_walkthrough_v3.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-007
+  Title: Institutional Governance Upgrade Walkthrough
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/institutional_governance_upgrade_walkthrough.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-008
+  Title: Institutional Review Framework
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/institutional_review_framework.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-009
+  Title: Migration Framework
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/migration_framework.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-010
+  Title: Production Readiness Framework
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/production_readiness_framework.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-011
+  Title: Repository Audit Framework
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/repository_audit_framework.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: KNOW-001
+  Title: Documentation Index
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Knowledge
+  Path: Knowledge/documentation_index.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: KNOW-002
+  Title: Architecture Decision Records (ADR) Index
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Knowledge
+  Path: Knowledge/index.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: KNOW-003
+  Title: AlphaGrid Execution Journal
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Knowledge
+  Path: Knowledge/living_execution_map.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: KNOW-004
+  Title: AlphaGrid Master Rulebook
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Knowledge
+  Path: Knowledge/master_rulebook.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: KNOW-005
+  Title: Breakout Family Migration Manifest & Rollback Plan
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Knowledge
+  Path: Knowledge/migration_manifest.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: KNOW-006
+  Title: Institutional Recovery Protocol
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Knowledge
+  Path: Knowledge/recovery_protocol.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: KNOW-007
+  Title: Strategy Catalog
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Knowledge
+  Path: Knowledge/strategy_catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: MON-001
+  Title: Alerts
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Monitoring
+  Path: Monitoring/Alerts.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: MON-002
+  Title: Dashboards
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Monitoring
+  Path: Monitoring/Dashboards.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: MON-003
+  Title: Health
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Monitoring
+  Path: Monitoring/Health.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: MON-004
+  Title: Logs
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Monitoring
+  Path: Monitoring/Logs.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: MON-005
+  Title: Metrics
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Monitoring
+  Path: Monitoring/Metrics.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: MON-006
+  Title: Telemetry
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Monitoring
+  Path: Monitoring/Telemetry.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: MON-007
+  Title: Tracing
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Monitoring
+  Path: Monitoring/Tracing.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: OPS-001
+  Title: CI CD
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Operations
+  Path: Operations/CI_CD.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: OPS-002
+  Title: Incident Response
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Operations
+  Path: Operations/Incident_Response.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: OPS-003
+  Title: Installation
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Operations
+  Path: Operations/Installation.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: OPS-004
+  Title: Runbooks
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Operations
+  Path: Operations/Runbooks.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-021
+  Title: Architecture Changes
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/architecture_changes.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-022
+  Title: Market Intelligence Performance Benchmark
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/benchmark_results.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-023
+  Title: Contracts Verified
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/contracts_verified.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-024
+  Title: Coverage Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/coverage_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-025
+  Title: Dependency Graph
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/dependency_graph.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-026
+  Title: Determinism Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/determinism_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-027
+  Title: Fault Injection Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/fault_injection_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-028
+  Title: Known Limitations
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/known_limitations.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-029
+  Title: Market Intelligence 10-Year Stress Test
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/long_benchmark_results.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-030
+  Title: Market Intelligence Health Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/market_intelligence_health_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-031
+  Title: Migration Notes
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/migration_notes.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-032
+  Title: Performance Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/performance_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-033
+  Title: Phase Freeze
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/phase_freeze.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-034
+  Title: Phase 10B Summary
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/phase_summary.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-035
+  Title: Incremental E2E Pipeline Verification
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/pipeline_verification.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-036
+  Title: Registry Verification
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/registry_verification.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: DOC-037
+  Title: Stress Test Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Phase_10B
+  Path: Phase_10B/stress_test_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RSRCH-001
+  Title: Benchmark Catalog
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Research
+  Path: Research/Benchmark_Catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RSRCH-002
+  Title: Benchmark Definitions
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Research
+  Path: Research/Benchmark_Definitions.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RSRCH-003
+  Title: Dataset Registry
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Research
+  Path: Research/Dataset_Registry.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RSRCH-004
+  Title: Experiment Catalog
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Research
+  Path: Research/Experiment_Catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RSRCH-005
+  Title: Experiment Templates
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Research
+  Path: Research/Experiment_Templates.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RSRCH-006
+  Title: Research Bible
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Research
+  Path: Research/Research_Bible.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RSRCH-007
+  Title: Validation Procedures
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Research
+  Path: Research/Validation_Procedures.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-001
+  Title: Repository Certification Package & Architecture Convergence Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/architecture_convergence_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-002
+  Title: Repository Audit & Compatibility Report (Phase 8)
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/audit_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-003
+  Title: Mandatory Repository Convergence Verification Report
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/e2e_convergence_verification_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-004
+  Title: Full Repository Integration & Architecture Migration Audit
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/full_integration_audit_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-005
+  Title: 'Phase 10C: Pure Price Geometry Gap Report'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/phase_10c_gap_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-006
+  Title: 'Phase 10D Gap Report: Concept Domain'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/phase_10d_gap_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-007
+  Title: "AlphaGrid Infinity X 5.0 \u2014 Production Architecture Audit (Revised)"
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/production_audit_report.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: REV-008
+  Title: Recovery Completion Audit
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Reviews
+  Path: Reviews/Architecture/recovery_completion_audit.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-001
+  Title: Capital Allocation
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Capital_Allocation.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-002
+  Title: Correlation
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Correlation.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-003
+  Title: Expected Shortfall
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Expected_Shortfall.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-004
+  Title: Exposure
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Exposure.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-005
+  Title: Factor Exposure
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Factor_Exposure.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-006
+  Title: Kill Switches
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Kill_Switches.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-007
+  Title: Portfolio Risk
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Portfolio_Risk.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-008
+  Title: Position Sizing
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Position_Sizing.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-009
+  Title: Risk Limits
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/Risk_Limits.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RISK-010
+  Title: VaR
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Risk
+  Path: Risk/VaR.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ROAD-001
+  Title: AI Compatibility Matrix
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Roadmaps
+  Path: Roadmaps/ai_compatibility_matrix.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ROAD-002
+  Title: Capability Matrix
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Roadmaps
+  Path: Roadmaps/capability_matrix.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ROAD-003
+  Title: Compatibility Matrix
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Roadmaps
+  Path: Roadmaps/compatibility_matrix.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ROAD-004
+  Title: AlphaGrid Continuous Recovery Roadmap & Engineering Control Document
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Roadmaps
+  Path: Roadmaps/continuous_recovery_roadmap.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: ROAD-005
+  Title: Traceability Matrix
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Roadmaps
+  Path: Roadmaps/traceability_matrix.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-001
+  Title: Cache Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Cache_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-002
+  Title: Checkpoint Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Checkpoint_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-003
+  Title: Configuration Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Configuration_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-004
+  Title: Health Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Health_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-005
+  Title: Plugin Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Plugin_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-006
+  Title: Recovery Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Recovery_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-007
+  Title: Registry Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Registry_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-008
+  Title: Runtime Context
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Runtime_Context.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-009
+  Title: Scheduler
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Scheduler.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-010
+  Title: Snapshot Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Snapshot_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-011
+  Title: State Manager
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/State_Manager.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-012
+  Title: Telemetry
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Telemetry.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: RUN-013
+  Title: Worker Pool
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Runtime
+  Path: Runtime/Worker_Pool.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-001
+  Title: Audit Trail
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/Audit_Trail.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-002
+  Title: Authentication
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/Authentication.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-003
+  Title: Authorization
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/Authorization.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-004
+  Title: Encryption
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/Encryption.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-005
+  Title: RBAC
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/RBAC.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-006
+  Title: Secrets
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/Secrets.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-007
+  Title: Supply Chain
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/Supply_Chain.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SEC-008
+  Title: Threat Model
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Security
+  Path: Security/Threat_Model.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SPEC-001
+  Title: DTO Specification
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Specifications
+  Path: Specifications/dto_specification.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SPEC-002
+  Title: Engineering Standards & Validation Rules
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Specifications
+  Path: Specifications/engineering_standards.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SPEC-003
+  Title: Operational Standards
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Specifications
+  Path: Specifications/operational_standards.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SPEC-004
+  Title: Registry Specification
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Specifications
+  Path: Specifications/registry_specification.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: TMPL-001
+  Title: 'ADR-[XXXX]: [Short Title of Solved Problem and Solution]'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Templates
+  Path: Templates/ADR-TEMPLATE.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: TMPL-002
+  Title: 'RFC-[XXXX]: [Proposal Title]'
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Templates
+  Path: Templates/RFC-TEMPLATE.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: TRAD-001
+  Title: Concept Catalog
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Trading
+  Path: Trading/Concept_Catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: TRAD-002
+  Title: Feature Catalog
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Trading
+  Path: Trading/Feature_Catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: TRAD-003
+  Title: Methodology Catalog
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Trading
+  Path: Trading/Methodology_Catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: TRAD-004
+  Title: Signal Catalog
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Trading
+  Path: Trading/Signal_Catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: TRAD-005
+  Title: Strategy Catalog
+  Version: 1.0.0
+  Maturity: '"Level 0: Draft"'
+  Implementation_Status: Not Implemented
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Trading
+  Path: Trading/Strategy_Catalog.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: CONST-011
+  Title: Target Operating Architecture
+  Version: 3.0.0
+  Maturity: 'Level 5: Institutionally Frozen'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Constitutions
+  Path: Constitutions/architecture_bible.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-014
+  Title: Master Dependency Graph
+  Version: 1.0.0
+  Maturity: 'Level 5: Institutionally Frozen'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/master_dependency_graph.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-015
+  Title: Master Phase Checklist
+  Version: 1.0.0
+  Maturity: 'Level 5: Institutionally Frozen'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/master_phase_checklist.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-012
+  Title: Master Project Ledger
+  Version: 1.0.0
+  Maturity: 'Level 5: Institutionally Frozen'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Governance
+  Path: Governance/master_project_ledger.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GOV-013
+  Title: Master Roadmap
+  Version: 1.0.0
+  Maturity: 'Level 5: Institutionally Frozen'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Roadmaps
+  Path: Roadmaps/master_roadmap.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: SPEC-005
+  Title: Master Interface Specification
+  Version: 1.0.0
+  Maturity: 'Level 5: Institutionally Frozen'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Specifications
+  Path: Specifications/master_interface_specification.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: EVID-008
+  Title: Momentum Family Validation Report
+  Version: 1.0.0
+  Maturity: 'Level 5: Institutionally Frozen'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Evidence
+  Path: Evidence/2026/momentum_family_validation_report.md
+  Dependencies: []
+  Referenced_By: []

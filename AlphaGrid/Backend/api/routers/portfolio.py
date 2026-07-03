@@ -11,11 +11,12 @@ from pydantic import BaseModel, Field
 
 from Backend.api.exceptions import APINotFoundError
 from Backend.api.responses import created_response, no_content_response, success_response
+from Backend.api.dependencies import get_portfolio_service
 from Backend.api.services.portfolio_service import PortfolioService
 from Shared.enums import TradeDirection
+from fastapi import Depends
 
 router = APIRouter(prefix="/portfolio", tags=["Portfolio"])
-_service = PortfolioService()
 
 
 class CreateTradeBody(BaseModel):
@@ -37,17 +38,17 @@ class UpdateTradeBody(BaseModel):
 
 
 @router.get("", summary="Portfolio summary")
-def get_portfolio() -> JSONResponse:
+def get_portfolio(service: PortfolioService = Depends(get_portfolio_service)) -> JSONResponse:
     """Return the current portfolio state including positions, trades, and PnL."""
-    data = _service.get_portfolio()
+    data = service.get_portfolio()
     return success_response(data=data)
 
 
 @router.post("/trades", summary="Add manual trade", status_code=201)
-def add_trade(body: CreateTradeBody) -> JSONResponse:
+def add_trade(body: CreateTradeBody, service: PortfolioService = Depends(get_portfolio_service)) -> JSONResponse:
     """Record a new manually entered trade."""
     from decimal import Decimal
-    data = _service.add_trade(
+    data = service.add_trade(
         symbol=body.symbol,
         trade_type=body.trade_type,
         quantity=body.quantity,
@@ -58,19 +59,19 @@ def add_trade(body: CreateTradeBody) -> JSONResponse:
 
 
 @router.put("/trades/{trade_id}", summary="Update trade")
-def update_trade(trade_id: UUID, body: UpdateTradeBody) -> JSONResponse:
+def update_trade(trade_id: UUID, body: UpdateTradeBody, service: PortfolioService = Depends(get_portfolio_service)) -> JSONResponse:
     """Update an existing manual trade record."""
     updates: dict[str, Any] = body.model_dump(exclude_none=True)
-    data = _service.update_trade(trade_id=trade_id, updates=updates)
+    data = service.update_trade(trade_id=trade_id, updates=updates)
     if data is None:
         raise APINotFoundError(f"Trade '{trade_id}' not found.")
     return success_response(data=data, message="Trade updated successfully.")
 
 
 @router.delete("/trades/{trade_id}", summary="Archive trade", status_code=204)
-def archive_trade(trade_id: UUID) -> JSONResponse:
+def archive_trade(trade_id: UUID, service: PortfolioService = Depends(get_portfolio_service)) -> JSONResponse:
     """Soft-archive a manual trade. The record is retained for historical analysis."""
-    found = _service.archive_trade(trade_id=trade_id)
+    found = service.archive_trade(trade_id=trade_id)
     if not found:
         raise APINotFoundError(f"Trade '{trade_id}' not found.")
     return no_content_response()

@@ -5,16 +5,16 @@ from __future__ import annotations
 from typing import Any
 from uuid import UUID
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 from Backend.api.exceptions import APINotFoundError
 from Backend.api.responses import created_response, success_response
 from Backend.api.services.strategies_service import StrategiesService
+from Backend.api.dependencies import get_strategies_service
 
 router = APIRouter(prefix="/strategies", tags=["Strategies"])
-_service = StrategiesService()
 
 
 class ValidateStrategyBody(BaseModel):
@@ -32,32 +32,43 @@ class BacktestBody(BaseModel):
 
 
 @router.get("", summary="All registered strategies")
-def list_strategies() -> JSONResponse:
+def list_strategies(service: StrategiesService = Depends(get_strategies_service)) -> JSONResponse:
     """Return all registered trading strategies."""
-    data = _service.list_strategies()
+    data = service.list_strategies()
     return success_response(data=data)
 
 
 @router.get("/{strategy_id}", summary="Single strategy")
-def get_strategy(strategy_id: UUID) -> JSONResponse:
+def get_strategy(
+    strategy_id: UUID,
+    service: StrategiesService = Depends(get_strategies_service)
+) -> JSONResponse:
     """Return a single strategy by its UUID."""
-    data = _service.get_strategy(strategy_id)
+    data = service.get_strategy(strategy_id)
     if data is None:
         raise APINotFoundError(f"Strategy '{strategy_id}' not found.")
     return success_response(data=data)
 
 
 @router.post("/{strategy_id}/validate", summary="Run paper validation", status_code=201)
-def validate_strategy(strategy_id: UUID, body: ValidateStrategyBody) -> JSONResponse:
+def validate_strategy(
+    strategy_id: UUID, 
+    body: ValidateStrategyBody,
+    service: StrategiesService = Depends(get_strategies_service)
+) -> JSONResponse:
     """Trigger a paper validation run for the specified strategy."""
-    data = _service.validate_strategy(strategy_id, body.parameters)
+    data = service.validate_strategy(strategy_id, body.parameters)
     return created_response(data=data, message="Strategy validation queued.")
 
 
 @router.post("/{strategy_id}/backtest", summary="Run backtest", status_code=201)
-def run_backtest(strategy_id: UUID, body: BacktestBody) -> JSONResponse:
+def run_backtest(
+    strategy_id: UUID, 
+    body: BacktestBody,
+    service: StrategiesService = Depends(get_strategies_service)
+) -> JSONResponse:
     """Trigger a historical backtest for the specified strategy."""
-    data = _service.run_backtest(
+    data = service.run_backtest(
         strategy_id=strategy_id,
         start_date=body.start_date,
         end_date=body.end_date,

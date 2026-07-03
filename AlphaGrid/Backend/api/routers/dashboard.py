@@ -9,10 +9,11 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 from Backend.api.responses import success_response
+from Backend.api.dependencies import get_dashboard_service
 from Backend.api.services.dashboard_service import DashboardService
+from fastapi import Depends
 
 router = APIRouter(prefix="/dashboard", tags=["Dashboard"])
-_service = DashboardService()
 
 
 class SaveLayoutBody(BaseModel):
@@ -23,21 +24,21 @@ class SaveLayoutBody(BaseModel):
 
 
 @router.get("", summary="Dashboard summary data")
-def get_dashboard() -> JSONResponse:
+def get_dashboard(service: DashboardService = Depends(get_dashboard_service)) -> JSONResponse:
     """Return the combined dashboard summary: market, portfolio, and system state."""
-    data = _service.get_dashboard_summary()
+    data = service.get_dashboard_summary()
     return success_response(data=data)
 
 
 @router.get("/layout", summary="Dashboard layout")
-def get_layout() -> JSONResponse:
+def get_layout(service: DashboardService = Depends(get_dashboard_service)) -> JSONResponse:
     """Return the user's current saved dashboard widget layout."""
-    data = _service.get_layout()
+    data = service.get_layout()
     return success_response(data=data)
 
 
 @router.put("/layout", summary="Save dashboard layout")
-def save_layout(body: SaveLayoutBody) -> JSONResponse:
+def save_layout(body: SaveLayoutBody, service: DashboardService = Depends(get_dashboard_service)) -> JSONResponse:
     """Persist a new dashboard widget layout configuration."""
-    data = _service.save_layout(layout=body.model_dump())
+    data = service.save_layout(layout=body.model_dump())
     return success_response(data=data, message="Layout saved.")

@@ -1,0 +1,25 @@
+--- Feature / Methodology Analysis ---
+
+--- Market vs Market Intelligence Duplication ---
+Market files: []
+Market Intelligence files: ['market_intelligence/data_quality_gate.py', 'market_intelligence/normalization_engine.py', 'market_intelligence/session_engine.py', 'market_intelligence/symbol_metadata_registry.py']
+
+Consumers of Backend.market (legacy):
+  api/services/market_service.py -> Backend.market.providers.yahoo
+  tests/test_market.py -> Backend.market.breadth
+  tests/test_market.py -> Backend.market.connector_manager
+  tests/test_market.py -> Backend.market.instruments
+  tests/test_market.py -> Backend.market.live_quotes
+  tests/test_market.py -> Backend.market.normalizer
+  tests/test_market.py -> Backend.market.ohlcv
+  tests/test_market.py -> Backend.market.providers.base
+  tests/test_market.py -> Backend.market.providers.mock
+  tests/test_market.py -> Backend.market.regime
+  tests/test_market.py -> Backend.market.session
+  tests/test_market.py -> Backend.market.validator
+  tests/test_market.py -> Backend.market.providers.base
+
+Consumers of Backend.market_intelligence (modern):
+  market_intelligence/session_engine.py -> Backend.market_intelligence.market_state_engine
+
+--- Strategy Flow ---

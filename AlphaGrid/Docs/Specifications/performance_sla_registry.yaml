@@ -1,0 +1,44 @@
+# AlphaGrid Performance & Validation SLA Registry
+# Maps capabilities to their strict institutional contracts.
+
+slas:
+  ftr-macd-generator:
+    latency_class: "normal"
+    expected_latency_ms: 15
+    expected_memory_mb: 20
+    throughput_bars_per_sec: 1000000
+    replay_required: true
+    robustness_required: true
+    stress_required: true
+    determinism_required: true
+    
+  ftr-roc-generator:
+    latency_class: "normal"
+    expected_latency_ms: 10
+    expected_memory_mb: 15
+    throughput_bars_per_sec: 1000000
+    replay_required: true
+    robustness_required: true
+    stress_required: true
+    determinism_required: true
+
+  con-momentum-semantic:
+    latency_class: "normal"
+    expected_latency_ms: 10
+    expected_memory_mb: 15
+    throughput_bars_per_sec: 1000000
+    replay_required: true
+    robustness_required: true
+    stress_required: true
+    determinism_required: true
+
+  # Defaults applied if capability is not explicitly listed
+  default:
+    latency_class: "standard"
+    expected_latency_ms: 100
+    expected_memory_mb: 100
+    throughput_bars_per_sec: 100000
+    replay_required: true
+    robustness_required: false
+    stress_required: false
+    determinism_required: true

@@ -58,8 +58,9 @@ class WalkForwardEngine:
         # Validate embargo against strategy's declared max_label_horizon.
         # Hard-fail if the configured embargo is insufficient for the strategy's
         # actual lookahead window — prevents silent label leakage.
-        strategy_cls = STRATEGY_REGISTRY.get_strategy(base_experiment.strategy_id)
-        required_horizon = strategy_cls.max_label_horizon()
+        from Backend.research.strategies.registry import StrategyRegistry
+        strategy_def = StrategyRegistry.get(base_experiment.strategy_id)
+        required_horizon = strategy_def.strategy_class.max_label_horizon()
         if embargo < required_horizon:
             raise ValueError(
                 f"embargo_period ({embargo}) is less than strategy "
@@ -117,7 +118,7 @@ class WalkForwardEngine:
     def _run_fold(self, base_exp: Experiment, storage_path: str, fold: Dict[str, Any]) -> Dict[str, Any]:
         """Runs the IS and OOS isolated backtests for a given fold."""
         # IS Backtest
-        is_engine = BacktestEngine()
+        is_engine = BacktestEngine(dataset_loader=self.dataset_loader.__class__())
         is_engine.execute(
             base_exp, 
             storage_path, 
@@ -125,7 +126,7 @@ class WalkForwardEngine:
             end_bound=fold["is_end"]
         )
         # OOS Backtest (Isolated instance, zero leakage)
-        oos_engine = BacktestEngine()
+        oos_engine = BacktestEngine(dataset_loader=self.dataset_loader.__class__())
         oos_engine.execute(
             base_exp, 
             storage_path, 

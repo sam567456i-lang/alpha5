@@ -15,29 +15,46 @@ from .donchian import Donchian20Feature
 from .keltner import KeltnerChannelFeature
 from .stochastic import StochasticFeature
 from .supertrend import SuperTrendFeature
-
+from .atr import ATRFeatureGenerator
+from .bollinger_bands import BollingerBandsFeatureGenerator
+from .high_low_breakout import HighLowBreakoutFeatureGenerator
+from .keltner_channels import KeltnerChannelFeatureGenerator
+from .rsi import RSIFeatureGenerator
+from .stochastic_generator import StochasticFeatureGenerator
+from .support_resistance import SupportResistanceFeatureGenerator
+from .volatility_breakout import VolatilityBreakoutFeatureGenerator
+from .vwap import VWAPFeatureGenerator
 __all__ = [
-    'AbstractFeature', 
-    'FeatureRegistry', 
-    'FeatureEngine', 
-    'FeatureCache',
-    'SMAFeature', 
-    'EMAFeature', 
-    'ROCFeature', 
-    'RSIFeature', 
-    'ATRFeature', 
-    'RelativeVolumeFeature',
-    'EMA12Feature',
-    'EMA26Feature',
-    'MACDLineFeature',
-    'MACDSignalFeature',
-    'MACDHistogramFeature',
-    'BollingerBandsFeature',
-    'BollingerMetricsFeature',
     'ADXFeature',
+    'ATRFeature',
+    'ATRFeatureGenerator',
+    'AbstractFeature',
+    'BollingerBandsFeature',
+    'BollingerBandsFeatureGenerator',
+    'BollingerMetricsFeature',
     'CCIFeature',
     'Donchian20Feature',
+    'EMA12Feature',
+    'EMA26Feature',
+    'EMAFeature',
+    'FeatureCache',
+    'FeatureEngine',
+    'FeatureRegistry',
+    'HighLowBreakoutFeatureGenerator',
     'KeltnerChannelFeature',
+    'KeltnerChannelFeatureGenerator',
+    'MACDHistogramFeature',
+    'MACDLineFeature',
+    'MACDSignalFeature',
+    'ROCFeature',
+    'RSIFeature',
+    'RSIFeatureGenerator',
+    'RelativeVolumeFeature',
+    'SMAFeature',
     'StochasticFeature',
-    'SuperTrendFeature'
+    'StochasticFeatureGenerator',
+    'SuperTrendFeature',
+    'SupportResistanceFeatureGenerator',
+    'VWAPFeatureGenerator',
+    'VolatilityBreakoutFeatureGenerator'
 ]

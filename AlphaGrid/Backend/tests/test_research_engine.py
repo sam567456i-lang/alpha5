@@ -15,8 +15,10 @@ from Backend.research.models.experiment import Experiment
 
 
 class MockStrategy(AbstractStrategy):
-    def __init__(self, parameters, random_generator):
+    instances = []
+    def __init__(self, parameters: dict, random_generator: Any, **kwargs):
         super().__init__(parameters, random_generator)
+        MockStrategy.instances.append(self)
         self.random_samples = []
         self.events_received = []
 
@@ -117,8 +119,30 @@ def _run_backtest(seed: int) -> MockStrategy:
     expected_hash = _get_expected_hash()
     
     from Backend.research.engine.strategy_interface import STRATEGY_REGISTRY
-    STRATEGY_REGISTRY._registry.clear()
-    STRATEGY_REGISTRY.register("MOCK", MockStrategy)
+    from Backend.research.strategies.definition import StrategyDefinition
+    from Backend.methodology.base import AbstractMethodology
+    from Backend.methodology.evaluation import MethodologyEvaluation
+    from datetime import datetime, timezone
+
+    class DummyMethodology(AbstractMethodology):
+        def __init__(self): pass
+        @classmethod
+        def get_name(cls): return "Dummy"
+        def evaluate(self, ctx): return MethodologyEvaluation("Dummy", datetime.now(timezone.utc), True, 1, 1.0)
+
+    from Backend.research.strategies.registry import StrategyRegistry as DefRegistry
+
+    if "MOCK" not in STRATEGY_REGISTRY._registry:
+        DefRegistry._definitions["MOCK"] = StrategyDefinition(
+            id="MOCK",
+            strategy_class=MockStrategy,
+            methodology=DummyMethodology,
+            features=[],
+            concepts=[],
+            primitive_signals=[],
+            parameters={}
+        )
+        STRATEGY_REGISTRY.register("MOCK", MockStrategy)
     
     exp = Experiment(
         id=uuid4(),
@@ -137,24 +161,8 @@ def _run_backtest(seed: int) -> MockStrategy:
     loader = DatasetLoader(duckdb_conn=mock_conn)
     engine = BacktestEngine(dataset_loader=loader)
     
-    # Instead of just returning the result, let's grab the actual strategy instance to verify state.
-    # To do this cleanly for a test, we can patch the strategy instantiation or capture it.
-    # Since StrategyRegistry creates it, let's fetch it via a class attribute hack for the test.
-    
-    strategy_instance = []
-    original_get = STRATEGY_REGISTRY.get_strategy
-    def patched_get(*args, **kwargs):
-        cls = original_get(*args, **kwargs)
-        def wrapper(*c_args, **c_kwargs):
-            inst = cls(*c_args, **c_kwargs)
-            strategy_instance.append(inst)
-            return inst
-        return wrapper
-        
-    STRATEGY_REGISTRY.get_strategy = patched_get
-    
     engine.execute(exp, "dummy.parquet")
-    return strategy_instance[0]
+    return MockStrategy.instances[-1]
 
 
 def test_backtest_engine_execution():

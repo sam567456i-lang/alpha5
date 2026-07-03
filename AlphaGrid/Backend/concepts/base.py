@@ -19,3 +19,4 @@ class Concept:
     confidence: float
     inputs: Dict[str, Any]
     generator: str
+    geometry_dependencies: list[str] = None

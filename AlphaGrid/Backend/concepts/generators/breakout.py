@@ -40,7 +40,7 @@ class BreakoutConceptGenerator(AbstractConceptGenerator):
     def get_required_features(self) -> List[str]:
         return [self.source]
 
-    def evaluate(self, timestamp: datetime, feature_values: Dict[str, Any]) -> Concept:
+    def evaluate(self, timestamp: datetime, feature_values: Dict[str, Any], geometry_cache: Any = None) -> Concept:
         feat = feature_values[self.source]
         
         upper = float(feat[self.upper_band_field])

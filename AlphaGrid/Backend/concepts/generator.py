@@ -27,13 +27,14 @@ class AbstractConceptGenerator(ABC):
         return []
 
     @abstractmethod
-    def evaluate(self, timestamp: datetime, feature_values: Dict[str, Any]) -> Concept:
+    def evaluate(self, timestamp: datetime, feature_values: Dict[str, Any], geometry_cache: Any = None) -> Concept:
         """
-        Evaluates the concept based on feature inputs.
+        Evaluates the concept based on feature inputs and geometry.
         
         Args:
             timestamp: The timestamp of the current event.
             feature_values: Dictionary of feature values.
+            geometry_cache: Geometry cache containing geometric objects.
             
         Returns:
             An immutable Concept object.

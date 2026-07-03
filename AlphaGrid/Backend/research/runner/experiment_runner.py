@@ -108,7 +108,7 @@ class ExperimentRunner:
             slippage_model={"type": "fixed", "bps": 5},
             walkforward_config={"min_training_period": 30, "min_testing_period": 7, "step_size": 7},
             mc_config={"n_simulations": 100},
-            strategy_config={"name": "TREND_FOLLOWING"},
+            strategy_config={"name": "STRAT-RSI-001"},
             provider_config={"type": "rule"},
             seed=42
         )

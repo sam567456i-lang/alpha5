@@ -1,0 +1,2115 @@
+{
+  "module_deps": {
+    "ai.inference": [
+      "Backend.research.experiments.experiment"
+    ],
+    "ai.trainer": [
+      "Backend.research.experiments.experiment"
+    ],
+    "api.app": [
+      "Backend.api.exceptions",
+      "Backend.api.websocket",
+      "Backend.api.routers",
+      "Backend.api.middleware"
+    ],
+    "api.middleware": [
+      "Backend.foundation.logger"
+    ],
+    "api.routers.ai": [
+      "Backend.api.services.ai_service",
+      "Backend.api.responses"
+    ],
+    "api.routers.dashboard": [
+      "Backend.api.services.dashboard_service",
+      "Backend.api.responses"
+    ],
+    "api.routers.features": [
+      "Backend.api.services.features_service",
+      "Backend.api.responses"
+    ],
+    "api.routers.market": [
+      "Backend.api.services.market_service",
+      "Backend.api.responses"
+    ],
+    "api.routers.options": [
+      "Backend.api.services.options_service",
+      "Backend.api.responses"
+    ],
+    "api.routers.portfolio": [
+      "Backend.api.exceptions",
+      "Backend.api.services.portfolio_service",
+      "Backend.api.responses"
+    ],
+    "api.routers.recommendations": [
+      "Backend.api.exceptions",
+      "Backend.api.services.recommendations_service",
+      "Backend.api.dependencies",
+      "Backend.api.responses"
+    ],
+    "api.routers.reports": [
+      "Backend.api.exceptions",
+      "Backend.api.services.reports_service",
+      "Backend.api.dependencies",
+      "Backend.api.responses"
+    ],
+    "api.routers.research": [
+      "Backend.api.services.research_service",
+      "Backend.api.dependencies",
+      "Backend.api.responses"
+    ],
+    "api.routers.strategies": [
+      "Backend.api.exceptions",
+      "Backend.api.services.strategies_service",
+      "Backend.api.responses"
+    ],
+    "api.routers.system": [
+      "Backend.api.services.system_service",
+      "Backend.api.responses"
+    ],
+    "api.services.market_service": [
+      "Backend.market.providers.yahoo",
+      "Backend.market"
+    ],
+    "api.services.research_service": [
+      "Backend.research.engine.validators"
+    ],
+    "cli.run_experiment": [
+      "Backend.research.runner.experiment_runner"
+    ],
+    "concepts.core.contracts": [
+      "Backend.price_geometry.graph.geometry_graph"
+    ],
+    "concepts.core.lifecycle": [
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.objects"
+    ],
+    "concepts.core.objects": [
+      "Backend.price_geometry.objects"
+    ],
+    "concepts.core.provenance": [
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.graph.provenance"
+    ],
+    "concepts.core.registry": [
+      "Backend.concepts.core.contracts",
+      "Backend.foundation.base_registry"
+    ],
+    "concepts.engines.price_action_engine": [
+      "Backend.concepts.core.contracts",
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "concepts.engines.smc_engine": [
+      "Backend.concepts.core.contracts",
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "concepts.generators.breakout": [
+      "Backend.concepts.generator",
+      "Backend.concepts.base"
+    ],
+    "concepts.generators.extremum": [
+      "Backend.concepts.generator",
+      "Backend.concepts.base"
+    ],
+    "concepts.generators.momentum": [
+      "Backend.concepts.generator",
+      "Backend.concepts.base"
+    ],
+    "concepts.generators.strength": [
+      "Backend.concepts.generator",
+      "Backend.concepts.base"
+    ],
+    "concepts.generators.trend": [
+      "Backend.concepts.generator",
+      "Backend.concepts.base"
+    ],
+    "concepts.generators.volatility": [
+      "Backend.concepts.generator",
+      "Backend.concepts.base"
+    ],
+    "concepts.generators.volume": [
+      "Backend.concepts.generator",
+      "Backend.concepts.base"
+    ],
+    "data.duckdb_manager": [
+      "Backend.foundation"
+    ],
+    "data.exceptions": [
+      "Backend.foundation"
+    ],
+    "data.integration": [
+      "Backend.foundation"
+    ],
+    "data.postgres": [
+      "Backend.foundation"
+    ],
+    "data.redis_cache": [
+      "Backend.foundation"
+    ],
+    "features.bollinger": [
+      "Backend.features.base"
+    ],
+    "features.donchian": [
+      "Backend.features.base"
+    ],
+    "features.macd": [
+      "Backend.features.trend",
+      "Backend.features.base"
+    ],
+    "features.relative_volume": [
+      "Backend.features.base"
+    ],
+    "market_intelligence.data_quality_gate": [
+      "Backend.foundation.exceptions"
+    ],
+    "market_intelligence.normalization_engine": [
+      "Backend.foundation.exceptions",
+      "Backend.foundation.logger"
+    ],
+    "market_intelligence.session_engine": [
+      "Backend.market_intelligence.market_state_engine"
+    ],
+    "market_intelligence.symbol_metadata_registry": [
+      "Backend.foundation.base_registry"
+    ],
+    "methodology.base": [
+      "Backend.signals.primitive.context"
+    ],
+    "methodology.breakout": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.composite": [
+      "Backend.methodology.voting",
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.engine": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.mean_reversion": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.momentum": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.reversal": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.trend_following": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.volatility": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.volume_analysis": [
+      "Backend.signals.primitive.context",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation"
+    ],
+    "methodology.voting": [
+      "Backend.methodology.evaluation"
+    ],
+    "price_geometry.conflict_engine": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.events": [
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.imbalance_engine": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.liquidity_engine": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.registry": [
+      "Backend.price_geometry.contracts",
+      "Backend.foundation.base_registry"
+    ],
+    "price_geometry.store": [
+      "Backend.foundation.base_registry",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.structure_engine": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.swing_engine": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.zone_engine": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.graph.geometry_graph": [
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.graph.incremental_updater": [
+      "Backend.price_geometry.events",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.graph.provenance": [
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry.graph.snapshot_service": [
+      "Backend.price_geometry.graph.geometry_graph"
+    ],
+    "research.decision.base": [
+      "Backend.methodology.signals"
+    ],
+    "research.decision.ml_provider": [
+      "Backend.research.decision.base",
+      "Backend.research.experiments.experiment",
+      "Backend.methodology.signals",
+      "Backend.ai.inference"
+    ],
+    "research.decision.rule_provider": [
+      "Backend.methodology.signals"
+    ],
+    "research.engine.backtest": [
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.models.result",
+      "Backend.research.strategies.registry",
+      "Backend.research.strategies.factory"
+    ],
+    "research.engine.monte_carlo": [
+      "Backend.research.engine.backtest",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader"
+    ],
+    "research.engine.replay": [
+      "Backend.research.engine.dataset_loader"
+    ],
+    "research.engine.signal_engine": [
+      "Backend.methodology.signals",
+      "Backend.methodology.evaluation"
+    ],
+    "research.engine.validators": [
+      "Backend.research.engine.strategy_interface"
+    ],
+    "research.engine.walkforward": [
+      "Backend.research.engine.backtest",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader"
+    ],
+    "research.evaluation.evaluator": [
+      "Backend.research.evaluation.metrics",
+      "Backend.research.evaluation.report",
+      "Backend.research.evaluation.policy"
+    ],
+    "research.evaluation.metrics": [
+      "Backend.research.evaluation.report"
+    ],
+    "research.evaluation.policy": [
+      "Backend.research.evaluation.report"
+    ],
+    "research.evaluation.promotion": [
+      "Backend.research.evaluation.registry",
+      "Backend.research.experiments.registry",
+      "Backend.research.evaluation.report"
+    ],
+    "research.evaluation.registry": [
+      "Backend.research.evaluation.report"
+    ],
+    "research.repository.interfaces": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.models.result"
+    ],
+    "research.repository.memory": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.models.result"
+    ],
+    "research.runner.experiment_runner": [
+      "Backend.research.experiments.experiment",
+      "Backend.research.experiments.registry",
+      "Backend.research.engine.walkforward",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.engine.backtest",
+      "Backend.research.strategies"
+    ],
+    "research.strategies.base_research_strategy": [
+      "Backend.features.registry",
+      "Backend.concepts.engine",
+      "Backend.methodology.base",
+      "Backend.research.engine.strategy_interface",
+      "Backend.methodology.engine",
+      "Backend.signals.primitive.engine",
+      "Backend.concepts.generator",
+      "Backend.signals.primitive.context",
+      "Backend.research.engine.signal_engine",
+      "Backend.research.decision.rule_provider",
+      "Backend.concepts.registry",
+      "Backend.features.engine",
+      "Backend.signals.primitive.base",
+      "Backend.features.base"
+    ],
+    "research.strategies.config": [
+      "Backend.concepts.generator",
+      "Backend.features.base",
+      "Backend.signals.primitive.base",
+      "Backend.methodology.base"
+    ],
+    "research.strategies.definition": [
+      "Backend.methodology.base",
+      "Backend.concepts.generator",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.features.base",
+      "Backend.signals.primitive.base"
+    ],
+    "research.strategies.ema_cross": [
+      "Backend.research.engine.strategy_interface"
+    ],
+    "research.strategies.factory": [
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.config"
+    ],
+    "research.strategies.registry": [
+      "Backend.research.strategies.definition"
+    ],
+    "research.strategies.definitions.bollinger_reversion": [
+      "Backend.research.strategies.definition",
+      "Backend.concepts.generators.volatility",
+      "Backend.features.bollinger",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.concepts.generators.extremum",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion"
+    ],
+    "research.strategies.definitions.cci_reversion": [
+      "Backend.research.strategies.definition",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.concepts.generators.extremum",
+      "Backend.features.cci",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion"
+    ],
+    "research.strategies.definitions.donchian_trend": [
+      "Backend.research.strategies.definition",
+      "Backend.methodology.trend_following",
+      "Backend.features.donchian",
+      "Backend.concepts.generators.trend",
+      "Backend.signals.primitive.generators.trend",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research.strategies.definitions.ema_cross": [
+      "Backend.research.strategies.definition",
+      "Backend.features.trend",
+      "Backend.methodology.trend_following",
+      "Backend.concepts.generators.trend",
+      "Backend.signals.primitive.generators.trend",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research.strategies.definitions.exhaustion_reversal": [
+      "Backend.research.strategies.definition",
+      "Backend.concepts.generators.volatility",
+      "Backend.features.bollinger",
+      "Backend.features.volatility",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.signals.primitive.generators.momentum",
+      "Backend.concepts.generators.extremum",
+      "Backend.methodology.reversal",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.features.momentum"
+    ],
+    "research.strategies.definitions.keltner_reversion": [
+      "Backend.research.strategies.definition",
+      "Backend.features.volatility",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.concepts.generators.extremum",
+      "Backend.features.keltner",
+      "Backend.features.trend",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion"
+    ],
+    "research.strategies.definitions.macd_momentum": [
+      "Backend.research.strategies.definition",
+      "Backend.signals.primitive.generators.momentum",
+      "Backend.concepts.generators.momentum",
+      "Backend.features.macd",
+      "Backend.methodology.momentum",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research.strategies.definitions.relative_volume_surge": [
+      "Backend.research.strategies.definition",
+      "Backend.methodology.volume_analysis",
+      "Backend.signals.primitive.generators.momentum",
+      "Backend.concepts.generators.momentum",
+      "Backend.features.macd",
+      "Backend.signals.primitive.generators.volume",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.concepts.generators.volume",
+      "Backend.features.relative_volume"
+    ],
+    "research.strategies.definitions.roc_momentum": [
+      "Backend.research.strategies.definition",
+      "Backend.signals.primitive.generators.momentum",
+      "Backend.concepts.generators.momentum",
+      "Backend.methodology.momentum",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.features.momentum"
+    ],
+    "research.strategies.definitions.rsi_reversion": [
+      "Backend.research.strategies.definition",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.concepts.generators.extremum",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.features.momentum",
+      "Backend.methodology.mean_reversion"
+    ],
+    "research.strategies.definitions.sma_cross": [
+      "Backend.research.strategies.definition",
+      "Backend.features.trend",
+      "Backend.methodology.trend_following",
+      "Backend.concepts.generators.trend",
+      "Backend.signals.primitive.generators.trend",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research.strategies.definitions.stochastic_exhaustion": [
+      "Backend.research.strategies.definition",
+      "Backend.features.stochastic",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.signals.primitive.generators.momentum",
+      "Backend.concepts.generators.extremum",
+      "Backend.methodology.reversal",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research.strategies.definitions.stochastic_momentum": [
+      "Backend.research.strategies.definition",
+      "Backend.features.stochastic",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.momentum",
+      "Backend.methodology.momentum",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research.strategies.definitions.stochastic_reversion": [
+      "Backend.research.strategies.definition",
+      "Backend.features.stochastic",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.concepts.generators.extremum",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion"
+    ],
+    "research.strategies.definitions.supertrend_cross": [
+      "Backend.research.strategies.definition",
+      "Backend.features.supertrend",
+      "Backend.concepts.generators.strength",
+      "Backend.methodology.trend_following",
+      "Backend.concepts.generators.trend",
+      "Backend.signals.primitive.generators.trend",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.features.adx"
+    ],
+    "research.strategies.definitions.volatility_expansion": [
+      "Backend.research.strategies.definition",
+      "Backend.concepts.generators.volatility",
+      "Backend.features.bollinger",
+      "Backend.signals.primitive.generators.momentum",
+      "Backend.concepts.generators.momentum",
+      "Backend.methodology.volatility",
+      "Backend.signals.primitive.generators.volatility",
+      "Backend.features.macd",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "signals.primitive.base": [
+      "Backend.concepts.base"
+    ],
+    "signals.primitive.context": [
+      "Backend.signals.primitive.base"
+    ],
+    "signals.primitive.engine": [
+      "Backend.signals.primitive.base",
+      "Backend.concepts.base"
+    ],
+    "signals.primitive.generators.breakout": [
+      "Backend.signals.primitive.base",
+      "Backend.concepts.base"
+    ],
+    "signals.primitive.generators.extremum": [
+      "Backend.signals.primitive.base",
+      "Backend.concepts.base"
+    ],
+    "signals.primitive.generators.momentum": [
+      "Backend.signals.primitive.base",
+      "Backend.concepts.base"
+    ],
+    "signals.primitive.generators.trend": [
+      "Backend.signals.primitive.base",
+      "Backend.concepts.base"
+    ],
+    "signals.primitive.generators.volatility": [
+      "Backend.signals.primitive.base",
+      "Backend.concepts.base"
+    ],
+    "signals.primitive.generators.volume": [
+      "Backend.signals.primitive.base",
+      "Backend.concepts.base"
+    ],
+    "tests.test_api": [
+      "Backend.api.websocket.hub",
+      "Backend.research.strategies.definition",
+      "Backend.methodology.base",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.strategies.registry",
+      "Backend.api.app",
+      "Backend.methodology.evaluation"
+    ],
+    "tests.test_composite_methodology": [
+      "Backend.methodology.base",
+      "Backend.signals.primitive.context",
+      "Backend.methodology.composite",
+      "Backend.methodology.evaluation",
+      "Backend.methodology.voting"
+    ],
+    "tests.test_database": [
+      "Backend.foundation",
+      "Backend.data"
+    ],
+    "tests.test_e2e_workflows": [
+      "Backend.research.engine.walkforward",
+      "Backend.research.strategies.definition",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader",
+      "Backend.methodology.base",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.strategies.ema_cross",
+      "Backend.research.strategies.registry",
+      "Backend.research.engine.monte_carlo",
+      "Backend.research.engine.replay",
+      "Backend.research.strategies",
+      "Backend.methodology.evaluation"
+    ],
+    "tests.test_engine_advanced": [
+      "Backend.research.strategies.definition",
+      "Backend.methodology.base",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.engine.backtest",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.strategies.registry",
+      "Backend.methodology.evaluation"
+    ],
+    "tests.test_engine_slice2b": [
+      "Backend.research.engine.walkforward",
+      "Backend.research.strategies.definition",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader",
+      "Backend.methodology.base",
+      "Backend.research.engine.strategy_interface",
+      "Backend.api.services.research_service",
+      "Backend.research.strategies.registry",
+      "Backend.research.engine.monte_carlo",
+      "Backend.research.engine.validators",
+      "Backend.research.engine.replay",
+      "Backend.methodology.evaluation"
+    ],
+    "tests.test_foundation": [
+      "Backend.foundation"
+    ],
+    "tests.test_market": [
+      "Backend.market.normalizer",
+      "Backend.market.live_quotes",
+      "Backend.market.providers.base",
+      "Backend.market.providers.mock",
+      "Backend.market.regime",
+      "Backend.market.session",
+      "Backend.market.instruments",
+      "Backend.market.breadth",
+      "Backend.market.validator",
+      "Backend.market.ohlcv",
+      "Backend.market.connector_manager"
+    ],
+    "tests.test_research_engine": [
+      "Backend.research.strategies.definition",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.dataset_loader",
+      "Backend.methodology.base",
+      "Backend.research.engine.backtest",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.strategies.registry",
+      "Backend.methodology.evaluation"
+    ],
+    "tests.test_research_models": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.models.result"
+    ],
+    "tests.test_research_repository": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.repository.memory",
+      "Backend.research.models.result"
+    ]
+  },
+  "file_deps": {
+    "ai/inference.py": [
+      "Backend.research.experiments.experiment"
+    ],
+    "ai/trainer.py": [
+      "Backend.research.experiments.experiment"
+    ],
+    "api/app.py": [
+      "Backend.api.exceptions",
+      "Backend.api.middleware",
+      "Backend.api.routers",
+      "Backend.api.websocket"
+    ],
+    "api/middleware.py": [
+      "Backend.foundation.logger"
+    ],
+    "api/routers/ai.py": [
+      "Backend.api.responses",
+      "Backend.api.services.ai_service"
+    ],
+    "api/routers/dashboard.py": [
+      "Backend.api.responses",
+      "Backend.api.services.dashboard_service"
+    ],
+    "api/routers/features.py": [
+      "Backend.api.responses",
+      "Backend.api.services.features_service"
+    ],
+    "api/routers/market.py": [
+      "Backend.api.responses",
+      "Backend.api.services.market_service"
+    ],
+    "api/routers/options.py": [
+      "Backend.api.responses",
+      "Backend.api.services.options_service"
+    ],
+    "api/routers/portfolio.py": [
+      "Backend.api.exceptions",
+      "Backend.api.responses",
+      "Backend.api.services.portfolio_service"
+    ],
+    "api/routers/recommendations.py": [
+      "Backend.api.dependencies",
+      "Backend.api.exceptions",
+      "Backend.api.responses",
+      "Backend.api.services.recommendations_service"
+    ],
+    "api/routers/reports.py": [
+      "Backend.api.dependencies",
+      "Backend.api.exceptions",
+      "Backend.api.responses",
+      "Backend.api.services.reports_service"
+    ],
+    "api/routers/research.py": [
+      "Backend.api.dependencies",
+      "Backend.api.responses",
+      "Backend.api.services.research_service"
+    ],
+    "api/routers/strategies.py": [
+      "Backend.api.exceptions",
+      "Backend.api.responses",
+      "Backend.api.services.strategies_service"
+    ],
+    "api/routers/system.py": [
+      "Backend.api.responses",
+      "Backend.api.services.system_service"
+    ],
+    "api/services/market_service.py": [
+      "Backend.market",
+      "Backend.market.providers.yahoo"
+    ],
+    "api/services/research_service.py": [
+      "Backend.research.engine.validators"
+    ],
+    "cli/run_experiment.py": [
+      "Backend.research.runner.experiment_runner"
+    ],
+    "concepts/core/contracts.py": [
+      "Backend.price_geometry.graph.geometry_graph"
+    ],
+    "concepts/core/lifecycle.py": [
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.objects"
+    ],
+    "concepts/core/objects.py": [
+      "Backend.price_geometry.objects"
+    ],
+    "concepts/core/provenance.py": [
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.graph.provenance"
+    ],
+    "concepts/core/registry.py": [
+      "Backend.foundation.base_registry",
+      "Backend.concepts.core.contracts"
+    ],
+    "concepts/engines/price_action_engine.py": [
+      "Backend.concepts.core.contracts",
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "concepts/engines/smc_engine.py": [
+      "Backend.concepts.core.contracts",
+      "Backend.concepts.core.objects",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "concepts/generators/breakout.py": [
+      "Backend.concepts.base",
+      "Backend.concepts.generator"
+    ],
+    "concepts/generators/extremum.py": [
+      "Backend.concepts.base",
+      "Backend.concepts.generator"
+    ],
+    "concepts/generators/momentum.py": [
+      "Backend.concepts.base",
+      "Backend.concepts.generator"
+    ],
+    "concepts/generators/strength.py": [
+      "Backend.concepts.base",
+      "Backend.concepts.generator"
+    ],
+    "concepts/generators/trend.py": [
+      "Backend.concepts.base",
+      "Backend.concepts.generator"
+    ],
+    "concepts/generators/volatility.py": [
+      "Backend.concepts.base",
+      "Backend.concepts.generator"
+    ],
+    "concepts/generators/volume.py": [
+      "Backend.concepts.base",
+      "Backend.concepts.generator"
+    ],
+    "data/duckdb_manager.py": [
+      "Backend.foundation"
+    ],
+    "data/exceptions.py": [
+      "Backend.foundation"
+    ],
+    "data/integration.py": [
+      "Backend.foundation"
+    ],
+    "data/postgres.py": [
+      "Backend.foundation"
+    ],
+    "data/redis_cache.py": [
+      "Backend.foundation"
+    ],
+    "features/bollinger.py": [
+      "Backend.features.base"
+    ],
+    "features/donchian.py": [
+      "Backend.features.base"
+    ],
+    "features/macd.py": [
+      "Backend.features.base",
+      "Backend.features.trend"
+    ],
+    "features/relative_volume.py": [
+      "Backend.features.base"
+    ],
+    "market_intelligence/data_quality_gate.py": [
+      "Backend.foundation.exceptions"
+    ],
+    "market_intelligence/normalization_engine.py": [
+      "Backend.foundation.exceptions",
+      "Backend.foundation.logger"
+    ],
+    "market_intelligence/session_engine.py": [
+      "Backend.market_intelligence.market_state_engine"
+    ],
+    "market_intelligence/symbol_metadata_registry.py": [
+      "Backend.foundation.base_registry"
+    ],
+    "methodology/base.py": [
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/breakout.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/composite.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.methodology.voting",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/engine.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/mean_reversion.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/momentum.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/reversal.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/trend_following.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/volatility.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/volume_analysis.py": [
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "methodology/voting.py": [
+      "Backend.methodology.evaluation"
+    ],
+    "price_geometry/conflict_engine.py": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/events.py": [
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/imbalance_engine.py": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/liquidity_engine.py": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/registry.py": [
+      "Backend.foundation.base_registry",
+      "Backend.price_geometry.contracts"
+    ],
+    "price_geometry/store.py": [
+      "Backend.price_geometry.objects",
+      "Backend.foundation.base_registry"
+    ],
+    "price_geometry/structure_engine.py": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/swing_engine.py": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/zone_engine.py": [
+      "Backend.price_geometry.contracts",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/graph/geometry_graph.py": [
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/graph/incremental_updater.py": [
+      "Backend.price_geometry.events",
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/graph/provenance.py": [
+      "Backend.price_geometry.graph.geometry_graph",
+      "Backend.price_geometry.objects"
+    ],
+    "price_geometry/graph/snapshot_service.py": [
+      "Backend.price_geometry.graph.geometry_graph"
+    ],
+    "research/decision/base.py": [
+      "Backend.methodology.signals"
+    ],
+    "research/decision/ml_provider.py": [
+      "Backend.methodology.signals",
+      "Backend.research.decision.base",
+      "Backend.research.experiments.experiment",
+      "Backend.ai.inference"
+    ],
+    "research/decision/rule_provider.py": [
+      "Backend.methodology.signals"
+    ],
+    "research/engine/backtest.py": [
+      "Backend.research.models.experiment",
+      "Backend.research.models.result",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.strategies.registry",
+      "Backend.research.strategies.factory"
+    ],
+    "research/engine/monte_carlo.py": [
+      "Backend.research.engine.backtest",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.models.experiment"
+    ],
+    "research/engine/replay.py": [
+      "Backend.research.engine.dataset_loader"
+    ],
+    "research/engine/signal_engine.py": [
+      "Backend.methodology.evaluation",
+      "Backend.methodology.signals"
+    ],
+    "research/engine/validators.py": [
+      "Backend.research.engine.strategy_interface"
+    ],
+    "research/engine/walkforward.py": [
+      "Backend.research.engine.backtest",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.models.experiment"
+    ],
+    "research/evaluation/evaluator.py": [
+      "Backend.research.evaluation.report",
+      "Backend.research.evaluation.metrics",
+      "Backend.research.evaluation.policy"
+    ],
+    "research/evaluation/metrics.py": [
+      "Backend.research.evaluation.report"
+    ],
+    "research/evaluation/policy.py": [
+      "Backend.research.evaluation.report"
+    ],
+    "research/evaluation/promotion.py": [
+      "Backend.research.evaluation.report",
+      "Backend.research.evaluation.registry",
+      "Backend.research.experiments.registry"
+    ],
+    "research/evaluation/registry.py": [
+      "Backend.research.evaluation.report"
+    ],
+    "research/repository/interfaces.py": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.models.result"
+    ],
+    "research/repository/memory.py": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.models.result"
+    ],
+    "research/runner/experiment_runner.py": [
+      "Backend.research.models.experiment",
+      "Backend.research.experiments.experiment",
+      "Backend.research.experiments.registry",
+      "Backend.research.engine.backtest",
+      "Backend.research.engine.walkforward",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.strategies"
+    ],
+    "research/strategies/base_research_strategy.py": [
+      "Backend.research.engine.strategy_interface",
+      "Backend.features.engine",
+      "Backend.features.registry",
+      "Backend.features.base",
+      "Backend.concepts.engine",
+      "Backend.concepts.registry",
+      "Backend.concepts.generator",
+      "Backend.signals.primitive.engine",
+      "Backend.signals.primitive.base",
+      "Backend.signals.primitive.context",
+      "Backend.methodology.engine",
+      "Backend.methodology.base",
+      "Backend.research.engine.signal_engine",
+      "Backend.research.decision.rule_provider"
+    ],
+    "research/strategies/config.py": [
+      "Backend.features.base",
+      "Backend.concepts.generator",
+      "Backend.methodology.base",
+      "Backend.signals.primitive.base"
+    ],
+    "research/strategies/definition.py": [
+      "Backend.features.base",
+      "Backend.methodology.base",
+      "Backend.concepts.generator",
+      "Backend.signals.primitive.base",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research/strategies/ema_cross.py": [
+      "Backend.research.engine.strategy_interface"
+    ],
+    "research/strategies/factory.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.config",
+      "Backend.research.strategies.base_research_strategy"
+    ],
+    "research/strategies/registry.py": [
+      "Backend.research.strategies.definition"
+    ],
+    "research/strategies/definitions/bollinger_reversion.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion",
+      "Backend.features.bollinger",
+      "Backend.concepts.generators.extremum",
+      "Backend.concepts.generators.volatility",
+      "Backend.signals.primitive.generators.extremum"
+    ],
+    "research/strategies/definitions/cci_reversion.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion",
+      "Backend.features.cci",
+      "Backend.concepts.generators.extremum",
+      "Backend.signals.primitive.generators.extremum"
+    ],
+    "research/strategies/definitions/donchian_trend.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.trend_following",
+      "Backend.features.donchian",
+      "Backend.concepts.generators.trend",
+      "Backend.signals.primitive.generators.trend"
+    ],
+    "research/strategies/definitions/ema_cross.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.trend_following",
+      "Backend.features.trend",
+      "Backend.concepts.generators.trend",
+      "Backend.signals.primitive.generators.trend"
+    ],
+    "research/strategies/definitions/exhaustion_reversal.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.reversal",
+      "Backend.features.momentum",
+      "Backend.features.bollinger",
+      "Backend.features.volatility",
+      "Backend.concepts.generators.extremum",
+      "Backend.concepts.generators.volatility",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.signals.primitive.generators.momentum"
+    ],
+    "research/strategies/definitions/keltner_reversion.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion",
+      "Backend.features.keltner",
+      "Backend.features.trend",
+      "Backend.features.volatility",
+      "Backend.concepts.generators.extremum",
+      "Backend.signals.primitive.generators.extremum"
+    ],
+    "research/strategies/definitions/macd_momentum.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.momentum",
+      "Backend.features.macd",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.momentum"
+    ],
+    "research/strategies/definitions/relative_volume_surge.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.volume_analysis",
+      "Backend.features.relative_volume",
+      "Backend.features.macd",
+      "Backend.concepts.generators.volume",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.volume",
+      "Backend.signals.primitive.generators.momentum"
+    ],
+    "research/strategies/definitions/roc_momentum.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.momentum",
+      "Backend.features.momentum",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.momentum"
+    ],
+    "research/strategies/definitions/rsi_reversion.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion",
+      "Backend.features.momentum",
+      "Backend.concepts.generators.extremum",
+      "Backend.signals.primitive.generators.extremum"
+    ],
+    "research/strategies/definitions/sma_cross.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.trend_following",
+      "Backend.features.trend",
+      "Backend.concepts.generators.trend",
+      "Backend.signals.primitive.generators.trend"
+    ],
+    "research/strategies/definitions/stochastic_exhaustion.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.reversal",
+      "Backend.features.stochastic",
+      "Backend.concepts.generators.extremum",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.extremum",
+      "Backend.signals.primitive.generators.momentum"
+    ],
+    "research/strategies/definitions/stochastic_momentum.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.momentum",
+      "Backend.features.stochastic",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.momentum"
+    ],
+    "research/strategies/definitions/stochastic_reversion.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.mean_reversion",
+      "Backend.features.stochastic",
+      "Backend.concepts.generators.extremum",
+      "Backend.signals.primitive.generators.extremum"
+    ],
+    "research/strategies/definitions/supertrend_cross.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.trend_following",
+      "Backend.features.supertrend",
+      "Backend.features.adx",
+      "Backend.concepts.generators.trend",
+      "Backend.concepts.generators.strength",
+      "Backend.signals.primitive.generators.trend"
+    ],
+    "research/strategies/definitions/volatility_expansion.py": [
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.base_research_strategy",
+      "Backend.methodology.volatility",
+      "Backend.features.bollinger",
+      "Backend.features.macd",
+      "Backend.concepts.generators.volatility",
+      "Backend.concepts.generators.momentum",
+      "Backend.signals.primitive.generators.volatility",
+      "Backend.signals.primitive.generators.momentum"
+    ],
+    "signals/primitive/base.py": [
+      "Backend.concepts.base"
+    ],
+    "signals/primitive/context.py": [
+      "Backend.signals.primitive.base"
+    ],
+    "signals/primitive/engine.py": [
+      "Backend.concepts.base",
+      "Backend.signals.primitive.base"
+    ],
+    "signals/primitive/generators/breakout.py": [
+      "Backend.concepts.base",
+      "Backend.signals.primitive.base"
+    ],
+    "signals/primitive/generators/extremum.py": [
+      "Backend.concepts.base",
+      "Backend.signals.primitive.base"
+    ],
+    "signals/primitive/generators/momentum.py": [
+      "Backend.concepts.base",
+      "Backend.signals.primitive.base"
+    ],
+    "signals/primitive/generators/trend.py": [
+      "Backend.concepts.base",
+      "Backend.signals.primitive.base"
+    ],
+    "signals/primitive/generators/volatility.py": [
+      "Backend.concepts.base",
+      "Backend.signals.primitive.base"
+    ],
+    "signals/primitive/generators/volume.py": [
+      "Backend.concepts.base",
+      "Backend.signals.primitive.base"
+    ],
+    "tests/test_api.py": [
+      "Backend.api.app",
+      "Backend.research.strategies.registry",
+      "Backend.research.strategies.definition",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.engine.strategy_interface",
+      "Backend.api.websocket.hub",
+      "Backend.api.websocket.hub"
+    ],
+    "tests/test_composite_methodology.py": [
+      "Backend.methodology.composite",
+      "Backend.methodology.voting",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.signals.primitive.context"
+    ],
+    "tests/test_database.py": [
+      "Backend.data",
+      "Backend.foundation"
+    ],
+    "tests/test_e2e_workflows.py": [
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.engine.walkforward",
+      "Backend.research.engine.monte_carlo",
+      "Backend.research.engine.replay",
+      "Backend.research.strategies.ema_cross",
+      "Backend.research.models.experiment",
+      "Backend.research.strategies.definition",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.research.strategies.registry",
+      "Backend.research.strategies"
+    ],
+    "tests/test_engine_advanced.py": [
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.engine.backtest",
+      "Backend.research.models.experiment",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.research.strategies.definition",
+      "Backend.research.strategies.registry"
+    ],
+    "tests/test_engine_slice2b.py": [
+      "Backend.research.engine.validators",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.engine.walkforward",
+      "Backend.research.engine.monte_carlo",
+      "Backend.research.engine.replay",
+      "Backend.api.services.research_service",
+      "Backend.research.models.experiment",
+      "Backend.research.strategies.definition",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.research.strategies.registry"
+    ],
+    "tests/test_foundation.py": [
+      "Backend.foundation"
+    ],
+    "tests/test_market.py": [
+      "Backend.market.breadth",
+      "Backend.market.connector_manager",
+      "Backend.market.instruments",
+      "Backend.market.live_quotes",
+      "Backend.market.normalizer",
+      "Backend.market.ohlcv",
+      "Backend.market.providers.base",
+      "Backend.market.providers.mock",
+      "Backend.market.regime",
+      "Backend.market.session",
+      "Backend.market.validator",
+      "Backend.market.providers.base"
+    ],
+    "tests/test_research_engine.py": [
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.engine.dataset_loader",
+      "Backend.research.engine.backtest",
+      "Backend.research.models.experiment",
+      "Backend.research.engine.strategy_interface",
+      "Backend.research.strategies.definition",
+      "Backend.methodology.base",
+      "Backend.methodology.evaluation",
+      "Backend.research.strategies.registry"
+    ],
+    "tests/test_research_models.py": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.models.result"
+    ],
+    "tests/test_research_repository.py": [
+      "Backend.research.models.dataset",
+      "Backend.research.models.experiment",
+      "Backend.research.models.result",
+      "Backend.research.repository.memory"
+    ]
+  },
+  "classes": {
+    "ai/base_model.py": [
+      "AbstractAIModel"
+    ],
+    "ai/compute_manager.py": [
+      "ComputeManager"
+    ],
+    "ai/inference.py": [
+      "InferenceEngine"
+    ],
+    "ai/trainer.py": [
+      "TrainingResult",
+      "Trainer"
+    ],
+    "api/dependencies.py": [
+      "PaginationParams"
+    ],
+    "api/exceptions.py": [
+      "APIError",
+      "APIValidationError",
+      "APINotFoundError",
+      "APIForbiddenError",
+      "APIConflictError",
+      "APIRateLimitError",
+      "APIMarketClosedError"
+    ],
+    "api/middleware.py": [
+      "RequestTimingMiddleware",
+      "StructuredLoggingMiddleware"
+    ],
+    "api/routers/dashboard.py": [
+      "SaveLayoutBody"
+    ],
+    "api/routers/portfolio.py": [
+      "CreateTradeBody",
+      "UpdateTradeBody"
+    ],
+    "api/routers/reports.py": [
+      "GenerateReportBody"
+    ],
+    "api/routers/research.py": [
+      "BacktestBody",
+      "ReplayBody"
+    ],
+    "api/routers/strategies.py": [
+      "ValidateStrategyBody",
+      "BacktestBody"
+    ],
+    "api/services/ai_service.py": [
+      "AIService"
+    ],
+    "api/services/dashboard_service.py": [
+      "DashboardService"
+    ],
+    "api/services/features_service.py": [
+      "FeaturesService"
+    ],
+    "api/services/market_service.py": [
+      "MarketStatus",
+      "MarketService"
+    ],
+    "api/services/options_service.py": [
+      "OptionsService"
+    ],
+    "api/services/portfolio_service.py": [
+      "PortfolioService"
+    ],
+    "api/services/recommendations_service.py": [
+      "RecommendationsService"
+    ],
+    "api/services/reports_service.py": [
+      "ReportsService"
+    ],
+    "api/services/research_service.py": [
+      "ResearchService"
+    ],
+    "api/services/strategies_service.py": [
+      "StrategiesService"
+    ],
+    "api/services/system_service.py": [
+      "SystemService"
+    ],
+    "api/websocket/hub.py": [
+      "Channel",
+      "ConnectionHub"
+    ],
+    "concepts/base.py": [
+      "Concept"
+    ],
+    "concepts/engine.py": [
+      "ConceptEngine"
+    ],
+    "concepts/generator.py": [
+      "AbstractConceptGenerator"
+    ],
+    "concepts/registry.py": [
+      "ConceptRegistry"
+    ],
+    "concepts/core/contracts.py": [
+      "AbstractConceptEngine"
+    ],
+    "concepts/core/lifecycle.py": [
+      "ConceptLifecycleManager"
+    ],
+    "concepts/core/objects.py": [
+      "ConceptObject",
+      "CandlestickPattern",
+      "OrderBlock",
+      "BreakerBlock",
+      "MitigationBlock",
+      "LiquiditySweep"
+    ],
+    "concepts/core/provenance.py": [
+      "ConceptProvenance"
+    ],
+    "concepts/core/registry.py": [
+      "ConceptEngineRegistry"
+    ],
+    "concepts/engines/price_action_engine.py": [
+      "PriceActionEngine"
+    ],
+    "concepts/engines/smc_engine.py": [
+      "SMCEngine"
+    ],
+    "concepts/generators/breakout.py": [
+      "BreakoutConceptGenerator"
+    ],
+    "concepts/generators/extremum.py": [
+      "ThresholdConfig",
+      "ExtremumConceptGenerator"
+    ],
+    "concepts/generators/momentum.py": [
+      "MomentumConceptGenerator"
+    ],
+    "concepts/generators/strength.py": [
+      "StrengthThresholdConfig",
+      "StrengthConceptGenerator"
+    ],
+    "concepts/generators/trend.py": [
+      "TrendConceptGenerator"
+    ],
+    "concepts/generators/volatility.py": [
+      "VolatilityConceptGenerator"
+    ],
+    "concepts/generators/volume.py": [
+      "VolumeConceptGenerator"
+    ],
+    "data/duckdb_manager.py": [
+      "DuckDBConnectionManager"
+    ],
+    "data/exceptions.py": [
+      "DatabaseError",
+      "DatabaseConfigurationError",
+      "DatabaseDependencyError",
+      "DatabaseConnectionError",
+      "DatabaseTransactionError",
+      "DatabaseMigrationError",
+      "DatabaseWritePolicyError",
+      "RepositoryError"
+    ],
+    "data/integration.py": [
+      "DatabaseModule"
+    ],
+    "data/migration.py": [
+      "MigrationManager"
+    ],
+    "data/postgres.py": [
+      "PostgreSQLConnectionManager"
+    ],
+    "data/redis_cache.py": [
+      "RedisConnectionManager",
+      "RedisCacheManager"
+    ],
+    "data/repository.py": [
+      "CRUDRepository",
+      "BaseRepository"
+    ],
+    "data/settings.py": [
+      "PostgreSQLSettings",
+      "DuckDBSettings",
+      "RedisSettings",
+      "MigrationSettings",
+      "DatabaseSettings"
+    ],
+    "data/transaction_manager.py": [
+      "TransactionManager"
+    ],
+    "features/adx.py": [
+      "ADXFeature"
+    ],
+    "features/base.py": [
+      "AbstractFeature"
+    ],
+    "features/bollinger.py": [
+      "BollingerBandsFeature",
+      "BollingerMetricsFeature"
+    ],
+    "features/cache.py": [
+      "FeatureCache"
+    ],
+    "features/cci.py": [
+      "CCIFeature"
+    ],
+    "features/donchian.py": [
+      "Donchian20Feature"
+    ],
+    "features/engine.py": [
+      "FeatureEngine"
+    ],
+    "features/keltner.py": [
+      "KeltnerChannelFeature"
+    ],
+    "features/macd.py": [
+      "EMA12Feature",
+      "EMA26Feature",
+      "MACDLineFeature",
+      "MACDSignalFeature",
+      "MACDHistogramFeature"
+    ],
+    "features/momentum.py": [
+      "ROCFeature",
+      "RSIFeature"
+    ],
+    "features/protocols.py": [
+      "TrendFeatureOutput"
+    ],
+    "features/registry.py": [
+      "FeatureRegistry"
+    ],
+    "features/relative_volume.py": [
+      "RelativeVolumeFeature"
+    ],
+    "features/stochastic.py": [
+      "StochasticFeature"
+    ],
+    "features/supertrend.py": [
+      "SuperTrendFeature"
+    ],
+    "features/trend.py": [
+      "SMAFeature",
+      "EMAFeature"
+    ],
+    "features/volatility.py": [
+      "ATRFeature",
+      "RelativeVolumeFeature"
+    ],
+    "foundation/application_entrypoint.py": [
+      "ApplicationContext"
+    ],
+    "foundation/base_registry.py": [
+      "RegistryError",
+      "BaseRegistry"
+    ],
+    "foundation/configuration_loader.py": [
+      "AppConfig"
+    ],
+    "foundation/database_manager.py": [
+      "DatabaseResource",
+      "DatabaseManager"
+    ],
+    "foundation/dependency_injection_container.py": [
+      "_ServiceRegistration",
+      "DependencyContainer"
+    ],
+    "foundation/event_bus.py": [
+      "EventEnvelope",
+      "EventBus"
+    ],
+    "foundation/exceptions.py": [
+      "AlphaGridError",
+      "ConfigurationError",
+      "ServiceRegistrationError",
+      "ServiceResolutionError",
+      "EventBusError",
+      "HealthCheckError",
+      "LifecycleError",
+      "PluginLoadError",
+      "DataError"
+    ],
+    "foundation/health_checker.py": [
+      "HealthStatus",
+      "HealthCheckResult",
+      "HealthChecker"
+    ],
+    "foundation/lifecycle_manager.py": [
+      "LifecycleState",
+      "LifecycleStep",
+      "LifecycleManager"
+    ],
+    "foundation/logger.py": [
+      "SecretRedactingFilter",
+      "JsonFormatter"
+    ],
+    "foundation/plugin_loader.py": [
+      "LoadedPlugin",
+      "PluginLoader"
+    ],
+    "market/breadth.py": [
+      "MarketBreadthCalculator"
+    ],
+    "market/connector_manager.py": [
+      "ConnectorManager"
+    ],
+    "market/instruments.py": [
+      "InstrumentCatalog"
+    ],
+    "market/live_quotes.py": [
+      "LiveQuoteEngine"
+    ],
+    "market/normalizer.py": [
+      "DataNormalizer"
+    ],
+    "market/ohlcv.py": [
+      "OHLCVEngine"
+    ],
+    "market/regime.py": [
+      "RegimeDetector"
+    ],
+    "market/service.py": [
+      "MarketService"
+    ],
+    "market/session.py": [
+      "MarketSessionManager"
+    ],
+    "market/validator.py": [
+      "OHLCVValidator"
+    ],
+    "market/providers/angelone.py": [
+      "AngelOneProvider"
+    ],
+    "market/providers/base.py": [
+      "ProviderStatus",
+      "ValidationStatus",
+      "ProviderHealth",
+      "InstrumentRecord",
+      "OHLCVRecord",
+      "LiveQuoteRecord",
+      "ValidationResult",
+      "ProviderUnavailable",
+      "ConnectorError",
+      "ProviderRateLimitError",
+      "MarketDataProvider"
+    ],
+    "market/providers/mock.py": [
+      "MockProvider"
+    ],
+    "market/providers/upstox.py": [
+      "UpstoxProvider"
+    ],
+    "market/providers/yahoo.py": [
+      "YahooFinanceProvider"
+    ],
+    "market/providers/zerodha.py": [
+      "ZerodhaProvider"
+    ],
+    "market_intelligence/data_provenance.py": [
+      "DataProvenanceTracker"
+    ],
+    "market_intelligence/data_quality_gate.py": [
+      "DataQualityGate"
+    ],
+    "market_intelligence/event_awareness.py": [
+      "RiskEvent",
+      "EventAwarenessEngine"
+    ],
+    "market_intelligence/exchange_contract.py": [
+      "ExchangeContract",
+      "NSEImplementation"
+    ],
+    "market_intelligence/liquidity_engine.py": [
+      "LiquidityEngine"
+    ],
+    "market_intelligence/market_context_engine.py": [
+      "TrendState",
+      "MarketContextEngine"
+    ],
+    "market_intelligence/market_rotation_engine.py": [
+      "MarketRotationEngine"
+    ],
+    "market_intelligence/market_state_engine.py": [
+      "MarketState",
+      "MarketStateEngine"
+    ],
+    "market_intelligence/mtf_alignment_engine.py": [
+      "MTFAlignmentEngine"
+    ],
+    "market_intelligence/normalization_engine.py": [
+      "NormalizationEngine"
+    ],
+    "market_intelligence/options_infrastructure.py": [
+      "AbstractOptionChainProvider",
+      "OptionInstrumentResolver",
+      "ExpiryResolver"
+    ],
+    "market_intelligence/session_engine.py": [
+      "SessionEngine"
+    ],
+    "market_intelligence/symbol_metadata_registry.py": [
+      "InstrumentType",
+      "SymbolMetadata",
+      "SymbolMetadataRegistry"
+    ],
+    "market_intelligence/trading_calendar.py": [
+      "TradingCalendar"
+    ],
+    "market_intelligence/universe_manager.py": [
+      "UniverseTier",
+      "UniverseManager"
+    ],
+    "market_intelligence/providers/abstract_market_data_provider.py": [
+      "AbstractMarketDataProvider",
+      "HistoricalDataProvider",
+      "LiveDataProvider",
+      "OptionDataProvider",
+      "EconomicCalendarProvider",
+      "NewsProvider"
+    ],
+    "methodology/base.py": [
+      "AbstractMethodology"
+    ],
+    "methodology/breakout.py": [
+      "BreakoutMethodology"
+    ],
+    "methodology/composite.py": [
+      "CompositeMethodology"
+    ],
+    "methodology/engine.py": [
+      "MethodologyEngine"
+    ],
+    "methodology/evaluation.py": [
+      "MethodologyEvaluation"
+    ],
+    "methodology/mean_reversion.py": [
+      "MeanReversionMethodology"
+    ],
+    "methodology/momentum.py": [
+      "MomentumMethodology"
+    ],
+    "methodology/registry.py": [
+      "MethodologyMetadata",
+      "MethodologyRegistry"
+    ],
+    "methodology/reversal.py": [
+      "ReversalMethodology"
+    ],
+    "methodology/signals.py": [
+      "MethodologySignal"
+    ],
+    "methodology/trend_following.py": [
+      "TrendFollowingMethodology"
+    ],
+    "methodology/volatility.py": [
+      "VolatilityMethodology"
+    ],
+    "methodology/volume_analysis.py": [
+      "VolumeAnalysisMethodology"
+    ],
+    "methodology/voting.py": [
+      "AbstractVotingStrategy",
+      "UnanimousVoting",
+      "MajorityVoting",
+      "AnyVoting"
+    ],
+    "price_geometry/conflict_engine.py": [
+      "ConflictEvent",
+      "ConflictEngine"
+    ],
+    "price_geometry/contracts.py": [
+      "AbstractGeometryEngine",
+      "AbstractSwing",
+      "AbstractStructure",
+      "AbstractLiquidity",
+      "AbstractImbalance",
+      "AbstractZone"
+    ],
+    "price_geometry/events.py": [
+      "GeometryEvent",
+      "SwingCreated",
+      "BOSCreated",
+      "LiquidityCreated",
+      "FVGFilled",
+      "BOSInvalidated"
+    ],
+    "price_geometry/imbalance_engine.py": [
+      "ImbalanceEngine"
+    ],
+    "price_geometry/liquidity_engine.py": [
+      "LiquidityEngine"
+    ],
+    "price_geometry/objects.py": [
+      "LifecycleState",
+      "GeometryObject",
+      "Swing",
+      "Structure",
+      "Liquidity",
+      "Imbalance",
+      "Zone"
+    ],
+    "price_geometry/registry.py": [
+      "EngineRegistry"
+    ],
+    "price_geometry/store.py": [
+      "GeometryStore"
+    ],
+    "price_geometry/structure_engine.py": [
+      "StructureEngine"
+    ],
+    "price_geometry/swing_engine.py": [
+      "SwingEngine"
+    ],
+    "price_geometry/zone_engine.py": [
+      "ZoneEngine"
+    ],
+    "price_geometry/graph/geometry_graph.py": [
+      "GeometryGraph"
+    ],
+    "price_geometry/graph/incremental_updater.py": [
+      "IncrementalGeometryUpdates"
+    ],
+    "price_geometry/graph/provenance.py": [
+      "GeometryProvenance"
+    ],
+    "price_geometry/graph/snapshot_service.py": [
+      "GeometrySnapshotService"
+    ],
+    "research/decision/base.py": [
+      "Decision",
+      "AbstractDecisionProvider"
+    ],
+    "research/decision/ml_provider.py": [
+      "MLDecisionProvider"
+    ],
+    "research/decision/rule_provider.py": [
+      "RuleDecisionProvider"
+    ],
+    "research/engine/backtest.py": [
+      "BacktestEngine"
+    ],
+    "research/engine/dataset_loader.py": [
+      "DatasetIntegrityError",
+      "DatasetLoader"
+    ],
+    "research/engine/monte_carlo.py": [
+      "MonteCarloEngine"
+    ],
+    "research/engine/replay.py": [
+      "ReplayState",
+      "ReplayEngine"
+    ],
+    "research/engine/signal_engine.py": [
+      "SignalEngine"
+    ],
+    "research/engine/strategy_interface.py": [
+      "AbstractStrategy",
+      "StrategyRegistry"
+    ],
+    "research/engine/validators.py": [
+      "ValidationError",
+      "StrategyValidator",
+      "WalkForwardValidator",
+      "MonteCarloValidator"
+    ],
+    "research/engine/walkforward.py": [
+      "WalkForwardEngine"
+    ],
+    "research/evaluation/evaluator.py": [
+      "ScientificEvaluator"
+    ],
+    "research/evaluation/metrics.py": [
+      "MetricsCalculator"
+    ],
+    "research/evaluation/policy.py": [
+      "PromotionPolicy"
+    ],
+    "research/evaluation/promotion.py": [
+      "PromotionEngine"
+    ],
+    "research/evaluation/registry.py": [
+      "EvaluationRegistry"
+    ],
+    "research/evaluation/report.py": [
+      "ProfitabilityMetrics",
+      "RiskMetrics",
+      "RobustnessMetrics",
+      "StatisticalMetrics",
+      "ScientificEvaluationReport"
+    ],
+    "research/experiments/candidate_registry.py": [
+      "CandidateStatus",
+      "CandidateRecord",
+      "CandidateRegistry"
+    ],
+    "research/experiments/experiment.py": [
+      "ExperimentConfig",
+      "ModelArtifact"
+    ],
+    "research/experiments/registry.py": [
+      "ExperimentRecord",
+      "ResearchRegistry"
+    ],
+    "research/models/advanced_results.py": [
+      "WalkForwardFold",
+      "WalkForwardResult",
+      "MonteCarloIteration",
+      "MonteCarloResult"
+    ],
+    "research/models/dataset.py": [
+      "DatasetSnapshot"
+    ],
+    "research/models/experiment.py": [
+      "ResearchParameterEncoder",
+      "Experiment"
+    ],
+    "research/models/result.py": [
+      "BacktestResult"
+    ],
+    "research/repository/interfaces.py": [
+      "IExperimentRepository",
+      "IDatasetSnapshotRepository"
+    ],
+    "research/repository/memory.py": [
+      "MemoryExperimentRepository",
+      "MemoryDatasetSnapshotRepository"
+    ],
+    "research/runner/experiment_runner.py": [
+      "ExperimentRunner"
+    ],
+    "research/strategies/base_research_strategy.py": [
+      "BaseResearchStrategy",
+      "DictWrapper"
+    ],
+    "research/strategies/config.py": [
+      "StrategyConfig"
+    ],
+    "research/strategies/definition.py": [
+      "ConceptDefinition",
+      "PrimitiveSignalDefinition",
+      "StrategyDefinition"
+    ],
+    "research/strategies/ema_cross.py": [
+      "EMACrossStrategy"
+    ],
+    "research/strategies/factory.py": [
+      "StrategyFactory"
+    ],
+    "research/strategies/registry.py": [
+      "StrategyRegistry"
+    ],
+    "signals/primitive/base.py": [
+      "PrimitiveSignal",
+      "AbstractPrimitiveSignalGenerator"
+    ],
+    "signals/primitive/context.py": [
+      "SignalContext"
+    ],
+    "signals/primitive/engine.py": [
+      "PrimitiveSignalEngine"
+    ],
+    "signals/primitive/generators/breakout.py": [
+      "BreakoutSignalGenerator"
+    ],
+    "signals/primitive/generators/extremum.py": [
+      "OverextendedSignalGenerator"
+    ],
+    "signals/primitive/generators/momentum.py": [
+      "MomentumSignalGenerator",
+      "MomentumExhaustionSignalGenerator"
+    ],
+    "signals/primitive/generators/trend.py": [
+      "StrongTrendSignalGenerator"
+    ],
+    "signals/primitive/generators/volatility.py": [
+      "VolatilityExpansionSignalGenerator"
+    ],
+    "signals/primitive/generators/volume.py": [
+      "VolumeSurgeSignalGenerator"
+    ],
+    "tests/test_api.py": [
+      "ResponseEnvelopeTests",
+      "ErrorHandlingTests",
+      "MarketRouterTests",
+      "OptionsRouterTests",
+      "PortfolioRouterTests",
+      "RecommendationsRouterTests",
+      "SystemRouterTests",
+      "DashboardRouterTests",
+      "ResearchRouterTests",
+      "ReportsRouterTests",
+      "WebSocketHubTests",
+      "DummyMethodology",
+      "MockApiStrategy"
+    ],
+    "tests/test_composite_methodology.py": [
+      "MockMethodology"
+    ],
+    "tests/test_database.py": [
+      "DatabaseSettingsTests",
+      "PostgreSQLConnectionManagerTests",
+      "DuckDBConnectionManagerTests",
+      "RedisCacheManagerTests",
+      "TransactionManagerTests",
+      "MigrationManagerTests",
+      "FoundationIntegrationTests",
+      "_NullLogger",
+      "_FakeEngine",
+      "_FakeConnection",
+      "_FakeSession",
+      "_FakeDuckDBConnection",
+      "_FakeRedisClient"
+    ],
+    "tests/test_e2e_workflows.py": [
+      "GoldenDatasetLoader",
+      "MockMLStrategy",
+      "DummyMethodology"
+    ],
+    "tests/test_engine_advanced.py": [
+      "DummyMethodology",
+      "MockDuckDBResult",
+      "MockDuckDBConnection",
+      "AdvancedMockStrategy"
+    ],
+    "tests/test_engine_slice2b.py": [
+      "ValidatedMockStrategy",
+      "DummyMethodology",
+      "MockFastDatasetLoader"
+    ],
+    "tests/test_foundation.py": [
+      "ConfigurationLoaderTests",
+      "DependencyContainerTests",
+      "EventBusTests",
+      "HealthCheckerTests",
+      "LifecycleManagerTests",
+      "ApplicationContextTests",
+      "PluginLoaderTests",
+      "LoggingTests",
+      "EventBusConcurrencyTests"
+    ],
+    "tests/test_market.py": [
+      "OHLCVValidatorTests",
+      "DataNormalizerTests",
+      "MarketBreadthCalculatorTests",
+      "RegimeDetectorTests",
+      "ConnectorManagerTests",
+      "OHLCVEngineTests",
+      "SessionManagerTests",
+      "ConcurrencyTests",
+      "BadProvider",
+      "DummyProvider"
+    ],
+    "tests/test_research_engine.py": [
+      "MockStrategy",
+      "MockDuckDBResult",
+      "MockDuckDBConnection",
+      "BadStrategy",
+      "DummyMethodology"
+    ],
+    "tests/test_shared.py": [
+      "SharedEnumsTests",
+      "SharedModelsTests",
+      "SharedDTOTests",
+      "TypeScriptGenerationTest"
+    ]
+  }
+}

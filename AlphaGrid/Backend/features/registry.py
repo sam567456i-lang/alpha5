@@ -38,6 +38,8 @@ class FeatureRegistry:
         # 1. Check for missing dependencies
         for name, cls in self._features.items():
             for dep in cls.get_dependencies():
+                if dep == "geometry_cache":
+                    continue
                 if dep not in self._features:
                     raise ValueError(f"Feature '{name}' depends on '{dep}', which is not registered.")
 
@@ -48,6 +50,8 @@ class FeatureRegistry:
         ordered: List[str] = []
 
         def visit(n: str) -> None:
+            if n == "geometry_cache":
+                return
             if n in temp_marked:
                 raise ValueError(f"Circular dependency detected involving feature '{n}'")
             if n not in visited:

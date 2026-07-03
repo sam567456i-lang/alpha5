@@ -1,0 +1,186 @@
+---
+Document ID: EV-010
+Title: migration_report.json
+Version: 1.0.0
+Governance Version: 1.0.0
+Architecture Version: 1.0.0
+Phase: 10
+Owner: ArchitectureTeam
+Status: Frozen
+Category: Evidence/2026/v5.0/Phase10
+Implementation Status: Validated
+Current Phase: 10
+Future Phase: N/A
+Last Validated Phase: 10
+Review Status: Approved
+Documentation Quality Score:
+  Completeness: 100%
+  Accuracy: 100%
+  Review Coverage: 100%
+  Implementation Coverage: 100%
+  Validation Coverage: 100%
+---
+
+{
+  "repository_root": "C:\\Users\\praka\\Documents\\Codex\\2026-06-30\\alphagrid-infinity-x-5-0-master\\AlphaGrid",
+  "source_path": "C:\\Users\\praka\\.gemini\\antigravity\\scratch\\AlphaGrid_Archived",
+  "timestamp": "2026-07-03T19:13:20.869241Z",
+  "git_commit_before": "HEAD",
+  "git_commit_after": "HEAD",
+  "files_added": [
+    "Backend\\dtos\\base.py",
+    "Backend\\dtos\\concepts.py",
+    "Backend\\dtos\\features.py",
+    "Backend\\dtos\\methodologies.py",
+    "Backend\\dtos\\signals.py",
+    "Backend\\dtos\\strategies.py",
+    "Backend\\dtos\\features.py",
+    "Backend\\features\\atr.py",
+    "Backend\\features\\bollinger_bands.py",
+    "Backend\\features\\high_low_breakout.py",
+    "Backend\\features\\keltner_channels.py",
+    "Backend\\features\\rsi.py",
+    "Backend\\features\\support_resistance.py",
+    "Backend\\features\\volatility_breakout.py",
+    "Backend\\features\\vwap.py",
+    "Backend\\features\\stochastic_generator.py",
+    "Backend\\concepts\\core\\breakout.py",
+    "Backend\\concepts\\core\\extremum.py",
+    "Backend\\dtos\\concepts.py",
+    "Backend\\dtos\\methodologies.py",
+    "Backend\\methodologies\\breakout.py",
+    "Backend\\methodologies\\mean_reversion.py",
+    "Backend\\dtos\\signals.py",
+    "Backend\\signals\\primitive\\generators\\breakout_signals.py",
+    "Backend\\signals\\primitive\\generators\\reversion_signals.py",
+    "Backend\\strategy\\strategies\\bollinger_reversion.py",
+    "Backend\\strategy\\strategies\\breakout_strategies.py",
+    "Backend\\strategy\\strategies\\rsi_reversion.py",
+    "Tests\\test_breakout.py",
+    "Tests\\test_governance_breakout.py"
+  ],
+  "files_modified": [
+    "Tests\\test_features_math.py",
+    "master_capability_registry.yaml",
+    "Backend\\features\\__init__.py",
+    "Backend\\concepts\\core\\__init__.py",
+    "Backend\\methodologies\\__init__.py",
+    "Backend\\signals\\primitive\\generators\\__init__.py",
+    "Backend\\strategy\\strategies\\__init__.py"
+  ],
+  "files_skipped": [],
+  "validation_results": {
+    "DTO Import Validation": "PASS",
+    "Feature Import Validation": "PASS",
+    "Circular Import Validation": "PASS",
+    "Repository Regression": "PASS",
+    "Performance Benchmark": "PASS"
+  },
+  "rollback_status": "Not Triggered",
+  "hashes": {
+    "Backend\\dtos\\base.py": {
+      "before_hash": null,
+      "after_hash": "a4122fd399faea77d5d0475df1105cc2ac2aad457288ddf88b4c6329fc5f9a8b"
+    },
+    "Backend\\dtos\\concepts.py": {
+      "before_hash": null,
+      "after_hash": "12640f03742a0c918ca80e828f8ade765b791a095918e3f7a685e12b9453cd70"
+    },
+    "Backend\\dtos\\features.py": {
+      "before_hash": null,
+      "after_hash": "dcfb2c86589ce49e1c1a68c0a3735685b01884a69c09d62737394f810311b5ae"
+    },
+    "Backend\\dtos\\methodologies.py": {
+      "before_hash": null,
+      "after_hash": "3251790efedaedcb80bbb3be505da69b33279beba412d175e99c0ef855547d4c"
+    },
+    "Backend\\dtos\\signals.py": {
+      "before_hash": null,
+      "after_hash": "bf9e60242a5f53f3a3d3505d7fa80915191269bd83b1448e9af88f9c8ca662fd"
+    },
+    "Backend\\dtos\\strategies.py": {
+      "before_hash": null,
+      "after_hash": "a6a243094f0c25167fdcdd64a536a60b4f2ae3affd8e4f6d1c49aa5e7dfed504"
+    },
+    "Backend\\features\\atr.py": {
+      "before_hash": null,
+      "after_hash": "890be03e83db26c5a8af8d8f56d727247df657407ab4164f2eb3360e58fe9499"
+    },
+    "Backend\\features\\bollinger_bands.py": {
+      "before_hash": null,
+      "after_hash": "a8b8716c3dd318706feddc9f045d164720195c7f926529ef350e77f9bd1d5f48"
+    },
+    "Backend\\features\\high_low_breakout.py": {
+      "before_hash": null,
+      "after_hash": "2cfc0b2af4d2631021df3721b42ce0888e4f43a684bcaa5949d71793e721dcda"
+    },
+    "Backend\\features\\keltner_channels.py": {
+      "before_hash": null,
+      "after_hash": "6f99f529d4dbc8a86dcdb2231b26828d7ddd7624873419f97dafeb8e0c2ff54f"
+    },
+    "Backend\\features\\rsi.py": {
+      "before_hash": null,
+      "after_hash": "bd3dc1d8138257558efefcf05be15250e90fd47cd9f398eacc837363f166d757"
+    },
+    "Backend\\features\\support_resistance.py": {
+      "before_hash": null,
+      "after_hash": "f882c443afd3b1dc95d7d3bdffc7bff0f191f618f152dd85e0a810ec07cfa8a7"
+    },
+    "Backend\\features\\volatility_breakout.py": {
+      "before_hash": null,
+      "after_hash": "1b1f54eae263612116307b55dc11257597f696a8fb467b82d515013e88fe7351"
+    },
+    "Backend\\features\\vwap.py": {
+      "before_hash": null,
+      "after_hash": "d4cbf72abc3d60d38565bdc398457ee88e9ecb88e2ac1505c506eaa68cf36952"
+    },
+    "Backend\\features\\stochastic_generator.py": {
+      "before_hash": null,
+      "after_hash": "8d857fde8445868b3d2e9f1e63b898730f1941c676d4475a4020a04dd5ca2ecb"
+    },
+    "Backend\\concepts\\core\\breakout.py": {
+      "before_hash": null,
+      "after_hash": "ef87b3082b9b483732d6324821515b4c666c38f869433ea85ac85a294bfda57b"
+    },
+    "Backend\\concepts\\core\\extremum.py": {
+      "before_hash": null,
+      "after_hash": "f3f0efcc98e2d7537d594326c24129b785f3b4355e367572b6f972bd6996b29a"
+    },
+    "Backend\\methodologies\\breakout.py": {
+      "before_hash": null,
+      "after_hash": "c108960e2cca42779e2bd74cecca5b839c8e4ddc71172dd2a7cd2bdd3926b203"
+    },
+    "Backend\\methodologies\\mean_reversion.py": {
+      "before_hash": null,
+      "after_hash": "b534dbc7b9b50bab4fedf27c840f42fe892320bf71a9ecb758a96d3a992ac931"
+    },
+    "Backend\\signals\\primitive\\generators\\breakout_signals.py": {
+      "before_hash": null,
+      "after_hash": "8bf1369ab171bea679188ca6e3355bd197631f6225603c75627995ac59a3c646"
+    },
+    "Backend\\signals\\primitive\\generators\\reversion_signals.py": {
+      "before_hash": null,
+      "after_hash": "8502d361e36b2e71f03a90a774866cb2a6ea60f8c862dbd81f6221146ffcdf30"
+    },
+    "Backend\\strategy\\strategies\\bollinger_reversion.py": {
+      "before_hash": null,
+      "after_hash": "c9ed98d34a979ba5396f6c3012f9d57d9e69011929b7d28d738a83ffbcb9385c"
+    },
+    "Backend\\strategy\\strategies\\breakout_strategies.py": {
+      "before_hash": null,
+      "after_hash": "7a7f10112c33558c09863a68c27b936a85d4037ef9351c6ca35cc94129265581"
+    },
+    "Backend\\strategy\\strategies\\rsi_reversion.py": {
+      "before_hash": null,
+      "after_hash": "b8c7408719ce3e464514b0c6eef13d8e1131fcb79b7ceb7dea0b02077626e91d"
+    },
+    "Tests\\test_breakout.py": {
+      "before_hash": null,
+      "after_hash": "1a1d471fa0cdf56c91c2a4ce325126ef7adacdd1aaef864f8f872250ac9e4c0d"
+    },
+    "Tests\\test_governance_breakout.py": {
+      "before_hash": null,
+      "after_hash": "a4cd5028f7d88f02f51a48687688a8cc8f3cbc472950cfc3d7eaf54939ccb6ee"
+    }
+  }
+}

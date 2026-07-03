@@ -15,6 +15,8 @@ from Backend.research.models.experiment import Experiment
 from uuid import uuid4
 
 class ValidatedMockStrategy(AbstractStrategy):
+    def __init__(self, parameters: Dict[str, Any], random_generator: Any, **kwargs) -> None:
+        super().__init__(parameters, random_generator)
     @classmethod
     def get_parameter_schema(cls) -> Dict[str, Dict[str, Any]]:
         return {
@@ -25,7 +27,31 @@ class ValidatedMockStrategy(AbstractStrategy):
     def on_market_event(self, event: Dict[str, Any]) -> None:
         pass
 
-STRATEGY_REGISTRY.register("VALIDATED_MOCK", ValidatedMockStrategy)
+from Backend.research.strategies.definition import StrategyDefinition
+from Backend.methodology.base import AbstractMethodology
+from Backend.methodology.evaluation import MethodologyEvaluation
+
+class DummyMethodology(AbstractMethodology):
+    def __init__(self): pass
+    @classmethod
+    def get_name(cls): return "Dummy"
+    def evaluate(self, ctx): return MethodologyEvaluation("Dummy", datetime.now(timezone.utc), True, 1, 1.0)
+
+from Backend.research.strategies.registry import StrategyRegistry as DefRegistry
+
+@pytest.fixture(autouse=True)
+def setup_validated_mock_registry():
+    DefRegistry._definitions["VALIDATED_MOCK"] = StrategyDefinition(
+        id="VALIDATED_MOCK",
+        strategy_class=ValidatedMockStrategy,
+        methodology=DummyMethodology,
+        features=[],
+        concepts=[],
+        primitive_signals=[],
+        parameters={}
+    )
+    if "VALIDATED_MOCK" not in STRATEGY_REGISTRY._registry:
+        STRATEGY_REGISTRY.register("VALIDATED_MOCK", ValidatedMockStrategy)
 
 class MockFastDatasetLoader(DatasetLoader):
     def __init__(self, rows=None):

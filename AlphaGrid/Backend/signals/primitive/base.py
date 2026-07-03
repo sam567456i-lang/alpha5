@@ -18,6 +18,7 @@ class PrimitiveSignal:
     timestamp: datetime
     direction: int  # 1 (Bullish), -1 (Bearish), 0 (Neutral)
     confidence: float
+    signal_type: str = "GENERIC"  # e.g., TREND_LONG, TREND_WEAKENING
     supporting_concepts: Tuple[str, ...] = field(default_factory=tuple)
     generator: str = ""
 

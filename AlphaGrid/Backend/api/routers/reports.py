@@ -12,10 +12,10 @@ from pydantic import BaseModel, Field
 from Backend.api.dependencies import PaginationParams, get_pagination
 from Backend.api.exceptions import APINotFoundError
 from Backend.api.responses import created_response, paginated_response, success_response
+from Backend.api.dependencies import get_reports_service
 from Backend.api.services.reports_service import ReportsService
 
 router = APIRouter(prefix="/reports", tags=["Reports"])
-_service = ReportsService()
 
 
 class GenerateReportBody(BaseModel):
@@ -28,9 +28,10 @@ class GenerateReportBody(BaseModel):
 @router.get("", summary="All reports")
 def list_reports(
     pagination: PaginationParams = Depends(get_pagination),
+    service: ReportsService = Depends(get_reports_service)
 ) -> JSONResponse:
     """Return a paginated list of generated reports."""
-    records, total = _service.list_reports(
+    records, total = service.list_reports(
         page=pagination.page, page_size=pagination.page_size
     )
     return paginated_response(
@@ -42,9 +43,9 @@ def list_reports(
 
 
 @router.post("/generate", summary="Generate report", status_code=201)
-def generate_report(body: GenerateReportBody) -> JSONResponse:
+def generate_report(body: GenerateReportBody, service: ReportsService = Depends(get_reports_service)) -> JSONResponse:
     """Trigger generation of a new report."""
-    data = _service.generate_report(
+    data = service.generate_report(
         report_type=body.report_type,
         parameters=body.parameters,
     )
@@ -52,9 +53,9 @@ def generate_report(body: GenerateReportBody) -> JSONResponse:
 
 
 @router.get("/{report_id}", summary="Download report")
-def get_report(report_id: UUID) -> JSONResponse:
+def get_report(report_id: UUID, service: ReportsService = Depends(get_reports_service)) -> JSONResponse:
     """Return a single report record including download URL."""
-    data = _service.get_report(report_id=report_id)
+    data = service.get_report(report_id=report_id)
     if data is None:
         raise APINotFoundError(f"Report '{report_id}' not found.")
     return success_response(data=data)

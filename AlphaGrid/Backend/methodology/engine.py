@@ -19,6 +19,16 @@ class MethodologyEngine:
     It passes the SignalContext to each methodology and aggregates their evaluations.
     """
 
+    ENGINE_METADATA = {
+        "owner": "Methodology Domain",
+        "version": "1.0.0",
+        "consumes": "PrimitiveSignal",
+        "produces": "MethodologyEvaluation",
+        "registry": "methodology_registry",
+        "contract_version": "v1",
+        "downstream": "StrategyEngine"
+    }
+
     def __init__(self, methodologies: List[AbstractMethodology]) -> None:
         """
         Initializes the MethodologyEngine.

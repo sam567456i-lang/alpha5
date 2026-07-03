@@ -14,6 +14,16 @@ class PrimitiveSignalEngine:
     Takes raw Concepts from Phase 8 and transforms them into atomic Primitive Signals for Methodologies.
     """
 
+    ENGINE_METADATA = {
+        "owner": "Primitive Signal Domain",
+        "version": "1.0.0",
+        "consumes": "Concept",
+        "produces": "PrimitiveSignal",
+        "registry": "primitive_signal_registry",
+        "contract_version": "v1",
+        "downstream": "MethodologyEngine"
+    }
+
     def __init__(self, generators: List[AbstractPrimitiveSignalGenerator]) -> None:
         """
         Initializes the PrimitiveSignalEngine.

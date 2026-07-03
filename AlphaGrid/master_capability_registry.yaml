@@ -1,0 +1,2805 @@
+capabilities:
+- id: ftr-ohlcv
+  category: Feature Store
+  family: General
+  name: OHLCV
+  owner: DataEngineering
+  produces:
+  - Raw Price Data
+  consumes: &id001
+  - Data Provider
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id001
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: General
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: ftr-candlebody
+  category: Feature Store
+  family: Candlestick
+  name: CandleBody
+  owner: FeatureEngineering
+  produces:
+  - Body Size
+  - Direction
+  consumes: &id002
+  - OHLCV
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id002
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Candlestick
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: ftr-upperwick
+  category: Feature Store
+  family: Candlestick
+  name: UpperWick
+  owner: FeatureEngineering
+  produces:
+  - Upper Wick Size
+  consumes: &id003
+  - OHLCV
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id003
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Candlestick
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: ftr-lowerwick
+  category: Feature Store
+  family: Candlestick
+  name: LowerWick
+  owner: FeatureEngineering
+  produces:
+  - Lower Wick Size
+  consumes: &id004
+  - OHLCV
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id004
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Candlestick
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: ftr-bodyratio
+  category: Feature Store
+  family: Candlestick
+  name: BodyRatio
+  owner: FeatureEngineering
+  produces:
+  - Body/Range Ratio
+  consumes: &id005
+  - OHLCV
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id005
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Candlestick
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: geo-pivot
+  category: Geometry
+  family: Geometry
+  name: Pivot
+  owner: QuantitativeResearch
+  produces:
+  - Pivot High
+  - Pivot Low
+  consumes: &id006
+  - OHLCV
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id006
+  shared_component: true
+  owner_layer: Geometry
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 6
+    required_family: Geometry
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: geo-swing
+  category: Geometry
+  family: Geometry
+  name: Swing
+  owner: QuantitativeResearch
+  produces:
+  - Swing High
+  - Swing Low
+  consumes: &id007
+  - Pivot
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id007
+  shared_component: true
+  owner_layer: Geometry
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 6
+    required_family: Geometry
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: geo-range
+  category: Geometry
+  family: Geometry
+  name: Range
+  owner: QuantitativeResearch
+  produces:
+  - Trading Range
+  - Value Area
+  consumes: &id008
+  - Swing
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id008
+  shared_component: true
+  owner_layer: Geometry
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 6
+    required_family: Geometry
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: geo-channel
+  category: Geometry
+  family: Geometry
+  name: Channel
+  owner: QuantitativeResearch
+  produces:
+  - Ascending Channel
+  - Descending Channel
+  consumes: &id009
+  - Swing
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id009
+  shared_component: true
+  owner_layer: Geometry
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 6
+    required_family: Geometry
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: con-trend
+  category: Concepts
+  family: Generic
+  name: Trend
+  owner: QuantitativeResearch
+  produces:
+  - Uptrend
+  - Downtrend
+  - Sideways
+  consumes: &id010
+  - Swing
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id010
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Generic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: con-momentum
+  category: Concepts
+  family: Generic
+  name: Momentum
+  owner: QuantitativeResearch
+  produces:
+  - Momentum Strength
+  - Divergence
+  consumes: &id011
+  - OHLCV
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id011
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Generic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: con-liquidity
+  category: Concepts
+  family: Generic
+  name: Liquidity
+  owner: QuantitativeResearch
+  produces:
+  - Liquidity Pool
+  - Liquidity Void
+  consumes: &id012
+  - Swing
+  - Range
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id012
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Generic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: con-structure
+  category: Concepts
+  family: Generic
+  name: Structure
+  owner: QuantitativeResearch
+  produces:
+  - Structure Shift
+  consumes: &id013
+  - Swing
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id013
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Generic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: meth-trendfollowing
+  category: Methodologies
+  family: Trend Following
+  name: Trend Following
+  owner: StrategyTeam
+  produces:
+  - Trend Signal
+  consumes: &id014
+  - Trend Concept
+  - Momentum Concept
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: designed
+  depends_on: *id014
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: meth-meanreversion
+  category: Methodologies
+  family: Mean Reversion
+  name: Mean Reversion
+  owner: StrategyTeam
+  produces:
+  - Mean Reversion Signal
+  consumes: &id015
+  - Extremum Concept
+  - Volatility Concept
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id015
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Reusable
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Mean Reversion
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: meth-smc
+  category: Methodologies
+  family: Market Structure
+  name: SMC
+  owner: StrategyTeam
+  produces:
+  - SMC Signal
+  consumes: &id016
+  - Structure Concept
+  - Liquidity Concept
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id016
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Market Structure
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: meth-wyckoff
+  category: Methodologies
+  family: Market Structure
+  name: Wyckoff
+  owner: StrategyTeam
+  produces:
+  - Wyckoff Phase Signal
+  consumes: &id017
+  - Structure Concept
+  - Liquidity Concept
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id017
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Market Structure
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: strat-canonicalvalidation
+  category: Strategies
+  family: Infrastructure
+  name: CanonicalValidationStrategy
+  owner: CoreTeam
+  produces:
+  - Validation Output
+  consumes: &id018
+  - OHLCV
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id018
+  shared_component: false
+  owner_layer: Strategy
+  lifecycle_state: Validated
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Infrastructure
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: strat-macdtrend
+  category: Strategies
+  family: Trend Following
+  name: MACD Trend
+  owner: StrategyTeam
+  produces:
+  - Trade Signal
+  consumes: &id019
+  - Trend Following Methodology
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id019
+  shared_component: false
+  owner_layer: Strategy
+  lifecycle_state: Validated
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: strat-smacross
+  category: Strategies
+  family: Trend Following
+  name: SMA Cross
+  owner: StrategyTeam
+  produces:
+  - Trade Signal
+  consumes: &id020
+  - Trend Following Methodology
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id020
+  shared_component: false
+  owner_layer: Strategy
+  lifecycle_state: Validated
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: strat-supertrend
+  category: Strategies
+  family: Trend Following
+  name: SuperTrend
+  owner: StrategyTeam
+  produces:
+  - Trade Signal
+  consumes: &id021
+  - Trend Following Methodology
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id021
+  shared_component: false
+  owner_layer: Strategy
+  lifecycle_state: Validated
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: strat-ichimoku
+  category: Strategies
+  family: Trend Following
+  name: Ichimoku Cloud
+  owner: StrategyTeam
+  produces:
+  - Trade Signal
+  consumes: &id022
+  - Trend Following Methodology
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id022
+  shared_component: false
+  owner_layer: Strategy
+  lifecycle_state: Validated
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: strat-rsireversion
+  category: Strategies
+  family: Mean Reversion
+  name: RSI Reversion
+  owner: StrategyTeam
+  produces:
+  - Trade Signal
+  consumes: &id023
+  - Mean Reversion Methodology
+  version: 0.1.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id023
+  shared_component: false
+  owner_layer: Strategy
+  lifecycle_state: Research Pending
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Mean Reversion
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  validation_status: repository_validated
+  research_status: pending
+  blocked_by: phase13_strategy_intelligence
+  freeze_status: blocked
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: int-macro
+  category: Market Intelligence
+  family: Macro
+  name: Macro Intelligence
+  produces:
+  - Macro Indicators
+  consumes: &id024
+  - Economic Calendar
+  - Interest Rates
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id024
+  shared_component: false
+  owner_layer: Data
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 4
+    required_family: Macro
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: int-breadth
+  category: Market Intelligence
+  family: Breadth
+  name: Breadth Intelligence
+  produces:
+  - Market Breadth Data
+  consumes: &id025
+  - Index Constituents
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id025
+  shared_component: false
+  owner_layer: Data
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 4
+    required_family: Breadth
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: int-calendar
+  category: Market Intelligence
+  family: Calendar
+  name: Economic Calendar Intelligence
+  produces:
+  - Event Risk
+  consumes: &id026
+  - Data Provider
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id026
+  shared_component: false
+  owner_layer: Data
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 4
+    required_family: Calendar
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: int-ownership
+  category: Market Intelligence
+  family: Ownership
+  name: Institutional Ownership Intelligence
+  produces:
+  - Ownership Concentration
+  consumes: &id027
+  - Filing Data
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id027
+  shared_component: false
+  owner_layer: Data
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 4
+    required_family: Ownership
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: ftr-breadth
+  category: Feature Store
+  family: Breadth
+  name: Breadth Features
+  produces:
+  - A/D Line
+  - TICK
+  - TRIN
+  consumes: &id028
+  - Breadth Intelligence
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id028
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Breadth
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: ftr-rs
+  category: Feature Store
+  family: Relative Strength
+  name: Relative Strength Features
+  produces:
+  - RS Ratio
+  consumes: &id029
+  - OHLCV
+  - Index OHLCV
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id029
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Relative Strength
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: ftr-currency
+  category: Feature Store
+  family: Currency
+  name: Currency Strength Features
+  produces:
+  - Currency Index
+  consumes: &id030
+  - Forex Data
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id030
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Currency
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: ftr-linreg
+  category: Feature Store
+  family: Trend Following
+  name: Linear Regression
+  produces:
+  - LinReg
+  consumes: &id031
+  - OHLCV
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id031
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: ftr-kama
+  category: Feature Store
+  family: Trend Following
+  name: KAMA
+  produces:
+  - Adaptive MA
+  consumes: &id032
+  - OHLCV
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id032
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: ftr-hma
+  category: Feature Store
+  family: Trend Following
+  name: Hull MA
+  produces:
+  - Smoothed MA
+  consumes: &id033
+  - OHLCV
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id033
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: ftr-ichimoku
+  category: Feature Store
+  family: Trend Following
+  name: Ichimoku Cloud
+  produces:
+  - Tenkan
+  - Kijun
+  - Senkou
+  consumes: &id034
+  - OHLCV
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: *id034
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Trend Following
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+- id: con-breadth
+  category: Concepts
+  family: Semantic
+  name: Breadth Expansion
+  produces:
+  - Breadth State
+  consumes: &id035
+  - Breadth Features
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id035
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Semantic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: con-rs
+  category: Concepts
+  family: Semantic
+  name: Relative Strength
+  produces:
+  - RS State
+  consumes: &id036
+  - Relative Strength Features
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id036
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Semantic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: con-seasonality
+  category: Concepts
+  family: Semantic
+  name: Seasonality
+  produces:
+  - Seasonal Bias
+  consumes: &id037
+  - Seasonality Features
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id037
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Semantic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: meth-breadth
+  category: Methodologies
+  family: Breadth
+  name: Breadth Methodology
+  produces:
+  - Breadth Signal
+  consumes: &id038
+  - Breadth Expansion Concept
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id038
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Breadth
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: meth-rs
+  category: Methodologies
+  family: Relative Strength
+  name: Relative Strength Methodology
+  produces:
+  - RS Signal
+  consumes: &id039
+  - Relative Strength Concept
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id039
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Relative Strength
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: meth-currency
+  category: Methodologies
+  family: Currency
+  name: Currency Methodology
+  produces:
+  - Currency Signal
+  consumes: &id040
+  - Currency Concept
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id040
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Currency
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: meth-seasonal
+  category: Methodologies
+  family: Seasonality
+  name: Seasonal Methodology
+  produces:
+  - Seasonal Signal
+  consumes: &id041
+  - Seasonality Concept
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: *id041
+  shared_component: true
+  owner_layer: Methodology
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Seasonality
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: eligible
+- id: ftr-rsi
+  family: Feature Store
+  name: RSI Feature Generator
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-bollinger
+  family: Feature Store
+  name: Bollinger Bands Generator
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-stochastic
+  family: Feature Store
+  name: Stochastic Generator
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-vwap
+  family: Feature Store
+  name: VWAP Feature Generator
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-keltner
+  family: Feature Store
+  name: Keltner Channel Generator
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-atr
+  family: Feature Store
+  name: ATR Feature Generator
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: con-extremum
+  family: Concept Engine
+  name: Extremum Concept Generator
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: sig-meanreversion
+  family: Signal Engine
+  name: Extremum Reversion Primitive
+  implementation_status: implemented
+  lifecycle_state: Reusable
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-sr
+  family: Feature Store
+  name: Support/Resistance Feature Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Reusable
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-ohlcv
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-hlbreakout
+  family: Feature Store
+  name: High/Low Breakout Feature Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Reusable
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-ohlcv
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: ftr-volbreakout
+  family: Feature Store
+  name: Volatility Breakout Feature Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Reusable
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-ohlcv
+    - ftr-atr
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: con-breakout
+  family: Concept Engine
+  name: Breakout Concept Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Reusable
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-sr
+    - ftr-hlbreakout
+    optional_requires:
+    - ftr-volbreakout
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: meth-breakout
+  family: Methodology Engine
+  name: Breakout Methodology
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Reusable
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 8
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - con-breakout
+    optional_requires:
+    - con-trend
+    - con-volatility
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: sig-breakout
+  family: Signal Engine
+  name: Breakout Primitive Signal Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Reusable
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 9
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - meth-breakout
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: strat-srbreakout
+  family: Strategy Engine
+  name: S/R Breakout Strategy
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  research_status: pending
+  blocked_by: phase13_strategy_intelligence
+  lifecycle_state: Research Pending
+  freeze_status: blocked
+  version: 0.1.0
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - sig-breakout
+    - ftr-sr
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: strat-hlbreakout
+  family: Strategy Engine
+  name: High/Low Breakout Strategy
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  research_status: pending
+  blocked_by: phase13_strategy_intelligence
+  lifecycle_state: Research Pending
+  freeze_status: blocked
+  version: 0.1.0
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - sig-breakout
+    - ftr-hlbreakout
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- id: strat-volbreakout
+  family: Strategy Engine
+  name: Volatility Breakout Strategy
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  research_status: pending
+  blocked_by: phase13_strategy_intelligence
+  lifecycle_state: Research Pending
+  freeze_status: blocked
+  version: 0.1.0
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - sig-breakout
+    - ftr-volbreakout
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+- category: Strategies
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: []
+  shared_component: true
+  owner_layer: Strategy
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: strat-macd-trend-legacy
+  name: MACD Trend Strategy (Legacy)
+  legacy_component: true
+  replacement: strat-macd-momentum-canonical
+  deprecated_after: v6.0
+- category: Strategies
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: []
+  shared_component: true
+  owner_layer: Strategy
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: strat-macd-momentum-canonical
+  name: MACD Momentum Strategy (Canonical)
+  generation: Canonical
+- category: Strategies
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: []
+  shared_component: true
+  owner_layer: Strategy
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: strat-roc-momentum-canonical
+  name: ROC Momentum Strategy (Canonical)
+  generation: Canonical
+- category: Concepts
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on: []
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: con-momentum-semantic
+  name: Momentum Semantic Concept
+  generation: Canonical
+- category: Feature Store
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: []
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: ftr-ppo-generator
+  name: PPO Feature Generator
+- category: Feature Store
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: []
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: ftr-trix-generator
+  name: TRIX Feature Generator
+- category: Feature Store
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: []
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: ftr-tsi-generator
+  name: TSI Feature Generator
+- category: Feature Store
+  family: Momentum
+  owner: StrategyTeam
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: planned
+  depends_on: []
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Candidate
+  stability: Research
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  freeze_status: not_started
+  id: ftr-kst-generator
+  name: KST Feature Generator

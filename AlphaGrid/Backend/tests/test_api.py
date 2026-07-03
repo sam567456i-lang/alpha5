@@ -7,12 +7,24 @@ import unittest
 from fastapi.testclient import TestClient
 
 from Backend.api.app import create_app
+from Backend.foundation.dependency_injection_container import DependencyContainer
+from Backend.market_intelligence.session_engine import SessionEngine
+from Backend.market_intelligence.universe_manager import UniverseManager
+from Backend.market_intelligence.normalization_engine import NormalizationEngine
+from Backend.market_intelligence.providers.abstract_market_data_provider import HistoricalDataProvider
+from Backend.market_intelligence.historical_market_pipeline import HistoricalMarketPipeline
 
 # ---------------------------------------------------------------------------
 # Test client setup
 # ---------------------------------------------------------------------------
 
-app = create_app(debug=True)
+container = DependencyContainer()
+container.register_instance("session_engine", SessionEngine())
+container.register_instance("universe_manager", UniverseManager())
+container.register_instance("normalization_engine", NormalizationEngine())
+container.register_instance("historical_market_pipeline", HistoricalMarketPipeline(None, None, None, None))
+
+app = create_app(container=container, debug=True)
 client = TestClient(app, raise_server_exceptions=False)
 
 
@@ -267,10 +279,38 @@ class ResearchRouterTests(unittest.TestCase):
         self.assertIn("pagination", r.json())
 
     def test_run_backtest(self) -> None:
+        from Backend.research.strategies.registry import StrategyRegistry
+        from Backend.research.strategies.definition import StrategyDefinition
+        from Backend.methodology.base import AbstractMethodology
+        from Backend.methodology.evaluation import MethodologyEvaluation
+        from datetime import datetime, timezone
+
+        class DummyMethodology(AbstractMethodology):
+            def __init__(self): pass
+            @classmethod
+            def get_name(cls): return "Dummy"
+            def evaluate(self, ctx): return MethodologyEvaluation("Dummy", datetime.now(timezone.utc), True, 1, 1.0)
+
+        from Backend.research.engine.strategy_interface import AbstractStrategy
+        
+        class MockApiStrategy(AbstractStrategy):
+            def __init__(self, parameters: dict, random_generator: Any, **kwargs):
+                super().__init__(parameters, random_generator)
+            def on_market_event(self, event): pass
+            
+        StrategyRegistry._definitions["BREAKOUT_V1"] = StrategyDefinition(
+            id="BREAKOUT_V1",
+            strategy_class=MockApiStrategy,
+            methodology=DummyMethodology,
+            features=[], concepts=[], primitive_signals=[], parameters={}
+        )
+        from Backend.research.engine.strategy_interface import STRATEGY_REGISTRY
+        if "BREAKOUT_V1" not in STRATEGY_REGISTRY._registry:
+            STRATEGY_REGISTRY.register("BREAKOUT_V1", MockApiStrategy)
         r = client.post(
             "/api/v1/research/backtest",
             json={
-                "strategy": "breakout_v1",
+                "strategy": "BREAKOUT_V1",
                 "start_date": "2024-01-01",
                 "end_date": "2024-12-31",
             },

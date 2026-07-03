@@ -1,3 +1,22 @@
+---
+Document ID: DOC-008
+Title: "Market Intelligence Platform"
+Version: 1.0.0
+Governance Version: 1.0.0
+Architecture Version: 1.0.0
+Phase: 10
+Owner: ArchitectureTeam
+Category: Root
+Maturity: "Level 5: Institutionally Frozen"
+Implementation Status: Validated
+Current Phase: 10
+Future Phase: N/A
+Last Validated Phase: 10
+Review Date: 2026-07-03
+Dependencies: []
+Referenced By: []
+---
+
 # Market Intelligence Platform
 
 The Market Intelligence Platform (Phase 6) abstracts all market data ingestion, providing a unified, provider-agnostic interface to the rest of the application.

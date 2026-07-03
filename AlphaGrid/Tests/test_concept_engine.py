@@ -5,6 +5,7 @@ import uuid
 from Backend.concepts.base import Concept
 from Backend.concepts.registry import ConceptRegistry
 from Backend.concepts.engine import ConceptEngine
+from Shared.enums.concept_type import ConceptType
 from Backend.concepts.generators.momentum import MomentumConceptGenerator
 from Backend.concepts.generators.trend import TrendConceptGenerator
 from Backend.concepts.generators.volatility import VolatilityConceptGenerator
@@ -14,6 +15,7 @@ class TestConceptImmutability:
     def test_concept_is_frozen(self):
         c = Concept(
             id="test",
+            type=ConceptType.UNKNOWN,
             version="v1",
             timestamp=datetime.now(timezone.utc),
             confidence=0.8,
@@ -84,9 +86,9 @@ class TestConceptEngine:
         engine = ConceptEngine(reg)
         ts = datetime(2025, 1, 1, tzinfo=timezone.utc)
 
-        features = {"ROC_5": None, "RSI_14": 50.0, "EMA_20": 100.0, "SMA_20": 100.0}
+        features = {"ROC_5": 5.0, "RSI_14": 50.0, "EMA_20": 100.0, "SMA_20": 100.0}
         concepts = engine.process(ts, features)
 
         # Ensure engine produces valid Concept objects
         assert concepts["MomentumState"].confidence == 0.0
-        assert "TrendState" in concepts
+        assert "TrendState_EMA_20" in concepts

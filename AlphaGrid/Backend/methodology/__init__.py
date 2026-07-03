@@ -11,6 +11,8 @@ from .momentum import MomentumMethodology
 from .reversal import ReversalMethodology
 from .volatility import VolatilityMethodology
 from .volume_analysis import VolumeAnalysisMethodology
+from .smc import SMCMethodology
+from .wyckoff import WyckoffMethodology
 
 __all__ = [
     'MethodologyEvaluation', 
@@ -23,5 +25,7 @@ __all__ = [
     'MomentumMethodology',
     'ReversalMethodology',
     'VolatilityMethodology',
-    'VolumeAnalysisMethodology'
+    'VolumeAnalysisMethodology',
+    'SMCMethodology',
+    'WyckoffMethodology'
 ]

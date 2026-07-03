@@ -33,3 +33,7 @@ class LifecycleError(AlphaGridError):
 
 class PluginLoadError(AlphaGridError):
     """Raised when a plugin module cannot be loaded or registered."""
+
+
+class DataError(AlphaGridError):
+    """Raised for data validation or processing failures."""

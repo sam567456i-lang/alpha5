@@ -10,17 +10,17 @@ from fastapi.responses import JSONResponse
 from Backend.api.dependencies import PaginationParams, get_pagination
 from Backend.api.exceptions import APINotFoundError
 from Backend.api.responses import paginated_response, success_response
+from Backend.api.dependencies import get_recommendations_service
 from Backend.api.services.recommendations_service import RecommendationsService
 from fastapi import Depends
 
 router = APIRouter(prefix="/recommendations", tags=["Recommendations"])
-_service = RecommendationsService()
 
 
 @router.get("/live", summary="Current live recommendations")
-def get_live_recommendations() -> JSONResponse:
+def get_live_recommendations(service: RecommendationsService = Depends(get_recommendations_service)) -> JSONResponse:
     """Return all currently active recommendations."""
-    data = _service.get_live_recommendations()
+    data = service.get_live_recommendations()
     return success_response(data=data)
 
 
@@ -29,9 +29,10 @@ def get_recommendation_history(
     symbol: str | None = Query(default=None, description="Filter by instrument symbol."),
     strategy: str | None = Query(default=None, description="Filter by strategy name."),
     pagination: PaginationParams = Depends(get_pagination),
+    service: RecommendationsService = Depends(get_recommendations_service)
 ) -> JSONResponse:
     """Return paginated historical recommendations, optionally filtered."""
-    records, total = _service.get_recommendation_history(
+    records, total = service.get_recommendation_history(
         symbol=symbol,
         strategy=strategy,
         page=pagination.page,
@@ -46,9 +47,9 @@ def get_recommendation_history(
 
 
 @router.get("/{recommendation_id}", summary="Single recommendation details")
-def get_recommendation(recommendation_id: UUID) -> JSONResponse:
+def get_recommendation(recommendation_id: UUID, service: RecommendationsService = Depends(get_recommendations_service)) -> JSONResponse:
     """Return the full detail of a single recommendation by its UUID."""
-    data = _service.get_recommendation(recommendation_id)
+    data = service.get_recommendation(recommendation_id)
     if data is None:
         raise APINotFoundError(f"Recommendation '{recommendation_id}' not found.")
     return success_response(data=data)

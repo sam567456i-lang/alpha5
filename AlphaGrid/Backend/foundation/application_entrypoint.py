@@ -55,6 +55,39 @@ def create_application_context(
     )
 
     _register_foundation_services(context)
+    
+    from Backend.market_intelligence.registry import register_market_intelligence_services
+    register_market_intelligence_services(container)
+    
+    from Backend.features.registry_hook import register_features
+    register_features(container)
+    
+    from Backend.concepts.registry_hook import register_concepts
+    register_concepts(container)
+    
+    from Backend.signals.primitive.registry_hook import register_primitive_signals
+    register_primitive_signals(container)
+    
+    from Backend.methodology.registry_hook import register_methodologies
+    register_methodologies(container)
+    
+    from Backend.strategy.registry_hook import register_strategies
+    register_strategies(container)
+    
+    from Backend.evidence.registry_hook import register_evidence
+    register_evidence(container)
+    
+    from Backend.core.canonical_pipeline import DomainResearchPipeline
+    from Backend.market_intelligence.historical_market_pipeline import HistoricalMarketPipeline
+    from Backend.features.engine import FeatureEngine
+    # We deliberately resolve concept_engine dynamically inside the pipeline 
+    # to ensure it crashes AT the exact execution boundary.
+    container.register_factory("domain_research_pipeline", lambda c: DomainResearchPipeline(
+        historical_market_pipeline=c.resolve("historical_market_pipeline", HistoricalMarketPipeline),
+        feature_engine=c.resolve("feature_engine", FeatureEngine),
+        container=c
+    ), singleton=True)
+    
     return context
 
 

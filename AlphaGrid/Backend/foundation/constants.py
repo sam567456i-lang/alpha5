@@ -8,7 +8,7 @@ DEFAULT_LOG_LEVEL = "INFO"
 DEFAULT_LOG_FORMAT = "json"
 ENV_PREFIX = "ALPHAGRID_"
 
-VALID_ENVIRONMENTS = frozenset({"development", "testing", "production"})
+VALID_ENVIRONMENTS = frozenset({"development", "testing", "staging", "production", "research", "audit"})
 VALID_LOG_FORMATS = frozenset({"json", "text"})
 
 SECRET_FIELD_MARKERS = frozenset(

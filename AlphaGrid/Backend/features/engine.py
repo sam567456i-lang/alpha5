@@ -16,6 +16,16 @@ class FeatureEngine:
     Ensures correct execution order (DAG), caches dependencies, and handles warm-up.
     """
 
+    ENGINE_METADATA = {
+        "owner": "Feature Domain",
+        "version": "1.0.0",
+        "consumes": "MarketSnapshot",
+        "produces": "FeatureValue",
+        "registry": "feature_registry",
+        "contract_version": "v1",
+        "downstream": "ConceptEngine"
+    }
+
     def __init__(self, registry: FeatureRegistry) -> None:
         self._registry = registry
         self._cache = FeatureCache()
@@ -30,17 +40,20 @@ class FeatureEngine:
             f.get_name(): 0 for f in self._feature_instances
         }
 
-    def process(self, snapshot: Any) -> Dict[str, Any]:
+    def process(self, snapshot: Any, geometry_cache: Any = None) -> Dict[str, Any]:
         """
         Processes a single market snapshot and computes all features.
         
         Args:
             snapshot: The incoming market event (dict or MarketSnapshot).
+            geometry_cache: Optional geometry objects from PriceGeometry.
             
         Returns:
             Dictionary mapping feature names to their computed values.
         """
         self._cache.clear()
+        if geometry_cache is not None:
+            self._cache.set("geometry_cache", geometry_cache)
         
         # Normalize input to MarketSnapshot
         if isinstance(snapshot, dict):
