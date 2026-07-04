@@ -4138,3 +4138,34 @@ capabilities:
   tags:
   - core
   - v1
+- capability_id: ANALYSIS_TREND_EMA
+  name: EMA Trend Analysis
+  platform: P05_Analysis
+  family: Trend
+  subfamily: EMA
+  version: 1.0.0
+  description: Analyzes the market trend using Exponential Moving Averages.
+  dependencies:
+  - INDICATOR_EMA
+  status: Active
+- capability_id: ANALYSIS_TREND_SMA
+  name: SMA Trend Analysis
+  platform: P05_Analysis
+  family: Trend
+  subfamily: SMA
+  dependencies:
+  - INDICATOR_SMA
+- capability_id: ANALYSIS_TREND_WMA
+  name: WMA Trend Analysis
+  platform: P05_Analysis
+  family: Trend
+  subfamily: WMA
+  dependencies:
+  - INDICATOR_WMA
+- capability_id: ANALYSIS_TREND_MA_CROSS
+  name: MA Cross Trend Analysis
+  platform: P05_Analysis
+  family: Trend
+  subfamily: MACross
+  dependencies:
+  - INDICATOR_SMA
