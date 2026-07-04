@@ -14,6 +14,8 @@ from Backend.indicator_engine.extremum.donchian import DonchianEngine
 from Backend.indicator_engine.extremum.high_low import HighLowEngine
 from Backend.indicator_engine.extremum.support_resistance import SupportResistanceEngine
 from Backend.indicator_engine.momentum.rsi import RSIEngine
+from Backend.indicator_engine.volume.vwap import VWAPEngine
+from Backend.indicator_engine.volume.relative_volume import RelativeVolumeEngine
 
 __all__ = [
     "FinancialIndicatorResult",
@@ -41,5 +43,7 @@ __all__ = [
     "DonchianEngine",
     "HighLowEngine",
     "SupportResistanceEngine",
-    "RSIEngine"
+    "RSIEngine",
+    "VWAPEngine",
+    "RelativeVolumeEngine"
 ]

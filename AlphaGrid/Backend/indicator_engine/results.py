@@ -80,3 +80,11 @@ class SupportResistanceResult(FinancialIndicatorResult):
 class RSIResult(FinancialIndicatorResult):
     rsi: np.ndarray
 
+@dataclass(frozen=True)
+class VWAPResult(FinancialIndicatorResult):
+    vwap: np.ndarray
+
+@dataclass(frozen=True)
+class RelativeVolumeResult(FinancialIndicatorResult):
+    relative_volume: np.ndarray
+

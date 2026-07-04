@@ -2,7 +2,7 @@
     "id": "dataset_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 5.876899987924844,
+    "duration_ms": 11.845300032291561,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Dataset DS-2026-MATH-001 v1.0.0 successfully verified.",
-    "timestamp": "2026-07-04T08:52:27.564734"
+    "timestamp": "2026-07-04T08:57:08.650356"
 }

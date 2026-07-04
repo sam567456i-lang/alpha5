@@ -2,7 +2,7 @@
     "id": "benchmark_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 49.2519999970682,
+    "duration_ms": 38.537500018719584,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -18,35 +18,35 @@
     "artifacts": [],
     "metrics": {
         "ema_1000": {
-            "average_ms": 0.08901999099180102,
-            "median_ms": 0.08849997539073229,
-            "std_ms": 0.008942791282850153,
-            "p95_ms": 0.1003599725663662
+            "average_ms": 0.10547998826950788,
+            "median_ms": 0.0942000187933445,
+            "std_ms": 0.02927028498838412,
+            "p95_ms": 0.1468599890358746
         },
         "roc_1000": {
-            "average_ms": 0.10015999432653189
+            "average_ms": 0.08547999896109104
         },
         "ema_10000": {
-            "average_ms": 0.23598000407218933,
-            "median_ms": 0.21670002024620771,
-            "std_ms": 0.03934109528473845,
-            "p95_ms": 0.28490001568570733
+            "average_ms": 0.2590399933978915,
+            "median_ms": 0.2324000233784318,
+            "std_ms": 0.07774193571310088,
+            "p95_ms": 0.3761800122447312
         },
         "roc_10000": {
-            "average_ms": 0.24213999276980758
+            "average_ms": 0.19563998794183135
         },
         "ema_100000": {
-            "average_ms": 1.9571800017729402,
-            "median_ms": 1.81639997754246,
-            "std_ms": 0.4414916137465927,
-            "p95_ms": 2.613180025946349
+            "average_ms": 1.6053200117312372,
+            "median_ms": 1.318400027230382,
+            "std_ms": 0.5343297104524576,
+            "p95_ms": 2.4239800055511296
         },
         "roc_100000": {
-            "average_ms": 3.7939000059850514
+            "average_ms": 3.3264400088228285
         }
     },
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Observed runtime remained approximately linear and did not indicate quadratic growth.",
-    "timestamp": "2026-07-04T08:52:32.782768"
+    "timestamp": "2026-07-04T08:57:13.456143"
 }

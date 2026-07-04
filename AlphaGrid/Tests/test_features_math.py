@@ -4,7 +4,7 @@ import unittest
 import math
 from typing import Dict, Any
 from Shared.models.market import MarketSnapshot
-from Backend.features.volatility import ATRFeature
+from Backend.reference.legacy.features.volatility import ATRFeature
 from Backend.features.linear_regression import LinRegFeature
 from Backend.features.ichimoku import TenkanSenFeature
 from Backend.features.kama import KAMAFeature
@@ -16,7 +16,7 @@ from Backend.reference.legacy.features.rsi import RSIFeatureGenerator
 from Backend.features.bollinger_bands import BollingerBandsFeatureGenerator
 from Backend.features.stochastic_generator import StochasticFeatureGenerator
 from Backend.features.keltner_channels import KeltnerChannelFeatureGenerator
-from Backend.features.vwap import VWAPFeatureGenerator
+from Backend.reference.legacy.features.vwap import VWAPFeatureGenerator
 class TestFeaturesMath(unittest.TestCase):
     """
     Validates features against known mathematical reference vectors.

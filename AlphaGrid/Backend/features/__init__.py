@@ -6,14 +6,12 @@ from .engine import FeatureEngine
 from .cache import FeatureCache
 
 # Old unmigrated features
-from .volatility import RelativeVolumeFeature
 from .adx import ADXFeature
 from .cci import CCIFeature
 from .stochastic import StochasticFeature
 from .supertrend import SuperTrendFeature
 from .stochastic_generator import StochasticFeatureGenerator
 from .volatility_breakout import VolatilityBreakoutFeatureGenerator
-from .vwap import VWAPFeatureGenerator
 
 # Migrated Generators
 from .sma_generator import SMAFeatureGenerator
@@ -23,6 +21,8 @@ from .ma_cross_generator import MACrossFeatureGenerator
 from .macd_generator import MACDFeatureGenerator
 from .roc_generator import ROCFeatureGenerator
 from .rsi_generator import RSIFeatureGenerator
+from .vwap_generator import VWAPFeatureGenerator
+from .relative_volume_generator import RelativeVolumeFeatureGenerator
 from .atr_generator import ATRFeatureGenerator
 from .bollinger_generator import BollingerFeatureGenerator
 from .keltner_generator import KeltnerFeatureGenerator
@@ -36,11 +36,11 @@ __all__ = [
     'FeatureEngine',
     'FeatureRegistry',
     'ADXFeature',
-    'RelativeVolumeFeature',
     'StochasticFeature',
     'StochasticFeatureGenerator',
     'SuperTrendFeature',
     'VWAPFeatureGenerator',
+    'RelativeVolumeFeatureGenerator',
     'VolatilityBreakoutFeatureGenerator',
     'CCIFeature',
     'SMAFeatureGenerator',

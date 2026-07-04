@@ -2,30 +2,30 @@
 
 | Validator | Status | Duration (ms) |
 |-----------|--------|---------------|
-| roadmap_validator | **PASS** | 757.8 |
-| repository_validator | **PASS** | 29894.3 |
-| import_validator | **PASS** | 2.2 |
-| registry_validator | **PASS** | 2.0 |
-| dependency_validator | **PASS** | 287.7 |
-| ast_math_validator | **PASS** | 132.1 |
+| roadmap_validator | **PASS** | 791.3 |
+| repository_validator | **PASS** | 30645.9 |
+| import_validator | **PASS** | 1.8 |
+| registry_validator | **PASS** | 1.4 |
+| dependency_validator | **PASS** | 185.3 |
+| ast_math_validator | **PASS** | 104.0 |
 | indicator_metadata_validator | **PASS** | 0.1 |
-| pipeline_validator | **PASS** | 1706.9 |
-| memory_validator | **PASS** | 150.5 |
-| dataset_validator | **PASS** | 5.9 |
-| indicator_formula_validator | **PASS** | 1423.9 |
-| performance_validator | **PASS** | 1223.0 |
-| complexity_validator | **PASS** | 1.6 |
-| deterministic_replay_validator | **PASS** | 1.6 |
-| mathematical_validator | **PASS** | 215.0 |
-| indicator_composition_validator | **PASS** | 2.0 |
-| numerical_robustness_validator | **PASS** | 1.7 |
-| determinism_validator | **PASS** | 559.7 |
-| indicator_warmup_validator | **PASS** | 10.1 |
-| numerical_precision_validator | **PASS** | 310.9 |
-| rolling_window_validator | **PASS** | 10.9 |
-| warmup_validator | **PASS** | 1.9 |
-| architecture_drift_validator | **PASS** | 1363.5 |
-| stability_validator | **PASS** | 4.9 |
-| benchmark_validator | **PASS** | 49.3 |
+| pipeline_validator | **PASS** | 1670.9 |
+| memory_validator | **PASS** | 149.4 |
+| dataset_validator | **PASS** | 11.8 |
+| indicator_formula_validator | **PASS** | 1673.0 |
+| performance_validator | **PASS** | 1275.7 |
+| complexity_validator | **PASS** | 1.4 |
+| deterministic_replay_validator | **PASS** | 1.4 |
+| mathematical_validator | **PASS** | 68.2 |
+| indicator_composition_validator | **PASS** | 1.3 |
+| numerical_robustness_validator | **PASS** | 1.4 |
+| determinism_validator | **PASS** | 259.6 |
+| indicator_warmup_validator | **PASS** | 6.1 |
+| numerical_precision_validator | **PASS** | 193.3 |
+| rolling_window_validator | **PASS** | 5.3 |
+| warmup_validator | **PASS** | 1.7 |
+| architecture_drift_validator | **PASS** | 1260.3 |
+| stability_validator | **PASS** | 2.8 |
+| benchmark_validator | **PASS** | 38.5 |
 
 **Freeze Status**: ELIGIBLE

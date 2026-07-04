@@ -38,7 +38,7 @@ from Backend.features.stochastic import StochasticFeature
 from Backend.reference.legacy.features.donchian import Donchian20Feature
 from Backend.features.keltner import KeltnerChannelFeature
 from Backend.features.cci import CCIFeature
-from Backend.features.volatility import ATRFeature
+from Backend.reference.legacy.features.volatility import ATRFeature
 
 def test_strategy_registry():
     StrategyRegistry.clear()

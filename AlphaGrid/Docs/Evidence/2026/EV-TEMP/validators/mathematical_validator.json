@@ -2,7 +2,7 @@
     "id": "mathematical_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 214.98099999735132,
+    "duration_ms": 68.19059996632859,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 1.1368683772161603e-13,
     "mean_error": 0.0,
     "summary": "All mathematical identity proofs passed.",
-    "timestamp": "2026-07-04T08:52:30.436118"
+    "timestamp": "2026-07-04T08:57:11.673588"
 }

@@ -739,6 +739,15 @@
         "Shared",
         "typing"
     ],
+    "Backend.features.relative_volume_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
     "Backend.features.roc_generator": [
         "Backend",
         "__future__",
@@ -796,12 +805,6 @@
         "typing",
         "uuid"
     ],
-    "Backend.features.volatility": [
-        "Shared",
-        "base",
-        "collections",
-        "typing"
-    ],
     "Backend.features.volatility_breakout": [
         "Backend",
         "__future__",
@@ -811,7 +814,7 @@
         "typing",
         "uuid"
     ],
-    "Backend.features.vwap": [
+    "Backend.features.vwap_generator": [
         "Backend",
         "__future__",
         "hashlib",
@@ -844,6 +847,7 @@
         "ma_cross_generator",
         "macd_generator",
         "registry",
+        "relative_volume_generator",
         "roc_generator",
         "rsi_generator",
         "sma_generator",
@@ -851,9 +855,8 @@
         "stochastic_generator",
         "supertrend",
         "support_resistance_generator",
-        "volatility",
         "volatility_breakout",
-        "vwap",
+        "vwap_generator",
         "wma_generator"
     ],
     "Backend.features.interfaces.extremum_feature": [
@@ -873,6 +876,11 @@
         "typing"
     ],
     "Backend.features.interfaces.volatility_feature": [
+        "Backend",
+        "pandas",
+        "typing"
+    ],
+    "Backend.features.interfaces.volume_feature": [
         "Backend",
         "pandas",
         "typing"
@@ -1057,6 +1065,18 @@
     "Backend.indicator_engine.volatility.keltner": [
         "Backend",
         "numpy"
+    ],
+    "Backend.indicator_engine.volume.relative_volume": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.volume.vwap": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.volume.__init__": [
+        "relative_volume",
+        "vwap"
     ],
     "Backend.journal.__init__": [],
     "Backend.market_data.market_bar": [
@@ -1278,6 +1298,11 @@
         "typing"
     ],
     "Backend.math.public.variance": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.vwap": [
         "Backend",
         "numpy",
         "typing"
