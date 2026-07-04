@@ -1,6 +1,6 @@
 import yaml
 import os
-from Backend.platforms.analysis.core.dto import AnalysisContext, AnalysisResult
+from Backend.platforms.analysis.contracts import AnalysisContext, AnalysisResult
 
 class ContractValidator:
     def __init__(self, contracts_path: str):

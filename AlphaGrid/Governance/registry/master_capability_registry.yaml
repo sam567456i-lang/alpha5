@@ -4457,3 +4457,489 @@ capabilities:
   subfamily: TBD
   dependencies: []
   status: planned
+- capability_id: ANALYSIS_TECH_TREND
+  name: Trend Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Trend
+  status: planned
+- capability_id: ANALYSIS_TECH_MOMENTUM
+  name: Momentum Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Momentum
+  status: planned
+- capability_id: ANALYSIS_TECH_VOLATILITY
+  name: Volatility Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Volatility
+  status: planned
+- capability_id: ANALYSIS_TECH_VOLUME
+  name: Volume Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Volume
+  status: planned
+- capability_id: ANALYSIS_TECH_PRICEACTION
+  name: Price Action Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Price Action
+  status: planned
+- capability_id: ANALYSIS_TECH_CANDLESTICK
+  name: Candlestick Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Candlestick
+  status: planned
+- capability_id: ANALYSIS_TECH_CHARTPATTERNS
+  name: Chart Patterns Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Chart Patterns
+  status: planned
+- capability_id: ANALYSIS_TECH_BREAKOUT
+  name: Breakout Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Breakout
+  status: planned
+- capability_id: ANALYSIS_TECH_MEANREVERSION
+  name: Mean Reversion Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Mean Reversion
+  status: planned
+- capability_id: ANALYSIS_TECH_SUPPORTRESISTANCE
+  name: Support Resistance Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Support Resistance
+  status: planned
+- capability_id: ANALYSIS_TECH_MARKETSTRUCTURE
+  name: Market Structure Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Market Structure
+  status: planned
+- capability_id: ANALYSIS_TECH_MULTITIMEFRAME
+  name: Multi Timeframe Analysis
+  platform: P05_Analysis
+  category: Technical
+  family: Multi Timeframe
+  status: planned
+- capability_id: ANALYSIS_INST_SMARTMONEYCONCEPTS
+  name: Smart Money Concepts Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Smart Money Concepts
+  status: planned
+- capability_id: ANALYSIS_INST_LIQUIDITY
+  name: Liquidity Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Liquidity
+  status: planned
+- capability_id: ANALYSIS_INST_ORDERFLOW
+  name: Order Flow Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Order Flow
+  status: planned
+- capability_id: ANALYSIS_INST_VOLUMEPROFILE
+  name: Volume Profile Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Volume Profile
+  status: planned
+- capability_id: ANALYSIS_INST_MARKETPROFILE
+  name: Market Profile Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Market Profile
+  status: planned
+- capability_id: ANALYSIS_INST_AUCTIONMARKETTHEORY
+  name: Auction Market Theory Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Auction Market Theory
+  status: planned
+- capability_id: ANALYSIS_INST_FOOTPRINTANALYSIS
+  name: Footprint Analysis Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Footprint Analysis
+  status: planned
+- capability_id: ANALYSIS_INST_DOMANALYSIS
+  name: DOM Analysis Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: DOM Analysis
+  status: planned
+- capability_id: ANALYSIS_INST_DELTAANALYSIS
+  name: Delta Analysis Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Delta Analysis
+  status: planned
+- capability_id: ANALYSIS_INST_ICEBERGDETECTION
+  name: Iceberg Detection Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Iceberg Detection
+  status: planned
+- capability_id: ANALYSIS_INST_ABSORPTION
+  name: Absorption Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Absorption
+  status: planned
+- capability_id: ANALYSIS_INST_LARGEORDERTRACKING
+  name: Large Order Tracking Analysis
+  platform: P05_Analysis
+  category: Institutional
+  family: Large Order Tracking
+  status: planned
+- capability_id: ANALYSIS_QUANT_STATISTICAL
+  name: Statistical Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Statistical
+  status: planned
+- capability_id: ANALYSIS_QUANT_QUANTITATIVE
+  name: Quantitative Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Quantitative
+  status: planned
+- capability_id: ANALYSIS_QUANT_FACTORMODELS
+  name: Factor Models Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Factor Models
+  status: planned
+- capability_id: ANALYSIS_QUANT_COINTEGRATION
+  name: Cointegration Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Cointegration
+  status: planned
+- capability_id: ANALYSIS_QUANT_PCA
+  name: PCA Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: PCA
+  status: planned
+- capability_id: ANALYSIS_QUANT_HIDDENMARKOVMODELS
+  name: Hidden Markov Models Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Hidden Markov Models
+  status: planned
+- capability_id: ANALYSIS_QUANT_BAYESIANMODELS
+  name: Bayesian Models Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Bayesian Models
+  status: planned
+- capability_id: ANALYSIS_QUANT_KALMANFILTER
+  name: Kalman Filter Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Kalman Filter
+  status: planned
+- capability_id: ANALYSIS_QUANT_MONTECARLO
+  name: Monte Carlo Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Monte Carlo
+  status: planned
+- capability_id: ANALYSIS_QUANT_REGIMESWITCHING
+  name: Regime Switching Analysis
+  platform: P05_Analysis
+  category: Quantitative
+  family: Regime Switching
+  status: planned
+- capability_id: ANALYSIS_MKT_RELATIVESTRENGTH
+  name: Relative Strength Analysis
+  platform: P05_Analysis
+  category: Market Analysis
+  family: Relative Strength
+  status: planned
+- capability_id: ANALYSIS_MKT_BREADTH
+  name: Breadth Analysis
+  platform: P05_Analysis
+  category: Market Analysis
+  family: Breadth
+  status: planned
+- capability_id: ANALYSIS_MKT_CORRELATION
+  name: Correlation Analysis
+  platform: P05_Analysis
+  category: Market Analysis
+  family: Correlation
+  status: planned
+- capability_id: ANALYSIS_MKT_INTERMARKET
+  name: Intermarket Analysis
+  platform: P05_Analysis
+  category: Market Analysis
+  family: Intermarket
+  status: planned
+- capability_id: ANALYSIS_MKT_SECTORROTATION
+  name: Sector Rotation Analysis
+  platform: P05_Analysis
+  category: Market Analysis
+  family: Sector Rotation
+  status: planned
+- capability_id: ANALYSIS_MKT_CURRENCYSTRENGTH
+  name: Currency Strength Analysis
+  platform: P05_Analysis
+  category: Market Analysis
+  family: Currency Strength
+  status: planned
+- capability_id: ANALYSIS_MKT_VOLATILITYREGIME
+  name: Volatility Regime Analysis
+  platform: P05_Analysis
+  category: Market Analysis
+  family: Volatility Regime
+  status: planned
+- capability_id: ANALYSIS_FUND_FUNDAMENTAL
+  name: Fundamental Analysis
+  platform: P05_Analysis
+  category: Fundamental
+  family: Fundamental
+  status: planned
+- capability_id: ANALYSIS_FUND_EARNINGS
+  name: Earnings Analysis
+  platform: P05_Analysis
+  category: Fundamental
+  family: Earnings
+  status: planned
+- capability_id: ANALYSIS_FUND_FINANCIALSTATEMENTS
+  name: Financial Statements Analysis
+  platform: P05_Analysis
+  category: Fundamental
+  family: Financial Statements
+  status: planned
+- capability_id: ANALYSIS_FUND_VALUATION
+  name: Valuation Analysis
+  platform: P05_Analysis
+  category: Fundamental
+  family: Valuation
+  status: planned
+- capability_id: ANALYSIS_FUND_MANAGEMENT
+  name: Management Analysis
+  platform: P05_Analysis
+  category: Fundamental
+  family: Management
+  status: planned
+- capability_id: ANALYSIS_FUND_INDUSTRY
+  name: Industry Analysis
+  platform: P05_Analysis
+  category: Fundamental
+  family: Industry
+  status: planned
+- capability_id: ANALYSIS_FUND_ECONOMIC
+  name: Economic Analysis
+  platform: P05_Analysis
+  category: Fundamental
+  family: Economic
+  status: planned
+- capability_id: ANALYSIS_MACRO_CENTRALBANK
+  name: Central Bank Analysis
+  platform: P05_Analysis
+  category: Macro
+  family: Central Bank
+  status: planned
+- capability_id: ANALYSIS_MACRO_INFLATION
+  name: Inflation Analysis
+  platform: P05_Analysis
+  category: Macro
+  family: Inflation
+  status: planned
+- capability_id: ANALYSIS_MACRO_INTERESTRATES
+  name: Interest Rates Analysis
+  platform: P05_Analysis
+  category: Macro
+  family: Interest Rates
+  status: planned
+- capability_id: ANALYSIS_MACRO_ALTERNATIVEDATA
+  name: Alternative Data Analysis
+  platform: P05_Analysis
+  category: Macro
+  family: Alternative Data
+  status: planned
+- capability_id: ANALYSIS_SENT_SENTIMENT
+  name: Sentiment Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: Sentiment
+  status: planned
+- capability_id: ANALYSIS_SENT_BEHAVIORAL
+  name: Behavioral Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: Behavioral
+  status: planned
+- capability_id: ANALYSIS_SENT_NEWS
+  name: News Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: News
+  status: planned
+- capability_id: ANALYSIS_SENT_SOCIALMEDIA
+  name: Social Media Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: Social Media
+  status: planned
+- capability_id: ANALYSIS_SENT_ONCHAIN
+  name: On chain Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: On chain
+  status: planned
+- capability_id: ANALYSIS_SENT_OPTIONS
+  name: Options Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: Options
+  status: planned
+- capability_id: ANALYSIS_SENT_FUTURESPOSITIONING
+  name: Futures Positioning Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: Futures Positioning
+  status: planned
+- capability_id: ANALYSIS_SENT_COTANALYSIS
+  name: COT Analysis Analysis
+  platform: P05_Analysis
+  category: Sentiment
+  family: COT Analysis
+  status: planned
+- capability_id: ANALYSIS_AI_MACHINELEARNING
+  name: Machine Learning Analysis
+  platform: P05_Analysis
+  category: AI
+  family: Machine Learning
+  status: planned
+- capability_id: ANALYSIS_AI_AIANALYSIS
+  name: AI Analysis Analysis
+  platform: P05_Analysis
+  category: AI
+  family: AI Analysis
+  status: planned
+- capability_id: ANALYSIS_AI_ENSEMBLEANALYSIS
+  name: Ensemble Analysis Analysis
+  platform: P05_Analysis
+  category: AI
+  family: Ensemble Analysis
+  status: planned
+- capability_id: ANALYSIS_AI_METAANALYSIS
+  name: Meta Analysis Analysis
+  platform: P05_Analysis
+  category: AI
+  family: Meta Analysis
+  status: planned
+- capability_id: ANALYSIS_AI_EXPLAINABILITYANALYSIS
+  name: Explainability Analysis Analysis
+  platform: P05_Analysis
+  category: AI
+  family: Explainability Analysis
+  status: planned
+- capability_id: ANALYSIS_EXT_EXTERNALREPOSITORY
+  name: External Repository Analysis
+  platform: P05_Analysis
+  category: External
+  family: External Repository
+  status: planned
+- capability_id: ANALYSIS_EXT_KNOWLEDGEBASE
+  name: Knowledge Base Analysis
+  platform: P05_Analysis
+  category: External
+  family: Knowledge Base
+  status: planned
+- capability_id: ANALYSIS_EXT_RESEARCHPAPER
+  name: Research Paper Analysis
+  platform: P05_Analysis
+  category: External
+  family: Research Paper
+  status: planned
+- capability_id: STRATEGY_TRENDFOLLOWING
+  name: Trend Following Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Trend Following
+  status: planned
+- capability_id: STRATEGY_BREAKOUT
+  name: Breakout Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Breakout
+  status: planned
+- capability_id: STRATEGY_MEANREVERSION
+  name: Mean Reversion Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Mean Reversion
+  status: planned
+- capability_id: STRATEGY_MOMENTUM
+  name: Momentum Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Momentum
+  status: planned
+- capability_id: STRATEGY_PRICEACTION
+  name: Price Action Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Price Action
+  status: planned
+- capability_id: STRATEGY_SMARTMONEY
+  name: Smart Money Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Smart Money
+  status: planned
+- capability_id: STRATEGY_VOLUME
+  name: Volume Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Volume
+  status: planned
+- capability_id: STRATEGY_ORDERFLOW
+  name: Order Flow Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Order Flow
+  status: planned
+- capability_id: STRATEGY_STATISTICAL
+  name: Statistical Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Statistical
+  status: planned
+- capability_id: STRATEGY_MACHINELEARNING
+  name: Machine Learning Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Machine Learning
+  status: planned
+- capability_id: STRATEGY_MACRO
+  name: Macro Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Macro
+  status: planned
+- capability_id: STRATEGY_SEASONAL
+  name: Seasonal Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Seasonal
+  status: planned
+- capability_id: STRATEGY_OPTIONS
+  name: Options Strategy
+  platform: P10_Strategies
+  category: Strategy
+  family: Options
+  status: planned

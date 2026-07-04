@@ -3,12 +3,12 @@ import unittest
 import pandas as pd
 from typing import Dict, Any
 
-from Backend.platforms.analysis.core.dto import AnalysisContext, AnalysisResult
-from Backend.platforms.analysis.registry.loader import RegistryLoader
-from Backend.platforms.analysis.factory.factory import AnalysisFactory, BaseAnalysis
+from Backend.platforms.analysis.contracts import AnalysisContext, AnalysisResult
+from Backend.platforms.analysis.registry import RegistryLoader
+from Backend.platforms.analysis.factory import AnalysisFactory, BaseAnalysis
 from Backend.platforms.analysis.validators.contract_validator import ContractValidator
-from Backend.platforms.analysis.engine.pipeline import AnalysisPipeline
-from Backend.platforms.analysis.engine.engine import AnalysisEngine
+from Backend.platforms.analysis.pipeline import AnalysisPipeline
+from Backend.platforms.analysis.engine import AnalysisEngine
 
 TEST_REGISTRY = os.path.join(os.path.dirname(__file__), "test_registry.yaml")
 TEST_CONTRACTS = os.path.join(os.path.dirname(__file__), "test_contracts.yaml")
@@ -90,14 +90,19 @@ class TestCore(unittest.TestCase):
             pipeline.run(analysis, context)
 
     def test_engine_end_to_end(self):
-        loader = RegistryLoader(TEST_REGISTRY)
+        validator = ContractValidator(TEST_CONTRACTS)
+        pipeline = AnalysisPipeline(validator)
+        
+        class MockRegistry:
+            def get_metadata(self, cid):
+                return None
+                
+        loader = MockRegistry()
         factory = AnalysisFactory(loader)
         factory.register("MOCK-TREND-001", MockTrendAnalysis)
         
-        validator = ContractValidator(TEST_CONTRACTS)
-        pipeline = AnalysisPipeline(validator)
+        # We also need a mock indicator engine
         engine = AnalysisEngine(factory, pipeline)
-        
         context = AnalysisContext(
             market_data=pd.DataFrame({"close": [1, 2, 3]}),
             timeframe="1D"

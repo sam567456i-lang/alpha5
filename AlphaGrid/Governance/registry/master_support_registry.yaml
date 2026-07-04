@@ -1,0 +1,63 @@
+# Master Support Registry
+# Tracks supported dimensions across the AlphaGrid platform
+
+market_support:
+  - Equities
+  - ETFs
+  - Futures
+  - Options
+  - Commodities
+  - Indices
+  - Forex (placeholder)
+  - Crypto (placeholder)
+  - Bonds (future)
+  - Fixed Income (future)
+
+trading_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  - Investing
+  - Quantitative
+  - Portfolio
+  - Research
+
+timeframes:
+  - Tick (placeholder)
+  - Seconds (placeholder)
+  - 1m
+  - 3m
+  - 5m
+  - 10m
+  - 15m
+  - 30m
+  - 45m
+  - 1H
+  - 2H
+  - 4H
+  - Daily
+  - Weekly
+  - Monthly
+
+dashboard_capabilities:
+  - Global Market Scanner
+  - Opportunity Scanner
+  - Analysis Explorer
+  - Market Explorer
+  - Multi-Timeframe View
+  - Strategy Explorer
+  - Watchlists
+  - Filters
+  - Saved Views
+  - Sorting
+  - Ranking
+  - Heatmaps
+  - Sector Rotation
+  - Risk Summary
+  - AI Explanation
+  - Evidence Panel
+  - Comparison View
+  - Notifications
+  - Reports
+  - Research Workspace

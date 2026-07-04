@@ -1,11 +1,11 @@
 import unittest
 import pandas as pd
 from typing import Dict, Any
-from Backend.platforms.analysis.core.dto import AnalysisContext
-from Backend.platforms.analysis.volume.vwap_analysis import VWAPAnalysis
-from Backend.platforms.analysis.volume.obv_analysis import OBVAnalysis
-from Backend.platforms.analysis.volume.volume_sma_analysis import VolumeSMAAnalysis
-from Backend.platforms.analysis.volume.ad_analysis import AccumulationDistributionAnalysis
+from Backend.platforms.analysis.contracts import AnalysisContext
+from Backend.platforms.analysis.volume.analyses.vwap_analysis import VWAPAnalysis
+from Backend.platforms.analysis.volume.analyses.obv_analysis import OBVAnalysis
+from Backend.platforms.analysis.volume.analyses.volume_sma_analysis import VolumeSMAAnalysis
+from Backend.platforms.analysis.volume.analyses.ad_analysis import AccumulationDistributionAnalysis
 
 class MockIndicatorEngine:
     def __init__(self, ind_name, df):

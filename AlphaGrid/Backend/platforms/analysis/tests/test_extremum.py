@@ -1,10 +1,10 @@
 import unittest
 import pandas as pd
 from typing import Dict, Any
-from Backend.platforms.analysis.core.dto import AnalysisContext
-from Backend.platforms.analysis.extremum.donchian_analysis import DonchianAnalysis
-from Backend.platforms.analysis.extremum.highlow_analysis import HighLowAnalysis
-from Backend.platforms.analysis.extremum.sr_analysis import SupportResistanceAnalysis
+from Backend.platforms.analysis.contracts import AnalysisContext
+from Backend.platforms.analysis.extremum.analyses.donchian_analysis import DonchianAnalysis
+from Backend.platforms.analysis.extremum.analyses.highlow_analysis import HighLowAnalysis
+from Backend.platforms.analysis.extremum.analyses.sr_analysis import SupportResistanceAnalysis
 
 class MockIndicatorEngine:
     def __init__(self, ind_name, df):

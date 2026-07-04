@@ -1,0 +1,40 @@
+# Master Dependency Graph
+# Authoritative source for Project OS to determine pipeline blockers and downstream dependencies
+
+forward_mapping:
+  Data:
+    - Indicator
+  Indicator:
+    - Analysis
+  Analysis:
+    - Concept
+  Concept:
+    - Inference
+  Inference:
+    - Methodology
+  Methodology:
+    - Signal
+  Signal:
+    - Opportunity
+  Opportunity:
+    - Recommendation
+  Recommendation:
+    - Dashboard
+
+reverse_mapping:
+  Analysis_Requires:
+    - Indicators
+  Strategy_Requires:
+    - Concepts
+  DashboardWidget_Requires:
+    - Analyses
+  Recommendation_Aggregates:
+    - Strategies
+  AIExplanation_Requires:
+    - Evidence Sources
+
+strict_rules:
+  - "No Analysis may generate a Signal."
+  - "No Analysis may bypass Indicator and read Data directly unless no Indicator exists."
+  - "No Dashboard widget may fetch from Database directly without going through DTOs."
+  - "Dependency flow must be strictly acyclic."

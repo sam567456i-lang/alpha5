@@ -1,8 +1,8 @@
 import unittest
 import pandas as pd
 from typing import Dict, Any
-from Backend.platforms.analysis.core.dto import AnalysisContext
-from Backend.platforms.analysis.volatility.atr_analysis import ATRAnalysis
+from Backend.platforms.analysis.contracts import AnalysisContext
+from Backend.platforms.analysis.volatility.analyses.atr_analysis import ATRAnalysis
 
 class MockIndicatorEngine:
     def __init__(self, atr_val=1.0, atr_series=None):
@@ -40,8 +40,8 @@ class TestVolatilityAnalysis(unittest.TestCase):
         self.assertEqual(res.score, -0.50)
         self.assertEqual(res.metadata["classification"], "contraction")
 
-from Backend.platforms.analysis.volatility.bollinger_analysis import BollingerAnalysis
-from Backend.platforms.analysis.volatility.keltner_analysis import KeltnerAnalysis
+from Backend.platforms.analysis.volatility.analyses.bollinger_analysis import BollingerAnalysis
+from Backend.platforms.analysis.volatility.analyses.keltner_analysis import KeltnerAnalysis
 
 class TestBollingerAnalysis(unittest.TestCase):
     def test_bb_expansion(self):

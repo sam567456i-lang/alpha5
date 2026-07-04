@@ -1,8 +1,8 @@
 import unittest
 import pandas as pd
 from typing import Dict, Any
-from Backend.platforms.analysis.core.dto import AnalysisContext
-from Backend.platforms.analysis.trend.ema_analysis import EMAAnalysis
+from Backend.platforms.analysis.contracts import AnalysisContext
+from Backend.platforms.analysis.trend.analyses.ema_analysis import EMAAnalysis
 
 class MockIndicatorEngine:
     def __init__(self, ema_20_val, ema_50_val, ema_200_val):

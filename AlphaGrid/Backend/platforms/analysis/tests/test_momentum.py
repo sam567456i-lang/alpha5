@@ -1,11 +1,11 @@
 import unittest
 import pandas as pd
 from typing import Dict, Any
-from Backend.platforms.analysis.core.dto import AnalysisContext
-from Backend.platforms.analysis.momentum.rsi_analysis import RSIAnalysis
-from Backend.platforms.analysis.momentum.roc_analysis import ROCAnalysis
-from Backend.platforms.analysis.momentum.macd_analysis import MACDAnalysis
-from Backend.platforms.analysis.momentum.composite_momentum_analysis import CompositeMomentumAnalysis
+from Backend.platforms.analysis.contracts import AnalysisContext
+from Backend.platforms.analysis.momentum.analyses.rsi_analysis import RSIAnalysis
+from Backend.platforms.analysis.momentum.analyses.roc_analysis import ROCAnalysis
+from Backend.platforms.analysis.momentum.analyses.macd_analysis import MACDAnalysis
+from Backend.platforms.analysis.momentum.analyses.composite_momentum_analysis import CompositeMomentumAnalysis
 
 class MockIndicatorEngine:
     def __init__(self, rsi_val=50.0, roc_val=0.0, macd_df=None):
@@ -53,7 +53,7 @@ class TestMomentumAnalysis(unittest.TestCase):
         self.assertEqual(res.metadata["classification"], "Strong Bullish Momentum")
 
     def test_composite_momentum(self):
-        from Backend.platforms.analysis.core.dto import AnalysisResult
+        from Backend.platforms.analysis.contracts import AnalysisResult
         analysis = CompositeMomentumAnalysis()
         
         rsi_res = AnalysisResult(score=0.8, raw_data=pd.DataFrame(), signals=[], metadata={"status": "completed"})
