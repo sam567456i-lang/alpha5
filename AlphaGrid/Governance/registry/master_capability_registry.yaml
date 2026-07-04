@@ -4240,3 +4240,31 @@ capabilities:
   subfamily: SupportResistance
   dependencies:
   - INDICATOR_SR
+- capability_id: ANALYSIS_VOLUME_VWAP
+  name: VWAP Analysis
+  platform: P05_Analysis
+  family: Volume
+  subfamily: VWAP
+  dependencies:
+  - INDICATOR_VWAP
+- capability_id: ANALYSIS_VOLUME_OBV
+  name: OBV Analysis
+  platform: P05_Analysis
+  family: Volume
+  subfamily: OBV
+  dependencies:
+  - INDICATOR_OBV
+- capability_id: ANALYSIS_VOLUME_SMA
+  name: Volume SMA Analysis
+  platform: P05_Analysis
+  family: Volume
+  subfamily: VolumeSMA
+  dependencies:
+  - INDICATOR_VOLUME_SMA
+- capability_id: ANALYSIS_VOLUME_AD
+  name: Accumulation Distribution Analysis
+  platform: P05_Analysis
+  family: Volume
+  subfamily: AccDist
+  dependencies:
+  - INDICATOR_ACC_DIST
