@@ -1,0 +1,90 @@
+ai_contract:
+  name: Ai Contract
+  description: Standard ai contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+analysis_contract:
+  name: Analysis Contract
+  description: Standard analysis contract definition.
+  version: 1.0.0
+  inputs:
+  - name: market_data
+    type: DataFrame
+    required: true
+  - name: timeframe
+    type: str
+    required: true
+  - name: parameters
+    type: Dict[str, Any]
+    required: false
+  outputs:
+  - name: score
+    type: float
+    description: -1.0 to 1.0
+  - name: signals
+    type: List[Signal]
+    required: false
+  - name: raw_data
+    type: DataFrame
+    required: true
+  invariants:
+  - score_between_minus_one_and_one
+  - raw_data_matches_input_index
+concept_contract:
+  name: Concept Contract
+  description: Standard concept contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+dashboard_contract:
+  name: Dashboard Contract
+  description: Standard dashboard contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+feature_contract:
+  name: Feature Contract
+  description: Standard feature contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+indicator_contract:
+  name: Indicator Contract
+  description: Standard indicator contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+methodology_contract:
+  name: Methodology Contract
+  description: Standard methodology contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+opportunity_contract:
+  name: Opportunity Contract
+  description: Standard opportunity contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+recommendation_contract:
+  name: Recommendation Contract
+  description: Standard recommendation contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []
+signal_contract:
+  name: Signal Contract
+  description: Standard signal contract definition.
+  version: 1.0.0
+  inputs: []
+  outputs: []
+  invariants: []

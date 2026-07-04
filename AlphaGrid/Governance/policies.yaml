@@ -1,0 +1,24 @@
+ai_policy:
+  name: Ai Policy
+  description: Standard ai policy definition.
+  version: 1.0.0
+deprecation_policy:
+  name: Deprecation Policy
+  description: Standard deprecation policy definition.
+  version: 1.0.0
+external_repository_policy:
+  name: External Repository Policy
+  description: Standard external repository policy definition.
+  version: 1.0.0
+licensing_policy:
+  name: Licensing Policy
+  description: Standard licensing policy definition.
+  version: 1.0.0
+release_policy:
+  name: Release Policy
+  description: Standard release policy definition.
+  version: 1.0.0
+security_policy:
+  name: Security Policy
+  description: Standard security policy definition.
+  version: 1.0.0

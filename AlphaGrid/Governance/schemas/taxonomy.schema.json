@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "format_version": {
+      "type": "string"
+    },
+    "generated_by": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "checksum": {
+      "type": "string"
+    },
+    "markets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "trading_styles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "timeframes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "analysis_domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "strategy_families": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dashboard_modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ai_agents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "data_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "governance_status_lifecycle": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "format_version",
+    "checksum",
+    "markets",
+    "timeframes",
+    "governance_status_lifecycle"
+  ]
+}

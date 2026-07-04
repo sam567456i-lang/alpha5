@@ -1,0 +1,34 @@
+# Dependency Graph
+
+- **Rolling State Management** depends on: Indicator Engine
+- **Streaming State Tracking** depends on: Rolling State Management
+- **Indicator Cache** depends on: Streaming State Tracking
+- **Warmup Cache** depends on: Indicator Cache
+- **Partial Recomputation Engine** depends on: Streaming State Tracking
+- **Incremental Updates (EMA, SMA, ATR, MACD, RSI, VWAP)** depends on: Streaming State Tracking
+- **Donchian Channels** depends on: Math Core
+- **High/Low Breakout** depends on: Math Core
+- **Support/Resistance Levels** depends on: Math Core
+- **RSI (Relative Strength Index)** depends on: Math Core
+- **RMA (Running Moving Average)** depends on: Math Core
+- **Momentum Engine Base** depends on: Indicator Engine
+- **VWAP (Volume Weighted Average Price)** depends on: Math Core
+- **OBV (On-Balance Volume)** depends on: Math Core
+- **Volume SMA** depends on: Math Core
+- **Accumulation/Distribution** depends on: Math Core
+- **Semantic Concept Base** depends on: Feature Generators
+- **Concept Fusion Engine** depends on: Concept Layer
+- **Methodology Base** depends on: Inference Layer
+- **Signal Generator Base** depends on: Methodologies
+- **Strategy Orchestrator** depends on: Signals
+- **Portfolio Engine** depends on: Declarative Strategies
+- **Risk Engine** depends on: Portfolio Engine
+- **Execution Engine** depends on: Risk Engine
+- **Vibe-Trading Integration** depends on: Inference Layer
+- **AI Platform Integration** depends on: Execution Engine
+- **Knowledge Subsystem (Vector DB/RAG)** depends on: AI Platform Integration
+- **Cross-Family Regression Validator** depends on: Validation Framework
+- **Concept Validator** depends on: Concept Layer
+- **Methodology Validator** depends on: Methodologies
+- **Signal Validator** depends on: Signals
+- **Strategy Dependency Validator** depends on: Declarative Strategies

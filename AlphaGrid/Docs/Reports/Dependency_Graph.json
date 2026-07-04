@@ -1,0 +1,12 @@
+{
+  "P05_depends_on": [
+    "P02_Data",
+    "P06_Math_Core"
+  ],
+  "dependent_on_P05": [
+    "P10_Concepts",
+    "P11_Inference",
+    "P12_Methodology",
+    "Dashboard"
+  ]
+}

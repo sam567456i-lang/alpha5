@@ -88,3 +88,14 @@ class VWAPResult(FinancialIndicatorResult):
 class RelativeVolumeResult(FinancialIndicatorResult):
     relative_volume: np.ndarray
 
+@dataclass(frozen=True)
+class OBVResult(FinancialIndicatorResult):
+    obv: np.ndarray
+
+@dataclass(frozen=True)
+class VolumeSMAResult(FinancialIndicatorResult):
+    volume_sma: np.ndarray
+
+@dataclass(frozen=True)
+class AccumulationDistributionResult(FinancialIndicatorResult):
+    ad: np.ndarray

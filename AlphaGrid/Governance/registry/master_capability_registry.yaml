@@ -1,0 +1,4140 @@
+schema_version: '1.0'
+format_version: '1.0'
+generated_by: System
+capabilities:
+- name: OHLCV
+  version: 1.0.0
+  capability_id: ftr-ohlcv
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: OHLCV capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: CandleBody
+  version: 1.0.0
+  capability_id: ftr-candlebody
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: CandleBody capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: UpperWick
+  version: 1.0.0
+  capability_id: ftr-upperwick
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: UpperWick capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: LowerWick
+  version: 1.0.0
+  capability_id: ftr-lowerwick
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: LowerWick capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: BodyRatio
+  version: 1.0.0
+  capability_id: ftr-bodyratio
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: BodyRatio capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Pivot
+  version: 1.0.0
+  capability_id: geo-pivot
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Pivot capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Swing
+  version: 1.0.0
+  capability_id: geo-swing
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Swing capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Range
+  version: 1.0.0
+  capability_id: geo-range
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Range capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Channel
+  version: 1.0.0
+  capability_id: geo-channel
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Channel capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Trend
+  version: 1.0.0
+  capability_id: con-trend
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Trend capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Momentum
+  version: 1.0.0
+  capability_id: con-momentum
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Momentum capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Liquidity
+  version: 1.0.0
+  capability_id: con-liquidity
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Liquidity capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Structure
+  version: 1.0.0
+  capability_id: con-structure
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Structure capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Trend Following
+  version: 1.0.0
+  capability_id: meth-trendfollowing
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Trend Following capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Mean Reversion
+  version: 1.0.0
+  capability_id: meth-meanreversion
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Mean Reversion capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: SMC
+  version: 1.0.0
+  capability_id: meth-smc
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: SMC capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Wyckoff
+  version: 1.0.0
+  capability_id: meth-wyckoff
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Wyckoff capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: CanonicalValidationStrategy
+  version: 1.0.0
+  capability_id: strat-canonicalvalidation
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: CanonicalValidationStrategy capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: MACD Trend
+  version: 1.0.0
+  capability_id: strat-macdtrend
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: MACD Trend capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: SMA Cross
+  version: 1.0.0
+  capability_id: strat-smacross
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: SMA Cross capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: SuperTrend
+  version: 1.0.0
+  capability_id: strat-supertrend
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: SuperTrend capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Ichimoku Cloud
+  version: 1.0.0
+  capability_id: strat-ichimoku
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Ichimoku Cloud capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: RSI Reversion
+  version: 1.0.0
+  capability_id: strat-rsireversion
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: RSI Reversion capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Macro Intelligence
+  version: 1.0.0
+  capability_id: int-macro
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Macro Intelligence capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breadth Intelligence
+  version: 1.0.0
+  capability_id: int-breadth
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breadth Intelligence capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Economic Calendar Intelligence
+  version: 1.0.0
+  capability_id: int-calendar
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Economic Calendar Intelligence capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Institutional Ownership Intelligence
+  version: 1.0.0
+  capability_id: int-ownership
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Institutional Ownership Intelligence capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breadth Features
+  version: 1.0.0
+  capability_id: ftr-breadth
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breadth Features capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Relative Strength Features
+  version: 1.0.0
+  capability_id: ftr-rs
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Relative Strength Features capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Currency Strength Features
+  version: 1.0.0
+  capability_id: ftr-currency
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Currency Strength Features capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Linear Regression
+  version: 1.0.0
+  capability_id: ftr-linreg
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Linear Regression capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: KAMA
+  version: 1.0.0
+  capability_id: ftr-kama
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: KAMA capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Hull MA
+  version: 1.0.0
+  capability_id: ftr-hma
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Hull MA capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Ichimoku Cloud
+  version: 1.0.0
+  capability_id: ftr-ichimoku
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Ichimoku Cloud capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breadth Expansion
+  version: 1.0.0
+  capability_id: con-breadth
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breadth Expansion capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Relative Strength
+  version: 1.0.0
+  capability_id: con-rs
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Relative Strength capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Seasonality
+  version: 1.0.0
+  capability_id: con-seasonality
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Seasonality capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breadth Methodology
+  version: 1.0.0
+  capability_id: meth-breadth
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breadth Methodology capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Relative Strength Methodology
+  version: 1.0.0
+  capability_id: meth-rs
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Relative Strength Methodology capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Currency Methodology
+  version: 1.0.0
+  capability_id: meth-currency
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Currency Methodology capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Seasonal Methodology
+  version: 1.0.0
+  capability_id: meth-seasonal
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Seasonal Methodology capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: RSI Feature Generator
+  version: 1.0.0
+  capability_id: ftr-rsi
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: RSI Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Bollinger Bands Generator
+  version: 1.0.0
+  capability_id: ftr-bollinger
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Bollinger Bands Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Stochastic Generator
+  version: 1.0.0
+  capability_id: ftr-stochastic
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Stochastic Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: VWAP Feature Generator
+  version: 1.0.0
+  capability_id: ftr-vwap
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: VWAP Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Keltner Channel Generator
+  version: 1.0.0
+  capability_id: ftr-keltner
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Keltner Channel Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: ATR Feature Generator
+  version: 1.0.0
+  capability_id: ftr-atr
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: ATR Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Extremum Concept Generator
+  version: 1.0.0
+  capability_id: con-extremum
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Extremum Concept Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Extremum Reversion Primitive
+  version: 1.0.0
+  capability_id: sig-meanreversion
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Extremum Reversion Primitive capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Support/Resistance Feature Generator
+  version: 1.0.0
+  capability_id: ftr-sr
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Support/Resistance Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: High/Low Breakout Feature Generator
+  version: 1.0.0
+  capability_id: ftr-hlbreakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: High/Low Breakout Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Volatility Breakout Feature Generator
+  version: 1.0.0
+  capability_id: ftr-volbreakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Volatility Breakout Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breakout Concept Generator
+  version: 1.0.0
+  capability_id: con-breakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breakout Concept Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breakout Methodology
+  version: 1.0.0
+  capability_id: meth-breakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breakout Methodology capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breakout Primitive Signal Generator
+  version: 1.0.0
+  capability_id: sig-breakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breakout Primitive Signal Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: S/R Breakout Strategy
+  version: 1.0.0
+  capability_id: strat-srbreakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: S/R Breakout Strategy capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: High/Low Breakout Strategy
+  version: 1.0.0
+  capability_id: strat-hlbreakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: High/Low Breakout Strategy capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Volatility Breakout Strategy
+  version: 1.0.0
+  capability_id: strat-volbreakout
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Volatility Breakout Strategy capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: MACD Trend Strategy (Legacy)
+  version: 1.0.0
+  capability_id: strat-macd-trend-legacy
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: MACD Trend Strategy (Legacy) capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: MACD Momentum Strategy (Canonical)
+  version: 1.0.0
+  capability_id: strat-macd-momentum-canonical
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: MACD Momentum Strategy (Canonical) capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: ROC Momentum Strategy (Canonical)
+  version: 1.0.0
+  capability_id: strat-roc-momentum-canonical
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: ROC Momentum Strategy (Canonical) capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Momentum Semantic Concept
+  version: 1.0.0
+  capability_id: con-momentum-semantic
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Momentum Semantic Concept capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: PPO Feature Generator
+  version: 1.0.0
+  capability_id: ftr-ppo-generator
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: PPO Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: TRIX Feature Generator
+  version: 1.0.0
+  capability_id: ftr-trix-generator
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: TRIX Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: TSI Feature Generator
+  version: 1.0.0
+  capability_id: ftr-tsi-generator
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: TSI Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: KST Feature Generator
+  version: 1.0.0
+  capability_id: ftr-kst-generator
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: KST Feature Generator capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Analysis Core Analysis
+  version: 1.0.0
+  capability_id: AN-ANALYSISCORE-001
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Analysis Core Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Trend Analysis
+  version: 1.0.0
+  capability_id: AN-TREND-002
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Trend Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Momentum Analysis
+  version: 1.0.0
+  capability_id: AN-MOMENTUM-003
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Momentum Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Volatility Analysis
+  version: 1.0.0
+  capability_id: AN-VOLATILITY-004
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Volatility Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Support/Resistance Analysis
+  version: 1.0.0
+  capability_id: AN-SUPPORTRESISTANCE-005
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Support/Resistance Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Volume Analysis
+  version: 1.0.0
+  capability_id: AN-VOLUME-006
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Volume Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Price Action Analysis
+  version: 1.0.0
+  capability_id: AN-PRICEACTION-007
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Price Action Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Candlestick Analysis
+  version: 1.0.0
+  capability_id: AN-CANDLESTICK-008
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Candlestick Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Chart Patterns Analysis
+  version: 1.0.0
+  capability_id: AN-CHARTPATTERNS-009
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Chart Patterns Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Market Structure Analysis
+  version: 1.0.0
+  capability_id: AN-MARKETSTRUCTURE-010
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Market Structure Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Smart Money Analysis
+  version: 1.0.0
+  capability_id: AN-SMARTMONEY-011
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Smart Money Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Liquidity Analysis
+  version: 1.0.0
+  capability_id: AN-LIQUIDITY-012
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Liquidity Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Market Profile Analysis
+  version: 1.0.0
+  capability_id: AN-MARKETPROFILE-013
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Market Profile Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Order Flow Analysis
+  version: 1.0.0
+  capability_id: AN-ORDERFLOW-014
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Order Flow Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Quantitative Analysis
+  version: 1.0.0
+  capability_id: AN-QUANTITATIVE-015
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Quantitative Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Statistical Analysis
+  version: 1.0.0
+  capability_id: AN-STATISTICAL-016
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Statistical Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Relative Strength Analysis
+  version: 1.0.0
+  capability_id: AN-RELATIVESTRENGTH-017
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Relative Strength Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Breadth Analysis
+  version: 1.0.0
+  capability_id: AN-BREADTH-018
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Breadth Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Correlation Analysis
+  version: 1.0.0
+  capability_id: AN-CORRELATION-019
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Correlation Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Intermarket Analysis
+  version: 1.0.0
+  capability_id: AN-INTERMARKET-020
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Intermarket Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Macro Analysis
+  version: 1.0.0
+  capability_id: AN-MACRO-021
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Macro Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Seasonal Analysis
+  version: 1.0.0
+  capability_id: AN-SEASONAL-022
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Seasonal Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Fundamental Analysis
+  version: 1.0.0
+  capability_id: AN-FUNDAMENTAL-023
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Fundamental Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Sentiment Analysis
+  version: 1.0.0
+  capability_id: AN-SENTIMENT-024
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Sentiment Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Options Analysis
+  version: 1.0.0
+  capability_id: AN-OPTIONS-025
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Options Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: Machine Learning Analysis
+  version: 1.0.0
+  capability_id: AN-MACHINELEARNING-026
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: Machine Learning Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: AI Analysis Analysis
+  version: 1.0.0
+  capability_id: AN-AIANALYSIS-027
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: AI Analysis Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1
+- name: External Analysis Analysis
+  version: 1.0.0
+  capability_id: AN-EXTERNALANALYSIS-028
+  platform: P05
+  family: Technical
+  subfamily: Trend
+  description: External Analysis Analysis capability.
+  inputs:
+  - OHLCV
+  outputs:
+  - Score
+  - Explainability
+  dependencies:
+  - P02_Data
+  - P06_Math_Core
+  markets:
+  - Stocks
+  - Crypto
+  - Forex
+  timeframes:
+  - 1H
+  - 4H
+  - Daily
+  trading_styles:
+  - Swing
+  - Position
+  analysis_domains:
+  - Technical
+  strategies:
+  - Trend Following
+  dashboard_widgets:
+  - Chart
+  - Score Panel
+  ai_compatibility: true
+  validation_profile: analysis
+  benchmark_profile: analysis_bench
+  documentation: Planned
+  lifecycle: Planned
+  status: Designed
+  deprecated: false
+  replacement: ''
+  tags:
+  - core
+  - v1

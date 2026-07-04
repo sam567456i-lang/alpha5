@@ -1,0 +1,359 @@
+{
+    "Program": "AlphaGrid",
+    "Projects": [
+        {
+            "Name": "Infrastructure",
+            "Phases": [
+                {
+                    "Name": "Phase 8.5: State Engine & Streaming Runtime",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Rolling State Management",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Indicator Engine"
+                            ]
+                        },
+                        {
+                            "Name": "Streaming State Tracking",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Rolling State Management"
+                            ]
+                        },
+                        {
+                            "Name": "Indicator Cache",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Streaming State Tracking"
+                            ]
+                        },
+                        {
+                            "Name": "Warmup Cache",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Indicator Cache"
+                            ]
+                        },
+                        {
+                            "Name": "Partial Recomputation Engine",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Streaming State Tracking"
+                            ]
+                        },
+                        {
+                            "Name": "Incremental Updates (EMA, SMA, ATR, MACD, RSI, VWAP)",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Streaming State Tracking"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Trading Core",
+            "Phases": [
+                {
+                    "Name": "Wave 5: Extremum Family",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Donchian Channels",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        },
+                        {
+                            "Name": "High/Low Breakout",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        },
+                        {
+                            "Name": "Support/Resistance Levels",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Name": "Wave 6: Momentum Family",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "RSI (Relative Strength Index)",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        },
+                        {
+                            "Name": "RMA (Running Moving Average)",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        },
+                        {
+                            "Name": "Momentum Engine Base",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Indicator Engine"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Name": "Wave 7: Volume Family",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "VWAP (Volume Weighted Average Price)",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        },
+                        {
+                            "Name": "OBV (On-Balance Volume)",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        },
+                        {
+                            "Name": "Volume SMA",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        },
+                        {
+                            "Name": "Accumulation/Distribution",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Math Core"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Advanced Trading Semantics",
+            "Phases": [
+                {
+                    "Name": "Phase 9.1: Concept Layer",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Semantic Concept Base",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Feature Generators"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Name": "Phase 9.2: Inference Layer",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Concept Fusion Engine",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Concept Layer"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Name": "Phase 9.3: Methodologies",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Methodology Base",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Inference Layer"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Name": "Phase 9.4: Signals",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Signal Generator Base",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Methodologies"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Name": "Phase 9.5: Declarative Strategies",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Strategy Orchestrator",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Signals"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Execution & Risk",
+            "Phases": [
+                {
+                    "Name": "Phase 10: Live Deployment",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Portfolio Engine",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Declarative Strategies"
+                            ]
+                        },
+                        {
+                            "Name": "Risk Engine",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Portfolio Engine"
+                            ]
+                        },
+                        {
+                            "Name": "Execution Engine",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Risk Engine"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "AI & Knowledge Subsystems",
+            "Phases": [
+                {
+                    "Name": "External Integrations",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Vibe-Trading Integration",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Inference Layer"
+                            ]
+                        },
+                        {
+                            "Name": "AI Platform Integration",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Execution Engine"
+                            ]
+                        },
+                        {
+                            "Name": "Knowledge Subsystem (Vector DB/RAG)",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "AI Platform Integration"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Validation & Governance",
+            "Phases": [
+                {
+                    "Name": "Repository Validation",
+                    "Status": "Planned",
+                    "Capabilities": [
+                        {
+                            "Name": "Cross-Family Regression Validator",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Validation Framework"
+                            ]
+                        },
+                        {
+                            "Name": "Concept Validator",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Concept Layer"
+                            ]
+                        },
+                        {
+                            "Name": "Methodology Validator",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Methodologies"
+                            ]
+                        },
+                        {
+                            "Name": "Signal Validator",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Signals"
+                            ]
+                        },
+                        {
+                            "Name": "Strategy Dependency Validator",
+                            "Status": "Planned",
+                            "Dependencies": [
+                                "Declarative Strategies"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "ADRs": [
+        {
+            "Name": "ADR-001-MTF-Alignment",
+            "Status": "Frozen"
+        },
+        {
+            "Name": "ADR-002-Validation-Framework",
+            "Status": "Frozen"
+        },
+        {
+            "Name": "ADR-003-Ownership-of-expected-bars",
+            "Status": "Frozen"
+        }
+    ],
+    "Governance": [
+        {
+            "Name": "API Freeze Manifest",
+            "Status": "Frozen"
+        },
+        {
+            "Name": "Master Capability Registry",
+            "Status": "Frozen"
+        },
+        {
+            "Name": "Validation Registry",
+            "Status": "Frozen"
+        }
+    ]
+}

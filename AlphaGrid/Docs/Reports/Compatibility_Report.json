@@ -1,0 +1,8 @@
+{
+  "validators_required": [
+    "Dependency",
+    "Mathematical",
+    "Determinism",
+    "Registry"
+  ]
+}

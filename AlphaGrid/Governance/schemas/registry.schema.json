@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "format_version": {
+      "type": "string"
+    },
+    "generated_by": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "checksum": {
+      "type": "string"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9\\-]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "maturity": {
+            "type": "string"
+          },
+          "relationships": {
+            "type": "object",
+            "properties": {
+              "hard_dependencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "soft_dependencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "optional_dependencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "conflicting_capabilities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "replaces": {
+                "type": "string"
+              },
+              "deprecated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "market_support": {
+            "type": "object",
+            "properties": {
+              "supported": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "unsupported": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "placeholder": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "required_feeds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "streaming_support": {
+            "type": "object",
+            "properties": {
+              "batch": {
+                "type": "boolean"
+              },
+              "streaming": {
+                "type": "boolean"
+              },
+              "incremental": {
+                "type": "boolean"
+              },
+              "warmup_required": {
+                "type": "integer"
+              },
+              "stateful": {
+                "type": "boolean"
+              }
+            }
+          },
+          "dashboard_contracts": {
+            "type": "object",
+            "properties": {
+              "searchable": {
+                "type": "array"
+              },
+              "filterable": {
+                "type": "array"
+              },
+              "sortable": {
+                "type": "array"
+              },
+              "grouping": {
+                "type": "boolean"
+              },
+              "export": {
+                "type": "boolean"
+              },
+              "comparison": {
+                "type": "boolean"
+              }
+            }
+          },
+          "cross_platform_references": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "version",
+          "maturity"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "format_version",
+    "checksum",
+    "capabilities"
+  ]
+}

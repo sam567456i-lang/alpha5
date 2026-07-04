@@ -1,0 +1,32 @@
+ai_rules:
+  name: Ai Rules
+  description: Standard ai rules definition.
+  version: 1.0.0
+dashboard_rules:
+  name: Dashboard Rules
+  description: Standard dashboard rules definition.
+  version: 1.0.0
+dependency_rules:
+  name: Dependency Rules
+  description: Standard dependency rules definition.
+  version: 1.0.0
+documentation_rules:
+  name: Documentation Rules
+  description: Standard documentation rules definition.
+  version: 1.0.0
+freeze_rules:
+  name: Freeze Rules
+  description: Standard freeze rules definition.
+  version: 1.0.0
+naming_rules:
+  name: Naming Rules
+  description: Standard naming rules definition.
+  version: 1.0.0
+validation_rules:
+  name: Validation Rules
+  description: Standard validation rules definition.
+  version: 1.0.0
+versioning_rules:
+  name: Versioning Rules
+  description: Standard versioning rules definition.
+  version: 1.0.0

@@ -1,0 +1,49 @@
+platform_id: P05
+name: Analysis Platform
+version: 1.0.0
+owner: ArchitectureTeam
+purpose: Universal capability discovery and analysis engine.
+inputs:
+- MarketData
+outputs:
+- AnalysisResult
+dependencies:
+- P02_Data
+- P06_Math_Core
+capabilities:
+- Trend
+- Momentum
+- Volatility
+- Volume
+contracts:
+- AnalysisContract
+- IndicatorContract
+validators:
+- Unit
+- Integration
+- Property
+benchmarks:
+- Pandas-TA
+tests:
+- pytest
+dashboard:
+- Score Panel
+ai:
+- AG-EXPLAIN-001
+documentation:
+- Docs/
+external_data:
+- News
+readiness:
+  architecture: 90
+  implementation: 10
+  validation: 0
+  performance: 0
+  documentation: 50
+  dashboard: 0
+  ai: 0
+  research: 0
+  testing: 0
+  governance: 100
+lifecycle: Implemented
+status: Active

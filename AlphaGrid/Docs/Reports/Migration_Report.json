@@ -1,0 +1,8 @@
+{
+  "needs_migration": [
+    "Backend/platforms/analysis/core/*"
+  ],
+  "archived": [
+    "Backend/platforms/analysis/legacy/*"
+  ]
+}

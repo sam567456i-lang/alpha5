@@ -1,0 +1,111 @@
+schema_version: '1.0'
+format_version: '1.0'
+generated_by: System
+repository: AlphaGrid-Infinity-X
+platforms:
+- P01
+- P02
+- P03
+- P04
+- P05
+- P06
+- P07
+- P08
+- P09
+- P10
+- P11
+- P12
+roadmaps:
+- Governance/roadmap.yaml
+schemas:
+- taxonomy.schema.json
+- registry.schema.json
+- validation.schema.json
+- roadmap.schema.json
+external_repos:
+- id: EXT-001
+  name: Pandas-TA
+  license: MIT
+  language: Python
+  architecture_score: 95
+governance:
+- registry
+- taxonomy
+- manifests
+- lifecycles
+- rules
+- policies
+- freeze
+- reports
+contracts:
+- Analysis
+- Indicator
+- Feature
+- Concept
+- Methodology
+- Signal
+- Opportunity
+- Recommendation
+- Dashboard
+- AI
+generators:
+- generate_docs.py
+- generate_matrix.py
+- generate_dashboard_docs.py
+- generate_project_bible.py
+- generate_reports.py
+validators:
+- GovernanceValidator
+- ArchitectureValidator
+- CodeValidator
+reports:
+- Repository_Report.md
+- Platform_Report.md
+- Validation_Report.md
+knowledge:
+- Confluence
+- Project_Bible
+ai:
+- AG-RES-001
+- AG-EXPLAIN-001
+- AG-DEV-001
+dashboard:
+- Trader_Terminal
+- Risk_Console
+external_repositories:
+- id: EXT-001
+  name: Pandas-TA
+  owner: twopirllc
+  license: MIT
+  commit_hash: v0.3.14b0
+  release: stable
+  dependencies:
+  - pandas
+  - numpy
+  security_scan: Passed
+  architecture_score: 95
+  performance_score: 90
+  compatibility: Python 3.10+
+  sandbox_status: Approved
+  approval_status: Approved
+  imported_modules:
+  - pandas_ta.trend
+  - pandas_ta.momentum
+  replacement_strategy: Migrate to Platform 8
+  last_validation: '2026-07-04T00:00:00Z'
+  risk_score: Low
+data_sources:
+- MarketData
+- News
+- Fundamentals
+tests:
+- pytest
+- hypothesis
+benchmarks:
+- pytest-benchmark
+documentation:
+- Docs/
+templates:
+- Governance/templates/
+cicd:
+- GitHub Actions

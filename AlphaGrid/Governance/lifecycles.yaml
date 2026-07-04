@@ -1,0 +1,24 @@
+capability_lifecycle:
+  name: Capability Lifecycle
+  description: Standard capability lifecycle definition.
+  version: 1.0.0
+dashboard_lifecycle:
+  name: Dashboard Lifecycle
+  description: Standard dashboard lifecycle definition.
+  version: 1.0.0
+external_repo_lifecycle:
+  name: External Repo Lifecycle
+  description: Standard external repo lifecycle definition.
+  version: 1.0.0
+freeze_lifecycle:
+  name: Freeze Lifecycle
+  description: Standard freeze lifecycle definition.
+  version: 1.0.0
+platform_lifecycle:
+  name: Platform Lifecycle
+  description: Standard platform lifecycle definition.
+  version: 1.0.0
+wave_lifecycle:
+  name: Wave Lifecycle
+  description: Standard wave lifecycle definition.
+  version: 1.0.0

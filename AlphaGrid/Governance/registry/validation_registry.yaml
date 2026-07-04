@@ -1,0 +1,64 @@
+schema_version: '1.0'
+format_version: '1.0'
+generated_by: System
+generated_at: '2026-07-04T15:15:09.710593Z'
+checksum: 770151d8be9cb2d0bad01a14516d700f
+profiles:
+  quick:
+  - roadmap_validator
+  - repository_validator
+  - import_validator
+  - registry_validator
+  - dependency_validator
+  - ast_math_validator
+  - indicator_metadata_validator
+  - indicator_formula_validator
+  - indicator_composition_validator
+  - indicator_warmup_validator
+  - rolling_window_validator
+  - architecture_drift_validator
+  - dataset_validator
+  - mathematical_validator
+  - determinism_validator
+  - numerical_precision_validator
+  - warmup_validator
+  - stability_validator
+  - benchmark_validator
+  analysis:
+  - unit_validator
+  - integration_validator
+  - property_validator
+  - regression_validator
+  - golden_dataset_validator
+  - legacy_equivalence_validator
+  - warmup_validator
+  - streaming_validator
+  - incremental_validator
+  - performance_validator
+  - memory_validator
+  - dashboard_validator
+  - ai_validator
+  - documentation_validator
+  - repository_validator
+  family:
+  - quick
+  - pipeline_validator
+  - deterministic_replay_validator
+  - numerical_robustness_validator
+  phase:
+  - family
+  - performance_validator
+  - memory_validator
+  - complexity_validator
+  release:
+  - phase
+  - stress_validator
+  - documentation_validator
+  - migration_validator
+  - config_drift_validator
+  repository:
+  - release
+  production:
+  - repository
+  - phase_freeze_validator
+  - evidence_generator
