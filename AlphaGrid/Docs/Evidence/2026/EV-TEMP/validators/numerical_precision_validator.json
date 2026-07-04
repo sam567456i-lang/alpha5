@@ -2,7 +2,7 @@
     "id": "numerical_precision_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1529.6850999584422,
+    "duration_ms": 412.7147999824956,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -98,5 +98,5 @@
     "max_error": 2.3639756818738533e-11,
     "mean_error": 6.875881425674536e-13,
     "summary": "All numerical primitives match golden datasets within strict tolerances.",
-    "timestamp": "2026-07-04T07:24:43.493654"
+    "timestamp": "2026-07-04T07:44:06.191288"
 }

@@ -2,7 +2,7 @@
     "id": "numerical_robustness_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 15.142699994612485,
+    "duration_ms": 1.487900037318468,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "NumericalRobustnessValidator passed.",
-    "timestamp": "2026-07-04T07:24:31.251991"
+    "timestamp": "2026-07-04T07:44:03.338629"
 }

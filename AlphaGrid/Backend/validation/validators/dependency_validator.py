@@ -35,12 +35,22 @@ class DependencyValidator(AbstractValidator):
         if os.path.exists(math_dir):
             self._scan_directory(math_dir, math_forbidden, errors)
             
-        # 2. Feature Layer Constraints
+        # 2. Indicator Engine Constraints
+        engine_dir = os.path.join(context.workspace, "Backend", "indicator_engine")
+        if os.path.exists(engine_dir):
+            engine_forbidden = {
+                "Backend.features": "Indicator Engine must not import features.",
+                "Backend.strategy": "Indicator Engine must not import strategies.",
+                "Backend.concepts": "Indicator Engine must not import concepts.",
+                "Backend.signals": "Indicator Engine must not import signals."
+            }
+            self._scan_directory(engine_dir, engine_forbidden, errors)
+            
+        # 3. Feature Layer Constraints
         if os.path.exists(features_dir):
             feature_forbidden = {
-                "Backend.math.internal": "Features must only consume Backend.math.public APIs.",
-                "Backend.math.streaming": "Features must only consume Backend.math.public APIs.",
-                "pandas": "Feature generators must not import pandas directly; defer to Math Core."
+                "Backend.math": "Features must not import Math Core; defer to Indicator Engine.",
+                "pandas": "Feature generators must not import pandas directly; defer to Market Data Contracts."
             }
             self._scan_directory(features_dir, feature_forbidden, errors)
             

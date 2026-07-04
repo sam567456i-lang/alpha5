@@ -8,6 +8,9 @@ profiles:
     - registry_validator
     - dependency_validator
     - ast_math_validator
+    - indicator_metadata_validator
+    - indicator_formula_validator
+    - indicator_warmup_validator
     - architecture_drift_validator
     - dataset_validator
     - mathematical_validator
@@ -55,6 +58,24 @@ validators:
     category: A
     blocking: true
     dependencies: []
+    minimum_phase: 1
+  - id: indicator_metadata_validator
+    class: IndicatorMetadataValidator
+    category: A
+    blocking: true
+    dependencies: []
+    minimum_phase: 1
+  - id: indicator_formula_validator
+    class: IndicatorFormulaValidator
+    category: A
+    blocking: true
+    dependencies: [indicator_metadata_validator]
+    minimum_phase: 1
+  - id: indicator_warmup_validator
+    class: IndicatorWarmupValidator
+    category: A
+    blocking: true
+    dependencies: [indicator_formula_validator]
     minimum_phase: 1
   - id: architecture_drift_validator
     class: ArchitectureDriftValidator

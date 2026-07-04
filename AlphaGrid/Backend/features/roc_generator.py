@@ -5,14 +5,17 @@ if TYPE_CHECKING:
     import pandas as pd
 import hashlib
 import uuid
-from typing import Dict, Any, TYPE_CHECKING, Optional, TYPE_CHECKING
+from typing import Dict, Any, Optional
 from Backend.dtos.features import FeatureDTO
 from Backend.features.interfaces.momentum_feature import MomentumFeatureInterface
+from Backend.indicator_engine.runner import IndicatorRunner
+from Backend.market_data.market_series import MarketSeries
 
 class ROCFeatureGenerator(MomentumFeatureInterface):
     """
     Canonical Production Rate of Change (ROC) Generator.
-    Produces generic momentum semantics.
+    Delegates numerical composition strictly to the Indicator Engine.
+    Strips semantic inference (momentum_strength, etc.) to the Concepts layer.
     """
     def __init__(self, period: int = 14):
         self.period = period
@@ -26,29 +29,30 @@ class ROCFeatureGenerator(MomentumFeatureInterface):
         if len(data) < self.period + 1:
             raise ValueError(f"Insufficient data. Required: {self.period + 1}")
             
-        close = data['close']
-        
-        # Calculate timestamps - assuming data.index is datetime
+        # Adapt pandas dataframe to Market Data Contract
         timestamps = data.index.astype(np.int64).values // 10**9 if hasattr(data.index, 'astype') else np.arange(len(data))
+        series = MarketSeries(
+            symbol=data.attrs.get('symbol', 'UNKNOWN'),
+            timeframe=data.attrs.get('timeframe', 'UNKNOWN'),
+            timestamps=timestamps,
+            opens=data['open'].values if 'open' in data else np.zeros(len(data)),
+            highs=data['high'].values if 'high' in data else np.zeros(len(data)),
+            lows=data['low'].values if 'low' in data else np.zeros(len(data)),
+            closes=data['close'].values,
+            volumes=data['volume'].values if 'volume' in data else np.zeros(len(data))
+        )
         
-        from Backend.math.public import calculate_roc
-        roc_res = calculate_roc(close.values, timestamps, self.period, "close")
-        roc_values = roc_res.values
-        valid_mask = roc_res.valid_mask
+        # Execute via IndicatorRunner
+        roc_res = IndicatorRunner.execute(
+            indicator_id="roc",
+            series=series,
+            period=self.period
+        )
         
-        if not valid_mask[-1]:
+        if not roc_res.valid_mask[-1]:
             current_roc = float('nan')
-            momentum_strength = float('nan')
-            momentum_direction = float('nan')
-            momentum_acceleration = float('nan')
         else:
-            current_roc = float(roc_values[-1])
-            prev_roc = float(roc_values[-2]) if valid_mask[-2] else 0.0
-            
-            # Generic Semantics
-            momentum_strength = abs(current_roc)
-            momentum_direction = 1.0 if current_roc > 0 else -1.0
-            momentum_acceleration = current_roc - prev_roc
+            current_roc = float(roc_res.roc[-1])
             
         # Serialize safely handling NaN
         safe_roc = "NaN" if np.isnan(current_roc) else f"{current_roc}"
@@ -62,24 +66,21 @@ class ROCFeatureGenerator(MomentumFeatureInterface):
             correlation_id=correlation_id,
             fingerprint=f"roc-{self.period}",
             checksum=payload_hash,
-            symbol=data.attrs.get('symbol', 'UNKNOWN'),
-            timeframe=data.attrs.get('timeframe', 'UNKNOWN'),
+            symbol=series.symbol,
+            timeframe=series.timeframe,
             values={
-                'roc': current_roc,
-                'momentum_strength': momentum_strength,
-                'momentum_direction': momentum_direction,
-                'momentum_acceleration': momentum_acceleration
+                'roc': current_roc
             },
             metadata={
                 'feature_type': 'momentum',
                 'indicator_family': 'roc',
-                'lookback': self.period + 1,
-                'warmup': self.period + 1,
+                'lookback': roc_res.lookback,
+                'warmup': roc_res.warmup_period,
                 'lag': 'low',
-                'complexity': 'O(n)',
+                'complexity': roc_res.metadata.get("complexity", "O(n)"),
                 'memory_class': 'O(period)',
                 'deterministic': True,
-                'numeric_stability': 'medium' # Sensitive to gaps
+                'numeric_stability': 'medium'
             },
             lineage={'dependencies': ['ftr-ohlcv']}
         )

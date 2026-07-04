@@ -2,14 +2,14 @@
     "id": "memory_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 208.2624000031501,
+    "duration_ms": 167.2643000492826,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
-    "peak_heap_mb": 117.60625,
-    "peak_rss_mb": 147.0078125,
+    "peak_heap_mb": 117.765625,
+    "peak_rss_mb": 147.20703125,
     "gc_collections": 1,
     "evidence_id": "EV-10i-b-memory_validator",
     "validator_version": "1.0.0",
@@ -19,6 +19,6 @@
     "metrics": {},
     "max_error": 0.0,
     "mean_error": 0.0,
-    "summary": "Memory tracking complete. RSS: 147.0MB, GC Collections: 1",
-    "timestamp": "2026-07-04T07:24:40.954235"
+    "summary": "Memory tracking complete. RSS: 147.2MB, GC Collections: 1",
+    "timestamp": "2026-07-04T07:44:05.154540"
 }

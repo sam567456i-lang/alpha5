@@ -5,14 +5,17 @@ if TYPE_CHECKING:
     import pandas as pd
 import hashlib
 import uuid
-from typing import Dict, Any, TYPE_CHECKING, Optional, TYPE_CHECKING
+from typing import Dict, Any, Optional
 from Backend.dtos.features import FeatureDTO
 from Backend.features.interfaces.momentum_feature import MomentumFeatureInterface
+from Backend.indicator_engine.runner import IndicatorRunner
+from Backend.market_data.market_series import MarketSeries
 
 class MACDFeatureGenerator(MomentumFeatureInterface):
     """
     Canonical Production MACD Generator.
-    Produces both standard MACD outputs and generic momentum semantics.
+    Delegates numerical composition strictly to the Indicator Engine.
+    Strips semantic inference (momentum_strength, etc.) to the Concepts layer.
     """
     def __init__(self, fast_period: int = 12, slow_period: int = 26, signal_period: int = 9):
         self.fast_period = fast_period
@@ -28,31 +31,40 @@ class MACDFeatureGenerator(MomentumFeatureInterface):
         if len(data) < self.slow_period + self.signal_period:
             raise ValueError(f"Insufficient data. Required: {self.slow_period + self.signal_period}")
             
-        close = data['close'].values
-        timestamps = np.arange(len(close))
+        # Adapt pandas dataframe to Market Data Contract
+        timestamps = data.index.astype(np.int64).values // 10**9 if hasattr(data.index, 'astype') else np.arange(len(data))
+        series = MarketSeries(
+            symbol=data.attrs.get('symbol', 'UNKNOWN'),
+            timeframe=data.attrs.get('timeframe', 'UNKNOWN'),
+            timestamps=timestamps,
+            opens=data['open'].values if 'open' in data else np.zeros(len(data)),
+            highs=data['high'].values if 'high' in data else np.zeros(len(data)),
+            lows=data['low'].values if 'low' in data else np.zeros(len(data)),
+            closes=data['close'].values,
+            volumes=data['volume'].values if 'volume' in data else np.zeros(len(data))
+        )
         
-        from Backend.math.public import calculate_ema, calculate_diff
+        # Execute via IndicatorRunner
+        macd_res = IndicatorRunner.execute(
+            indicator_id="macd",
+            series=series,
+            fast_period=self.fast_period,
+            slow_period=self.slow_period,
+            signal_period=self.signal_period
+        )
         
-        fast_ema = calculate_ema(close, timestamps, self.fast_period)
-        slow_ema = calculate_ema(close, timestamps, self.slow_period)
+        if not macd_res.valid_mask[-1]:
+            current_macd = float('nan')
+            current_signal = float('nan')
+            current_hist = float('nan')
+        else:
+            current_macd = float(macd_res.macd[-1])
+            current_signal = float(macd_res.signal[-1])
+            current_hist = float(macd_res.histogram[-1])
         
-        macd_line_vals = fast_ema.values - slow_ema.values
-        
-        signal_line = calculate_ema(macd_line_vals, timestamps, self.signal_period)
-        
-        macd_histogram = macd_line_vals - signal_line.values
-        
-        current_macd = float(macd_line_vals[-1])
-        current_signal = float(signal_line.values[-1])
-        current_hist = float(macd_histogram[-1])
-        prev_hist = float(macd_histogram[-2]) if len(macd_histogram) > 1 else 0.0
-        
-        # Generic Semantics
-        momentum_strength = abs(current_macd)
-        momentum_direction = 1.0 if current_macd > 0 else -1.0
-        momentum_acceleration = current_hist - prev_hist
-        
-        payload_hash = hashlib.md5(f"{current_macd}{current_signal}{current_hist}".encode()).hexdigest()
+        # Serialize safely handling NaN
+        safe_payload = f"{'NaN' if np.isnan(current_macd) else current_macd}_{'NaN' if np.isnan(current_signal) else current_signal}_{'NaN' if np.isnan(current_hist) else current_hist}"
+        payload_hash = hashlib.md5(safe_payload.encode()).hexdigest()
         
         return FeatureDTO(
             id=f"{self.component_id}-{uuid.uuid4().hex[:8]}",
@@ -62,23 +74,20 @@ class MACDFeatureGenerator(MomentumFeatureInterface):
             correlation_id=correlation_id,
             fingerprint=f"macd-{self.fast_period}-{self.slow_period}-{self.signal_period}",
             checksum=payload_hash,
-            symbol=data.attrs.get('symbol', 'UNKNOWN'),
-            timeframe=data.attrs.get('timeframe', 'UNKNOWN'),
+            symbol=series.symbol,
+            timeframe=series.timeframe,
             values={
                 'macd_line': current_macd,
                 'signal_line': current_signal,
-                'histogram': current_hist,
-                'momentum_strength': momentum_strength,
-                'momentum_direction': momentum_direction,
-                'momentum_acceleration': momentum_acceleration
+                'histogram': current_hist
             },
             metadata={
                 'feature_type': 'momentum',
                 'indicator_family': 'macd',
-                'lookback': self.slow_period + self.signal_period,
-                'warmup': self.slow_period + self.signal_period,
+                'lookback': macd_res.lookback,
+                'warmup': macd_res.warmup_period,
                 'lag': 'medium',
-                'complexity': 'O(n)',
+                'complexity': macd_res.metadata.get("complexity", "O(n)"),
                 'memory_class': 'O(period)',
                 'deterministic': True,
                 'numeric_stability': 'high'

@@ -2,7 +2,7 @@
     "id": "pipeline_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 3921.3947000098415,
+    "duration_ms": 2135.9928000019863,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Pipeline verified end-to-end dynamically.",
-    "timestamp": "2026-07-04T07:24:31.162120"
+    "timestamp": "2026-07-04T07:44:01.981554"
 }

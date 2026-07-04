@@ -921,7 +921,54 @@
         "logger",
         "plugin_loader"
     ],
+    "Backend.indicator_engine.factory": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.indicator_engine.registry": [
+        "typing"
+    ],
+    "Backend.indicator_engine.results": [
+        "dataclasses",
+        "numpy",
+        "typing"
+    ],
+    "Backend.indicator_engine.runner": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.indicator_engine.__init__": [
+        "Backend"
+    ],
+    "Backend.indicator_engine.momentum.macd": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.momentum.roc": [
+        "Backend",
+        "numpy"
+    ],
     "Backend.journal.__init__": [],
+    "Backend.market_data.market_bar": [
+        "dataclasses"
+    ],
+    "Backend.market_data.market_dataset": [
+        "Backend",
+        "dataclasses",
+        "typing"
+    ],
+    "Backend.market_data.market_series": [
+        "dataclasses",
+        "numpy"
+    ],
+    "Backend.market_data.market_snapshot": [
+        "Backend",
+        "dataclasses",
+        "typing"
+    ],
+    "Backend.market_data.__init__": [
+        "Backend"
+    ],
     "Backend.market_intelligence.data_provenance": [
         "datetime",
         "hashlib",
@@ -2131,6 +2178,20 @@
     ],
     "Backend.validation.validators.import_validator": [
         "Backend"
+    ],
+    "Backend.validation.validators.indicator_formula_validator": [
+        "Backend",
+        "numpy",
+        "time"
+    ],
+    "Backend.validation.validators.indicator_metadata_validator": [
+        "Backend",
+        "time"
+    ],
+    "Backend.validation.validators.indicator_warmup_validator": [
+        "Backend",
+        "numpy",
+        "time"
     ],
     "Backend.validation.validators.legacy_equivalence_validator": [
         "Backend",

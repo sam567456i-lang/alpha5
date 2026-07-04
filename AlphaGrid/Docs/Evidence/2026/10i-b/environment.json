@@ -3,10 +3,10 @@
     "cpu_cores": 4,
     "os_build": "10.0.19045",
     "cpu_percent": 0.0,
-    "ram_percent": 82.1,
+    "ram_percent": 79.7,
     "python_version": "3.11.9",
     "numpy_version": "1.26.4",
     "pandas_version": "2.1.4",
-    "git_commit_sha": "a4fbb6b767f139ad7da98adc11a7a4f201641c22",
+    "git_commit_sha": "eb79adcefa7bb0666c3608bc99422195719fe7d2",
     "benchmark_seed": 99
 }
