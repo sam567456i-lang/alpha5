@@ -7,15 +7,15 @@ from Backend.platforms.analysis.momentum.macd_analysis import MACDAnalysis
 
 class CompositeMomentumAnalysis(BaseAnalysis):
     def execute(self, context: AnalysisContext) -> AnalysisResult:
-        # Executes sub-analyses directly.
-        rsi_analyzer = RSIAnalysis()
-        macd_analyzer = MACDAnalysis()
+        # Resolving dependencies directly from the orchestrator context instead of instantiating sub-analyzers
+        rsi_result = context.dependencies.get("ANALYSIS_MOMENTUM_RSI")
+        macd_result = context.dependencies.get("ANALYSIS_MOMENTUM_MACD")
         
-        rsi_result = rsi_analyzer.execute(context)
-        macd_result = macd_analyzer.execute(context)
-        
+        if not rsi_result or not macd_result:
+            return AnalysisResult(0.0, context.market_data, [], {"status": "Unsupported", "reason": "Sub-analysis dependencies not injected by Orchestrator"})
+            
         if rsi_result.metadata.get("status") == "Unsupported" or macd_result.metadata.get("status") == "Unsupported":
-            return AnalysisResult(0.0, context.market_data, [], {"status": "Unsupported", "reason": "Sub-analyzers unavailable"})
+            return AnalysisResult(0.0, context.market_data, [], {"status": "Unsupported", "reason": "One or more sub-analyzers failed"})
             
         rsi_score = rsi_result.score
         macd_score = macd_result.score

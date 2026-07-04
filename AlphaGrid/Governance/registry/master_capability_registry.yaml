@@ -4198,3 +4198,10 @@ capabilities:
   dependencies:
   - INDICATOR_RSI
   - INDICATOR_MACD
+- capability_id: ANALYSIS_VOLATILITY_ATR
+  name: ATR Volatility Analysis
+  platform: P05_Analysis
+  family: Volatility
+  subfamily: ATR
+  dependencies:
+  - INDICATOR_ATR

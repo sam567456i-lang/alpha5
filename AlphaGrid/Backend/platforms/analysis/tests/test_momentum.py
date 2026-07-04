@@ -53,10 +53,16 @@ class TestMomentumAnalysis(unittest.TestCase):
         self.assertEqual(res.metadata["classification"], "Strong Bullish Momentum")
 
     def test_composite_momentum(self):
+        from Backend.platforms.analysis.core.dto import AnalysisResult
         analysis = CompositeMomentumAnalysis()
-        macd_df = pd.DataFrame({"macd": [1.0, 1.5], "signal": [0.5, 0.5], "hist": [0.5, 1.0]})
-        engine = MockIndicatorEngine(rsi_val=60.0, macd_df=macd_df) 
-        context = AnalysisContext(market_data=pd.DataFrame({"close": [150]}), timeframe="1D", dependencies={"indicator_engine": engine})
+        
+        rsi_res = AnalysisResult(score=0.8, raw_data=pd.DataFrame(), signals=[], metadata={"status": "completed"})
+        macd_res = AnalysisResult(score=0.7, raw_data=pd.DataFrame(), signals=[], metadata={"status": "completed"})
+        
+        context = AnalysisContext(market_data=pd.DataFrame({"close": [150]}), timeframe="1D", dependencies={
+            "ANALYSIS_MOMENTUM_RSI": rsi_res,
+            "ANALYSIS_MOMENTUM_MACD": macd_res
+        })
         res = analysis.execute(context)
         print("COMPOSITE REASON:", res.metadata.get("reason"))
         
