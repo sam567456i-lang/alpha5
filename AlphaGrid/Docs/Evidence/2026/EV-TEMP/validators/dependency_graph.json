@@ -598,6 +598,15 @@
         "collections",
         "typing"
     ],
+    "Backend.features.ema_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
     "Backend.features.engine": [
         "Shared",
         "base",
@@ -671,6 +680,15 @@
         "typing",
         "uuid"
     ],
+    "Backend.features.ma_cross_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
     "Backend.features.momentum": [
         "Shared",
         "base",
@@ -710,6 +728,15 @@
         "Backend",
         "__future__",
         "datetime",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.sma_generator": [
+        "Backend",
+        "__future__",
         "hashlib",
         "numpy",
         "pandas",
@@ -776,6 +803,15 @@
         "typing",
         "uuid"
     ],
+    "Backend.features.wma_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
     "Backend.features.__init__": [
         "adx",
         "atr",
@@ -805,6 +841,11 @@
     "Backend.features.interfaces.momentum_feature": [
         "Backend",
         "__future__",
+        "pandas",
+        "typing"
+    ],
+    "Backend.features.interfaces.trend_feature": [
+        "Backend",
         "pandas",
         "typing"
     ],
@@ -945,6 +986,14 @@
         "numpy"
     ],
     "Backend.indicator_engine.momentum.roc": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.trend.moving_averages": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.trend.moving_average_cross": [
         "Backend",
         "numpy"
     ],
@@ -2178,6 +2227,11 @@
     ],
     "Backend.validation.validators.import_validator": [
         "Backend"
+    ],
+    "Backend.validation.validators.indicator_composition_validator": [
+        "Backend",
+        "numpy",
+        "time"
     ],
     "Backend.validation.validators.indicator_formula_validator": [
         "Backend",

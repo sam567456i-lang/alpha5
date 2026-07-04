@@ -20,3 +20,22 @@ class MACDResult(FinancialIndicatorResult):
 @dataclass(frozen=True)
 class ROCResult(FinancialIndicatorResult):
     roc: np.ndarray
+
+@dataclass(frozen=True)
+class SMAResult(FinancialIndicatorResult):
+    sma: np.ndarray
+
+@dataclass(frozen=True)
+class EMAResult(FinancialIndicatorResult):
+    ema: np.ndarray
+
+@dataclass(frozen=True)
+class WMAResult(FinancialIndicatorResult):
+    wma: np.ndarray
+
+@dataclass(frozen=True)
+class MACrossResult(FinancialIndicatorResult):
+    fast_ma: np.ndarray
+    slow_ma: np.ndarray
+    cross_signal: np.ndarray
+

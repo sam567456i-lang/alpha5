@@ -10,6 +10,7 @@ profiles:
     - ast_math_validator
     - indicator_metadata_validator
     - indicator_formula_validator
+    - indicator_composition_validator
     - indicator_warmup_validator
     - architecture_drift_validator
     - dataset_validator
@@ -71,11 +72,17 @@ validators:
     blocking: true
     dependencies: [indicator_metadata_validator]
     minimum_phase: 1
+  - id: indicator_composition_validator
+    class: IndicatorCompositionValidator
+    category: A
+    blocking: true
+    dependencies: [indicator_formula_validator]
+    minimum_phase: 1
   - id: indicator_warmup_validator
     class: IndicatorWarmupValidator
     category: A
     blocking: true
-    dependencies: [indicator_formula_validator]
+    dependencies: [indicator_composition_validator]
     minimum_phase: 1
   - id: architecture_drift_validator
     class: ArchitectureDriftValidator
@@ -185,7 +192,7 @@ validators:
     class: FeaturePipelineValidator
     category: A
     blocking: true
-    dependencies: [capability_validator]
+    dependencies: [indicator_warmup_validator]
     minimum_phase: 5
     
   - id: concept_pipeline_validator
@@ -230,29 +237,8 @@ validators:
     dependencies: [e2e_pipeline_validator]
     minimum_phase: 10
 
-  - id: deterministic_replay_validator
-    class: DeterministicReplayValidator
-    category: A
-    blocking: true
-    dependencies: [pipeline_validator]
-    minimum_phase: 10
-    
-  - id: numerical_robustness_validator
-    class: NumericalRobustnessValidator
-    category: A
-    blocking: true
-    dependencies: [pipeline_validator]
-    minimum_phase: 10
-    
   - id: performance_validator
     class: PerformanceValidator
-    category: A
-    blocking: true
-    dependencies: [pipeline_validator]
-    minimum_phase: 10
-    
-  - id: memory_validator
-    class: MemoryValidator
     category: A
     blocking: true
     dependencies: [pipeline_validator]
@@ -262,7 +248,28 @@ validators:
     class: StressValidator
     category: A
     blocking: true
-    dependencies: [pipeline_validator]
+    dependencies: [performance_validator]
+    minimum_phase: 10
+
+  - id: memory_validator
+    class: MemoryValidator
+    category: A
+    blocking: true
+    dependencies: [stress_validator]
+    minimum_phase: 10
+
+  - id: deterministic_replay_validator
+    class: DeterministicReplayValidator
+    category: A
+    blocking: true
+    dependencies: [memory_validator]
+    minimum_phase: 10
+    
+  - id: numerical_robustness_validator
+    class: NumericalRobustnessValidator
+    category: A
+    blocking: true
+    dependencies: [deterministic_replay_validator]
     minimum_phase: 10
     
   - id: documentation_validator

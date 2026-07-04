@@ -9,12 +9,16 @@ class MACDEngine:
     """Financial composition logic for Moving Average Convergence Divergence."""
     
     metadata = {
-        "formula": "EMA(fast) - EMA(slow), EMA(macd, signal)",
+        "id": "macd",
+        "family": "momentum",
+        "indicator_type": "oscillator",
+        "composable": True,
+        "streaming_supported": False,
+        "formula": "EMA(close, fast) - EMA(close, slow)",
         "inputs": ["close"],
         "outputs": ["macd", "signal", "histogram"],
-        "warmup": "slow + signal",
+        "warmup": "slow_period + signal_period",
         "complexity": "O(N)",
-        "streaming": False,
         "deterministic": True,
     }
     

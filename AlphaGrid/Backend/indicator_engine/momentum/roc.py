@@ -8,12 +8,16 @@ class ROCEngine:
     """Financial composition logic for Rate of Change."""
     
     metadata = {
-        "formula": "(close - close[n]) / close[n] * 100",
+        "id": "roc",
+        "family": "momentum",
+        "indicator_type": "oscillator",
+        "composable": True,
+        "streaming_supported": False,
+        "formula": "((Price(t) - Price(t-n)) / Price(t-n)) * 100",
         "inputs": ["close"],
         "outputs": ["roc"],
         "warmup": "period",
         "complexity": "O(N)",
-        "streaming": False,
         "deterministic": True,
     }
     

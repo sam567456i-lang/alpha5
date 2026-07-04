@@ -8,7 +8,10 @@ class IndicatorMetadataValidator(AbstractValidator):
         start = time.perf_counter()
         errors = []
         
-        required_keys = ["formula", "inputs", "outputs", "warmup", "complexity", "streaming", "deterministic"]
+        required_keys = [
+            "id", "family", "indicator_type", "composable", "streaming_supported",
+            "formula", "inputs", "outputs", "warmup", "complexity", "deterministic"
+        ]
         
         for name, registration in IndicatorRegistry.get_all().items():
             engine = registration["engine"]

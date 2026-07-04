@@ -19,6 +19,7 @@
         "ast_math_validator",
         "indicator_metadata_validator",
         "indicator_formula_validator",
+        "indicator_composition_validator",
         "indicator_warmup_validator",
         "architecture_drift_validator",
         "dataset_validator",
