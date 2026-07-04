@@ -12,6 +12,7 @@ profiles:
     - indicator_formula_validator
     - indicator_composition_validator
     - indicator_warmup_validator
+    - rolling_window_validator
     - architecture_drift_validator
     - dataset_validator
     - mathematical_validator
@@ -84,11 +85,17 @@ validators:
     blocking: true
     dependencies: [indicator_composition_validator]
     minimum_phase: 1
+  - id: rolling_window_validator
+    class: RollingWindowValidator
+    category: A
+    blocking: true
+    dependencies: [indicator_warmup_validator]
+    minimum_phase: 1
   - id: architecture_drift_validator
     class: ArchitectureDriftValidator
     category: A
     blocking: true
-    dependencies: []
+    dependencies: [rolling_window_validator]
     minimum_phase: 1
   - id: legacy_equivalence_validator
     class: LegacyEquivalenceValidator

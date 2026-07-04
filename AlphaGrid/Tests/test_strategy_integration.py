@@ -32,7 +32,7 @@ from Backend.research.strategies.definitions.cci_reversion import CCI_REVERSION
 from Backend.research.strategies.definitions.stochastic_momentum import STOCHASTIC_MOMENTUM
 from Backend.research.strategies.definitions.stochastic_exhaustion import STOCHASTIC_EXHAUSTION
 
-from Backend.features.trend import EMAFeature, SMAFeature
+from Backend.reference.legacy.features.trend import EMAFeature, SMAFeature
 from Backend.features.momentum import ROCFeature, RSIFeature
 from Backend.features.stochastic import StochasticFeature
 from Backend.features.donchian import Donchian20Feature

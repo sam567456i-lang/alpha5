@@ -5,7 +5,7 @@ from datetime import timedelta
 
 from Backend.research.engine.strategy_interface import STRATEGY_REGISTRY
 from Backend.research.strategies.base_research_strategy import BaseResearchStrategy
-from Backend.features.trend import EMAFeature
+from Backend.reference.legacy.features.trend import EMAFeature
 from Backend.concepts.base import Concept
 from Shared.enums.concept_type import ConceptType
 from Backend.concepts.generator import AbstractConceptGenerator

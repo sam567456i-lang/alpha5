@@ -158,5 +158,45 @@
         "status": "PASS",
         "evidence_id": "EV-TEMP",
         "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:14:25.067162",
+        "phase": "10i-b",
+        "family": "momentum",
+        "profile": "phase",
+        "duration_ms": 17360.765200050082,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:15:25.476340",
+        "phase": "10i-b",
+        "family": "momentum",
+        "profile": "phase",
+        "duration_ms": 16831.688399834093,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:16:12.248297",
+        "phase": "10i-b",
+        "family": "momentum",
+        "profile": "phase",
+        "duration_ms": 17925.05490005715,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:17:38.518349",
+        "phase": "10i-b",
+        "family": "momentum",
+        "profile": "phase",
+        "duration_ms": 37934.34249976417,
+        "status": "PASS",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
     }
 ]

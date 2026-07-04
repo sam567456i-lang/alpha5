@@ -3,7 +3,7 @@
 from collections import deque
 from typing import Any, Dict, List
 from Shared.models.market import MarketSnapshot
-from .base import AbstractFeature
+from Backend.features.base import AbstractFeature
 
 
 class SMAFeature(AbstractFeature):

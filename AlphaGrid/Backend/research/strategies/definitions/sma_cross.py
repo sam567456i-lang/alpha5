@@ -3,7 +3,7 @@
 from Backend.research.strategies.definition import StrategyDefinition, ConceptDefinition, PrimitiveSignalDefinition
 from Backend.research.strategies.base_research_strategy import BaseResearchStrategy
 from Backend.methodology.trend_following import TrendFollowingMethodology
-from Backend.features.trend import SMAFeature
+from Backend.reference.legacy.features.trend import SMAFeature
 from Backend.concepts.generators.trend import TrendConceptGenerator
 from Backend.signals.primitive.generators.trend import StrongTrendSignalGenerator
 

@@ -39,3 +39,21 @@ class MACrossResult(FinancialIndicatorResult):
     slow_ma: np.ndarray
     cross_signal: np.ndarray
 
+@dataclass(frozen=True)
+class ATRResult(FinancialIndicatorResult):
+    atr: np.ndarray
+
+@dataclass(frozen=True)
+class BollingerResult(FinancialIndicatorResult):
+    upper: np.ndarray
+    middle: np.ndarray
+    lower: np.ndarray
+    bandwidth: np.ndarray
+    percent_b: np.ndarray
+
+@dataclass(frozen=True)
+class KeltnerResult(FinancialIndicatorResult):
+    upper: np.ndarray
+    middle: np.ndarray
+    lower: np.ndarray
+

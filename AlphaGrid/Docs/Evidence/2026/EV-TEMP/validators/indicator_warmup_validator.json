@@ -2,7 +2,7 @@
     "id": "indicator_warmup_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 2.050899958703667,
+    "duration_ms": 7.993000035639852,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "All indicators correctly expose warmup behavior.",
-    "timestamp": "2026-07-04T08:00:37.378615"
+    "timestamp": "2026-07-04T08:17:37.384776"
 }

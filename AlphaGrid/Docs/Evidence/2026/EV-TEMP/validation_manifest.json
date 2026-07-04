@@ -21,6 +21,7 @@
         "indicator_formula_validator",
         "indicator_composition_validator",
         "indicator_warmup_validator",
+        "rolling_window_validator",
         "architecture_drift_validator",
         "dataset_validator",
         "mathematical_validator",

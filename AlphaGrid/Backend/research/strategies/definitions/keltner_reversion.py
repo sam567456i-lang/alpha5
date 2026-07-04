@@ -4,7 +4,7 @@ from Backend.research.strategies.definition import StrategyDefinition, ConceptDe
 from Backend.research.strategies.base_research_strategy import BaseResearchStrategy
 from Backend.methodology.mean_reversion import MeanReversionMethodology
 from Backend.features.keltner import KeltnerChannelFeature
-from Backend.features.trend import EMAFeature
+from Backend.reference.legacy.features.trend import EMAFeature
 from Backend.features.volatility import ATRFeature
 from Backend.concepts.generators.extremum import ExtremumConceptGenerator, ThresholdConfig
 from Backend.signals.primitive.generators.extremum import OverextendedSignalGenerator

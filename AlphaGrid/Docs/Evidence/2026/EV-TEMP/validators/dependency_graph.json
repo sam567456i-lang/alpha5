@@ -561,6 +561,15 @@
         "typing",
         "uuid"
     ],
+    "Backend.features.atr_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
     "Backend.features.base": [
         "Shared",
         "abc",
@@ -574,6 +583,15 @@
         "typing"
     ],
     "Backend.features.bollinger_bands": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.bollinger_generator": [
         "Backend",
         "__future__",
         "hashlib",
@@ -652,6 +670,15 @@
         "typing"
     ],
     "Backend.features.keltner_channels": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.keltner_generator": [
         "Backend",
         "__future__",
         "hashlib",
@@ -773,12 +800,6 @@
         "typing",
         "uuid"
     ],
-    "Backend.features.trend": [
-        "Shared",
-        "base",
-        "collections",
-        "typing"
-    ],
     "Backend.features.volatility": [
         "Shared",
         "base",
@@ -814,29 +835,31 @@
     ],
     "Backend.features.__init__": [
         "adx",
-        "atr",
+        "atr_generator",
         "base",
-        "bollinger",
-        "bollinger_bands",
+        "bollinger_generator",
         "cache",
         "cci",
         "donchian",
+        "ema_generator",
         "engine",
         "high_low_breakout",
-        "keltner",
-        "keltner_channels",
-        "macd",
+        "keltner_generator",
+        "ma_cross_generator",
+        "macd_generator",
         "momentum",
         "registry",
+        "roc_generator",
         "rsi",
+        "sma_generator",
         "stochastic",
         "stochastic_generator",
         "supertrend",
         "support_resistance",
-        "trend",
         "volatility",
         "volatility_breakout",
-        "vwap"
+        "vwap",
+        "wma_generator"
     ],
     "Backend.features.interfaces.momentum_feature": [
         "Backend",
@@ -845,6 +868,11 @@
         "typing"
     ],
     "Backend.features.interfaces.trend_feature": [
+        "Backend",
+        "pandas",
+        "typing"
+    ],
+    "Backend.features.interfaces.volatility_feature": [
         "Backend",
         "pandas",
         "typing"
@@ -994,6 +1022,18 @@
         "numpy"
     ],
     "Backend.indicator_engine.trend.moving_average_cross": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.volatility.atr": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.volatility.bollinger": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.volatility.keltner": [
         "Backend",
         "numpy"
     ],
@@ -1165,6 +1205,12 @@
         "numpy",
         "typing"
     ],
+    "Backend.math.public.rma": [
+        "Backend",
+        "numpy",
+        "time",
+        "typing"
+    ],
     "Backend.math.public.roc": [
         "Backend",
         "numpy",
@@ -1198,6 +1244,12 @@
     "Backend.math.public.stddev": [
         "Backend",
         "numpy",
+        "typing"
+    ],
+    "Backend.math.public.true_range": [
+        "Backend",
+        "numpy",
+        "time",
         "typing"
     ],
     "Backend.math.public.validation": [
@@ -2313,6 +2365,11 @@
         "Backend",
         "os",
         "subprocess"
+    ],
+    "Backend.validation.validators.rolling_window_validator": [
+        "Backend",
+        "numpy",
+        "time"
     ],
     "Backend.validation.validators.stability_validator": [
         "Backend",
