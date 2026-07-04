@@ -1,16 +1,10 @@
 {
-    "phase": "10i-b",
-    "family": "momentum",
-    "profile": "phase",
+    "phase": "10i-c",
+    "family": "core",
+    "profile": "repository",
     "dataset": "default.parquet",
-    "strategies": [
-        "MACDMomentumStrategy",
-        "ROCMomentumStrategy"
-    ],
-    "features": [
-        "MACDFeatureGenerator",
-        "ROCFeatureGenerator"
-    ],
+    "strategies": [],
+    "features": [],
     "validators_executed": [
         "roadmap_validator",
         "repository_validator",
@@ -36,6 +30,10 @@
         "numerical_robustness_validator",
         "performance_validator",
         "memory_validator",
-        "complexity_validator"
+        "complexity_validator",
+        "stress_validator",
+        "documentation_validator",
+        "migration_validator",
+        "config_drift_validator"
     ]
 }

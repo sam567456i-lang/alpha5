@@ -2,16 +2,16 @@
     "id": "determinism_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 259.57280001603067,
-    "phase": "10i-b",
-    "family": "momentum",
+    "duration_ms": 251.09510001493618,
+    "phase": "10i-c",
+    "family": "ALL",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10i-b-determinism_validator",
+    "evidence_id": "EV-10i-c-determinism_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "All mathematical primitives proven to be strictly deterministic with no hidden state.",
-    "timestamp": "2026-07-04T08:57:11.941154"
+    "timestamp": "2026-07-04T09:01:02.633644"
 }

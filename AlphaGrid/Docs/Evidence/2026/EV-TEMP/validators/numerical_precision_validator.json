@@ -2,16 +2,16 @@
     "id": "numerical_precision_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 193.33119998918846,
-    "phase": "10i-b",
-    "family": "momentum",
+    "duration_ms": 186.55969999963418,
+    "phase": "10i-c",
+    "family": "ALL",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10i-b-numerical_precision_validator",
+    "evidence_id": "EV-10i-c-numerical_precision_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
@@ -98,5 +98,5 @@
     "max_error": 2.3639756818738533e-11,
     "mean_error": 6.875881425674536e-13,
     "summary": "All numerical primitives match golden datasets within strict tolerances.",
-    "timestamp": "2026-07-04T08:57:12.142462"
+    "timestamp": "2026-07-04T09:01:02.983910"
 }

@@ -2,16 +2,16 @@
     "id": "dataset_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 11.845300032291561,
-    "phase": "10i-b",
-    "family": "momentum",
+    "duration_ms": 2.7054999954998493,
+    "phase": "10i-c",
+    "family": "ALL",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10i-b-dataset_validator",
+    "evidence_id": "EV-10i-c-dataset_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Dataset DS-2026-MATH-001 v1.0.0 successfully verified.",
-    "timestamp": "2026-07-04T08:57:08.650356"
+    "timestamp": "2026-07-04T09:00:59.737020"
 }

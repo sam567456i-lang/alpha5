@@ -2,16 +2,16 @@
     "id": "architecture_drift_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1260.2603999548592,
-    "phase": "10i-b",
-    "family": "momentum",
+    "duration_ms": 1576.8862999975681,
+    "phase": "10i-c",
+    "family": "ALL",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10i-b-architecture_drift_validator",
+    "evidence_id": "EV-10i-c-architecture_drift_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "No architecture drift detected.",
-    "timestamp": "2026-07-04T08:57:13.413003"
+    "timestamp": "2026-07-04T09:01:04.575445"
 }

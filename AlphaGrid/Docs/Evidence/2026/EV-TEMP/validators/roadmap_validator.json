@@ -2,16 +2,16 @@
     "id": "roadmap_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 791.3372000330128,
-    "phase": "10i-b",
-    "family": "momentum",
+    "duration_ms": 795.5896999919787,
+    "phase": "10i-c",
+    "family": "ALL",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10i-b-roadmap_validator",
+    "evidence_id": "EV-10i-c-roadmap_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Roadmap and prerequisites verified successfully.",
-    "timestamp": "2026-07-04T08:56:35.869945"
+    "timestamp": "2026-07-04T09:00:27.063308"
 }

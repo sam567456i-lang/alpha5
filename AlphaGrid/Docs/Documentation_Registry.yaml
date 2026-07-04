@@ -2068,3 +2068,43 @@ documents:
   Path: Reviews/validation_dashboard.md
   Dependencies: []
   Referenced_By: []
+- Document_ID: GEN-189
+  Title: Summary
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Generated
+  Path: Evidence/2026/EV-10I-C-WAVE5/summary.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GEN-190
+  Title: Summary
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Generated
+  Path: Evidence/2026/EV-10I-C-WAVE6/summary.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GEN-191
+  Title: Summary
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Generated
+  Path: Evidence/2026/EV-10I-C-WAVE7/summary.md
+  Dependencies: []
+  Referenced_By: []
+evidence:
+- path: Docs/Evidence/2026/EV-10I-C-WAVE5/summary.md
+  description: Wave evidence summary for EV-10I-C-WAVE5
+- path: Docs/Evidence/2026/EV-10I-C-WAVE6/summary.md
+  description: Wave evidence summary for EV-10I-C-WAVE6
+- path: Docs/Evidence/2026/EV-10I-C-WAVE7/summary.md
+  description: Wave evidence summary for EV-10I-C-WAVE7

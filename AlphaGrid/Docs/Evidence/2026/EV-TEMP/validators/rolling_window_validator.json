@@ -2,16 +2,16 @@
     "id": "rolling_window_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 5.2918000146746635,
-    "phase": "10i-b",
-    "family": "momentum",
+    "duration_ms": 5.959300033282489,
+    "phase": "10i-c",
+    "family": "ALL",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10i-b-rolling_window_validator",
+    "evidence_id": "EV-10i-c-rolling_window_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "All rolling window indicators passed boundary and accumulation validation.",
-    "timestamp": "2026-07-04T08:57:12.146627"
+    "timestamp": "2026-07-04T09:01:02.992389"
 }

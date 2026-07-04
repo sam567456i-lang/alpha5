@@ -2,16 +2,16 @@
     "id": "mathematical_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 68.19059996632859,
-    "phase": "10i-b",
-    "family": "momentum",
+    "duration_ms": 81.02829998824745,
+    "phase": "10i-c",
+    "family": "ALL",
     "start_time": "",
     "end_time": "",
     "cpu_utilization_percent": 0.0,
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10i-b-mathematical_validator",
+    "evidence_id": "EV-10i-c-mathematical_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
@@ -20,5 +20,5 @@
     "max_error": 1.1368683772161603e-13,
     "mean_error": 0.0,
     "summary": "All mathematical identity proofs passed.",
-    "timestamp": "2026-07-04T08:57:11.673588"
+    "timestamp": "2026-07-04T09:01:02.375891"
 }
