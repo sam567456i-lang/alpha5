@@ -1,8 +1,11 @@
+from __future__ import annotations
+from typing import TYPE_CHECKING
 import numpy as np
-import pandas as pd
+if TYPE_CHECKING:
+    import pandas as pd
 import hashlib
 import uuid
-from typing import Dict, Any, Optional
+from typing import Dict, Any, TYPE_CHECKING, Optional, TYPE_CHECKING
 from Backend.dtos.features import FeatureDTO
 from Backend.features.interfaces.momentum_feature import MomentumFeatureInterface
 

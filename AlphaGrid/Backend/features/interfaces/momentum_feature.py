@@ -1,5 +1,7 @@
-from typing import Protocol, runtime_checkable
-import pandas as pd
+from __future__ import annotations
+from typing import Protocol, runtime_checkable, TYPE_CHECKING
+if TYPE_CHECKING:
+    import pandas as pd
 from Backend.dtos.features import FeatureDTO
 
 @runtime_checkable

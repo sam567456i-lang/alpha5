@@ -1,0 +1,35 @@
+{
+    "metrics": {
+        "MACD_Line": {
+            "max_error": 0.0,
+            "mean_error": 0.0,
+            "rmse": 0.0,
+            "correlation": 1.0,
+            "nan_mismatch_count": 0,
+            "warmup_legacy": 34,
+            "warmup_new": 34,
+            "first_mismatch_idx": -1
+        },
+        "Signal_Line": {
+            "max_error": 0.0,
+            "mean_error": 0.0,
+            "rmse": 0.0,
+            "correlation": 1.0,
+            "nan_mismatch_count": 0,
+            "warmup_legacy": 34,
+            "warmup_new": 34,
+            "first_mismatch_idx": -1
+        },
+        "Histogram": {
+            "max_error": 0.0,
+            "mean_error": 0.0,
+            "rmse": 0.0,
+            "correlation": 0.9999999999999999,
+            "nan_mismatch_count": 0,
+            "warmup_legacy": 34,
+            "warmup_new": 34,
+            "first_mismatch_idx": -1
+        }
+    },
+    "errors": []
+}

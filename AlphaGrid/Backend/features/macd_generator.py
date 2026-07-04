@@ -1,8 +1,11 @@
+from __future__ import annotations
+from typing import TYPE_CHECKING
 import numpy as np
-import pandas as pd
+if TYPE_CHECKING:
+    import pandas as pd
 import hashlib
 import uuid
-from typing import Dict, Any, Optional
+from typing import Dict, Any, TYPE_CHECKING, Optional, TYPE_CHECKING
 from Backend.dtos.features import FeatureDTO
 from Backend.features.interfaces.momentum_feature import MomentumFeatureInterface
 
@@ -25,18 +28,24 @@ class MACDFeatureGenerator(MomentumFeatureInterface):
         if len(data) < self.slow_period + self.signal_period:
             raise ValueError(f"Insufficient data. Required: {self.slow_period + self.signal_period}")
             
-        close = data['close']
-        fast_ema = close.ewm(span=self.fast_period, adjust=False).mean()
-        slow_ema = close.ewm(span=self.slow_period, adjust=False).mean()
+        close = data['close'].values
+        timestamps = np.arange(len(close))
         
-        macd_line = fast_ema - slow_ema
-        signal_line = macd_line.ewm(span=self.signal_period, adjust=False).mean()
-        macd_histogram = macd_line - signal_line
+        from Backend.math.public import calculate_ema, calculate_diff
         
-        current_macd = float(macd_line.iloc[-1])
-        current_signal = float(signal_line.iloc[-1])
-        current_hist = float(macd_histogram.iloc[-1])
-        prev_hist = float(macd_histogram.iloc[-2]) if len(macd_histogram) > 1 else 0.0
+        fast_ema = calculate_ema(close, timestamps, self.fast_period)
+        slow_ema = calculate_ema(close, timestamps, self.slow_period)
+        
+        macd_line_vals = fast_ema.values - slow_ema.values
+        
+        signal_line = calculate_ema(macd_line_vals, timestamps, self.signal_period)
+        
+        macd_histogram = macd_line_vals - signal_line.values
+        
+        current_macd = float(macd_line_vals[-1])
+        current_signal = float(signal_line.values[-1])
+        current_hist = float(macd_histogram[-1])
+        prev_hist = float(macd_histogram[-2]) if len(macd_histogram) > 1 else 0.0
         
         # Generic Semantics
         momentum_strength = abs(current_macd)

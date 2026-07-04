@@ -1,0 +1,23 @@
+[
+    {
+        "id": "VAL-LEGACY-EQ",
+        "status": "PASS",
+        "duration_ms": 1551.6541000106372,
+        "errors": [],
+        "summary": "Full series mathematical equivalence proven against legacy generator."
+    },
+    {
+        "id": "VAL-DEP",
+        "status": "PASS",
+        "duration_ms": 166.17779998341575,
+        "errors": [],
+        "summary": "Strict DAG (Feature -> Math -> NumPy) enforced successfully."
+    },
+    {
+        "id": "VAL-PERF",
+        "status": "PASS",
+        "duration_ms": 797.8882999741472,
+        "errors": [],
+        "summary": "Performance check passed. Old: 5.15ms, New: 2.76ms."
+    }
+]
