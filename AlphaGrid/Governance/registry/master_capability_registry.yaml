@@ -4219,3 +4219,24 @@ capabilities:
   subfamily: Keltner
   dependencies:
   - INDICATOR_KELTNER_CHANNELS
+- capability_id: ANALYSIS_EXTREMUM_DONCHIAN
+  name: Donchian Channels Analysis
+  platform: P05_Analysis
+  family: Extremum
+  subfamily: Donchian
+  dependencies:
+  - INDICATOR_DONCHIAN
+- capability_id: ANALYSIS_EXTREMUM_HIGHLOW
+  name: High Low Analysis
+  platform: P05_Analysis
+  family: Extremum
+  subfamily: HighLow
+  dependencies:
+  - INDICATOR_HIGHLOW
+- capability_id: ANALYSIS_EXTREMUM_SR
+  name: Support Resistance Analysis
+  platform: P05_Analysis
+  family: Extremum
+  subfamily: SupportResistance
+  dependencies:
+  - INDICATOR_SR
