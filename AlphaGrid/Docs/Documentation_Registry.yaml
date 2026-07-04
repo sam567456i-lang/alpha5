@@ -2057,7 +2057,7 @@ documents:
   Path: Reviews/project_dashboard.md
   Dependencies: []
   Referenced_By: []
-- Document_ID: GEN-188
+- Document_ID: GEN-010
   Title: Validation Dashboard
   Version: 1.0.0
   Maturity: '"Level 5: Institutionally Frozen"'
@@ -2099,6 +2099,17 @@ documents:
   Owner: ArchitectureTeam
   Category: Generated
   Path: Evidence/2026/EV-10I-C-WAVE7/summary.md
+  Dependencies: []
+  Referenced_By: []
+- Document_ID: GEN-192
+  Title: Wave Lifecycle
+  Version: 1.0.0
+  Maturity: '"Level 5: Institutionally Frozen"'
+  Implementation_Status: Validated
+  Phase: '10'
+  Owner: ArchitectureTeam
+  Category: Generated
+  Path: Governance/Wave_Lifecycle.md
   Dependencies: []
   Referenced_By: []
 evidence:

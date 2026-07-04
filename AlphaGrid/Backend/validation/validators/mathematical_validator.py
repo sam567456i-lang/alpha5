@@ -68,6 +68,41 @@ class MathematicalValidator(AbstractValidator):
         sma_const = calculate_sma(const_arr, timestamps, period)
         assert_identity("SMA(Constant) == Constant", sma_const.values, const_arr, sma_const.valid_mask)
                 
+        # 6. Triple-Reference Equivalence Proof (Math Core == Indicator Engine == Feature Generator)
+        from Backend.market_data.market_series import MarketSeries
+        from Backend.indicator_engine.trend.moving_averages import SMAEngine
+        from Backend.features.sma_generator import SMAFeatureGenerator
+        import pandas as pd
+        
+        # Construct MarketSeries
+        df = pd.DataFrame({"close": prices}, index=pd.to_datetime(timestamps, unit="ns"))
+        series = MarketSeries(
+            symbol="TEST",
+            timeframe="1d",
+            timestamps=timestamps,
+            opens=prices,
+            highs=prices,
+            lows=prices,
+            closes=prices,
+            volumes=prices
+        )
+        
+        # Engine
+        engine = SMAEngine(period=period)
+        engine_res = engine.generate(series)
+        
+        # Feature
+        feature = SMAFeatureGenerator(period=period)
+        feature_res = feature.generate(df, trace_id="123", correlation_id="456")
+        
+        # Assert Math Core == Engine == Feature
+        assert_identity("Triple-Reference (Core == Engine)", sma_res.values, engine_res.sma, sma_res.valid_mask)
+        
+        last_val = float(sma_res.values[-1])
+        feat_val = float(feature_res.values['sma'])
+        if abs(last_val - feat_val) > 1e-9:
+            errors.append(f"Triple-Reference (Core == Feature) failed: {feat_val} != {last_val}")
+        
         duration_ms = (time.perf_counter() - start) * 1000.0
         
         if errors:

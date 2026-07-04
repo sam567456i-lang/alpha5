@@ -1,0 +1,9 @@
+{
+    "locked_apis": {
+        "Backend/math/public/__init__.py": "7781ccf44b0b92e2a33aa34b9dd4c66ae7bd8bca5182da5c54ad5d34fcde86a3",
+        "Backend/indicator_engine/__init__.py": "d3bd48f9d3460d3e5411991121d9d740f0cdd2d42b10e3332b51d97ae56c4738",
+        "Backend/features/__init__.py": "9228baa3765d17a5bf15a90f5514ae3925a3aaaba0d6df95a9efc826676857d1",
+        "Backend/validation/dtos.py": "bfa6159ec4b2c377c7afb6001a4062c03e5b5ed744c9ba13dbdd83233b0197f4",
+        "master_capability_registry.yaml": "c996be36d3cc2dfeb70ddf7952ea4816c299f0d04e39b7b331070a610b3c397d"
+    }
+}

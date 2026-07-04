@@ -308,5 +308,45 @@
         "status": "PASS",
         "evidence_id": "EV-TEMP",
         "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T09:10:21.701470",
+        "phase": "10i-c",
+        "family": "core",
+        "profile": "repository",
+        "duration_ms": 40604.2298998218,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T09:11:37.131090",
+        "phase": "10i-c",
+        "family": "core",
+        "profile": "repository",
+        "duration_ms": 38957.70610001637,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T09:13:07.174335",
+        "phase": "10i-c",
+        "family": "core",
+        "profile": "repository",
+        "duration_ms": 37629.0540000773,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T09:14:59.365422",
+        "phase": "10i-c",
+        "family": "core",
+        "profile": "repository",
+        "duration_ms": 41599.42149982089,
+        "status": "PASS",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
     }
 ]

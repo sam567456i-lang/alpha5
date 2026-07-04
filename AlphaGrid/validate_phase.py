@@ -96,7 +96,26 @@ def main():
     os.makedirs(os.path.dirname(dashboard_path), exist_ok=True)
     
     with open(dashboard_path, "w") as f:
-        f.write(f"# Validation Dashboard (Phase {args.phase} - {args.family})\n\n")
+        f.write(f"""---
+Document ID: GEN-010
+Title: "Validation Dashboard"
+Version: 1.0.0
+Governance Version: 1.0.0
+Architecture Version: 1.0.0
+Phase: 10
+Owner: ArchitectureTeam
+Category: Generated
+Maturity: "Level 5: Institutionally Frozen"
+Implementation Status: Validated
+Current Phase: 10
+Future Phase: N/A
+Last Validated Phase: 10
+Review Date: 2026-07-04
+Dependencies: []
+Referenced By: []
+---
+
+# Validation Dashboard (Phase {args.phase} - {args.family})\n\n""")
         f.write("| Validator | Status | Duration (ms) |\n")
         f.write("|-----------|--------|---------------|\n")
         for r in results:

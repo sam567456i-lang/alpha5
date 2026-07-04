@@ -2260,6 +2260,7 @@
     "Backend.validation.validators.architecture_drift_validator": [
         "Backend",
         "ast",
+        "hashlib",
         "json",
         "os",
         "time"
@@ -2359,6 +2360,7 @@
         "json",
         "numpy",
         "os",
+        "pandas",
         "time"
     ],
     "Backend.validation.validators.memory_validator": [

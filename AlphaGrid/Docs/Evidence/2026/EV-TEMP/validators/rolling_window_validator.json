@@ -2,7 +2,7 @@
     "id": "rolling_window_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 5.959300033282489,
+    "duration_ms": 5.253200011793524,
     "phase": "10i-c",
     "family": "ALL",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "All rolling window indicators passed boundary and accumulation validation.",
-    "timestamp": "2026-07-04T09:01:02.992389"
+    "timestamp": "2026-07-04T09:14:58.426669"
 }

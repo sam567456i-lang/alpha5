@@ -2,7 +2,7 @@
     "id": "migration_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1.4208999928086996,
+    "duration_ms": 1.3463999493978918,
     "phase": "10i-c",
     "family": "ALL",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "MigrationValidator passed.",
-    "timestamp": "2026-07-04T09:00:59.730635"
+    "timestamp": "2026-07-04T09:14:55.034414"
 }

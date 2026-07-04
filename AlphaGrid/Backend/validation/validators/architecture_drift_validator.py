@@ -64,6 +64,22 @@ class ArchitectureDriftValidator(AbstractValidator):
                     if dep.startswith("Backend.math"):
                         errors.append(f"Drift Violation: Concept '{mod}' imports Math '{dep}'. Concepts cannot calculate.")
                         
+        # Check API Freeze Manifest
+        import hashlib
+        api_manifest_path = os.path.join(context.workspace, "Docs", "Governance", "api_freeze_manifest.json")
+        if os.path.exists(api_manifest_path):
+            with open(api_manifest_path, "r", encoding="utf-8") as f:
+                api_manifest = json.load(f).get("locked_apis", {})
+            for rel_path, expected_hash in api_manifest.items():
+                full_path = os.path.join(context.workspace, os.path.normpath(rel_path))
+                if not os.path.exists(full_path):
+                    errors.append(f"API Freeze Violation: Locked file missing: {rel_path}")
+                else:
+                    with open(full_path, "rb") as f:
+                        current_hash = hashlib.sha256(f.read()).hexdigest()
+                    if current_hash != expected_hash:
+                        errors.append(f"API Freeze Violation: Locked API file modified without re-approval: {rel_path}")
+                        
         # If there's a reference graph, compare
         if hasattr(context, 'reference_graph_path') and context.reference_graph_path and os.path.exists(context.reference_graph_path):
             with open(context.reference_graph_path, "r", encoding="utf-8") as f:
