@@ -14,7 +14,7 @@ class WMAAnalysis(BaseAnalysis):
             wma_50 = indicator_engine.get_indicator("WMA", context.market_data, length=50)
             wma_200 = indicator_engine.get_indicator("WMA", context.market_data, length=200)
         except Exception as e:
-            return AnalysisResult(0.0, context.market_data, [], {"status": "Unsupported", "reason": f"Required indicators unavailable: {str(e)}"})
+            return AnalysisResult(0.0, context.market_data, [], {"status": "Unsupported", "reason": str(e)})
             
         if wma_20.empty or wma_50.empty or wma_200.empty:
             return AnalysisResult(0.0, context.market_data, [], {"status": "Unsupported", "reason": "Empty indicator data"})
@@ -22,28 +22,40 @@ class WMAAnalysis(BaseAnalysis):
         latest_20 = wma_20.iloc[-1]
         latest_50 = wma_50.iloc[-1]
         latest_200 = wma_200.iloc[-1]
-        latest_price = context.market_data['close'].iloc[-1]
         
-        trend_state = "Neutral"
+        classification = "Neutral"
         score = 0.0
         confidence = 0.20
-        risk = "Medium"
-        evidence = f"WMA20: {latest_20:.2f}, WMA50: {latest_50:.2f}, WMA200: {latest_200:.2f}"
+        risk_flags = ["Medium"]
+        evidence = [f"WMA20: {latest_20:.2f}", f"WMA50: {latest_50:.2f}", f"WMA200: {latest_200:.2f}"]
         
         if latest_20 > latest_50 > latest_200:
-            trend_state = "Strong Uptrend"
+            classification = "Strong Uptrend"
             score = 0.85
             confidence = 0.90
-            risk = "Low"
-            evidence += ". Bullish alignment."
+            risk_flags = ["Low"]
+            evidence.append("Bullish alignment.")
         elif latest_20 < latest_50 < latest_200:
-            trend_state = "Strong Downtrend"
+            classification = "Strong Downtrend"
             score = -0.85
             confidence = 0.90
-            risk = "Low"
-            evidence += ". Bearish alignment."
+            risk_flags = ["Low"]
+            evidence.append("Bearish alignment.")
             
-        return AnalysisResult(score, context.market_data, [], {
-            "status": "Success", "trend": trend_state, "confidence": confidence,
-            "evidence": evidence, "risk": risk, "contradictions": "None", "quality": "High"
-        })
+        return AnalysisResult(
+            score=score,
+            raw_data=context.market_data,
+            signals=[],
+            metadata={
+                "analysis_type": "trend",
+                "status": "completed",
+                "overall_score": score,
+                "confidence": confidence,
+                "classification": classification,
+                "evidence": evidence,
+                "contradictions": [],
+                "risk_flags": risk_flags,
+                "quality": "High",
+                "metadata": {}
+            }
+        )

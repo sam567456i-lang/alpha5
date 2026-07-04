@@ -24,7 +24,6 @@ class TestTrendAnalysis(unittest.TestCase):
         self.analysis = EMAAnalysis()
         
     def test_ema_strong_uptrend(self):
-        # Price > 20 > 50 > 200
         market_data = pd.DataFrame({"close": [150]})
         engine = MockIndicatorEngine(120, 100, 80)
         
@@ -37,12 +36,11 @@ class TestTrendAnalysis(unittest.TestCase):
         result = self.analysis.execute(context)
         
         self.assertEqual(result.score, 0.85)
-        self.assertEqual(result.metadata["trend"], "Strong Uptrend")
-        self.assertEqual(result.metadata["risk"], "Low")
-        self.assertEqual(result.metadata["status"], "Success")
+        self.assertEqual(result.metadata["classification"], "Strong Uptrend")
+        self.assertEqual(result.metadata["risk_flags"], ["Low"])
+        self.assertEqual(result.metadata["status"], "completed")
 
     def test_ema_weakening_uptrend(self):
-        # 20 > 50 > 200 but Price < 20
         market_data = pd.DataFrame({"close": [110]})
         engine = MockIndicatorEngine(120, 100, 80)
         
@@ -55,8 +53,8 @@ class TestTrendAnalysis(unittest.TestCase):
         result = self.analysis.execute(context)
         
         self.assertEqual(result.score, 0.50)
-        self.assertEqual(result.metadata["trend"], "Weakening Uptrend")
-        self.assertEqual(result.metadata["risk"], "High")
+        self.assertEqual(result.metadata["classification"], "Weakening Uptrend")
+        self.assertEqual(result.metadata["risk_flags"], ["High"])
 
     def test_ema_unsupported_if_engine_missing(self):
         market_data = pd.DataFrame({"close": [150]})
@@ -64,7 +62,7 @@ class TestTrendAnalysis(unittest.TestCase):
         context = AnalysisContext(
             market_data=market_data,
             timeframe="1D",
-            dependencies={} # No engine
+            dependencies={} 
         )
         
         result = self.analysis.execute(context)

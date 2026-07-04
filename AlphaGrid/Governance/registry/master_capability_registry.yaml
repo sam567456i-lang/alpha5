@@ -4169,3 +4169,10 @@ capabilities:
   subfamily: MACross
   dependencies:
   - INDICATOR_SMA
+- capability_id: ANALYSIS_MOMENTUM_RSI
+  name: RSI Momentum Analysis
+  platform: P05_Analysis
+  family: Momentum
+  subfamily: RSI
+  dependencies:
+  - INDICATOR_RSI
