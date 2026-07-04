@@ -4,6 +4,15 @@
         "Backend/indicator_engine/__init__.py": "d3bd48f9d3460d3e5411991121d9d740f0cdd2d42b10e3332b51d97ae56c4738",
         "Backend/features/__init__.py": "9228baa3765d17a5bf15a90f5514ae3925a3aaaba0d6df95a9efc826676857d1",
         "Backend/validation/dtos.py": "bfa6159ec4b2c377c7afb6001a4062c03e5b5ed744c9ba13dbdd83233b0197f4",
-        "master_capability_registry.yaml": "c996be36d3cc2dfeb70ddf7952ea4816c299f0d04e39b7b331070a610b3c397d"
+        "master_capability_registry.yaml": "c996be36d3cc2dfeb70ddf7952ea4816c299f0d04e39b7b331070a610b3c397d",
+        "Docs/Documentation_Registry.yaml": "dbfed5f3e2d7a3406b46bda5ab8fd370d93e86db05e5bfdba413ad7dd00118a2",
+        "Backend/validation/validation_registry.py": "681963648bb10669bcc8be2f36659a30573cff2633e34ca1565402e78fcc0fb0",
+        "Docs/Governance/Wave_Lifecycle.md": "aa598a21e01d4bfc96dd7a8347607d88641186d6cb82d33f96a6c9c213ed311e",
+        "Docs/Architecture/capability_dependency_graph.md": "d36157404badf0f8e435446ec103de3cf5516df8a5755159d410b0e3d66838eb",
+        "Datasets/dataset_manifest.json": "e4201c9fe4cdc846a4511c4981522163105cefb051bc0922bc1e0601eff7b39d",
+        "Docs/Evidence/2026/EV-TEMP/validation_manifest.json": "08817a2355e54f796cf0dedb67e2e08949ec99efda4f90c955e02b76e51bb502",
+        "Docs/ADRs/ADR-001-MTF-Alignment.md": "096762133e7757fed11060bd6ca9022db1d30e0596d8c01b89acbd3a3c29ae6b",
+        "Docs/ADRs/ADR-003-Ownership-of-expected-bars.md": "cf6c6d35aca02a515caf8931e0140f6745e2c15a6bca92374ae8b8fa46e50e2c",
+        "Docs/adr/ADR-001-shared-models.md": "59a14af6d7b383853a64b3ad4f191cedd905e1ebefa17f293e06e1d0e6cd252e"
     }
 }

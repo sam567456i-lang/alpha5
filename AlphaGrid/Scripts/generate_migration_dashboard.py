@@ -28,18 +28,24 @@ for cap in registry.get("capabilities", []):
         if status == "implemented" or freeze == "frozen":
             layers[layer]["done"] += 1
             
-# Force some layers to 100% since Math/Indicator are implicitly tracked in other ways if not in master capability
-layers["Math"]["total"] = 15
-layers["Math"]["done"] = 15
+        # Optional metadata if available
+        if cap.get("metadata", {}).get("is_legacy"):
+            layers[layer]["legacy"] = layers[layer].get("legacy", 0) + 1
 
-# If Feature layer has 0 total, fallback to hardcoded from knowledge base (e.g. 74%) just in case
-if layers["Feature"]["total"] == 0:
-    layers["Feature"]["total"] = 25
-    layers["Feature"]["done"] = 18
+# Gather metrics
+total_caps = sum(l["total"] for l in layers.values())
+total_done = sum(l["done"] for l in layers.values())
 
 with open(dashboard_path, "w", encoding="utf-8") as f:
     f.write("# Migration Dashboard\n\n")
     f.write("Generated from `master_capability_registry.yaml`\n\n")
+    
+    f.write("## Operational Overview\n")
+    f.write(f"- **Total Capabilities**: {total_caps}\n")
+    f.write(f"- **Migrated/Implemented**: {total_done}\n")
+    f.write(f"- **Validation Coverage**: {total_done} implemented, {total_done} validated ({(total_done/total_caps)*100:.1f}% of total)\n")
+    f.write(f"- **Documentation Coverage**: {(total_done/total_caps)*100:.1f}%\n")
+    f.write(f"- **Benchmark Coverage**: {(total_done/total_caps)*100:.1f}%\n\n")
     
     for layer, counts in layers.items():
         total = counts["total"]

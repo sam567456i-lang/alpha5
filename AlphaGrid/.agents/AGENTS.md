@@ -63,3 +63,19 @@ Do NOT create or maintain project copies in:
 If the active workspace is not the canonical repository, STOP and request that the correct repository be opened before making any project changes.
 
 There must be exactly ONE source of truth.
+
+## 7. Strict Architectural Governance
+
+**Architecture Decision Record (ADR) Policy:**
+- No new architectural layer may be introduced without an approved Architecture Decision Record demonstrating why existing layers cannot satisfy the requirement.
+- The repository infrastructure is now feature-complete. Future work must deliver trading capabilities, not additional architectural layers.
+
+**Dependency Hierarchy Constraint:**
+The canonical dependency graph for all components must strictly flow downwards as follows:
+`Market Data -> Math Core -> Indicator Engine -> Feature Generators -> Concepts -> Methodologies -> Signals -> Strategies`
+Strategies must never instantiate indicators directly. Strategies rely purely on semantic building blocks (concepts, methodologies, signals).
+
+**Capability Completion Rule:**
+No new capability reaches "Complete" until it satisfies all 7 mandatory gates:
+`Capability -> Registry -> Implementation -> Validation -> Documentation -> Benchmark -> Evidence -> Freeze`
+Partially implemented features without validation, documentation, and evidence are forbidden.
