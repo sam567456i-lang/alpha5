@@ -1,7 +1,4 @@
-schema_version: '1.0'
-format_version: '1.0'
-generated_by: System
-capabilities:
+analyses:
 - name: OHLCV
   version: 1.0.0
   capability_id: ftr-ohlcv
@@ -4865,81 +4862,33 @@ capabilities:
   category: External
   family: Research Paper
   status: planned
-- capability_id: STRATEGY_TRENDFOLLOWING
-  name: Trend Following Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Trend Following
+- capability_id: ANALYSIS_EXECUTION
+  name: Execution Analysis
+  platform: P06_Analysis
+  category: Execution
+  family: Execution
   status: planned
-- capability_id: STRATEGY_BREAKOUT
-  name: Breakout Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Breakout
+- capability_id: ANALYSIS_DATA_QUALITY
+  name: Data Quality Analysis
+  platform: P06_Analysis
+  category: Data Quality
+  family: Data Quality
   status: planned
-- capability_id: STRATEGY_MEANREVERSION
-  name: Mean Reversion Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Mean Reversion
+- capability_id: ANALYSIS_MARKET_REGIME
+  name: Market Regime Analysis
+  platform: P06_Analysis
+  category: Market Regime
+  family: Market Regime
   status: planned
-- capability_id: STRATEGY_MOMENTUM
-  name: Momentum Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Momentum
+- capability_id: ANALYSIS_CROSS_ASSET
+  name: Cross Asset Analysis
+  platform: P06_Analysis
+  category: Cross Asset
+  family: Cross Asset
   status: planned
-- capability_id: STRATEGY_PRICEACTION
-  name: Price Action Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Price Action
-  status: planned
-- capability_id: STRATEGY_SMARTMONEY
-  name: Smart Money Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Smart Money
-  status: planned
-- capability_id: STRATEGY_VOLUME
-  name: Volume Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Volume
-  status: planned
-- capability_id: STRATEGY_ORDERFLOW
-  name: Order Flow Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Order Flow
-  status: planned
-- capability_id: STRATEGY_STATISTICAL
-  name: Statistical Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Statistical
-  status: planned
-- capability_id: STRATEGY_MACHINELEARNING
-  name: Machine Learning Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Machine Learning
-  status: planned
-- capability_id: STRATEGY_MACRO
-  name: Macro Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Macro
-  status: planned
-- capability_id: STRATEGY_SEASONAL
-  name: Seasonal Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Seasonal
-  status: planned
-- capability_id: STRATEGY_OPTIONS
-  name: Options Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Options
+- capability_id: ANALYSIS_PORTFOLIO_CONTEXT
+  name: Portfolio Context
+  platform: P06_Analysis
+  category: Portfolio Context
+  family: Portfolio Context
   status: planned

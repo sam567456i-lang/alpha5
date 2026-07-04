@@ -2,23 +2,29 @@
 # Authoritative source for Project OS to determine pipeline blockers and downstream dependencies
 
 forward_mapping:
-  Data:
-    - Indicator
-  Indicator:
-    - Analysis
-  Analysis:
-    - Concept
-  Concept:
+  Market:
+    - Market Profile
+  Market Profile:
+    - Applicable Analysis Families
+  Applicable Analysis Families:
+    - Applicable Strategies
+  Applicable Strategies:
+    - Applicable Timeframes
+  Applicable Timeframes:
+    - Applicable Trading Styles
+  Applicable Trading Styles:
+    - Concepts
+  Concepts:
     - Inference
   Inference:
-    - Methodology
-  Methodology:
-    - Signal
-  Signal:
-    - Opportunity
-  Opportunity:
-    - Recommendation
-  Recommendation:
+    - Methodologies
+  Methodologies:
+    - Signals
+  Signals:
+    - Opportunities
+  Opportunities:
+    - Recommendations
+  Recommendations:
     - Dashboard
 
 reverse_mapping:
