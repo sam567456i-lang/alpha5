@@ -33,7 +33,7 @@ from Backend.research.strategies.definitions.stochastic_momentum import STOCHAST
 from Backend.research.strategies.definitions.stochastic_exhaustion import STOCHASTIC_EXHAUSTION
 
 from Backend.reference.legacy.features.trend import EMAFeature, SMAFeature
-from Backend.features.momentum import ROCFeature, RSIFeature
+from Backend.reference.legacy.features.momentum import ROCFeature, RSIFeature
 from Backend.features.stochastic import StochasticFeature
 from Backend.reference.legacy.features.donchian import Donchian20Feature
 from Backend.features.keltner import KeltnerChannelFeature

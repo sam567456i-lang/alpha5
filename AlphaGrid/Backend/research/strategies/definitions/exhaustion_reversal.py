@@ -3,7 +3,7 @@
 from Backend.research.strategies.definition import StrategyDefinition, ConceptDefinition, PrimitiveSignalDefinition
 from Backend.research.strategies.base_research_strategy import BaseResearchStrategy
 from Backend.methodology.reversal import ReversalMethodology
-from Backend.features.momentum import RSIFeature
+from Backend.reference.legacy.features.momentum import RSIFeature
 from Backend.features.bollinger import BollingerBandsFeature
 from Backend.features.volatility import ATRFeature
 from Backend.concepts.generators.extremum import ExtremumConceptGenerator, ThresholdConfig

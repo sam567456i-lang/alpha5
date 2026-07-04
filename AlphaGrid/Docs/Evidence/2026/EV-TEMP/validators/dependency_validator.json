@@ -2,7 +2,7 @@
     "id": "dependency_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 173.3576999977231,
+    "duration_ms": 287.711999961175,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Strict DAG (Feature -> Math -> NumPy) enforced successfully.",
-    "timestamp": "2026-07-04T08:47:49.639057"
+    "timestamp": "2026-07-04T08:52:25.561001"
 }

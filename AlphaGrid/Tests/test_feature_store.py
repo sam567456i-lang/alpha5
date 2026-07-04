@@ -11,7 +11,7 @@ from Backend.features.registry import FeatureRegistry
 from Backend.features.engine import FeatureEngine
 from Backend.features.cache import FeatureCache
 from Backend.reference.legacy.features.trend import SMAFeature, EMAFeature
-from Backend.features.momentum import ROCFeature, RSIFeature
+from Backend.reference.legacy.features.momentum import ROCFeature, RSIFeature
 from Backend.features.volatility import ATRFeature, RelativeVolumeFeature
 
 

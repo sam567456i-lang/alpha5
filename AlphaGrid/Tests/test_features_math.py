@@ -12,7 +12,7 @@ from Backend.features.kama import KAMAFeature
 import pytest
 import numpy as np
 import pandas as pd
-from Backend.features.rsi import RSIFeatureGenerator
+from Backend.reference.legacy.features.rsi import RSIFeatureGenerator
 from Backend.features.bollinger_bands import BollingerBandsFeatureGenerator
 from Backend.features.stochastic_generator import StochasticFeatureGenerator
 from Backend.features.keltner_channels import KeltnerChannelFeatureGenerator

@@ -2,7 +2,7 @@
     "id": "warmup_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1.7579999985173345,
+    "duration_ms": 1.9076999742537737,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "All mathematical primitives strictly adhere to warmup boundaries.",
-    "timestamp": "2026-07-04T08:47:55.595005"
+    "timestamp": "2026-07-04T08:52:31.361427"
 }

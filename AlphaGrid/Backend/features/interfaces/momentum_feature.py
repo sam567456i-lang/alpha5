@@ -17,9 +17,6 @@ class MomentumFeatureInterface(Protocol):
         
     def generate(self, data: pd.DataFrame, trace_id: str, correlation_id: str) -> FeatureDTO:
         """
-        Must return a FeatureDTO where the `values` dict contains:
-        - momentum_strength (float): Magnitude of the momentum
-        - momentum_direction (float): 1.0 (Up), -1.0 (Down)
-        - momentum_acceleration (float): Rate of change of momentum (optional, 0.0 if not supported)
+        Must return a FeatureDTO containing numerical indicator outputs.
         """
         ...

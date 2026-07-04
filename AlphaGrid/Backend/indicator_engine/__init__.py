@@ -13,6 +13,7 @@ from Backend.indicator_engine.volatility.keltner import KeltnerEngine
 from Backend.indicator_engine.extremum.donchian import DonchianEngine
 from Backend.indicator_engine.extremum.high_low import HighLowEngine
 from Backend.indicator_engine.extremum.support_resistance import SupportResistanceEngine
+from Backend.indicator_engine.momentum.rsi import RSIEngine
 
 __all__ = [
     "FinancialIndicatorResult",
@@ -39,5 +40,6 @@ __all__ = [
     "KeltnerEngine",
     "DonchianEngine",
     "HighLowEngine",
-    "SupportResistanceEngine"
+    "SupportResistanceEngine",
+    "RSIEngine"
 ]

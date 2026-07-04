@@ -719,12 +719,6 @@
         "typing",
         "uuid"
     ],
-    "Backend.features.momentum": [
-        "Shared",
-        "base",
-        "collections",
-        "typing"
-    ],
     "Backend.features.protocols": [
         "Shared",
         "typing"
@@ -754,10 +748,9 @@
         "typing",
         "uuid"
     ],
-    "Backend.features.rsi": [
+    "Backend.features.rsi_generator": [
         "Backend",
         "__future__",
-        "datetime",
         "hashlib",
         "numpy",
         "pandas",
@@ -850,10 +843,9 @@
         "keltner_generator",
         "ma_cross_generator",
         "macd_generator",
-        "momentum",
         "registry",
         "roc_generator",
-        "rsi",
+        "rsi_generator",
         "sma_generator",
         "stochastic",
         "stochastic_generator",
@@ -1039,6 +1031,10 @@
         "numpy"
     ],
     "Backend.indicator_engine.momentum.roc": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.momentum.rsi": [
         "Backend",
         "numpy"
     ],

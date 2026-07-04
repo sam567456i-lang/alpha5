@@ -76,3 +76,7 @@ class SupportResistanceResult(FinancialIndicatorResult):
     distance_to_resistance: np.ndarray
     distance_to_support: np.ndarray
 
+@dataclass(frozen=True)
+class RSIResult(FinancialIndicatorResult):
+    rsi: np.ndarray
+
