@@ -40,5 +40,38 @@ class TestVolatilityAnalysis(unittest.TestCase):
         self.assertEqual(res.score, -0.50)
         self.assertEqual(res.metadata["classification"], "contraction")
 
+from Backend.platforms.analysis.volatility.bollinger_analysis import BollingerAnalysis
+from Backend.platforms.analysis.volatility.keltner_analysis import KeltnerAnalysis
+
+class TestBollingerAnalysis(unittest.TestCase):
+    def test_bb_expansion(self):
+        analysis = BollingerAnalysis()
+        bb_data = pd.DataFrame({
+            "upper": [0]*20, "middle": [0]*20, "lower": [0]*20,
+            "bandwidth": [1.0]*19 + [1.5]
+        })
+        engine = MockIndicatorEngine(atr_val=1.0)
+        engine.get_indicator = lambda name, df, length=None: bb_data if name == "BOLLINGER_BANDS" else pd.Series()
+        context = AnalysisContext(market_data=pd.DataFrame({"close": [150]}), timeframe="1D", dependencies={"indicator_engine": engine})
+        
+        res = analysis.execute(context)
+        self.assertEqual(res.score, 0.60)
+        self.assertEqual(res.metadata["classification"], "expansion")
+
+class TestKeltnerAnalysis(unittest.TestCase):
+    def test_kc_compression(self):
+        analysis = KeltnerAnalysis()
+        kc_data = pd.DataFrame({
+            "upper": [0]*20, "middle": [0]*20, "lower": [0]*20,
+            "bandwidth": [1.0]*19 + [0.90]
+        })
+        engine = MockIndicatorEngine(atr_val=1.0)
+        engine.get_indicator = lambda name, df, length=None: kc_data if name == "KELTNER_CHANNELS" else pd.Series()
+        context = AnalysisContext(market_data=pd.DataFrame({"close": [150]}), timeframe="1D", dependencies={"indicator_engine": engine})
+        
+        res = analysis.execute(context)
+        self.assertEqual(res.score, -0.40)
+        self.assertEqual(res.metadata["classification"], "compression")
+
 if __name__ == "__main__":
     unittest.main()

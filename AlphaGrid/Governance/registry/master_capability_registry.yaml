@@ -4205,3 +4205,17 @@ capabilities:
   subfamily: ATR
   dependencies:
   - INDICATOR_ATR
+- capability_id: ANALYSIS_VOLATILITY_BOLLINGER
+  name: Bollinger Bands Analysis
+  platform: P05_Analysis
+  family: Volatility
+  subfamily: Bollinger
+  dependencies:
+  - INDICATOR_BOLLINGER_BANDS
+- capability_id: ANALYSIS_VOLATILITY_KELTNER
+  name: Keltner Channels Analysis
+  platform: P05_Analysis
+  family: Volatility
+  subfamily: Keltner
+  dependencies:
+  - INDICATOR_KELTNER_CHANNELS
