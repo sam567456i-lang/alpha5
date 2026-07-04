@@ -2,7 +2,7 @@
     "id": "benchmark_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 19.725399964954704,
+    "duration_ms": 124.89780003670603,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -18,26 +18,35 @@
     "artifacts": [],
     "metrics": {
         "ema_1000": {
-            "average_ms": 0.07442000787705183,
-            "median_ms": 0.07200002437457442,
-            "std_ms": 0.006364089757940516,
-            "p95_ms": 0.08402001112699509
+            "average_ms": 0.30437998939305544,
+            "median_ms": 0.2874999772757292,
+            "std_ms": 0.06635933797847529,
+            "p95_ms": 0.389779987744987
+        },
+        "roc_1000": {
+            "average_ms": 0.27823999989777803
         },
         "ema_10000": {
-            "average_ms": 0.21773999324068427,
-            "median_ms": 0.20750000840052962,
-            "std_ms": 0.03447501478950456,
-            "p95_ms": 0.2699199947528541
+            "average_ms": 0.7643000106327236,
+            "median_ms": 0.4770000232383609,
+            "std_ms": 0.5365442081943064,
+            "p95_ms": 1.5809400007128713
+        },
+        "roc_10000": {
+            "average_ms": 0.7891200017184019
         },
         "ema_100000": {
-            "average_ms": 1.600300008431077,
-            "median_ms": 1.408600015565753,
-            "std_ms": 0.3999965402990165,
-            "p95_ms": 2.1067800000309944
+            "average_ms": 3.6013199714943767,
+            "median_ms": 3.3801000099629164,
+            "std_ms": 0.7469012067591333,
+            "p95_ms": 4.738539969548583
+        },
+        "roc_100000": {
+            "average_ms": 5.641459999606013
         }
     },
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Observed runtime remained approximately linear and did not indicate quadratic growth.",
-    "timestamp": "2026-07-04T06:39:05.791814"
+    "timestamp": "2026-07-04T07:24:43.685233"
 }

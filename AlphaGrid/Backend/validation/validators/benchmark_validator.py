@@ -23,24 +23,39 @@ class BenchmarkValidator(AbstractValidator):
             # Cold cache pass
             _ = calculate_ema(values, timestamps, period)
             
-            # Warm cache passes
+            # Warm cache passes for EMA
             pass_times = []
+            roc_pass_times = []
+            
+            from Backend.math.public.roc import calculate_roc
+            
             for _ in range(passes):
                 t0 = time.perf_counter()
                 _ = calculate_ema(values, timestamps, period)
                 t1 = time.perf_counter()
                 pass_times.append((t1 - t0) * 1000.0)
                 
+                t2 = time.perf_counter()
+                _ = calculate_roc(values, timestamps, period)
+                t3 = time.perf_counter()
+                roc_pass_times.append((t3 - t2) * 1000.0)
+                
             avg_ms = float(np.mean(pass_times))
             median_ms = float(np.median(pass_times))
             std_ms = float(np.std(pass_times))
             p95_ms = float(np.percentile(pass_times, 95))
+            
+            roc_avg_ms = float(np.mean(roc_pass_times))
             
             metrics[f"ema_{size}"] = {
                 "average_ms": avg_ms,
                 "median_ms": median_ms,
                 "std_ms": std_ms,
                 "p95_ms": p95_ms
+            }
+            
+            metrics[f"roc_{size}"] = {
+                "average_ms": roc_avg_ms
             }
             
             if prev_avg_time is not None:

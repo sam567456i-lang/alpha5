@@ -2,7 +2,7 @@
     "id": "import_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 2.1610999829135835,
+    "duration_ms": 18.227100023068488,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "ImportValidator passed.",
-    "timestamp": "2026-07-04T06:38:59.656499"
+    "timestamp": "2026-07-04T07:24:21.301769"
 }

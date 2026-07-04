@@ -1069,6 +1069,11 @@
         "numpy",
         "typing"
     ],
+    "Backend.math.public.roc": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
     "Backend.math.public.rolling_max": [
         "Backend",
         "numpy",

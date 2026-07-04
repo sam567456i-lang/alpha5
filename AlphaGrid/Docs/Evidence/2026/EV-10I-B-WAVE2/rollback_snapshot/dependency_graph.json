@@ -1,0 +1,2216 @@
+{
+    "Backend.__init__": [],
+    "Backend.ai.base_model": [
+        "abc",
+        "typing"
+    ],
+    "Backend.ai.compute_manager": [
+        "numpy",
+        "os",
+        "random"
+    ],
+    "Backend.ai.inference": [
+        "Backend",
+        "base_model",
+        "compute_manager",
+        "hashlib",
+        "logging",
+        "numpy",
+        "pickle",
+        "typing"
+    ],
+    "Backend.ai.trainer": [
+        "Backend",
+        "base_model",
+        "compute_manager",
+        "datetime",
+        "hashlib",
+        "io",
+        "logging",
+        "numpy",
+        "pickle",
+        "typing",
+        "uuid"
+    ],
+    "Backend.ai.__init__": [
+        "base_model",
+        "compute_manager",
+        "inference",
+        "trainer"
+    ],
+    "Backend.analytics.__init__": [],
+    "Backend.api.app": [
+        "Backend",
+        "__future__",
+        "fastapi",
+        "typing"
+    ],
+    "Backend.api.dependencies": [
+        "Backend",
+        "__future__",
+        "dataclasses",
+        "fastapi"
+    ],
+    "Backend.api.exceptions": [
+        "__future__",
+        "fastapi",
+        "responses",
+        "starlette"
+    ],
+    "Backend.api.middleware": [
+        "Backend",
+        "__future__",
+        "starlette",
+        "time",
+        "typing"
+    ],
+    "Backend.api.responses": [
+        "__future__",
+        "datetime",
+        "fastapi",
+        "typing"
+    ],
+    "Backend.api.__init__": [
+        "app"
+    ],
+    "Backend.api.routers.ai": [
+        "Backend",
+        "__future__",
+        "fastapi",
+        "uuid"
+    ],
+    "Backend.api.routers.dashboard": [
+        "Backend",
+        "__future__",
+        "fastapi",
+        "pydantic",
+        "typing"
+    ],
+    "Backend.api.routers.features": [
+        "Backend",
+        "__future__",
+        "fastapi"
+    ],
+    "Backend.api.routers.market": [
+        "Backend",
+        "__future__",
+        "fastapi"
+    ],
+    "Backend.api.routers.options": [
+        "Backend",
+        "__future__",
+        "fastapi"
+    ],
+    "Backend.api.routers.portfolio": [
+        "Backend",
+        "Shared",
+        "__future__",
+        "decimal",
+        "fastapi",
+        "pydantic",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.routers.recommendations": [
+        "Backend",
+        "__future__",
+        "fastapi",
+        "uuid"
+    ],
+    "Backend.api.routers.reports": [
+        "Backend",
+        "__future__",
+        "fastapi",
+        "pydantic",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.routers.research": [
+        "Backend",
+        "__future__",
+        "fastapi",
+        "pydantic",
+        "typing"
+    ],
+    "Backend.api.routers.strategies": [
+        "Backend",
+        "__future__",
+        "fastapi",
+        "pydantic",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.routers.system": [
+        "Backend",
+        "__future__",
+        "fastapi"
+    ],
+    "Backend.api.routers.__init__": [
+        "ai",
+        "dashboard",
+        "features",
+        "market",
+        "options",
+        "portfolio",
+        "recommendations",
+        "reports",
+        "research",
+        "strategies",
+        "system"
+    ],
+    "Backend.api.services.ai_service": [
+        "__future__",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.services.dashboard_service": [
+        "__future__",
+        "typing"
+    ],
+    "Backend.api.services.features_service": [
+        "__future__",
+        "typing"
+    ],
+    "Backend.api.services.market_service": [
+        "Backend",
+        "__future__",
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.api.services.options_service": [
+        "__future__",
+        "typing"
+    ],
+    "Backend.api.services.portfolio_service": [
+        "Shared",
+        "__future__",
+        "decimal",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.services.recommendations_service": [
+        "__future__",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.services.reports_service": [
+        "__future__",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.services.research_service": [
+        "Backend",
+        "__future__",
+        "logging",
+        "threading",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.services.strategies_service": [
+        "__future__",
+        "typing",
+        "uuid"
+    ],
+    "Backend.api.services.system_service": [
+        "__future__",
+        "typing"
+    ],
+    "Backend.api.services.__init__": [
+        "ai_service",
+        "dashboard_service",
+        "features_service",
+        "market_service",
+        "options_service",
+        "portfolio_service",
+        "recommendations_service",
+        "reports_service",
+        "research_service",
+        "strategies_service",
+        "system_service"
+    ],
+    "Backend.api.websocket.hub": [
+        "__future__",
+        "enum",
+        "fastapi",
+        "typing"
+    ],
+    "Backend.api.websocket.router": [
+        "__future__",
+        "fastapi",
+        "hub"
+    ],
+    "Backend.api.websocket.__init__": [
+        "hub",
+        "router"
+    ],
+    "Backend.cli.run_experiment": [
+        "Backend",
+        "logging"
+    ],
+    "Backend.concepts.base": [
+        "Shared",
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.engine": [
+        "base",
+        "datetime",
+        "generator",
+        "logging",
+        "registry",
+        "typing"
+    ],
+    "Backend.concepts.generator": [
+        "abc",
+        "base",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.registry": [
+        "generator",
+        "typing"
+    ],
+    "Backend.concepts.registry_hook": [
+        "Backend",
+        "importlib",
+        "inspect",
+        "pkgutil"
+    ],
+    "Backend.concepts.__init__": [
+        "base",
+        "engine",
+        "generator",
+        "generators",
+        "registry"
+    ],
+    "Backend.concepts.core.breakout": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.concepts.core.extremum": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.concepts.core.lifecycle": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.concepts.core.objects": [
+        "Backend",
+        "dataclasses",
+        "datetime",
+        "hashlib",
+        "json",
+        "typing"
+    ],
+    "Backend.concepts.core.provenance": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.concepts.core.__init__": [
+        "breakout",
+        "extremum"
+    ],
+    "Backend.concepts.generators.breakout": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.extremum": [
+        "Backend",
+        "Shared",
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.market_structure": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing",
+        "uuid"
+    ],
+    "Backend.concepts.generators.momentum": [
+        "Backend",
+        "Shared",
+        "collections",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.price_action": [
+        "Backend",
+        "Shared",
+        "collections",
+        "datetime",
+        "numpy",
+        "typing",
+        "uuid"
+    ],
+    "Backend.concepts.generators.strength": [
+        "Backend",
+        "Shared",
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.trend": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.trend_generator": [
+        "Backend",
+        "datetime",
+        "typing",
+        "uuid"
+    ],
+    "Backend.concepts.generators.volatility": [
+        "Backend",
+        "Shared",
+        "collections",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.volume": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.wyckoff": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.concepts.generators.__init__": [
+        "breakout",
+        "extremum",
+        "momentum",
+        "strength",
+        "trend",
+        "volatility",
+        "volume"
+    ],
+    "Backend.concepts.runtime.momentum_semantic": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.config.__init__": [],
+    "Backend.core.canonical_pipeline": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "hashlib",
+        "json",
+        "logging",
+        "pandas",
+        "time",
+        "typing"
+    ],
+    "Backend.core.__init__": [],
+    "Backend.data.duckdb_manager": [
+        "Backend",
+        "__future__",
+        "dataclasses",
+        "duckdb",
+        "exceptions",
+        "logging",
+        "pathlib",
+        "settings",
+        "typing"
+    ],
+    "Backend.data.exceptions": [
+        "Backend",
+        "__future__"
+    ],
+    "Backend.data.integration": [
+        "Backend",
+        "__future__",
+        "dataclasses",
+        "duckdb_manager",
+        "migration",
+        "pathlib",
+        "postgres",
+        "redis_cache",
+        "settings",
+        "transaction_manager",
+        "typing"
+    ],
+    "Backend.data.migration": [
+        "__future__",
+        "alembic",
+        "dataclasses",
+        "exceptions",
+        "pathlib",
+        "settings"
+    ],
+    "Backend.data.postgres": [
+        "Backend",
+        "__future__",
+        "contextlib",
+        "dataclasses",
+        "exceptions",
+        "inspect",
+        "logging",
+        "settings",
+        "sqlalchemy",
+        "typing"
+    ],
+    "Backend.data.redis_cache": [
+        "Backend",
+        "__future__",
+        "dataclasses",
+        "exceptions",
+        "inspect",
+        "json",
+        "logging",
+        "redis",
+        "settings",
+        "typing"
+    ],
+    "Backend.data.repository": [
+        "__future__",
+        "dataclasses",
+        "exceptions",
+        "sqlalchemy",
+        "typing"
+    ],
+    "Backend.data.settings": [
+        "__future__",
+        "dataclasses",
+        "exceptions",
+        "pathlib",
+        "typing",
+        "urllib"
+    ],
+    "Backend.data.transaction_manager": [
+        "__future__",
+        "contextlib",
+        "dataclasses",
+        "exceptions",
+        "typing"
+    ],
+    "Backend.data.__init__": [
+        "duckdb_manager",
+        "exceptions",
+        "integration",
+        "migration",
+        "postgres",
+        "redis_cache",
+        "repository",
+        "settings",
+        "transaction_manager"
+    ],
+    "Backend.dtos.base": [
+        "datetime",
+        "pydantic",
+        "typing"
+    ],
+    "Backend.dtos.concepts": [
+        "base",
+        "typing"
+    ],
+    "Backend.dtos.features": [
+        "base",
+        "pydantic",
+        "typing"
+    ],
+    "Backend.dtos.methodologies": [
+        "base",
+        "typing"
+    ],
+    "Backend.dtos.signals": [
+        "base",
+        "pydantic",
+        "typing"
+    ],
+    "Backend.dtos.strategies": [
+        "base",
+        "typing"
+    ],
+    "Backend.evidence.engine": [
+        "logging",
+        "typing"
+    ],
+    "Backend.evidence.registry_hook": [
+        "Backend"
+    ],
+    "Backend.features.adx": [
+        "Shared",
+        "base",
+        "collections",
+        "typing"
+    ],
+    "Backend.features.atr": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.base": [
+        "Shared",
+        "abc",
+        "typing"
+    ],
+    "Backend.features.bollinger": [
+        "Backend",
+        "Shared",
+        "collections",
+        "math",
+        "typing"
+    ],
+    "Backend.features.bollinger_bands": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.cache": [
+        "threading",
+        "typing"
+    ],
+    "Backend.features.cci": [
+        "Shared",
+        "base",
+        "collections",
+        "typing"
+    ],
+    "Backend.features.donchian": [
+        "Backend",
+        "Shared",
+        "collections",
+        "typing"
+    ],
+    "Backend.features.engine": [
+        "Shared",
+        "base",
+        "cache",
+        "logging",
+        "registry",
+        "typing"
+    ],
+    "Backend.features.geometry_distance": [
+        "Shared",
+        "base",
+        "typing"
+    ],
+    "Backend.features.high_low_breakout": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.hma": [
+        "Shared",
+        "base",
+        "math",
+        "typing"
+    ],
+    "Backend.features.ichimoku": [
+        "Shared",
+        "base",
+        "typing"
+    ],
+    "Backend.features.kama": [
+        "Shared",
+        "base",
+        "math",
+        "typing"
+    ],
+    "Backend.features.keltner": [
+        "Shared",
+        "base",
+        "typing"
+    ],
+    "Backend.features.keltner_channels": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.linear_regression": [
+        "Shared",
+        "base",
+        "math",
+        "typing"
+    ],
+    "Backend.features.macd": [
+        "Backend",
+        "Shared",
+        "typing"
+    ],
+    "Backend.features.macd_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.momentum": [
+        "Shared",
+        "base",
+        "collections",
+        "typing"
+    ],
+    "Backend.features.protocols": [
+        "Shared",
+        "typing"
+    ],
+    "Backend.features.registry": [
+        "base",
+        "typing"
+    ],
+    "Backend.features.registry_hook": [
+        "Backend",
+        "importlib",
+        "inspect",
+        "logging",
+        "pkgutil"
+    ],
+    "Backend.features.relative_volume": [
+        "Backend",
+        "Shared",
+        "typing"
+    ],
+    "Backend.features.roc_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.rsi": [
+        "Backend",
+        "__future__",
+        "datetime",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.stochastic": [
+        "Shared",
+        "base",
+        "collections",
+        "typing"
+    ],
+    "Backend.features.stochastic_generator": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.supertrend": [
+        "Shared",
+        "base",
+        "protocols",
+        "typing"
+    ],
+    "Backend.features.support_resistance": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.trend": [
+        "Shared",
+        "base",
+        "collections",
+        "typing"
+    ],
+    "Backend.features.volatility": [
+        "Shared",
+        "base",
+        "collections",
+        "typing"
+    ],
+    "Backend.features.volatility_breakout": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.vwap": [
+        "Backend",
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.features.__init__": [
+        "adx",
+        "atr",
+        "base",
+        "bollinger",
+        "bollinger_bands",
+        "cache",
+        "cci",
+        "donchian",
+        "engine",
+        "high_low_breakout",
+        "keltner",
+        "keltner_channels",
+        "macd",
+        "momentum",
+        "registry",
+        "rsi",
+        "stochastic",
+        "stochastic_generator",
+        "supertrend",
+        "support_resistance",
+        "trend",
+        "volatility",
+        "volatility_breakout",
+        "vwap"
+    ],
+    "Backend.features.interfaces.momentum_feature": [
+        "Backend",
+        "__future__",
+        "pandas",
+        "typing"
+    ],
+    "Backend.foundation.application_entrypoint": [
+        "Backend",
+        "__future__",
+        "configuration_loader",
+        "database_manager",
+        "dataclasses",
+        "dependency_injection_container",
+        "event_bus",
+        "health_checker",
+        "lifecycle_manager",
+        "logger",
+        "logging",
+        "pathlib",
+        "typing"
+    ],
+    "Backend.foundation.base_registry": [
+        "hashlib",
+        "json",
+        "typing"
+    ],
+    "Backend.foundation.configuration_loader": [
+        "__future__",
+        "constants",
+        "dataclasses",
+        "exceptions",
+        "os",
+        "pathlib",
+        "typing"
+    ],
+    "Backend.foundation.constants": [
+        "__future__"
+    ],
+    "Backend.foundation.database_manager": [
+        "__future__",
+        "dataclasses",
+        "exceptions",
+        "health_checker",
+        "inspect",
+        "typing"
+    ],
+    "Backend.foundation.dependency_injection_container": [
+        "__future__",
+        "dataclasses",
+        "exceptions",
+        "threading",
+        "typing"
+    ],
+    "Backend.foundation.event_bus": [
+        "__future__",
+        "asyncio",
+        "collections",
+        "copy",
+        "dataclasses",
+        "datetime",
+        "exceptions",
+        "inspect",
+        "threading",
+        "types",
+        "typing",
+        "uuid"
+    ],
+    "Backend.foundation.exceptions": [
+        "__future__"
+    ],
+    "Backend.foundation.health_checker": [
+        "__future__",
+        "asyncio",
+        "dataclasses",
+        "datetime",
+        "enum",
+        "exceptions",
+        "inspect",
+        "time",
+        "typing"
+    ],
+    "Backend.foundation.lifecycle_manager": [
+        "__future__",
+        "dataclasses",
+        "enum",
+        "exceptions",
+        "inspect",
+        "logging",
+        "typing"
+    ],
+    "Backend.foundation.logger": [
+        "__future__",
+        "constants",
+        "datetime",
+        "json",
+        "logging",
+        "typing"
+    ],
+    "Backend.foundation.plugin_loader": [
+        "__future__",
+        "dataclasses",
+        "dependency_injection_container",
+        "exceptions",
+        "importlib",
+        "types",
+        "typing"
+    ],
+    "Backend.foundation.__init__": [
+        "application_entrypoint",
+        "configuration_loader",
+        "database_manager",
+        "dependency_injection_container",
+        "event_bus",
+        "exceptions",
+        "health_checker",
+        "lifecycle_manager",
+        "logger",
+        "plugin_loader"
+    ],
+    "Backend.journal.__init__": [],
+    "Backend.market_intelligence.data_provenance": [
+        "datetime",
+        "hashlib",
+        "json",
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.data_quality_gate": [
+        "Backend",
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.event_awareness": [
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.market_intelligence.exchange_contract": [
+        "abc",
+        "datetime",
+        "typing"
+    ],
+    "Backend.market_intelligence.historical_market_pipeline": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.market_intelligence.liquidity_engine": [
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.market_context_engine": [
+        "enum",
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.market_rotation_engine": [
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.market_state_engine": [
+        "datetime",
+        "enum",
+        "typing"
+    ],
+    "Backend.market_intelligence.mtf_alignment_engine": [
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.normalization_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "time",
+        "typing"
+    ],
+    "Backend.market_intelligence.options_infrastructure": [
+        "abc",
+        "datetime",
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.registry": [
+        "Backend"
+    ],
+    "Backend.market_intelligence.session_engine": [
+        "Backend",
+        "datetime",
+        "numpy",
+        "typing"
+    ],
+    "Backend.market_intelligence.symbol_metadata_registry": [
+        "Backend",
+        "dataclasses",
+        "enum",
+        "typing"
+    ],
+    "Backend.market_intelligence.trading_calendar": [
+        "datetime",
+        "typing"
+    ],
+    "Backend.market_intelligence.universe_manager": [
+        "enum",
+        "typing"
+    ],
+    "Backend.market_intelligence.__init__": [],
+    "Backend.market_intelligence.providers.abstract_market_data_provider": [
+        "abc",
+        "datetime",
+        "pandas",
+        "typing"
+    ],
+    "Backend.market_intelligence.providers.provider_factory": [
+        "Backend",
+        "importlib",
+        "logging",
+        "pkgutil",
+        "typing"
+    ],
+    "Backend.market_intelligence.providers.synthetic_dataset_provider": [
+        "Backend",
+        "datetime",
+        "json",
+        "os",
+        "pandas"
+    ],
+    "Backend.market_intelligence.providers.yfinance_provider": [
+        "Backend",
+        "__future__",
+        "datetime",
+        "logging",
+        "pandas",
+        "typing",
+        "yfinance"
+    ],
+    "Backend.market_intelligence.providers.__init__": [],
+    "Backend.math.public.clip": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.correlation": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.covariance": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.diff": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.ema": [
+        "Backend",
+        "numpy",
+        "time",
+        "typing"
+    ],
+    "Backend.math.public.indicator_result": [
+        "dataclasses",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.rolling_max": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.rolling_min": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.rolling_sum": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.shift": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.sma": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.stddev": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.validation": [
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.variance": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.wma": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.public.__init__": [
+        "Backend"
+    ],
+    "Backend.math.runtime.backend": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.math.runtime.numba_backend": [
+        "numba",
+        "numpy"
+    ],
+    "Backend.math.runtime.numpy_backend": [
+        "numpy"
+    ],
+    "Backend.methodologies.breakout": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.methodologies.mean_reversion": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.methodologies.__init__": [
+        "breakout",
+        "mean_reversion"
+    ],
+    "Backend.methodology.base": [
+        "Backend",
+        "abc",
+        "evaluation"
+    ],
+    "Backend.methodology.breakout": [
+        "Backend"
+    ],
+    "Backend.methodology.composite": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.methodology.engine": [
+        "Backend",
+        "logging",
+        "typing"
+    ],
+    "Backend.methodology.evaluation": [
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.methodology.mean_reversion": [
+        "Backend"
+    ],
+    "Backend.methodology.momentum": [
+        "Backend"
+    ],
+    "Backend.methodology.registry": [
+        "Shared",
+        "pydantic",
+        "typing"
+    ],
+    "Backend.methodology.registry_hook": [
+        "Backend",
+        "inspect",
+        "logging"
+    ],
+    "Backend.methodology.reversal": [
+        "Backend"
+    ],
+    "Backend.methodology.signals": [
+        "dataclasses",
+        "typing"
+    ],
+    "Backend.methodology.smc": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.methodology.trend_following": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.methodology.volatility": [
+        "Backend"
+    ],
+    "Backend.methodology.volume_analysis": [
+        "Backend"
+    ],
+    "Backend.methodology.voting": [
+        "Backend",
+        "abc",
+        "datetime",
+        "typing"
+    ],
+    "Backend.methodology.wyckoff": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.methodology.__init__": [
+        "base",
+        "breakout",
+        "engine",
+        "evaluation",
+        "mean_reversion",
+        "momentum",
+        "reversal",
+        "signals",
+        "smc",
+        "trend_following",
+        "volatility",
+        "volume_analysis",
+        "wyckoff"
+    ],
+    "Backend.methodology.runtime.momentum": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.notifications.__init__": [],
+    "Backend.plugins.__init__": [],
+    "Backend.portfolio.__init__": [],
+    "Backend.price_geometry.cache": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.price_geometry.channel_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.conflict_engine": [
+        "Backend",
+        "dataclasses",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.contracts": [
+        "abc",
+        "pandas",
+        "typing"
+    ],
+    "Backend.price_geometry.events": [
+        "Backend",
+        "dataclasses",
+        "datetime"
+    ],
+    "Backend.price_geometry.factory": [
+        "Backend",
+        "importlib",
+        "pkgutil",
+        "typing"
+    ],
+    "Backend.price_geometry.geometry_engine": [
+        "Backend",
+        "datetime",
+        "graphlib",
+        "pandas",
+        "typing"
+    ],
+    "Backend.price_geometry.imbalance_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.liquidity_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.objects": [
+        "dataclasses",
+        "datetime",
+        "enum",
+        "hashlib",
+        "json",
+        "typing"
+    ],
+    "Backend.price_geometry.order_block_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.pivot_engine": [
+        "Backend",
+        "datetime",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.range_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.registry": [
+        "Backend"
+    ],
+    "Backend.price_geometry.store": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.price_geometry.structure_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.swing_engine": [
+        "Backend",
+        "datetime",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.trendline_engine": [
+        "Backend",
+        "datetime",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.zone_engine": [
+        "Backend",
+        "pandas",
+        "typing",
+        "uuid"
+    ],
+    "Backend.price_geometry.__init__": [],
+    "Backend.price_geometry.graph.geometry_graph": [
+        "Backend",
+        "datetime",
+        "networkx",
+        "typing"
+    ],
+    "Backend.price_geometry.graph.incremental_updater": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.price_geometry.graph.provenance": [
+        "Backend",
+        "networkx",
+        "typing"
+    ],
+    "Backend.price_geometry.graph.snapshot_service": [
+        "Backend",
+        "datetime",
+        "hashlib",
+        "json",
+        "networkx",
+        "os",
+        "typing"
+    ],
+    "Backend.price_geometry.graph.__init__": [],
+    "Backend.recommendation.__init__": [],
+    "Backend.reports.__init__": [],
+    "Backend.research.__init__": [],
+    "Backend.research.decision.base": [
+        "Backend",
+        "abc",
+        "dataclasses",
+        "typing"
+    ],
+    "Backend.research.decision.ml_provider": [
+        "Backend",
+        "logging",
+        "numpy",
+        "typing"
+    ],
+    "Backend.research.decision.rule_provider": [
+        "Backend",
+        "base",
+        "typing"
+    ],
+    "Backend.research.decision.__init__": [
+        "base",
+        "ml_provider",
+        "rule_provider"
+    ],
+    "Backend.research.engine.backtest": [
+        "Backend",
+        "datetime",
+        "numpy",
+        "typing"
+    ],
+    "Backend.research.engine.backtest_engine": [
+        "logging",
+        "typing"
+    ],
+    "Backend.research.engine.dataset_loader": [
+        "datetime",
+        "duckdb",
+        "hashlib",
+        "json",
+        "math",
+        "typing",
+        "unicodedata"
+    ],
+    "Backend.research.engine.experiment_engine": [
+        "logging",
+        "typing"
+    ],
+    "Backend.research.engine.montecarlo_engine": [
+        "logging",
+        "typing"
+    ],
+    "Backend.research.engine.monte_carlo": [
+        "Backend",
+        "concurrent",
+        "copy",
+        "logging",
+        "numpy",
+        "typing"
+    ],
+    "Backend.research.engine.replay": [
+        "Backend",
+        "datetime",
+        "enum",
+        "logging",
+        "threading",
+        "time",
+        "typing"
+    ],
+    "Backend.research.engine.signal_engine": [
+        "Backend",
+        "Shared",
+        "logging",
+        "typing"
+    ],
+    "Backend.research.engine.strategy_interface": [
+        "abc",
+        "datetime",
+        "re",
+        "typing"
+    ],
+    "Backend.research.engine.validators": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.research.engine.walkforward": [
+        "Backend",
+        "concurrent",
+        "datetime",
+        "logging",
+        "typing"
+    ],
+    "Backend.research.engine.walkforward_engine": [
+        "logging",
+        "typing"
+    ],
+    "Backend.research.engine.__init__": [
+        "backtest",
+        "dataset_loader",
+        "strategy_interface"
+    ],
+    "Backend.research.evaluation.evaluator": [
+        "Backend",
+        "typing"
+    ],
+    "Backend.research.evaluation.metrics": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.research.evaluation.policy": [
+        "Backend",
+        "dataclasses",
+        "typing"
+    ],
+    "Backend.research.evaluation.promotion": [
+        "Backend",
+        "Shared",
+        "typing"
+    ],
+    "Backend.research.evaluation.registry": [
+        "Backend",
+        "threading",
+        "typing"
+    ],
+    "Backend.research.evaluation.report": [
+        "dataclasses",
+        "typing"
+    ],
+    "Backend.research.evaluation.__init__": [
+        "evaluator",
+        "metrics",
+        "policy",
+        "promotion",
+        "registry",
+        "report"
+    ],
+    "Backend.research.experiments.candidate_registry": [
+        "datetime",
+        "enum",
+        "json",
+        "logging",
+        "threading",
+        "typing"
+    ],
+    "Backend.research.experiments.experiment": [
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.research.experiments.registry": [
+        "Shared",
+        "datetime",
+        "json",
+        "logging",
+        "threading",
+        "typing"
+    ],
+    "Backend.research.experiments.__init__": [
+        "candidate_registry",
+        "experiment",
+        "registry"
+    ],
+    "Backend.research.models.advanced_results": [
+        "Shared",
+        "datetime",
+        "typing",
+        "uuid"
+    ],
+    "Backend.research.models.dataset": [
+        "Shared",
+        "datetime",
+        "pydantic"
+    ],
+    "Backend.research.models.experiment": [
+        "Shared",
+        "datetime",
+        "json",
+        "pydantic",
+        "typing",
+        "uuid"
+    ],
+    "Backend.research.models.result": [
+        "Shared",
+        "pydantic",
+        "typing",
+        "uuid"
+    ],
+    "Backend.research.models.__init__": [
+        "dataset",
+        "experiment",
+        "result"
+    ],
+    "Backend.research.repository.candidate_registry": [
+        "logging",
+        "typing"
+    ],
+    "Backend.research.repository.interfaces": [
+        "Backend",
+        "abc",
+        "typing",
+        "uuid"
+    ],
+    "Backend.research.repository.memory": [
+        "Backend",
+        "interfaces",
+        "threading",
+        "typing",
+        "uuid"
+    ],
+    "Backend.research.repository.research_registry": [
+        "logging",
+        "typing"
+    ],
+    "Backend.research.repository.__init__": [
+        "interfaces",
+        "memory"
+    ],
+    "Backend.research.runner.experiment_runner": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "hashlib",
+        "json",
+        "logging",
+        "numpy",
+        "os",
+        "pandas",
+        "unicodedata",
+        "uuid"
+    ],
+    "Backend.research.strategies.base_research_strategy": [
+        "Backend",
+        "datetime",
+        "logging",
+        "typing"
+    ],
+    "Backend.research.strategies.canonical_validation": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.research.strategies.config": [
+        "Backend",
+        "dataclasses",
+        "typing"
+    ],
+    "Backend.research.strategies.definition": [
+        "Backend",
+        "dataclasses",
+        "hashlib",
+        "json",
+        "typing"
+    ],
+    "Backend.research.strategies.ema_cross": [
+        "Backend",
+        "datetime",
+        "numpy",
+        "typing"
+    ],
+    "Backend.research.strategies.factory": [
+        "Backend",
+        "numpy",
+        "typing"
+    ],
+    "Backend.research.strategies.registry": [
+        "Backend",
+        "threading",
+        "typing"
+    ],
+    "Backend.research.strategies.__init__": [
+        "base_research_strategy",
+        "config",
+        "definitions",
+        "registry"
+    ],
+    "Backend.research.strategies.definitions.adx_trend": [],
+    "Backend.research.strategies.definitions.bollinger_reversion": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.cci_reversion": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.donchian_trend": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.ema_cross": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.exhaustion_reversal": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.keltner_reversion": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.macd_momentum": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.relative_volume_surge": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.roc_momentum": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.rsi_reversion": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.sma_cross": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.stochastic_exhaustion": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.stochastic_momentum": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.stochastic_reversion": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.supertrend_cross": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.volatility_expansion": [
+        "Backend"
+    ],
+    "Backend.research.strategies.definitions.__init__": [
+        "bollinger_reversion",
+        "rsi_reversion",
+        "supertrend_cross"
+    ],
+    "Backend.risk.__init__": [],
+    "Backend.shared.__init__": [],
+    "Backend.signals.__init__": [],
+    "Backend.signals.primitive.base": [
+        "Backend",
+        "Shared",
+        "abc",
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.context": [
+        "Backend",
+        "collections",
+        "typing"
+    ],
+    "Backend.signals.primitive.engine": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.registry_hook": [
+        "Backend",
+        "importlib",
+        "inspect",
+        "logging",
+        "pkgutil"
+    ],
+    "Backend.signals.primitive.__init__": [],
+    "Backend.signals.primitive.generators.breakout": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.breakout_signals": [
+        "Backend",
+        "hashlib",
+        "uuid"
+    ],
+    "Backend.signals.primitive.generators.crossover": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.extremum": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.ichimoku_breakout": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.macd_cross": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.market_structure": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.momentum": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.momentum_runtime": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.signals.primitive.generators.reversion_signals": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.signals.primitive.generators.sma_cross": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.supertrend_flip": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.trend": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.trend_signals": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing",
+        "uuid"
+    ],
+    "Backend.signals.primitive.generators.volatility": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.volume": [
+        "Backend",
+        "Shared",
+        "datetime",
+        "typing"
+    ],
+    "Backend.signals.primitive.generators.__init__": [
+        "breakout_signals",
+        "reversion_signals"
+    ],
+    "Backend.strategy.base": [
+        "Backend",
+        "abc",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.engine": [
+        "Backend",
+        "logging",
+        "typing"
+    ],
+    "Backend.strategy.objects": [
+        "dataclasses",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.registry_hook": [
+        "Backend"
+    ],
+    "Backend.strategy.strategies.bollinger_reversion": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.strategy.strategies.breakout_strategies": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.strategy.strategies.ema_cross": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.strategies.ichimoku": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.strategies.macd_momentum": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.strategies.macd_trend": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.strategies.roc_momentum": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.strategies.rsi_reversion": [
+        "Backend",
+        "hashlib",
+        "typing",
+        "uuid"
+    ],
+    "Backend.strategy.strategies.sma_cross": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.strategies.supertrend": [
+        "Backend",
+        "datetime",
+        "typing"
+    ],
+    "Backend.strategy.strategies.__init__": [
+        "bollinger_reversion",
+        "breakout_strategies",
+        "rsi_reversion"
+    ],
+    "Backend.tests.generate_golden_dataset": [
+        "datetime",
+        "json",
+        "math",
+        "os",
+        "sys"
+    ],
+    "Backend.tests.test_api": [
+        "Backend",
+        "__future__",
+        "datetime",
+        "fastapi",
+        "unittest"
+    ],
+    "Backend.tests.test_composite_methodology": [
+        "Backend",
+        "datetime",
+        "pytest"
+    ],
+    "Backend.tests.test_database": [
+        "Backend",
+        "__future__",
+        "pathlib",
+        "tempfile",
+        "unittest"
+    ],
+    "Backend.tests.test_e2e_workflows": [
+        "Backend",
+        "datetime",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pytest",
+        "typing",
+        "uuid"
+    ],
+    "Backend.tests.test_engine_advanced": [
+        "Backend",
+        "concurrent",
+        "datetime",
+        "hashlib",
+        "hypothesis",
+        "json",
+        "pytest",
+        "threading",
+        "time",
+        "tracemalloc",
+        "typing",
+        "unicodedata",
+        "uuid"
+    ],
+    "Backend.tests.test_engine_slice2b": [
+        "Backend",
+        "datetime",
+        "pytest",
+        "typing",
+        "uuid"
+    ],
+    "Backend.tests.test_foundation": [
+        "Backend",
+        "__future__",
+        "asyncio",
+        "logging",
+        "sys",
+        "tempfile",
+        "threading",
+        "types",
+        "unittest"
+    ],
+    "Backend.tests.test_price_geometry": [
+        "Backend",
+        "datetime",
+        "numpy",
+        "pandas",
+        "pytest"
+    ],
+    "Backend.tests.test_research_engine": [
+        "Backend",
+        "datetime",
+        "hashlib",
+        "json",
+        "pytest",
+        "typing",
+        "unicodedata",
+        "uuid"
+    ],
+    "Backend.tests.test_research_models": [
+        "Backend",
+        "datetime",
+        "json",
+        "pytest",
+        "uuid"
+    ],
+    "Backend.tests.test_research_repository": [
+        "Backend",
+        "datetime",
+        "pytest",
+        "uuid"
+    ],
+    "Backend.tests.test_shared": [
+        "Shared",
+        "datetime",
+        "decimal",
+        "os",
+        "pydantic",
+        "unittest",
+        "uuid"
+    ],
+    "Backend.tests.__init__": [],
+    "Backend.validation.dtos": [
+        "dataclasses",
+        "datetime",
+        "json",
+        "typing"
+    ],
+    "Backend.validation.runner": [
+        "Backend",
+        "graphlib",
+        "json",
+        "os",
+        "time",
+        "typing"
+    ],
+    "Backend.validation.validation_registry": [
+        "importlib",
+        "typing",
+        "yaml"
+    ],
+    "Backend.validation.validators.abstract_validator": [
+        "Backend",
+        "abc",
+        "time"
+    ],
+    "Backend.validation.validators.api_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.architecture_drift_validator": [
+        "Backend",
+        "ast",
+        "json",
+        "os",
+        "time"
+    ],
+    "Backend.validation.validators.ast_math_validator": [
+        "Backend",
+        "ast",
+        "os",
+        "time"
+    ],
+    "Backend.validation.validators.benchmark_validator": [
+        "Backend",
+        "numpy",
+        "time"
+    ],
+    "Backend.validation.validators.capability_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.complexity_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.config_drift_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.config_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.dataset_validator": [
+        "Backend",
+        "hashlib",
+        "json",
+        "os",
+        "time"
+    ],
+    "Backend.validation.validators.dependency_validator": [
+        "Backend",
+        "ast",
+        "os",
+        "time",
+        "yaml"
+    ],
+    "Backend.validation.validators.determinism_validator": [
+        "Backend",
+        "hashlib",
+        "numpy",
+        "time"
+    ],
+    "Backend.validation.validators.deterministic_replay_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.documentation_validator": [
+        "Backend",
+        "subprocess"
+    ],
+    "Backend.validation.validators.dto_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.evidence_generator": [
+        "Backend",
+        "datetime",
+        "json",
+        "os"
+    ],
+    "Backend.validation.validators.import_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.legacy_equivalence_validator": [
+        "Backend",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "time",
+        "typing"
+    ],
+    "Backend.validation.validators.mathematical_validator": [
+        "Backend",
+        "json",
+        "numpy",
+        "os",
+        "time"
+    ],
+    "Backend.validation.validators.memory_validator": [
+        "Backend",
+        "gc",
+        "os",
+        "psutil",
+        "time"
+    ],
+    "Backend.validation.validators.migration_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.numerical_precision_validator": [
+        "Backend",
+        "numpy",
+        "os",
+        "pandas",
+        "time"
+    ],
+    "Backend.validation.validators.numerical_robustness_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.performance_validator": [
+        "Backend",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "platform",
+        "psutil",
+        "subprocess",
+        "time",
+        "typing"
+    ],
+    "Backend.validation.validators.phase_freeze_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.pipeline_validator": [
+        "Backend",
+        "datetime",
+        "json",
+        "numpy",
+        "os",
+        "pandas"
+    ],
+    "Backend.validation.validators.registry_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.repository_validator": [
+        "Backend",
+        "os",
+        "subprocess"
+    ],
+    "Backend.validation.validators.stability_validator": [
+        "Backend",
+        "json",
+        "numpy",
+        "os",
+        "time",
+        "warnings"
+    ],
+    "Backend.validation.validators.stress_validator": [
+        "Backend"
+    ],
+    "Backend.validation.validators.warmup_validator": [
+        "Backend",
+        "numpy",
+        "time"
+    ],
+    "Backend.validation.validators.__init__": [
+        "Backend"
+    ]
+}

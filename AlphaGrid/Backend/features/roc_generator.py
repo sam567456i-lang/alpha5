@@ -27,17 +27,32 @@ class ROCFeatureGenerator(MomentumFeatureInterface):
             raise ValueError(f"Insufficient data. Required: {self.period + 1}")
             
         close = data['close']
-        roc = ((close - close.shift(self.period)) / close.shift(self.period)) * 100
         
-        current_roc = float(roc.iloc[-1])
-        prev_roc = float(roc.iloc[-2]) if len(roc) > 1 else 0.0
+        # Calculate timestamps - assuming data.index is datetime
+        timestamps = data.index.astype(np.int64).values // 10**9 if hasattr(data.index, 'astype') else np.arange(len(data))
         
-        # Generic Semantics
-        momentum_strength = abs(current_roc)
-        momentum_direction = 1.0 if current_roc > 0 else -1.0
-        momentum_acceleration = current_roc - prev_roc
+        from Backend.math.public import calculate_roc
+        roc_res = calculate_roc(close.values, timestamps, self.period, "close")
+        roc_values = roc_res.values
+        valid_mask = roc_res.valid_mask
         
-        payload_hash = hashlib.md5(f"{current_roc}".encode()).hexdigest()
+        if not valid_mask[-1]:
+            current_roc = float('nan')
+            momentum_strength = float('nan')
+            momentum_direction = float('nan')
+            momentum_acceleration = float('nan')
+        else:
+            current_roc = float(roc_values[-1])
+            prev_roc = float(roc_values[-2]) if valid_mask[-2] else 0.0
+            
+            # Generic Semantics
+            momentum_strength = abs(current_roc)
+            momentum_direction = 1.0 if current_roc > 0 else -1.0
+            momentum_acceleration = current_roc - prev_roc
+            
+        # Serialize safely handling NaN
+        safe_roc = "NaN" if np.isnan(current_roc) else f"{current_roc}"
+        payload_hash = hashlib.md5(safe_roc.encode()).hexdigest()
         
         return FeatureDTO(
             id=f"{self.component_id}-{uuid.uuid4().hex[:8]}",

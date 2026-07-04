@@ -45,7 +45,7 @@ class AstMathValidator(AbstractValidator):
                                 
                         class MathVisitor(ast.NodeVisitor):
                             def visit_Attribute(self, node):
-                                if node.attr in ['ewm', 'rolling']:
+                                if node.attr in ['ewm', 'rolling', 'shift']:
                                     errors.append(f"{file} illegally calls .{node.attr}() - defer to Math Core.")
                                 self.generic_visit(node)
                                 

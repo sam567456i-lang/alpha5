@@ -14,6 +14,7 @@ from Backend.math.public.variance import calculate_variance, update_variance
 from Backend.math.public.stddev import calculate_stddev, update_stddev
 from Backend.math.public.covariance import calculate_covariance, update_covariance
 from Backend.math.public.correlation import calculate_correlation, update_correlation
+from Backend.math.public.roc import calculate_roc, update_roc
 from Backend.math.public.indicator_result import IndicatorResult
 
 __all__ = [
@@ -30,5 +31,6 @@ __all__ = [
     "calculate_stddev", "update_stddev",
     "calculate_covariance", "update_covariance",
     "calculate_correlation", "update_correlation",
+    "calculate_roc", "update_roc",
     "IndicatorResult"
 ]

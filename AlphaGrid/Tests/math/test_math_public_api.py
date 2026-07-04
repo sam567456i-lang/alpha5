@@ -21,6 +21,7 @@ def test_public_api_exports():
         "calculate_stddev", "update_stddev",
         "calculate_covariance", "update_covariance",
         "calculate_correlation", "update_correlation",
+        "calculate_roc", "update_roc",
         "IndicatorResult"
     }
     
