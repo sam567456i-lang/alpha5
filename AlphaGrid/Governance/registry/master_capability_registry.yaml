@@ -4268,3 +4268,192 @@ capabilities:
   subfamily: AccDist
   dependencies:
   - INDICATOR_ACC_DIST
+- capability_id: ANALYSIS_PLACEHOLDER_PRICE_ACTION
+  name: Price Action Analysis Placeholder
+  platform: P05_Analysis
+  family: Price Action
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_CANDLESTICK
+  name: Candlestick Analysis Placeholder
+  platform: P05_Analysis
+  family: Candlestick
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_CHART_PATTERNS
+  name: Chart Patterns Analysis Placeholder
+  platform: P05_Analysis
+  family: Chart Patterns
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_MARKET_STRUCTURE
+  name: Market Structure Analysis Placeholder
+  platform: P05_Analysis
+  family: Market Structure
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_SUPPORT_RESISTANCE_STRUCTURE
+  name: Support Resistance Structure Analysis Placeholder
+  platform: P05_Analysis
+  family: Support Resistance Structure
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_MULTI_TIMEFRAME
+  name: Multi Timeframe Analysis Placeholder
+  platform: P05_Analysis
+  family: Multi Timeframe
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_SMART_MONEY
+  name: Smart Money Analysis Placeholder
+  platform: P05_Analysis
+  family: Smart Money
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_LIQUIDITY
+  name: Liquidity Analysis Placeholder
+  platform: P05_Analysis
+  family: Liquidity
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_ORDER_FLOW
+  name: Order Flow Analysis Placeholder
+  platform: P05_Analysis
+  family: Order Flow
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_MARKET_PROFILE
+  name: Market Profile Analysis Placeholder
+  platform: P05_Analysis
+  family: Market Profile
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_RELATIVE_STRENGTH
+  name: Relative Strength Analysis Placeholder
+  platform: P05_Analysis
+  family: Relative Strength
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_BREADTH
+  name: Breadth Analysis Placeholder
+  platform: P05_Analysis
+  family: Breadth
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_CORRELATION
+  name: Correlation Analysis Placeholder
+  platform: P05_Analysis
+  family: Correlation
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_RISK
+  name: Risk Analysis Placeholder
+  platform: P05_Analysis
+  family: Risk
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_STATISTICAL
+  name: Statistical Analysis Placeholder
+  platform: P05_Analysis
+  family: Statistical
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_QUANTITATIVE
+  name: Quantitative Analysis Placeholder
+  platform: P05_Analysis
+  family: Quantitative
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_FUNDAMENTAL
+  name: Fundamental Analysis Placeholder
+  platform: P05_Analysis
+  family: Fundamental
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_MACRO
+  name: Macro Analysis Placeholder
+  platform: P05_Analysis
+  family: Macro
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_INTERMARKET
+  name: Intermarket Analysis Placeholder
+  platform: P05_Analysis
+  family: Intermarket
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_SEASONALITY
+  name: Seasonality Analysis Placeholder
+  platform: P05_Analysis
+  family: Seasonality
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_SENTIMENT
+  name: Sentiment Analysis Placeholder
+  platform: P05_Analysis
+  family: Sentiment
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_BEHAVIORAL
+  name: Behavioral Analysis Placeholder
+  platform: P05_Analysis
+  family: Behavioral
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_OPTIONS
+  name: Options Analysis Placeholder
+  platform: P05_Analysis
+  family: Options
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_ON_CHAIN
+  name: On-chain Analysis Placeholder
+  platform: P05_Analysis
+  family: On-chain
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_MACHINE_LEARNING
+  name: Machine Learning Analysis Placeholder
+  platform: P05_Analysis
+  family: Machine Learning
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_AI_ANALYSIS
+  name: AI Analysis Analysis Placeholder
+  platform: P05_Analysis
+  family: AI Analysis
+  subfamily: TBD
+  dependencies: []
+  status: planned
+- capability_id: ANALYSIS_PLACEHOLDER_EXTERNAL_REPOSITORY_ANALYSIS
+  name: External Repository Analysis Analysis Placeholder
+  platform: P05_Analysis
+  family: External Repository Analysis
+  subfamily: TBD
+  dependencies: []
+  status: planned
