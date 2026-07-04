@@ -1,0 +1,10 @@
+{
+  "dataset_id": "DS-2026-MATH-001",
+  "version": "1.0.0",
+  "generator": "generate_golden_reference.py",
+  "seed": 42,
+  "reference_implementation": "pandas_ewm_1.5.0",
+  "checksums": {
+    "golden_reference.parquet": "76fa22887f8d4009d5eba1ee482c630c717717fd90299dbc4deabdb6fda3a65e"
+  }
+}

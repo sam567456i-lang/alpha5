@@ -1,8 +1,7 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 import numpy as np
-if TYPE_CHECKING:
-    import pandas as pd
+import pandas as pd
 from typing import Dict, Any, TYPE_CHECKING, Optional, TYPE_CHECKING
 from datetime import datetime
 import hashlib

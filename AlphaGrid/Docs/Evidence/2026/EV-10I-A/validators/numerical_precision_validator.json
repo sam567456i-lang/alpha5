@@ -1,0 +1,102 @@
+{
+    "id": "numerical_precision_validator",
+    "status": "PASS",
+    "reason": "",
+    "duration_ms": 219.66519998386502,
+    "phase": "10",
+    "family": "momentum",
+    "start_time": "",
+    "end_time": "",
+    "cpu_utilization_percent": 0.0,
+    "peak_heap_mb": 0.0,
+    "peak_rss_mb": 0.0,
+    "gc_collections": 0,
+    "evidence_id": "EV-10-numerical_precision_validator",
+    "validator_version": "1.0.0",
+    "warnings": [],
+    "errors": [],
+    "artifacts": [],
+    "metrics": {
+        "EMA": {
+            "max_absolute_error": 0.0,
+            "mean_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "mean_relative_error": 0.0,
+            "tolerance_applied": 1e-12
+        },
+        "SMA": {
+            "max_absolute_error": 2.5579538487363607e-13,
+            "mean_absolute_error": 1.191004966607406e-13,
+            "max_relative_error": 2.5864272432134945e-15,
+            "mean_relative_error": 1.1883575725821771e-15,
+            "tolerance_applied": 1e-12
+        },
+        "Variance": {
+            "max_absolute_error": 6.124878382252064e-12,
+            "mean_absolute_error": 1.1847238264154032e-12,
+            "max_relative_error": 1.56530493712583e-13,
+            "mean_relative_error": 1.451287753701186e-14,
+            "tolerance_applied": 1e-10
+        },
+        "WMA": {
+            "max_absolute_error": 4.263256414560601e-14,
+            "mean_absolute_error": 2.0445201312651313e-15,
+            "max_relative_error": 4.460790729075817e-16,
+            "mean_relative_error": 2.0350485301825023e-17,
+            "tolerance_applied": 1e-12
+        },
+        "StdDev": {
+            "max_absolute_error": 4.4941828036826337e-13,
+            "mean_absolute_error": 6.399473993614428e-14,
+            "max_relative_error": 7.828648588141736e-14,
+            "mean_relative_error": 7.254325195001864e-15,
+            "tolerance_applied": 1e-10
+        },
+        "Rolling_Max": {
+            "max_absolute_error": 0.0,
+            "mean_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "mean_relative_error": 0.0,
+            "tolerance_applied": 1e-12
+        },
+        "Rolling_Min": {
+            "max_absolute_error": 0.0,
+            "mean_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "mean_relative_error": 0.0,
+            "tolerance_applied": 1e-12
+        },
+        "Diff": {
+            "max_absolute_error": 0.0,
+            "mean_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "mean_relative_error": 0.0,
+            "tolerance_applied": 1e-12
+        },
+        "Shift": {
+            "max_absolute_error": 0.0,
+            "mean_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "mean_relative_error": 0.0,
+            "tolerance_applied": 1e-12
+        },
+        "Covariance": {
+            "max_absolute_error": 2.3639756818738533e-11,
+            "mean_absolute_error": 6.190309775528685e-12,
+            "max_relative_error": 5.5744818764441674e-12,
+            "mean_relative_error": 4.7190468424981265e-14,
+            "tolerance_applied": 1e-10
+        },
+        "Correlation": {
+            "max_absolute_error": 2.5701663020072374e-14,
+            "mean_absolute_error": 3.296209569750761e-15,
+            "max_relative_error": 5.577180486720897e-12,
+            "mean_relative_error": 4.8703186257299705e-14,
+            "tolerance_applied": 1e-10
+        }
+    },
+    "max_error": 2.3639756818738533e-11,
+    "mean_error": 6.875881425674536e-13,
+    "summary": "All numerical primitives match golden datasets within strict tolerances.",
+    "timestamp": "2026-07-04T06:01:43.888767"
+}

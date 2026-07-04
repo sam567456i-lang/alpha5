@@ -1,0 +1,30 @@
+{
+    "phase": "10",
+    "family": "momentum",
+    "profile": "family",
+    "dataset": "default.parquet",
+    "strategies": [
+        "MACDMomentumStrategy",
+        "ROCMomentumStrategy"
+    ],
+    "features": [
+        "MACDFeatureGenerator",
+        "ROCFeatureGenerator"
+    ],
+    "validators_executed": [
+        "repository_validator",
+        "import_validator",
+        "registry_validator",
+        "dependency_validator",
+        "dataset_validator",
+        "mathematical_validator",
+        "determinism_validator",
+        "numerical_precision_validator",
+        "warmup_validator",
+        "stability_validator",
+        "benchmark_validator",
+        "pipeline_validator",
+        "deterministic_replay_validator",
+        "numerical_robustness_validator"
+    ]
+}

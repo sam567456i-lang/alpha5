@@ -1,8 +1,11 @@
 import numpy as np
+
+# Fail import immediately if numba is missing
+import numba
 from numba import njit
 
 @njit(cache=True)
-def ema_loop(values: np.ndarray, out: np.ndarray, valid_mask: np.ndarray, start_idx: int, alpha: float):
+def _numba_ema_loop(values: np.ndarray, out: np.ndarray, valid_mask: np.ndarray, start_idx: int, alpha: float):
     n = len(values)
     prev_ema = out[start_idx]
     
@@ -17,3 +20,7 @@ def ema_loop(values: np.ndarray, out: np.ndarray, valid_mask: np.ndarray, start_
             out[i] = current_ema
             valid_mask[i] = True
             prev_ema = current_ema
+
+class NumbaBackend:
+    def ema_loop(self, values: np.ndarray, out: np.ndarray, valid_mask: np.ndarray, start_idx: int, alpha: float) -> None:
+        _numba_ema_loop(values, out, valid_mask, start_idx, alpha)

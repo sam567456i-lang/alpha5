@@ -1,0 +1,12 @@
+{
+    "cpu_model": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+    "cpu_cores": 4,
+    "os_build": "10.0.19045",
+    "cpu_percent": 0.0,
+    "ram_percent": 78.8,
+    "python_version": "3.11.9",
+    "numpy_version": "1.26.4",
+    "pandas_version": "2.1.4",
+    "git_commit_sha": "7814f1b54a20e9aa031fe2868b241d0b91d3ded6",
+    "benchmark_seed": 99
+}

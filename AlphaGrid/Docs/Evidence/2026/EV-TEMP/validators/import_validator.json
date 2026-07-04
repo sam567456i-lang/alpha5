@@ -2,8 +2,8 @@
     "id": "import_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1.5786999720148742,
-    "phase": "10e",
+    "duration_ms": 2.1610999829135835,
+    "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
     "end_time": "",
@@ -11,12 +11,14 @@
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10e-import_validator",
+    "evidence_id": "EV-10i-b-import_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
     "artifacts": [],
     "metrics": {},
+    "max_error": 0.0,
+    "mean_error": 0.0,
     "summary": "ImportValidator passed.",
-    "timestamp": "2026-07-03T21:54:31.086063"
+    "timestamp": "2026-07-04T06:38:59.656499"
 }

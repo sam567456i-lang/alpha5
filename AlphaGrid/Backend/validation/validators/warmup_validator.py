@@ -24,10 +24,9 @@ class WarmupValidator(AbstractValidator):
         if not np.array_equal(ema_res.timestamps, timestamps):
             errors.append("Output timestamps do not identically match input timestamps.")
             
-        # 3. Warmup Region NaN integrity
-        warmup_region = ema_res.values[:ema_res.warmup_period]
-        if not np.isnan(warmup_region).all():
-            errors.append(f"First {ema_res.warmup_period} elements must be strictly NaN.")
+        # 3. Warmup Region NaN integrity (Removed)
+        # We no longer force NaN in the warmup region because recursive indicators (like MACD)
+        # need the intermediate seed values. We rely entirely on valid_mask.
             
         # 4. Valid Mask Boundary
         if ema_res.valid_mask[:ema_res.warmup_period].any():

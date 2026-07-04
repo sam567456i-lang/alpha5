@@ -2,6 +2,7 @@ import argparse
 import sys
 import os
 import json
+import shutil
 from datetime import datetime
 from Backend.validation.dtos import ValidationContextDTO
 from Backend.validation.validation_registry import ValidationRegistry
@@ -118,6 +119,13 @@ def main():
         "evidence_id": os.path.basename(evidence_dir),
         "git_commit": "latest"
     }
+    
+    if args.phase == "10" and all_passed:
+        ev_10i_path = os.path.join(os.path.dirname(evidence_dir), "EV-10I-A")
+        if os.path.exists(ev_10i_path):
+            shutil.rmtree(ev_10i_path)
+        shutil.copytree(evidence_dir, ev_10i_path)
+        print(f"Evidence officially archived to: {ev_10i_path}")
     
     history = []
     if os.path.exists(history_path):

@@ -1,7 +1,7 @@
 {
-    "phase": "10e",
+    "phase": "10i-b",
     "family": "momentum",
-    "profile": "family",
+    "profile": "phase",
     "dataset": "default.parquet",
     "strategies": [
         "MACDMomentumStrategy",
@@ -15,8 +15,21 @@
         "repository_validator",
         "import_validator",
         "registry_validator",
+        "dependency_validator",
+        "ast_math_validator",
+        "architecture_drift_validator",
+        "dataset_validator",
+        "mathematical_validator",
+        "determinism_validator",
+        "numerical_precision_validator",
+        "warmup_validator",
+        "stability_validator",
+        "benchmark_validator",
         "pipeline_validator",
         "deterministic_replay_validator",
-        "numerical_robustness_validator"
+        "numerical_robustness_validator",
+        "performance_validator",
+        "memory_validator",
+        "complexity_validator"
     ]
 }

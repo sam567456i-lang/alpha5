@@ -1,0 +1,21 @@
+allowed:
+  - numpy
+  - math
+  - typing
+  - hashlib
+  - uuid
+  - enum
+  - dataclasses
+  - datetime
+  - time
+
+optional:
+  - numba
+
+forbidden:
+  - pandas
+  - scipy
+  - sklearn
+  - ta-lib
+  - polars
+  - vectorbt

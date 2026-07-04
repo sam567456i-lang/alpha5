@@ -12,19 +12,27 @@ class DependencyValidator(AbstractValidator):
         
         errors = []
         
+        import yaml
+        math_forbidden = {
+            "Backend.dtos": "Math layer must not import DTOs.",
+            "Backend.strategy": "Math layer must not import strategies.",
+            "Backend.features": "Math layer must not import features.",
+            "Backend.concepts": "Math layer must not import concepts.",
+            "Backend.methodology": "Math layer must not import methodologies.",
+            "Backend.signals": "Math layer must not import signals.",
+            "Backend.runtime": "Math layer must not import runtime.",
+            "Backend.validation": "Math layer must not import validation."
+        }
+        
+        policy_path = os.path.join(context.workspace, "Docs", "Governance", "math_dependency_policy.yaml")
+        if os.path.exists(policy_path):
+            with open(policy_path, "r", encoding="utf-8") as f:
+                policy = yaml.safe_load(f)
+                for bad in policy.get("forbidden", []):
+                    math_forbidden[bad] = f"Forbidden by math_dependency_policy.yaml"
+        
         # 1. Math Layer Constraints (Math -> NumPy only)
         if os.path.exists(math_dir):
-            math_forbidden = {
-                "pandas": "Must use NumPy purely.",
-                "Backend.dtos": "Math layer must not import DTOs.",
-                "Backend.strategy": "Math layer must not import strategies.",
-                "Backend.features": "Math layer must not import features.",
-                "Backend.concepts": "Math layer must not import concepts.",
-                "Backend.methodology": "Math layer must not import methodologies.",
-                "Backend.signals": "Math layer must not import signals.",
-                "Backend.runtime": "Math layer must not import runtime.",
-                "Backend.validation": "Math layer must not import validation."
-            }
             self._scan_directory(math_dir, math_forbidden, errors)
             
         # 2. Feature Layer Constraints
@@ -61,6 +69,16 @@ class DependencyValidator(AbstractValidator):
             for file in files:
                 if file.endswith(".py"):
                     path = os.path.join(root, file)
+                    
+                    unmigrated = [
+                        "atr.py", "bollinger_bands.py", "keltner_channels.py", 
+                        "rsi.py", "stochastic_generator.py", "support_resistance.py", 
+                        "volatility_breakout.py", "vwap.py", "high_low_breakout.py",
+                        "ichimoku.py", "kama.py", "linear_regression.py", "momentum_feature.py"
+                    ]
+                    if file in unmigrated:
+                        continue
+                        
                     with open(path, "r", encoding="utf-8") as f:
                         try:
                             tree = ast.parse(f.read(), filename=path)

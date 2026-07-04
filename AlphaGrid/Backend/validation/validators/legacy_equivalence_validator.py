@@ -7,8 +7,7 @@ from typing import Dict, Any, List
 from Backend.validation.validators.abstract_validator import AbstractValidator
 from Backend.validation.dtos import ValidationContextDTO, ValidatorResultDTO
 
-# Legacy and New Generators
-from Backend.features.legacy.macd_legacy import MACDLegacyGenerator
+from Backend.reference.legacy.features.macd import MACDLegacyGenerator
 from Backend.features.macd_generator import MACDFeatureGenerator
 
 class LegacyEquivalenceValidator(AbstractValidator):

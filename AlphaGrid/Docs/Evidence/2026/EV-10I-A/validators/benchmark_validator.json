@@ -1,0 +1,43 @@
+{
+    "id": "benchmark_validator",
+    "status": "PASS",
+    "reason": "",
+    "duration_ms": 3235.2927000029013,
+    "phase": "10",
+    "family": "momentum",
+    "start_time": "",
+    "end_time": "",
+    "cpu_utilization_percent": 0.0,
+    "peak_heap_mb": 0.0,
+    "peak_rss_mb": 0.0,
+    "gc_collections": 0,
+    "evidence_id": "EV-10-benchmark_validator",
+    "validator_version": "1.0.0",
+    "warnings": [],
+    "errors": [],
+    "artifacts": [],
+    "metrics": {
+        "ema_1000": {
+            "average_ms": 7.1217400138266385,
+            "median_ms": 8.214399975258857,
+            "std_ms": 2.256452934476276,
+            "p95_ms": 9.443400031886995
+        },
+        "ema_10000": {
+            "average_ms": 49.3494400056079,
+            "median_ms": 48.914400045759976,
+            "std_ms": 1.0331155875542375,
+            "p95_ms": 50.926239998079836
+        },
+        "ema_100000": {
+            "average_ms": 476.78599999053404,
+            "median_ms": 478.4073999617249,
+            "std_ms": 3.5102492978422233,
+            "p95_ms": 479.8139800084755
+        }
+    },
+    "max_error": 0.0,
+    "mean_error": 0.0,
+    "summary": "Observed runtime remained approximately linear and did not indicate quadratic growth.",
+    "timestamp": "2026-07-04T06:01:47.138511"
+}

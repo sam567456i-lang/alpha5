@@ -6,6 +6,16 @@ profiles:
     - repository_validator
     - import_validator
     - registry_validator
+    - dependency_validator
+    - ast_math_validator
+    - architecture_drift_validator
+    - dataset_validator
+    - mathematical_validator
+    - determinism_validator
+    - numerical_precision_validator
+    - warmup_validator
+    - stability_validator
+    - benchmark_validator
   family:
     - quick
     - pipeline_validator
@@ -28,6 +38,72 @@ profiles:
     - evidence_generator
     
 validators:
+  - id: dataset_validator
+    class: DatasetValidator
+    category: A
+    blocking: true
+    dependencies: [dependency_validator]
+    minimum_phase: 10
+  - id: dependency_validator
+    class: DependencyValidator
+    category: A
+    blocking: true
+    dependencies: []
+    minimum_phase: 1
+  - id: ast_math_validator
+    class: AstMathValidator
+    category: A
+    blocking: true
+    dependencies: []
+    minimum_phase: 1
+  - id: architecture_drift_validator
+    class: ArchitectureDriftValidator
+    category: A
+    blocking: true
+    dependencies: []
+    minimum_phase: 1
+  - id: legacy_equivalence_validator
+    class: LegacyEquivalenceValidator
+    category: A
+    blocking: true
+    dependencies: []
+    minimum_phase: 10
+  - id: mathematical_validator
+    class: MathematicalValidator
+    category: A
+    blocking: true
+    dependencies: [dataset_validator]
+    minimum_phase: 10
+  - id: determinism_validator
+    class: DeterminismValidator
+    category: A
+    blocking: true
+    dependencies: [mathematical_validator]
+    minimum_phase: 10
+  - id: numerical_precision_validator
+    class: NumericalPrecisionValidator
+    category: A
+    blocking: true
+    dependencies: [determinism_validator]
+    minimum_phase: 10
+  - id: warmup_validator
+    class: WarmupValidator
+    category: A
+    blocking: true
+    dependencies: [numerical_precision_validator]
+    minimum_phase: 10
+  - id: stability_validator
+    class: StabilityValidator
+    category: A
+    blocking: true
+    dependencies: [warmup_validator]
+    minimum_phase: 10
+  - id: benchmark_validator
+    class: BenchmarkValidator
+    category: A
+    blocking: true
+    dependencies: [stability_validator]
+    minimum_phase: 10
   - id: complexity_validator
     class: ComplexityValidator
     category: A
@@ -64,13 +140,6 @@ validators:
     
   - id: api_validator
     class: APIValidator
-    category: A
-    blocking: true
-    dependencies: []
-    minimum_phase: 1
-    
-  - id: dependency_validator
-    class: DependencyValidator
     category: A
     blocking: true
     dependencies: []

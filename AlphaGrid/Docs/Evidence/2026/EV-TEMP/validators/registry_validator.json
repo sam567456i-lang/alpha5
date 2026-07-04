@@ -2,8 +2,8 @@
     "id": "registry_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1.927300007082522,
-    "phase": "10e",
+    "duration_ms": 1.718799991067499,
+    "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
     "end_time": "",
@@ -11,12 +11,14 @@
     "peak_heap_mb": 0.0,
     "peak_rss_mb": 0.0,
     "gc_collections": 0,
-    "evidence_id": "EV-10e-registry_validator",
+    "evidence_id": "EV-10i-b-registry_validator",
     "validator_version": "1.0.0",
     "warnings": [],
     "errors": [],
     "artifacts": [],
     "metrics": {},
+    "max_error": 0.0,
+    "mean_error": 0.0,
     "summary": "Registry schemas valid.",
-    "timestamp": "2026-07-03T21:54:31.090051"
+    "timestamp": "2026-07-04T06:38:59.659756"
 }

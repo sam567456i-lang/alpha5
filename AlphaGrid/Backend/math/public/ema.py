@@ -46,8 +46,8 @@ def calculate_ema(
     
     prev_ema = out[start_idx]
     
-    from Backend.math.internal.kernels import ema_loop
-    ema_loop(values, out, valid_mask, start_idx, alpha)
+    from Backend.math.runtime.backend import get_backend
+    get_backend().ema_loop(values, out, valid_mask, start_idx, alpha)
             
     # However, strict TA-Lib requires a warmup of `period - 1` before it's considered "valid".
     # We will enforce valid_mask strictly but NOT null out the values to allow downstream generators

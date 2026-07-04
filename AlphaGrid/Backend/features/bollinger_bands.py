@@ -1,8 +1,7 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 import numpy as np
-if TYPE_CHECKING:
-    import pandas as pd
+import pandas as pd
 import hashlib
 import uuid
 from Backend.dtos.features import FeatureDTO

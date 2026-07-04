@@ -7,7 +7,7 @@ from typing import Dict, Any
 from Backend.validation.validators.abstract_validator import AbstractValidator
 from Backend.validation.dtos import ValidationContextDTO, ValidatorResultDTO
 
-from Backend.features.legacy.macd_legacy import MACDLegacyGenerator
+from Backend.reference.legacy.features.macd import MACDLegacyGenerator
 from Backend.features.macd_generator import MACDFeatureGenerator
 
 class PerformanceValidator(AbstractValidator):
@@ -45,11 +45,45 @@ class PerformanceValidator(AbstractValidator):
         ev_dir = os.path.join(context.workspace, "Docs", "Evidence", "2026", context.phase)
         os.makedirs(ev_dir, exist_ok=True)
         
-        with open(os.path.join(ev_dir, "performance_before.json"), "w") as f:
-            json.dump({"latency_ms": leg_time}, f)
+        benchmark_data = {
+            "latency_ms_before": leg_time,
+            "latency_ms_after": new_time,
+            "improvement_ratio": leg_time / max(new_time, 1e-6),
+            "iterations": 100,
+            "dataset_size": size
+        }
+        with open(os.path.join(ev_dir, "benchmark.json"), "w") as f:
+            json.dump(benchmark_data, f, indent=4)
             
-        with open(os.path.join(ev_dir, "performance_after.json"), "w") as f:
-            json.dump({"latency_ms": new_time, "improvement_ratio": leg_time / max(new_time, 1e-6)}, f)
+        import platform
+        import subprocess
+        try:
+            import psutil
+            cpu_percent = psutil.cpu_percent()
+            ram_percent = psutil.virtual_memory().percent
+        except ImportError:
+            cpu_percent = -1
+            ram_percent = -1
+            
+        try:
+            git_sha = subprocess.check_output(["git", "rev-parse", "HEAD"]).decode('utf-8').strip()
+        except Exception:
+            git_sha = "unknown"
+            
+        env_data = {
+            "cpu_model": platform.processor(),
+            "cpu_cores": os.cpu_count(),
+            "os_build": platform.version(),
+            "cpu_percent": cpu_percent,
+            "ram_percent": ram_percent,
+            "python_version": platform.python_version(),
+            "numpy_version": np.__version__,
+            "pandas_version": pd.__version__,
+            "git_commit_sha": git_sha,
+            "benchmark_seed": 99
+        }
+        with open(os.path.join(ev_dir, "environment.json"), "w") as f:
+            json.dump(env_data, f, indent=4)
             
         duration_ms = (time.perf_counter() - start) * 1000.0
         

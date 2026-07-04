@@ -1,3 +1,4 @@
+math_core_version: 1.0.0
 capabilities:
 - id: ftr-ohlcv
   category: Feature Store
