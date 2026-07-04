@@ -2,7 +2,7 @@
     "id": "determinism_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 266.05879998533055,
+    "duration_ms": 290.17940000630915,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "All mathematical primitives proven to be strictly deterministic with no hidden state.",
-    "timestamp": "2026-07-04T08:17:37.373776"
+    "timestamp": "2026-07-04T08:47:55.383944"
 }

@@ -3,6 +3,7 @@
 
 profiles:
   quick:
+    - roadmap_validator
     - repository_validator
     - import_validator
     - registry_validator
@@ -37,8 +38,10 @@ profiles:
     - documentation_validator
     - migration_validator
     - config_drift_validator
-  production:
+  repository:
     - release
+  production:
+    - repository
     - phase_freeze_validator
     - evidence_generator
     
@@ -313,4 +316,11 @@ validators:
     category: A
     blocking: false
     dependencies: [phase_freeze_validator]
+    minimum_phase: 1
+    
+  - id: roadmap_validator
+    class: RoadmapValidator
+    category: A
+    blocking: true
+    dependencies: []
     minimum_phase: 1

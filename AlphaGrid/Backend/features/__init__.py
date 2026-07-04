@@ -10,13 +10,10 @@ from .momentum import ROCFeature, RSIFeature
 from .volatility import RelativeVolumeFeature
 from .adx import ADXFeature
 from .cci import CCIFeature
-from .donchian import Donchian20Feature
 from .stochastic import StochasticFeature
 from .supertrend import SuperTrendFeature
-from .high_low_breakout import HighLowBreakoutFeatureGenerator
 from .rsi import RSIFeatureGenerator
 from .stochastic_generator import StochasticFeatureGenerator
-from .support_resistance import SupportResistanceFeatureGenerator
 from .volatility_breakout import VolatilityBreakoutFeatureGenerator
 from .vwap import VWAPFeatureGenerator
 
@@ -30,6 +27,9 @@ from .roc_generator import ROCFeatureGenerator
 from .atr_generator import ATRFeatureGenerator
 from .bollinger_generator import BollingerFeatureGenerator
 from .keltner_generator import KeltnerFeatureGenerator
+from .donchian_generator import DonchianFeatureGenerator
+from .high_low_generator import HighLowFeatureGenerator
+from .support_resistance_generator import SupportResistanceFeatureGenerator
 
 __all__ = [
     'AbstractFeature',
@@ -37,8 +37,6 @@ __all__ = [
     'FeatureEngine',
     'FeatureRegistry',
     'ADXFeature',
-    'Donchian20Feature',
-    'HighLowBreakoutFeatureGenerator',
     'ROCFeature',
     'RSIFeature',
     'RSIFeatureGenerator',
@@ -46,7 +44,6 @@ __all__ = [
     'StochasticFeature',
     'StochasticFeatureGenerator',
     'SuperTrendFeature',
-    'SupportResistanceFeatureGenerator',
     'VWAPFeatureGenerator',
     'VolatilityBreakoutFeatureGenerator',
     'CCIFeature',
@@ -58,5 +55,8 @@ __all__ = [
     'ROCFeatureGenerator',
     'ATRFeatureGenerator',
     'BollingerFeatureGenerator',
-    'KeltnerFeatureGenerator'
+    'KeltnerFeatureGenerator',
+    'DonchianFeatureGenerator',
+    'HighLowFeatureGenerator',
+    'SupportResistanceFeatureGenerator'
 ]

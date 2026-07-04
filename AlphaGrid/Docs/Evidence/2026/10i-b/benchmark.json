@@ -1,7 +1,7 @@
 {
-    "latency_ms_before": 6.229777000262402,
-    "latency_ms_after": 6.380871000001207,
-    "improvement_ratio": 0.9763207875948634,
+    "latency_ms_before": 5.154162999824621,
+    "latency_ms_after": 5.535852999892086,
+    "improvement_ratio": 0.9310512760951374,
     "iterations": 100,
     "dataset_size": 50000
 }

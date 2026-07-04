@@ -198,5 +198,55 @@
         "status": "PASS",
         "evidence_id": "EV-TEMP",
         "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:37:52.192798",
+        "phase": "10i-c",
+        "family": "core",
+        "profile": "repository",
+        "duration_ms": 113004.36150026508,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:39:40.476024",
+        "phase": "10i-c",
+        "family": "core",
+        "profile": "repository",
+        "duration_ms": 37429.0116999764,
+        "status": "PASS",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:44:36.111990",
+        "phase": "10i-b",
+        "family": "momentum",
+        "profile": "phase",
+        "duration_ms": 18090.01280000666,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:46:42.404650",
+        "phase": "10i-b",
+        "family": "momentum",
+        "profile": "phase",
+        "duration_ms": 37382.84550019307,
+        "status": "FAIL",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
+    },
+    {
+        "timestamp": "2026-07-04T08:47:57.250848",
+        "phase": "10i-b",
+        "family": "momentum",
+        "profile": "phase",
+        "duration_ms": 43395.61379997758,
+        "status": "PASS",
+        "evidence_id": "EV-TEMP",
+        "git_commit": "latest"
     }
 ]

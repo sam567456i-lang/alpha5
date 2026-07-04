@@ -3,4 +3,6 @@ from Backend.validation.validators.indicator_formula_validator import IndicatorF
 from Backend.validation.validators.indicator_warmup_validator import IndicatorWarmupValidator
 from Backend.validation.validators.indicator_metadata_validator import IndicatorMetadataValidator
 from Backend.validation.validators.indicator_composition_validator import IndicatorCompositionValidator
-from Backend.validation.validators.rolling_window_validator import RollingWindowValidator
+from .benchmark_validator import BenchmarkValidator
+from .rolling_window_validator import RollingWindowValidator
+from .roadmap_validator import RoadmapValidator

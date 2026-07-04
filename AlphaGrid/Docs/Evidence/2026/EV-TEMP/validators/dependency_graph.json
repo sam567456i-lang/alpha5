@@ -610,11 +610,14 @@
         "collections",
         "typing"
     ],
-    "Backend.features.donchian": [
+    "Backend.features.donchian_generator": [
         "Backend",
-        "Shared",
-        "collections",
-        "typing"
+        "__future__",
+        "hashlib",
+        "numpy",
+        "pandas",
+        "typing",
+        "uuid"
     ],
     "Backend.features.ema_generator": [
         "Backend",
@@ -638,7 +641,7 @@
         "base",
         "typing"
     ],
-    "Backend.features.high_low_breakout": [
+    "Backend.features.high_low_generator": [
         "Backend",
         "__future__",
         "hashlib",
@@ -791,7 +794,7 @@
         "protocols",
         "typing"
     ],
-    "Backend.features.support_resistance": [
+    "Backend.features.support_resistance_generator": [
         "Backend",
         "__future__",
         "hashlib",
@@ -840,10 +843,10 @@
         "bollinger_generator",
         "cache",
         "cci",
-        "donchian",
+        "donchian_generator",
         "ema_generator",
         "engine",
-        "high_low_breakout",
+        "high_low_generator",
         "keltner_generator",
         "ma_cross_generator",
         "macd_generator",
@@ -855,11 +858,16 @@
         "stochastic",
         "stochastic_generator",
         "supertrend",
-        "support_resistance",
+        "support_resistance_generator",
         "volatility",
         "volatility_breakout",
         "vwap",
         "wma_generator"
+    ],
+    "Backend.features.interfaces.extremum_feature": [
+        "Backend",
+        "pandas",
+        "typing"
     ],
     "Backend.features.interfaces.momentum_feature": [
         "Backend",
@@ -1008,6 +1016,23 @@
     ],
     "Backend.indicator_engine.__init__": [
         "Backend"
+    ],
+    "Backend.indicator_engine.extremum.donchian": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.extremum.high_low": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.extremum.support_resistance": [
+        "Backend",
+        "numpy"
+    ],
+    "Backend.indicator_engine.extremum.__init__": [
+        "donchian",
+        "high_low",
+        "support_resistance"
     ],
     "Backend.indicator_engine.momentum.macd": [
         "Backend",
@@ -2366,6 +2391,13 @@
         "os",
         "subprocess"
     ],
+    "Backend.validation.validators.roadmap_validator": [
+        "Backend",
+        "os",
+        "time",
+        "typing",
+        "yaml"
+    ],
     "Backend.validation.validators.rolling_window_validator": [
         "Backend",
         "numpy",
@@ -2388,6 +2420,9 @@
         "time"
     ],
     "Backend.validation.validators.__init__": [
-        "Backend"
+        "Backend",
+        "benchmark_validator",
+        "roadmap_validator",
+        "rolling_window_validator"
     ]
 }

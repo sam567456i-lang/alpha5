@@ -43,6 +43,27 @@ class ArchitectureDriftValidator(AbstractValidator):
             json.dump(current_graph, f, indent=4)
             
         errors = []
+        
+        # New strict architectural intent rules
+        for mod, current_deps in current_graph.items():
+            # Features cannot import Math internals directly
+            if "Backend.features" in mod and "generator" in mod:
+                for dep in current_deps:
+                    if dep.startswith("Backend.math"):
+                        errors.append(f"Drift Violation: Feature Generator '{mod}' imports Math Core '{dep}'. Generators must delegate to Indicator Engine.")
+            
+            # Indicator Engine must not leak DTOs directly (it returns FinancialIndicatorResult)
+            if "Backend.indicator_engine" in mod:
+                for dep in current_deps:
+                    if "Backend.dtos" in dep:
+                        errors.append(f"Drift Violation: Engine '{mod}' imports DTOs '{dep}'. DTOs belong in the Feature Layer.")
+            
+            # Concepts cannot perform math
+            if "Backend.research.concepts" in mod:
+                for dep in current_deps:
+                    if dep.startswith("Backend.math"):
+                        errors.append(f"Drift Violation: Concept '{mod}' imports Math '{dep}'. Concepts cannot calculate.")
+                        
         # If there's a reference graph, compare
         if hasattr(context, 'reference_graph_path') and context.reference_graph_path and os.path.exists(context.reference_graph_path):
             with open(context.reference_graph_path, "r", encoding="utf-8") as f:

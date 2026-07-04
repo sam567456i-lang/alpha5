@@ -33,7 +33,8 @@ class MACDEngine:
         slow_ema_res = calculate_ema(series.closes, series.timestamps, self.slow, "close")
         
         # MACD Line = Fast - Slow
-        macd_line = fast_ema_res.values - slow_ema_res.values
+        with np.errstate(invalid='ignore'):
+            macd_line = fast_ema_res.values - slow_ema_res.values
         
         # Calculate Signal Line = EMA of MACD Line
         signal_res = calculate_ema(macd_line, series.timestamps, self.signal, "macd")

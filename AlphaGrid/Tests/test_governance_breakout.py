@@ -4,8 +4,8 @@ import pandas as pd
 import time
 import psutil
 import os
-from Backend.features.support_resistance import SupportResistanceFeatureGenerator
-from Backend.features.high_low_breakout import HighLowBreakoutFeatureGenerator
+from Backend.reference.legacy.features.support_resistance import SupportResistanceFeatureGenerator
+from Backend.reference.legacy.features.high_low_breakout import HighLowBreakoutFeatureGenerator
 
 
 @pytest.fixture

@@ -57,3 +57,22 @@ class KeltnerResult(FinancialIndicatorResult):
     middle: np.ndarray
     lower: np.ndarray
 
+@dataclass(frozen=True)
+class DonchianResult(FinancialIndicatorResult):
+    upper: np.ndarray
+    lower: np.ndarray
+    middle: np.ndarray
+    bandwidth: np.ndarray
+
+@dataclass(frozen=True)
+class HighLowResult(FinancialIndicatorResult):
+    highest_high: np.ndarray
+    lowest_low: np.ndarray
+
+@dataclass(frozen=True)
+class SupportResistanceResult(FinancialIndicatorResult):
+    resistance: np.ndarray
+    support: np.ndarray
+    distance_to_resistance: np.ndarray
+    distance_to_support: np.ndarray
+

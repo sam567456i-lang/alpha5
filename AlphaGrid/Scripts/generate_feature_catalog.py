@@ -23,9 +23,9 @@ def discover_features():
                 module = importlib.import_module(f"Backend.features.{module_name}")
                 for name, obj in inspect.getmembers(module):
                     if inspect.isclass(obj) and obj.__module__ == module.__name__:
-                        # Check if it implements one of the interfaces
-                        if issubclass(obj, (MomentumFeatureInterface, TrendFeatureInterface, VolatilityFeatureInterface)):
-                            if name != "MomentumFeatureInterface" and name != "TrendFeatureInterface" and name != "VolatilityFeatureInterface":
+                        # Check if it implements one of the interfaces by looking for generate method
+                        if hasattr(obj, 'generate') and hasattr(obj, 'component_id'):
+                            if name not in ["MomentumFeatureInterface", "TrendFeatureInterface", "VolatilityFeatureInterface", "FeatureGenerator"]:
                                 feature_classes.append(obj)
             except Exception as e:
                 print(f"Failed to load {module_name}: {e}")
@@ -54,10 +54,10 @@ def generate_catalog():
                 comp_id = instance.component_id
                 
                 # Check which interface it implements
-                interface = "Unknown"
-                if issubclass(cls, MomentumFeatureInterface): interface = "MomentumFeatureInterface"
-                elif issubclass(cls, TrendFeatureInterface): interface = "TrendFeatureInterface"
-                elif issubclass(cls, VolatilityFeatureInterface): interface = "VolatilityFeatureInterface"
+                interface = "FeatureInterface"
+                if "Momentum" in cls.__name__: interface = "MomentumFeatureInterface"
+                elif "Trend" in cls.__name__ or "MA" in cls.__name__: interface = "TrendFeatureInterface"
+                elif "Volatility" in cls.__name__ or "ATR" in cls.__name__ or "Bollinger" in cls.__name__ or "Keltner" in cls.__name__: interface = "VolatilityFeatureInterface"
                 
                 f.write(f"| `{cls.__name__}` | `{comp_id}` | `{interface}` | `['ftr-ohlcv']` |\n")
             except Exception as e:

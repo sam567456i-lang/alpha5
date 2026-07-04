@@ -47,7 +47,7 @@ def main():
     
     context = ValidationContextDTO(
         phase=args.phase,
-        family=args.family,
+        family=args.family if args.profile != "repository" else "ALL",
         git_commit="latest",
         registry_version="latest",
         dto_version="latest",

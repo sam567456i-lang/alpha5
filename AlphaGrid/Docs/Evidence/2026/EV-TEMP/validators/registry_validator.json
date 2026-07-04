@@ -2,7 +2,7 @@
     "id": "registry_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1.4948999742045999,
+    "duration_ms": 2.083799976389855,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -20,5 +20,5 @@
     "max_error": 0.0,
     "mean_error": 0.0,
     "summary": "Registry schemas valid.",
-    "timestamp": "2026-07-04T08:17:31.455820"
+    "timestamp": "2026-07-04T08:47:49.464458"
 }

@@ -2,7 +2,7 @@
     "id": "performance_validator",
     "status": "PASS",
     "reason": "",
-    "duration_ms": 1358.3751999540254,
+    "duration_ms": 1362.6377999898978,
     "phase": "10i-b",
     "family": "momentum",
     "start_time": "",
@@ -19,6 +19,6 @@
     "metrics": {},
     "max_error": 0.0,
     "mean_error": 0.0,
-    "summary": "Performance check passed. Old: 6.23ms, New: 6.38ms.",
-    "timestamp": "2026-07-04T08:17:36.997662"
+    "summary": "Performance check passed. Old: 5.15ms, New: 5.54ms.",
+    "timestamp": "2026-07-04T08:47:54.956419"
 }

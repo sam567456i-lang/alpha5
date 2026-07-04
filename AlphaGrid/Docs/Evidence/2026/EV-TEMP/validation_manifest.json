@@ -12,6 +12,7 @@
         "ROCFeatureGenerator"
     ],
     "validators_executed": [
+        "roadmap_validator",
         "repository_validator",
         "import_validator",
         "registry_validator",

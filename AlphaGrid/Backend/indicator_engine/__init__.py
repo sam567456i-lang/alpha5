@@ -10,6 +10,9 @@ from Backend.indicator_engine.trend.moving_average_cross import MACrossEngine
 from Backend.indicator_engine.volatility.atr import ATREngine
 from Backend.indicator_engine.volatility.bollinger import BollingerEngine
 from Backend.indicator_engine.volatility.keltner import KeltnerEngine
+from Backend.indicator_engine.extremum.donchian import DonchianEngine
+from Backend.indicator_engine.extremum.high_low import HighLowEngine
+from Backend.indicator_engine.extremum.support_resistance import SupportResistanceEngine
 
 __all__ = [
     "FinancialIndicatorResult",
@@ -33,5 +36,8 @@ __all__ = [
     "MACrossEngine",
     "ATREngine",
     "BollingerEngine",
-    "KeltnerEngine"
+    "KeltnerEngine",
+    "DonchianEngine",
+    "HighLowEngine",
+    "SupportResistanceEngine"
 ]
