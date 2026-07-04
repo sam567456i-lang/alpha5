@@ -1,79 +1,1361 @@
 strategies:
-- capability_id: STRATEGY_TRENDFOLLOWING
-  name: Trend Following Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Trend Following
-  status: planned
-- capability_id: STRATEGY_BREAKOUT
-  name: Breakout Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Breakout
-  status: planned
-- capability_id: STRATEGY_MEANREVERSION
-  name: Mean Reversion Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Mean Reversion
-  status: planned
-- capability_id: STRATEGY_MOMENTUM
-  name: Momentum Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Momentum
-  status: planned
-- capability_id: STRATEGY_PRICEACTION
-  name: Price Action Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Price Action
-  status: planned
-- capability_id: STRATEGY_SMARTMONEY
-  name: Smart Money Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Smart Money
-  status: planned
-- capability_id: STRATEGY_VOLUME
-  name: Volume Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Volume
-  status: planned
-- capability_id: STRATEGY_ORDERFLOW
-  name: Order Flow Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Order Flow
-  status: planned
-- capability_id: STRATEGY_STATISTICAL
-  name: Statistical Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Statistical
-  status: planned
-- capability_id: STRATEGY_MACHINELEARNING
-  name: Machine Learning Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Machine Learning
-  status: planned
-- capability_id: STRATEGY_MACRO
-  name: Macro Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Macro
-  status: planned
-- capability_id: STRATEGY_SEASONAL
-  name: Seasonal Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Seasonal
-  status: planned
-- capability_id: STRATEGY_OPTIONS
-  name: Options Strategy
-  platform: P10_Strategies
-  category: Strategy
-  family: Options
-  status: planned
+- strategy_id: STRAT_ICT_2022_MODEL
+  name: 2022 Model
+  parent_methodology: METH_ICT
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_ICT_2023_MODEL
+  name: 2023 Model
+  parent_methodology: METH_ICT
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_ICT_OTE
+  name: OTE
+  parent_methodology: METH_ICT
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_ICT_SILVER_BULLET
+  name: Silver Bullet
+  parent_methodology: METH_ICT
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_ICT_UNICORN
+  name: Unicorn
+  parent_methodology: METH_ICT
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_ICT_JUDAS_SWING
+  name: Judas Swing
+  parent_methodology: METH_ICT
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_SMART_MONEY_CONCEPTS_LIQUIDITY_SWEEP
+  name: Liquidity Sweep
+  parent_methodology: METH_SMART_MONEY_CONCEPTS
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_SMART_MONEY_CONCEPTS_FVG
+  name: FVG
+  parent_methodology: METH_SMART_MONEY_CONCEPTS
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_SMART_MONEY_CONCEPTS_ORDER_BLOCK
+  name: Order Block
+  parent_methodology: METH_SMART_MONEY_CONCEPTS
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_SMART_MONEY_CONCEPTS_BREAKER
+  name: Breaker
+  parent_methodology: METH_SMART_MONEY_CONCEPTS
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_SMART_MONEY_CONCEPTS_MITIGATION
+  name: Mitigation
+  parent_methodology: METH_SMART_MONEY_CONCEPTS
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_WYCKOFF_SPRING
+  name: Spring
+  parent_methodology: METH_WYCKOFF
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_WYCKOFF_UPTHRUST
+  name: Upthrust
+  parent_methodology: METH_WYCKOFF
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_WYCKOFF_SOS
+  name: SOS
+  parent_methodology: METH_WYCKOFF
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_WYCKOFF_SOW
+  name: SOW
+  parent_methodology: METH_WYCKOFF
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_WYCKOFF_LPS
+  name: LPS
+  parent_methodology: METH_WYCKOFF
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_WYCKOFF_LPSY
+  name: LPSY
+  parent_methodology: METH_WYCKOFF
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_TREND_FOLLOWING_EMA_PULLBACK
+  name: EMA Pullback
+  parent_methodology: METH_TREND_FOLLOWING
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_TREND_FOLLOWING_DONCHIAN_BREAKOUT
+  name: Donchian Breakout
+  parent_methodology: METH_TREND_FOLLOWING
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_TREND_FOLLOWING_TURTLE
+  name: Turtle
+  parent_methodology: METH_TREND_FOLLOWING
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_TREND_FOLLOWING_SUPERTREND
+  name: Supertrend
+  parent_methodology: METH_TREND_FOLLOWING
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_BREAKOUT_TRADING_ORB
+  name: ORB
+  parent_methodology: METH_BREAKOUT_TRADING
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_BREAKOUT_TRADING_VOLATILITY_BREAKOUT
+  name: Volatility Breakout
+  parent_methodology: METH_BREAKOUT_TRADING
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_BREAKOUT_TRADING_NR7
+  name: NR7
+  parent_methodology: METH_BREAKOUT_TRADING
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_MEAN_REVERSION_VWAP_REVERSION
+  name: VWAP Reversion
+  parent_methodology: METH_MEAN_REVERSION
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_MEAN_REVERSION_BOLLINGER
+  name: Bollinger
+  parent_methodology: METH_MEAN_REVERSION
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_MEAN_REVERSION_RSI_EXTREMES
+  name: RSI Extremes
+  parent_methodology: METH_MEAN_REVERSION
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_MEAN_REVERSION_REGRESSION
+  name: Regression
+  parent_methodology: METH_MEAN_REVERSION
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_AUCTION_MARKET_THEORY_VALUE_AREA_PLAY
+  name: Value Area Play
+  parent_methodology: METH_AUCTION_MARKET_THEORY
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_VOLUME_SPREAD_ANALYSIS_NO_DEMAND
+  name: No Demand
+  parent_methodology: METH_VOLUME_SPREAD_ANALYSIS
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_VOLUME_SPREAD_ANALYSIS_NO_SUPPLY
+  name: No Supply
+  parent_methodology: METH_VOLUME_SPREAD_ANALYSIS
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_STATISTICAL_ARBITRAGE_PAIRS_TRADING
+  name: Pairs Trading
+  parent_methodology: METH_STATISTICAL_ARBITRAGE
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_STATISTICAL_ARBITRAGE_COINTEGRATION_REVERSION
+  name: Cointegration Reversion
+  parent_methodology: METH_STATISTICAL_ARBITRAGE
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
+- strategy_id: STRAT_QUANTITATIVE_KALMAN_FILTER_MOMENTUM
+  name: Kalman Filter Momentum
+  parent_methodology: METH_QUANTITATIVE
+  platform: P12_Methodology
+  supported_markets:
+  - all
+  supported_assets:
+  - all
+  supported_sessions:
+  - all
+  supported_timeframes:
+  - all
+  supported_styles:
+  - all
+  supported_methodologies:
+  - all
+  required_data: []
+  required_indicators: []
+  required_analyses: []
+  required_features: []
+  required_concepts: []
+  required_validators: []
+  required_dashboard_widgets: []
+  required_ai_agents: []
+  streaming_support: true
+  cache_support: true
+  incremental_support: true
+  performance_profile: O(N)
+  maturity: research
+  implementation_status: planned
+  performance_metrics:
+    win_rate: 0.0
+    profit_factor: 0.0
+    expectancy: 0.0
+    average_rr: 0.0
+    best_markets: []
+    best_timeframes: []
+    best_sessions: []
+    best_regimes: []
+    known_weaknesses: []
