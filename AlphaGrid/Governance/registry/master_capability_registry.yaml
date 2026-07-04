@@ -4176,3 +4176,10 @@ capabilities:
   subfamily: RSI
   dependencies:
   - INDICATOR_RSI
+- capability_id: ANALYSIS_MOMENTUM_ROC
+  name: ROC Momentum Analysis
+  platform: P05_Analysis
+  family: Momentum
+  subfamily: ROC
+  dependencies:
+  - INDICATOR_ROC
