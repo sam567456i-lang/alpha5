@@ -1,0 +1,55 @@
+{
+  "manifest_id": "manifest_decision_chain",
+  "version": "1.0.0",
+  "transitions": [
+    {
+      "step": 1,
+      "producer": "Platform10",
+      "consumer": "Platform11",
+      "input_dto": "FeatureDTO",
+      "output_dto": "MethodologyResultDTO",
+      "validation_rules": ["methodology_confidence_present"],
+      "traceability_required": true
+    },
+    {
+      "step": 2,
+      "producer": "Platform11",
+      "consumer": "Platform12",
+      "input_dto": "MethodologyResultDTO",
+      "output_dto": "CompositeDecisionContextDTO",
+      "validation_rules": ["consensus_score_valid"],
+      "traceability_required": true
+    },
+    {
+      "step": 3,
+      "producer": "Platform12",
+      "consumer": "Platform13",
+      "input_dto": "CompositeDecisionContextDTO",
+      "output_dto": "OpportunityDetectionDTO",
+      "validation_rules": ["opportunity_profile_valid"],
+      "traceability_required": true
+    },
+    {
+      "step": 4,
+      "producer": "Platform13",
+      "consumer": "Platform14",
+      "input_dto": "OpportunityDetectionDTO",
+      "output_dto": "EvaluatedOpportunityCollectionDTO",
+      "validation_rules": ["ranking_valid", "competition_resolved"],
+      "traceability_required": true
+    },
+    {
+      "step": 5,
+      "producer": "Platform14",
+      "consumer": "Platform15",
+      "input_dto": "EvaluatedOpportunityCollectionDTO",
+      "output_dto": "RecommendationDTO",
+      "validation_rules": ["entry_stop_target_valid", "cryptographic_hash_valid"],
+      "traceability_required": true
+    }
+  ],
+  "certification": {
+    "required_suites": ["transition_integrity", "schema_validation"],
+    "enforcement": "strict"
+  }
+}

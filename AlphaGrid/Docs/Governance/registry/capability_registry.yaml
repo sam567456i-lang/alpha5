@@ -1,0 +1,6209 @@
+entries:
+- id: CON-LIQ-PDH
+  ontology_ref: ONT-LIQ-LIQ-PDH
+  name: PDH Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PDHConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PDHConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: TimeBasedLiquidityDetector
+    tolerance: &id001
+      type: absolute
+      value: 0
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: &id002
+    - CRYPTO
+    - FX
+    - EQUITY
+    supported_sessions: &id003
+    - ALL
+    timeframe: DAY
+    lookback: 1
+    detection_mode: PREV_HIGH
+- id: DET-LIQ-PDH
+  ontology_ref: ONT-LIQ-LIQ-PDH
+  name: PDH Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PDHDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-PDL
+  ontology_ref: ONT-LIQ-LIQ-PDL
+  name: PDL Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PDLConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PDLConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: TimeBasedLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    timeframe: DAY
+    lookback: 1
+    detection_mode: PREV_LOW
+- id: DET-LIQ-PDL
+  ontology_ref: ONT-LIQ-LIQ-PDL
+  name: PDL Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PDLDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-PWH
+  ontology_ref: ONT-LIQ-LIQ-PWH
+  name: PWH Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PWHConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PWHConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: TimeBasedLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    timeframe: WEEK
+    lookback: 1
+    detection_mode: PREV_HIGH
+- id: DET-LIQ-PWH
+  ontology_ref: ONT-LIQ-LIQ-PWH
+  name: PWH Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PWHDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-PWL
+  ontology_ref: ONT-LIQ-LIQ-PWL
+  name: PWL Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PWLConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PWLConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: TimeBasedLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    timeframe: WEEK
+    lookback: 1
+    detection_mode: PREV_LOW
+- id: DET-LIQ-PWL
+  ontology_ref: ONT-LIQ-LIQ-PWL
+  name: PWL Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PWLDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-PMH
+  ontology_ref: ONT-LIQ-LIQ-PMH
+  name: PMH Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PMHConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PMHConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: TimeBasedLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    timeframe: MONTH
+    lookback: 1
+    detection_mode: PREV_HIGH
+- id: DET-LIQ-PMH
+  ontology_ref: ONT-LIQ-LIQ-PMH
+  name: PMH Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PMHDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-PML
+  ontology_ref: ONT-LIQ-LIQ-PML
+  name: PML Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PMLConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PMLConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: TimeBasedLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    timeframe: MONTH
+    lookback: 1
+    detection_mode: PREV_LOW
+- id: DET-LIQ-PML
+  ontology_ref: ONT-LIQ-LIQ-PML
+  name: PML Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PMLDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-EQH
+  ontology_ref: ONT-LIQ-LIQ-EQH
+  name: EQH Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: EQHConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - EQHConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: EqualLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    detection_mode: EQUAL_HIGHS
+- id: DET-LIQ-EQH
+  ontology_ref: ONT-LIQ-LIQ-EQH
+  name: EQH Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: EQHDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-EQL
+  ontology_ref: ONT-LIQ-LIQ-EQL
+  name: EQL Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: EQLConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - EQLConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: EqualLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    detection_mode: EQUAL_LOWS
+- id: DET-LIQ-EQL
+  ontology_ref: ONT-LIQ-LIQ-EQL
+  name: EQL Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: EQLDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-SWINGHIGH
+  ontology_ref: ONT-LIQ-LIQ-SWINGHIGH
+  name: Swing High Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SwingHighConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - SwingHighConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: SwingLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    detection_mode: SWING_HIGH
+- id: DET-LIQ-SWINGHIGH
+  ontology_ref: ONT-LIQ-LIQ-SWINGHIGH
+  name: Swing High Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SwingHighDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-SWINGLOW
+  ontology_ref: ONT-LIQ-LIQ-SWINGLOW
+  name: Swing Low Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SwingLowConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - SwingLowConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+  configuration:
+    detector: SwingLiquidityDetector
+    tolerance: *id001
+    confidence_model: static
+    lineage_required: true
+    latency_budget_ms: 10
+    replay_supported: true
+    deterministic: true
+    supported_markets: *id002
+    supported_sessions: *id003
+    detection_mode: SWING_LOW
+- id: DET-LIQ-SWINGLOW
+  ontology_ref: ONT-LIQ-LIQ-SWINGLOW
+  name: Swing Low Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SwingLowDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-SWEEP
+  ontology_ref: ONT-LIQ-LIQ-SWEEP
+  name: Sweep Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SweepConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - SweepConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-SWEEP
+  ontology_ref: ONT-LIQ-LIQ-SWEEP
+  name: Sweep Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SweepDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-STOPHUNT
+  ontology_ref: ONT-LIQ-LIQ-STOPHUNT
+  name: Stop Hunt Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: StopHuntConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - StopHuntConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-STOPHUNT
+  ontology_ref: ONT-LIQ-LIQ-STOPHUNT
+  name: Stop Hunt Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: StopHuntDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-MSS
+  ontology_ref: ONT-LIQ-LIQ-MSS
+  name: MSS Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MSSConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - MSSConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-MSS
+  ontology_ref: ONT-LIQ-LIQ-MSS
+  name: MSS Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MSSDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-BOS
+  ontology_ref: ONT-LIQ-LIQ-BOS
+  name: BOS Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BOSConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - BOSConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-BOS
+  ontology_ref: ONT-LIQ-LIQ-BOS
+  name: BOS Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BOSDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-CHOCH
+  ontology_ref: ONT-LIQ-LIQ-CHOCH
+  name: CHOCH Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: CHOCHConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - CHOCHConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-CHOCH
+  ontology_ref: ONT-LIQ-LIQ-CHOCH
+  name: CHOCH Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: CHOCHDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-INDUCEMENT
+  ontology_ref: ONT-LIQ-LIQ-INDUCEMENT
+  name: Inducement Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: InducementConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - InducementConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-INDUCEMENT
+  ontology_ref: ONT-LIQ-LIQ-INDUCEMENT
+  name: Inducement Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: InducementDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-JUDASSWING
+  ontology_ref: ONT-LIQ-LIQ-JUDASSWING
+  name: Judas Swing Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: JudasSwingConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - JudasSwingConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-JUDASSWING
+  ontology_ref: ONT-LIQ-LIQ-JUDASSWING
+  name: Judas Swing Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: JudasSwingDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-TURTLESOUP
+  ontology_ref: ONT-LIQ-LIQ-TURTLESOUP
+  name: Turtle Soup Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: TurtleSoupConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - TurtleSoupConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-TURTLESOUP
+  ontology_ref: ONT-LIQ-LIQ-TURTLESOUP
+  name: Turtle Soup Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: TurtleSoupDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-FVG
+  ontology_ref: ONT-LIQ-LIQ-FVG
+  name: FVG Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: FVGConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - FVGConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-FVG
+  ontology_ref: ONT-LIQ-LIQ-FVG
+  name: FVG Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: FVGDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-IFVG
+  ontology_ref: ONT-LIQ-LIQ-IFVG
+  name: IFVG Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: IFVGConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - IFVGConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-IFVG
+  ontology_ref: ONT-LIQ-LIQ-IFVG
+  name: IFVG Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: IFVGDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-ORDERBLOCK
+  ontology_ref: ONT-LIQ-LIQ-ORDERBLOCK
+  name: Order Block Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: OrderBlockConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - OrderBlockConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-ORDERBLOCK
+  ontology_ref: ONT-LIQ-LIQ-ORDERBLOCK
+  name: Order Block Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: OrderBlockDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-BREAKER
+  ontology_ref: ONT-LIQ-LIQ-BREAKER
+  name: Breaker Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BreakerConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - BreakerConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-BREAKER
+  ontology_ref: ONT-LIQ-LIQ-BREAKER
+  name: Breaker Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BreakerDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-MITIGATION
+  ontology_ref: ONT-LIQ-LIQ-MITIGATION
+  name: Mitigation Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MitigationConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - MitigationConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-MITIGATION
+  ontology_ref: ONT-LIQ-LIQ-MITIGATION
+  name: Mitigation Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MitigationDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-LIQUIDITYVOID
+  ontology_ref: ONT-LIQ-LIQ-LIQUIDITYVOID
+  name: Liquidity Void Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LiquidityVoidConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - LiquidityVoidConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-LIQUIDITYVOID
+  ontology_ref: ONT-LIQ-LIQ-LIQUIDITYVOID
+  name: Liquidity Void Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LiquidityVoidDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-LIQ-BPR
+  ontology_ref: ONT-LIQ-LIQ-BPR
+  name: BPR Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BPRConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - BPRConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-LIQ-BPR
+  ontology_ref: ONT-LIQ-LIQ-BPR
+  name: BPR Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BPRDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-UPTREND
+  ontology_ref: ONT-MAR-TRE-UPTREND
+  name: Uptrend Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: UptrendConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - UptrendConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-UPTREND
+  ontology_ref: ONT-MAR-TRE-UPTREND
+  name: Uptrend Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: UptrendDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-DOWNTREND
+  ontology_ref: ONT-MAR-TRE-DOWNTREND
+  name: Downtrend Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: DowntrendConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - DowntrendConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-DOWNTREND
+  ontology_ref: ONT-MAR-TRE-DOWNTREND
+  name: Downtrend Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: DowntrendDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-RANGING
+  ontology_ref: ONT-MAR-TRE-RANGING
+  name: Ranging Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: RangingConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - RangingConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-RANGING
+  ontology_ref: ONT-MAR-TRE-RANGING
+  name: Ranging Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: RangingDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-EXPANDING
+  ontology_ref: ONT-MAR-TRE-EXPANDING
+  name: Expanding Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ExpandingConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - ExpandingConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-EXPANDING
+  ontology_ref: ONT-MAR-TRE-EXPANDING
+  name: Expanding Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ExpandingDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-CONTRACTING
+  ontology_ref: ONT-MAR-TRE-CONTRACTING
+  name: Contracting Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ContractingConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - ContractingConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-CONTRACTING
+  ontology_ref: ONT-MAR-TRE-CONTRACTING
+  name: Contracting Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ContractingDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-HIGHVOLATILITY
+  ontology_ref: ONT-MAR-VOL-HIGHVOLATILITY
+  name: High Volatility Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: HighVolatilityConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - HighVolatilityConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-HIGHVOLATILITY
+  ontology_ref: ONT-MAR-VOL-HIGHVOLATILITY
+  name: High Volatility Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: HighVolatilityDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-LOWVOLATILITY
+  ontology_ref: ONT-MAR-VOL-LOWVOLATILITY
+  name: Low Volatility Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LowVolatilityConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - LowVolatilityConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-LOWVOLATILITY
+  ontology_ref: ONT-MAR-VOL-LOWVOLATILITY
+  name: Low Volatility Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LowVolatilityDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-COMPRESSION
+  ontology_ref: ONT-MAR-VOL-COMPRESSION
+  name: Compression Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: CompressionConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - CompressionConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-COMPRESSION
+  ontology_ref: ONT-MAR-VOL-COMPRESSION
+  name: Compression Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: CompressionDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-EXPANSION
+  ontology_ref: ONT-MAR-VOL-EXPANSION
+  name: Expansion Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ExpansionConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - ExpansionConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-EXPANSION
+  ontology_ref: ONT-MAR-VOL-EXPANSION
+  name: Expansion Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ExpansionDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-LONDON
+  ontology_ref: ONT-MAR-SES-LONDON
+  name: London Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LondonConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - LondonConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-LONDON
+  ontology_ref: ONT-MAR-SES-LONDON
+  name: London Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LondonDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-NEWYORK
+  ontology_ref: ONT-MAR-SES-NEWYORK
+  name: New York Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: NewYorkConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - NewYorkConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-NEWYORK
+  ontology_ref: ONT-MAR-SES-NEWYORK
+  name: New York Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: NewYorkDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-ASIA
+  ontology_ref: ONT-MAR-SES-ASIA
+  name: Asia Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: AsiaConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - AsiaConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-ASIA
+  ontology_ref: ONT-MAR-SES-ASIA
+  name: Asia Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: AsiaDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-LONDONCLOSE
+  ontology_ref: ONT-MAR-SES-LONDONCLOSE
+  name: London Close Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LondonCloseConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - LondonCloseConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-LONDONCLOSE
+  ontology_ref: ONT-MAR-SES-LONDONCLOSE
+  name: London Close Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: LondonCloseDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MAR-NYOPENKILLZONE
+  ontology_ref: ONT-MAR-SES-NYOPENKILLZONE
+  name: NY Open Killzone Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: NYOpenKillzoneConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - NYOpenKillzoneConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MAR-NYOPENKILLZONE
+  ontology_ref: ONT-MAR-SES-NYOPENKILLZONE
+  name: NY Open Killzone Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: NYOpenKillzoneDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-BIDIMBALANCE
+  ontology_ref: ONT-ORD-IMB-BIDIMBALANCE
+  name: Bid Imbalance Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BidImbalanceConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - BidImbalanceConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-BIDIMBALANCE
+  ontology_ref: ONT-ORD-IMB-BIDIMBALANCE
+  name: Bid Imbalance Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BidImbalanceDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-ASKIMBALANCE
+  ontology_ref: ONT-ORD-IMB-ASKIMBALANCE
+  name: Ask Imbalance Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: AskImbalanceConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - AskImbalanceConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-ASKIMBALANCE
+  ontology_ref: ONT-ORD-IMB-ASKIMBALANCE
+  name: Ask Imbalance Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: AskImbalanceDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-STACKEDIMBALANCE
+  ontology_ref: ONT-ORD-IMB-STACKEDIMBALANCE
+  name: Stacked Imbalance Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: StackedImbalanceConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - StackedImbalanceConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-STACKEDIMBALANCE
+  ontology_ref: ONT-ORD-IMB-STACKEDIMBALANCE
+  name: Stacked Imbalance Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: StackedImbalanceDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-PASSIVEBUYERS
+  ontology_ref: ONT-ORD-ABS-PASSIVEBUYERS
+  name: Passive Buyers Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PassiveBuyersConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PassiveBuyersConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-PASSIVEBUYERS
+  ontology_ref: ONT-ORD-ABS-PASSIVEBUYERS
+  name: Passive Buyers Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PassiveBuyersDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-PASSIVESELLERS
+  ontology_ref: ONT-ORD-ABS-PASSIVESELLERS
+  name: Passive Sellers Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PassiveSellersConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PassiveSellersConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-PASSIVESELLERS
+  ontology_ref: ONT-ORD-ABS-PASSIVESELLERS
+  name: Passive Sellers Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PassiveSellersDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-ICEBERG
+  ontology_ref: ONT-ORD-ABS-ICEBERG
+  name: Iceberg Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: IcebergConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - IcebergConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-ICEBERG
+  ontology_ref: ONT-ORD-ABS-ICEBERG
+  name: Iceberg Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: IcebergDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-DELTADIVERGENCE
+  ontology_ref: ONT-ORD-EXH-DELTADIVERGENCE
+  name: Delta Divergence Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: DeltaDivergenceConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - DeltaDivergenceConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-DELTADIVERGENCE
+  ontology_ref: ONT-ORD-EXH-DELTADIVERGENCE
+  name: Delta Divergence Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: DeltaDivergenceDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-ORD-VOLUMEDIVERGENCE
+  ontology_ref: ONT-ORD-EXH-VOLUMEDIVERGENCE
+  name: Volume Divergence Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: VolumeDivergenceConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - VolumeDivergenceConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-ORD-VOLUMEDIVERGENCE
+  ontology_ref: ONT-ORD-EXH-VOLUMEDIVERGENCE
+  name: Volume Divergence Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: VolumeDivergenceDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-TRENDFOLLOWING
+  ontology_ref: ONT-MET-DIR-TRENDFOLLOWING
+  name: Trend Following Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: TrendFollowingConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - TrendFollowingConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-TRENDFOLLOWING
+  ontology_ref: ONT-MET-DIR-TRENDFOLLOWING
+  name: Trend Following Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: TrendFollowingDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-MOMENTUM
+  ontology_ref: ONT-MET-DIR-MOMENTUM
+  name: Momentum Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MomentumConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - MomentumConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-MOMENTUM
+  ontology_ref: ONT-MET-DIR-MOMENTUM
+  name: Momentum Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MomentumDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-BREAKOUT
+  ontology_ref: ONT-MET-DIR-BREAKOUT
+  name: Breakout Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BreakoutConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - BreakoutConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-BREAKOUT
+  ontology_ref: ONT-MET-DIR-BREAKOUT
+  name: Breakout Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: BreakoutDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-MEANREVERSION
+  ontology_ref: ONT-MET-STA-MEANREVERSION
+  name: Mean Reversion Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MeanReversionConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - MeanReversionConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-MEANREVERSION
+  ontology_ref: ONT-MET-STA-MEANREVERSION
+  name: Mean Reversion Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MeanReversionDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-STATISTICALARBITRAGE
+  ontology_ref: ONT-MET-STA-STATISTICALARBITRAGE
+  name: Statistical Arbitrage Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: StatisticalArbitrageConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - StatisticalArbitrageConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-STATISTICALARBITRAGE
+  ontology_ref: ONT-MET-STA-STATISTICALARBITRAGE
+  name: Statistical Arbitrage Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: StatisticalArbitrageDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-PAIRSTRADING
+  ontology_ref: ONT-MET-STA-PAIRSTRADING
+  name: Pairs Trading Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PairsTradingConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - PairsTradingConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-PAIRSTRADING
+  ontology_ref: ONT-MET-STA-PAIRSTRADING
+  name: Pairs Trading Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: PairsTradingDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-ICT
+  ontology_ref: ONT-MET-INS-ICT
+  name: ICT Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ICTConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - ICTConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-ICT
+  ontology_ref: ONT-MET-INS-ICT
+  name: ICT Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: ICTDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-SMC
+  ontology_ref: ONT-MET-INS-SMC
+  name: SMC Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SMCConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - SMCConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-SMC
+  ontology_ref: ONT-MET-INS-SMC
+  name: SMC Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: SMCDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-WYCKOFF
+  ontology_ref: ONT-MET-INS-WYCKOFF
+  name: Wyckoff Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: WyckoffConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - WyckoffConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-WYCKOFF
+  ontology_ref: ONT-MET-INS-WYCKOFF
+  name: Wyckoff Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: WyckoffDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-AUCTIONMARKETTHEORY
+  ontology_ref: ONT-MET-INS-AUCTIONMARKETTHEORY
+  name: Auction Market Theory Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: AuctionMarketTheoryConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - AuctionMarketTheoryConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-AUCTIONMARKETTHEORY
+  ontology_ref: ONT-MET-INS-AUCTIONMARKETTHEORY
+  name: Auction Market Theory Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: AuctionMarketTheoryDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-VOLUMEPROFILE
+  ontology_ref: ONT-MET-MIC-VOLUMEPROFILE
+  name: Volume Profile Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: VolumeProfileConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - VolumeProfileConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-VOLUMEPROFILE
+  ontology_ref: ONT-MET-MIC-VOLUMEPROFILE
+  name: Volume Profile Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: VolumeProfileDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-MARKETPROFILE
+  ontology_ref: ONT-MET-MIC-MARKETPROFILE
+  name: Market Profile Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MarketProfileConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - MarketProfileConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-MARKETPROFILE
+  ontology_ref: ONT-MET-MIC-MARKETPROFILE
+  name: Market Profile Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: MarketProfileDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: CON-MET-ORDERFLOW
+  ontology_ref: ONT-MET-MIC-ORDERFLOW
+  name: Order Flow Concept
+  type: Concept
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: OrderFlowConceptPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces:
+    - OrderFlowConceptDTO
+    events_emitted:
+    - ConceptDetectedEvent
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Geometry
+  - Structure
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: DET-MET-ORDERFLOW
+  ontology_ref: ONT-MET-MIC-ORDERFLOW
+  name: Order Flow Detector
+  type: Detector
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 9
+    component: Concept Platform
+    registry: Concept Registry
+    plugin: OrderFlowDetectorPlugin
+  contracts:
+    consumes:
+    - GeometrySnapshotDTO
+    produces: []
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 10ms
+    memory_budget: 25MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-EMAPULLBACK
+  name: EMA Pullback Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: EMAPullbackStrategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-EMAPULLBACK-ENTRY
+  name: EMA Pullback Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: EMAPullbackEntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-EMAPULLBACK-STOP
+  name: EMA Pullback Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: EMAPullbackStopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-EMAPULLBACK-TARGET
+  name: EMA Pullback Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: EMAPullbackTargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-EMAPULLBACK-SCALING
+  name: EMA Pullback Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: EMAPullbackScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-EMAPULLBACK-EXIT
+  name: EMA Pullback Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: EMAPullbackExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-EMAPULLBACK-VALIDATION
+  name: EMA Pullback Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: EMAPullbackValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-DONCHIANBREAKOUT
+  name: Donchian Breakout Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: DonchianBreakoutStrategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-DONCHIANBREAKOUT-ENTRY
+  name: Donchian Breakout Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: DonchianBreakoutEntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-DONCHIANBREAKOUT-STOP
+  name: Donchian Breakout Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: DonchianBreakoutStopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-DONCHIANBREAKOUT-TARGET
+  name: Donchian Breakout Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: DonchianBreakoutTargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-DONCHIANBREAKOUT-SCALING
+  name: Donchian Breakout Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: DonchianBreakoutScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-DONCHIANBREAKOUT-EXIT
+  name: Donchian Breakout Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: DonchianBreakoutExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-DONCHIANBREAKOUT-VALIDATION
+  name: Donchian Breakout Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: DonchianBreakoutValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-RSI-2
+  name: RSI-2 Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: RSI-2Strategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-RSI-2-ENTRY
+  name: RSI-2 Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: RSI-2EntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-RSI-2-STOP
+  name: RSI-2 Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: RSI-2StopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-RSI-2-TARGET
+  name: RSI-2 Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: RSI-2TargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-RSI-2-SCALING
+  name: RSI-2 Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: RSI-2ScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-RSI-2-EXIT
+  name: RSI-2 Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: RSI-2ExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-RSI-2-VALIDATION
+  name: RSI-2 Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: RSI-2ValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-VWAPREVERSION
+  name: VWAP Reversion Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: VWAPReversionStrategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-VWAPREVERSION-ENTRY
+  name: VWAP Reversion Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: VWAPReversionEntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-VWAPREVERSION-STOP
+  name: VWAP Reversion Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: VWAPReversionStopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-VWAPREVERSION-TARGET
+  name: VWAP Reversion Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: VWAPReversionTargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-VWAPREVERSION-SCALING
+  name: VWAP Reversion Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: VWAPReversionScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-VWAPREVERSION-EXIT
+  name: VWAP Reversion Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: VWAPReversionExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-VWAPREVERSION-VALIDATION
+  name: VWAP Reversion Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: VWAPReversionValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-ORDERBLOCKENTRY
+  name: Order Block Entry Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: OrderBlockEntryStrategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-ORDERBLOCKENTRY-ENTRY
+  name: Order Block Entry Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: OrderBlockEntryEntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-ORDERBLOCKENTRY-STOP
+  name: Order Block Entry Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: OrderBlockEntryStopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-ORDERBLOCKENTRY-TARGET
+  name: Order Block Entry Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: OrderBlockEntryTargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-ORDERBLOCKENTRY-SCALING
+  name: Order Block Entry Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: OrderBlockEntryScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-ORDERBLOCKENTRY-EXIT
+  name: Order Block Entry Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: OrderBlockEntryExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-ORDERBLOCKENTRY-VALIDATION
+  name: Order Block Entry Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: OrderBlockEntryValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-SESSIONSWEEP
+  name: Session Sweep Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: SessionSweepStrategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-SESSIONSWEEP-ENTRY
+  name: Session Sweep Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: SessionSweepEntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-SESSIONSWEEP-STOP
+  name: Session Sweep Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: SessionSweepStopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-SESSIONSWEEP-TARGET
+  name: Session Sweep Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: SessionSweepTargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-SESSIONSWEEP-SCALING
+  name: Session Sweep Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: SessionSweepScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-SESSIONSWEEP-EXIT
+  name: Session Sweep Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: SessionSweepExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-SESSIONSWEEP-VALIDATION
+  name: Session Sweep Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: SessionSweepValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-TURTLESOUP
+  name: Turtle Soup Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: TurtleSoupStrategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-TURTLESOUP-ENTRY
+  name: Turtle Soup Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: TurtleSoupEntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-TURTLESOUP-STOP
+  name: Turtle Soup Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: TurtleSoupStopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-TURTLESOUP-TARGET
+  name: Turtle Soup Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: TurtleSoupTargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-TURTLESOUP-SCALING
+  name: Turtle Soup Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: TurtleSoupScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-TURTLESOUP-EXIT
+  name: Turtle Soup Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: TurtleSoupExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-TURTLESOUP-VALIDATION
+  name: Turtle Soup Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: TurtleSoupValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: STR-FVGMITIGATION
+  name: FVG Mitigation Strategy
+  type: Strategy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Strategy Registry
+    plugin: FVGMitigationStrategy
+  contracts:
+    consumes:
+    - MethodologyResultDTO
+    produces:
+    - RecommendationDTO
+    events_emitted:
+    - RecommendationGeneratedEvent
+  data_requirements:
+  - OHLC
+  - Concepts
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources:
+  - Concepts
+  - Geometry
+  computational_profile:
+    latency_budget: 50ms
+    memory_budget: 100MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-FVGMITIGATION-ENTRY
+  name: FVG Mitigation Entry Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: FVGMitigationEntryPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-FVGMITIGATION-STOP
+  name: FVG Mitigation Stop Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: FVGMitigationStopPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-FVGMITIGATION-TARGET
+  name: FVG Mitigation Target Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: FVGMitigationTargetPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-FVGMITIGATION-SCALING
+  name: FVG Mitigation Scaling Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: FVGMitigationScalingPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-FVGMITIGATION-EXIT
+  name: FVG Mitigation Exit Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: FVGMitigationExitPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned
+- id: POL-FVGMITIGATION-VALIDATION
+  name: FVG Mitigation Validation Policy
+  type: Policy
+  versions:
+    schema: 1.0.0
+    implementation: 1.0.0
+    registry: 1.0.0
+  ownership:
+    platform: Platform 11
+    component: Strategy Platform
+    registry: Policy Registry
+    plugin: FVGMitigationValidationPolicy
+  contracts:
+    consumes:
+    - ExecutionContextDTO
+    produces:
+    - PolicyResultDTO
+    events_emitted: []
+  data_requirements:
+  - OHLC
+  markets:
+  - Forex
+  - Crypto
+  - Futures
+  evidence_sources: []
+  computational_profile:
+    latency_budget: 5ms
+    memory_budget: 10MB
+    incremental: true
+    replay: Supported
+  status:
+    design: Approved
+    implementation: Planned

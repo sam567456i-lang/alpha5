@@ -535,14 +535,9 @@ Every release must support:
 No silent incompatibilities.
 
 ### 43. Documentation Synchronization Constitution
-Every code change affecting:
-- Registry
-- DTO
-- Config
-- CLI
-- Pipeline
-- Strategy
-must update documentation before merge.
+Every approved architectural, governance, registry, DTO, interface, plugin, methodology, platform, testing, or implementation changeâ€”regardless of sizeâ€”must trigger automatic documentation impact analysis. All affected documents must be updated before certification and freeze. No code, registry, or architecture change may be considered complete while documentation is out of sync.
+
+Project OS will automatically run a Documentation Impact Report and Documentation Audit to mathematically enforce this constraint.
 
 ### 44. Benchmark Governance Constitution
 Every strategy benchmark should include:
@@ -628,3 +623,64 @@ After every phase, you must execute and explicitly log the following 10 mandator
 10. Production Readiness Audit
 
 Only when all 10 audits pass can the phase be legally marked as **Phase Accepted**.
+
+## Section 7: Legacy Component Classification & Preservation
+
+### 51. Classification States
+When a new platform or phase introduces overlapping functionality with existing production code, Project OS must classify the existing component into one of six states:
+- **Retain**: Component remains in the repository unchanged because it still serves an existing purpose but is not involved in the current work.
+- **Reuse**: Component works correctly, passes governance, and has correct DTOs, and is actively reused in the new implementation. Keep frozen. No rewrite permitted.
+- **Extend**: Component exists but is missing tests, docs, or registry entries. Keep implementation, add missing pieces, certify, and freeze.
+- **Migrate**: Component logic is correct but resides in the wrong platform boundary. Move ownership while preserving implementation.
+- **Deprecate**: Redundant implementation superseded by a canonical engine. Scheduled for removal after successful certification of replacement.
+- **Remove**: Immediate deletion is prohibited. A component may be removed only after:
+    1. Project OS classifies it as removable with evidence.
+    2. No active dependencies remain.
+    3. A replacement (if required) has been certified.
+    4. Human approval has been granted.
+    5. The removal passes repository certification.
+
+### 52. Evidence-Based Classification
+Every classification must include structured evidence. A classification is automatically rejected if it lacks:
+- Repository path
+- Registry ID
+- Capability ID
+- Platform
+- Reason
+- Dependencies
+- Risk
+- Classification Confidence (e.g., 0.97). If confidence is low, human review is mandatory.
+
+### 53. Mandatory Impact Analysis
+Every classification should automatically generate a complete impact analysis:
+- Affected Platforms
+- Affected DTOs
+- Affected Registries
+- Affected Tests
+- Affected Documentation
+- Affected Dashboards
+- Affected AI
+- Affected Methodologies
+- Affected Plugins
+This analysis becomes part of the mandatory approval package.
+
+### 54. Compatibility Verification & Migration Safeguard
+For components classified as **Migrate**, the following strict sequence must be followed:
+`Old Component -> New Component -> Behavior Comparison -> Certification -> Migration`
+Before migration, verify that the behavior remains equivalent. Do not migrate solely because the architecture says so.
+
+### 55. Preservation of History
+For every migrated or deprecated component, a permanent audit trail must be recorded:
+- Original location
+- New location
+- Migration reason
+- Migration date
+- Certification ID
+- Approval reference
+This ensures working systems are not broken during platform transitions.
+
+### Rule 38 — Institutional Methodology Synthesis
+Platform 11 shall never generate trading opportunities, recommendations, entries, exits, or risk decisions. It produces only a synthesized market interpretation.
+
+### Rule 39 — Mandatory Phase Exit Pipeline
+No platform, subsystem, methodology, registry, governance component, or Project OS module may be considered complete until the Phase Exit Governance Pipeline has successfully passed and a Phase Exit Manifest and Freeze Report have been generated.

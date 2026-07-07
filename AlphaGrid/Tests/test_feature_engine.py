@@ -7,7 +7,7 @@ from Backend.features.engine import FeatureEngine
 from Backend.features.registry import FeatureRegistry
 from Backend.features.base import AbstractFeature
 from Backend.features.keltner import KeltnerChannelFeature
-from Backend.reference.legacy.features.volatility import ATRFeature
+from Backend.features.volatility import ATRFeature
 
 # Dummy features for testing DAG execution
 class DummyEMA(AbstractFeature):

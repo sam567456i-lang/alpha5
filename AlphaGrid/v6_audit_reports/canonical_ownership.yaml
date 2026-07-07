@@ -1,0 +1,15 @@
+Duplicate_Concepts:
+- concept: Liquidity Sweeps
+  current_locations:
+  - price_geometry\liquidity_engine.py
+  - market_intelligence\liquidity_engine.py
+  action: MERGE
+  canonical_owner: price_geometry\liquidity_engine.py
+- concept: Bollinger Bands
+  current_locations:
+  - features\bollinger.py
+  - features\bollinger_bands.py
+  - features\bollinger_generator.py
+  - indicator_engine\volatility\bollinger.py
+  action: MERGE
+  canonical_owner: indicator_engine\volatility\bollinger.py

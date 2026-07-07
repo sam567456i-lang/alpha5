@@ -1,99 +1,31 @@
-# AlphaGrid Master Roadmap (Auto-Generated)
+# AlphaGrid Master Roadmap (v25)
 
-This document is generated from Governance/master_capability_registry.yaml. Do not edit manually.
+## Current Status: Governance Frozen, E2E Certification Pending (Stage 1)
+*As of the latest repository audit, the Governance and Taxonomy layers are strictly implemented. We are currently executing the Universal Switch System and E2E Certification gates before any further platform logic is implemented.*
 
-## Registered Capabilities
-- **ftr-ohlcv**: OHLCV (Planned)
-- **ftr-candlebody**: CandleBody (Planned)
-- **ftr-upperwick**: UpperWick (Planned)
-- **ftr-lowerwick**: LowerWick (Planned)
-- **ftr-bodyratio**: BodyRatio (Planned)
-- **geo-pivot**: Pivot (Planned)
-- **geo-swing**: Swing (Planned)
-- **geo-range**: Range (Planned)
-- **geo-channel**: Channel (Planned)
-- **con-trend**: Trend (Planned)
-- **con-momentum**: Momentum (Planned)
-- **con-liquidity**: Liquidity (Planned)
-- **con-structure**: Structure (Planned)
-- **meth-trendfollowing**: Trend Following (Planned)
-- **meth-meanreversion**: Mean Reversion (Planned)
-- **meth-smc**: SMC (Planned)
-- **meth-wyckoff**: Wyckoff (Planned)
-- **strat-canonicalvalidation**: CanonicalValidationStrategy (Planned)
-- **strat-macdtrend**: MACD Trend (Planned)
-- **strat-smacross**: SMA Cross (Planned)
-- **strat-supertrend**: SuperTrend (Planned)
-- **strat-ichimoku**: Ichimoku Cloud (Planned)
-- **strat-rsireversion**: RSI Reversion (Planned)
-- **int-macro**: Macro Intelligence (Planned)
-- **int-breadth**: Breadth Intelligence (Planned)
-- **int-calendar**: Economic Calendar Intelligence (Planned)
-- **int-ownership**: Institutional Ownership Intelligence (Planned)
-- **ftr-breadth**: Breadth Features (Planned)
-- **ftr-rs**: Relative Strength Features (Planned)
-- **ftr-currency**: Currency Strength Features (Planned)
-- **ftr-linreg**: Linear Regression (Planned)
-- **ftr-kama**: KAMA (Planned)
-- **ftr-hma**: Hull MA (Planned)
-- **ftr-ichimoku**: Ichimoku Cloud (Planned)
-- **con-breadth**: Breadth Expansion (Planned)
-- **con-rs**: Relative Strength (Planned)
-- **con-seasonality**: Seasonality (Planned)
-- **meth-breadth**: Breadth Methodology (Planned)
-- **meth-rs**: Relative Strength Methodology (Planned)
-- **meth-currency**: Currency Methodology (Planned)
-- **meth-seasonal**: Seasonal Methodology (Planned)
-- **ftr-rsi**: RSI Feature Generator (Planned)
-- **ftr-bollinger**: Bollinger Bands Generator (Planned)
-- **ftr-stochastic**: Stochastic Generator (Planned)
-- **ftr-vwap**: VWAP Feature Generator (Planned)
-- **ftr-keltner**: Keltner Channel Generator (Planned)
-- **ftr-atr**: ATR Feature Generator (Planned)
-- **con-extremum**: Extremum Concept Generator (Planned)
-- **sig-meanreversion**: Extremum Reversion Primitive (Planned)
-- **ftr-sr**: Support/Resistance Feature Generator (Planned)
-- **ftr-hlbreakout**: High/Low Breakout Feature Generator (Planned)
-- **ftr-volbreakout**: Volatility Breakout Feature Generator (Planned)
-- **con-breakout**: Breakout Concept Generator (Planned)
-- **meth-breakout**: Breakout Methodology (Planned)
-- **sig-breakout**: Breakout Primitive Signal Generator (Planned)
-- **strat-srbreakout**: S/R Breakout Strategy (Planned)
-- **strat-hlbreakout**: High/Low Breakout Strategy (Planned)
-- **strat-volbreakout**: Volatility Breakout Strategy (Planned)
-- **strat-macd-trend-legacy**: MACD Trend Strategy (Legacy) (Planned)
-- **strat-macd-momentum-canonical**: MACD Momentum Strategy (Canonical) (Planned)
-- **strat-roc-momentum-canonical**: ROC Momentum Strategy (Canonical) (Planned)
-- **con-momentum-semantic**: Momentum Semantic Concept (Planned)
-- **ftr-ppo-generator**: PPO Feature Generator (Planned)
-- **ftr-trix-generator**: TRIX Feature Generator (Planned)
-- **ftr-tsi-generator**: TSI Feature Generator (Planned)
-- **ftr-kst-generator**: KST Feature Generator (Planned)
-- **AN-ANALYSISCORE-001**: Analysis Core Analysis (Planned)
-- **AN-TREND-002**: Trend Analysis (Planned)
-- **AN-MOMENTUM-003**: Momentum Analysis (Planned)
-- **AN-VOLATILITY-004**: Volatility Analysis (Planned)
-- **AN-SUPPORTRESISTANCE-005**: Support/Resistance Analysis (Planned)
-- **AN-VOLUME-006**: Volume Analysis (Planned)
-- **AN-PRICEACTION-007**: Price Action Analysis (Planned)
-- **AN-CANDLESTICK-008**: Candlestick Analysis (Planned)
-- **AN-CHARTPATTERNS-009**: Chart Patterns Analysis (Planned)
-- **AN-MARKETSTRUCTURE-010**: Market Structure Analysis (Planned)
-- **AN-SMARTMONEY-011**: Smart Money Analysis (Planned)
-- **AN-LIQUIDITY-012**: Liquidity Analysis (Planned)
-- **AN-MARKETPROFILE-013**: Market Profile Analysis (Planned)
-- **AN-ORDERFLOW-014**: Order Flow Analysis (Planned)
-- **AN-QUANTITATIVE-015**: Quantitative Analysis (Planned)
-- **AN-STATISTICAL-016**: Statistical Analysis (Planned)
-- **AN-RELATIVESTRENGTH-017**: Relative Strength Analysis (Planned)
-- **AN-BREADTH-018**: Breadth Analysis (Planned)
-- **AN-CORRELATION-019**: Correlation Analysis (Planned)
-- **AN-INTERMARKET-020**: Intermarket Analysis (Planned)
-- **AN-MACRO-021**: Macro Analysis (Planned)
-- **AN-SEASONAL-022**: Seasonal Analysis (Planned)
-- **AN-FUNDAMENTAL-023**: Fundamental Analysis (Planned)
-- **AN-SENTIMENT-024**: Sentiment Analysis (Planned)
-- **AN-OPTIONS-025**: Options Analysis (Planned)
-- **AN-MACHINELEARNING-026**: Machine Learning Analysis (Planned)
-- **AN-AIANALYSIS-027**: AI Analysis Analysis (Planned)
-- **AN-EXTERNALANALYSIS-028**: External Analysis Analysis (Planned)
+## Stage 0: Repository Audit
+✅ **Completed**: Detected 216 capabilities, missing Universal Switches, missing E2E tests, and 230 open TODOs.
+
+## Stage 1: Master Checklist & Roadmap Update
+✅ **Completed**: You are reading the updated roadmap based on factual repository evidence.
+
+## Stage 2: Universal Switch System (Next)
+Create the centralized, registry-driven configuration `Docs/Governance/universal_switches.yaml`. This controls the execution lifecycle for every platform, family, capability, methodology, and research module dynamically.
+
+## Stage 3: E2E Certification Framework
+Establish the absolute CI exit gates. Scaffold the 30 defined certification domains. These tests must run successfully with actual data up to the newly implemented layers before any phase can be frozen.
+
+## Stage 4: Research & AI Laboratory
+Create the `Research/` directory. Strictly enforce the isolation rules: no production logic can ever depend on this directory. Implement the validation lifecycle (Experiment -> Validate -> Certify).
+
+## Stage 5: Governance Validation & Explicit Unlock
+Execute the final validation of switches, E2E tests, and isolation. Generate `Platform10_Unlock_Report.md`.
+
+## Stage 6+: Execution (Platforms 10-24)
+*Platform 10 (Concept Platform)*
+- Concept Engine (Trend Exhaustion, Premium Market, Liquidity Grab)
+*Platform 11 (Market State)*
+- Master Market State snapshot generation.
+*Platform 12 (Capability Orchestrator)*
+- Dynamic execution planning.
+*(See detailed architectural design for Platforms 13-24)*

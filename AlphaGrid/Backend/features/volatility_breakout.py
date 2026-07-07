@@ -1,10 +1,9 @@
-from __future__ import annotations
-from typing import TYPE_CHECKING
 import numpy as np
 import pandas as pd
 import hashlib
 import uuid
 from Backend.dtos.features import FeatureDTO
+from Shared.dtos.execution_context import ExecutionContext
 
 
 class VolatilityBreakoutFeatureGenerator:
@@ -50,12 +49,28 @@ class VolatilityBreakoutFeatureGenerator:
         payload = f"{upper_threshold}:{lower_threshold}:{upside_breakout}:{downside_breakout}"
         payload_hash = hashlib.md5(payload.encode()).hexdigest()
 
+        exec_ctx = ExecutionContext(
+            session_id="legacy",
+            trace_id=trace_id,
+            correlation_id=correlation_id,
+            instrument_id="TEST/USD",
+            environment="local",
+            runtime_mode="test",
+            exchange="TEST",
+            provider="TEST",
+            market="TEST",
+            timezone="UTC",
+            sequence_id=0,
+            is_replay=True,
+            build_version="1.0.0"
+        )
+        
         return FeatureDTO(
             id=f"{self.component_id}-{uuid.uuid4().hex[:8]}",
             schema_version="1.0.0",
+            owner="Feature",
             producer=self.component_id,
-            trace_id=trace_id,
-            correlation_id=correlation_id,
+            execution_context=exec_ctx,
             fingerprint=f"volbreakout-{self.atr_period}-{self.multiplier}",
             checksum=payload_hash,
             symbol=data.attrs.get('symbol', 'UNKNOWN'),

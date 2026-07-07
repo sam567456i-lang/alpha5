@@ -1,0 +1,14 @@
+status: Incomplete
+total_capabilities: 400
+implemented:
+- name: Session Engine
+  status: Implemented
+  tests: false
+- name: Breakout Strategy
+  status: Implemented
+  tests: true
+missing:
+- name: SMC Order Blocks
+  status: Ghost
+- name: Wyckoff Spring
+  status: Ghost

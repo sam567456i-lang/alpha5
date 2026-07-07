@@ -2,7 +2,7 @@ import yaml
 import sys
 
 def validate_registry():
-    registry_path = r'C:\Users\praka\.gemini\antigravity\brain\e5c38fbb-20c7-49d7-bb09-1233d320f032\master_capability_registry.yaml'
+    registry_path = 'master_capability_registry.yaml'
     
     try:
         with open(registry_path, 'r') as f:

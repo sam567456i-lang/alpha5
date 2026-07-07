@@ -845,3 +845,24 @@ Phase 16 is complete only when:
 - Documentation updated.
 - Capability Registry updated.
 - Production readiness verified.
+
+### 7.4 Stable Dependency Rule (Institutional Governance)
+Once a platform successfully passes the Phase Exit Gate and is marked as **Frozen**, it becomes a **Read-Only** Stable Dependency.
+No future platform may directly modify a frozen platform to change its behavior.
+
+Instead, if a modification is required, the following institutional process must be observed:
+1. **Architecture Change Request (ACR)**: A formal request detailing the needed change.
+2. **Repository Impact Analysis**: A scan identifying all downstream consumers that might break.
+3. **Classification**: Assessment of the ACR scope.
+4. **Human Approval**: The change must be explicitly approved.
+5. **Controlled Implementation**: The implementation of the change.
+6. **Recertification**: The platform's entire certification suite must be re-run and pass.
+7. **Freeze**: The platform is re-frozen.
+
+This guarantees that upstream foundational platforms remain unconditionally stable for downstream dependencies.
+
+### 7.5 Cross-Platform Contract Rule
+Each platform MUST publish an immutable contract (specifying its inputs, outputs, version, guarantees, and compatibility). Downstream platforms MUST depend ONLY on these published contracts, rather than any internal implementations of the upstream platform. This preserves platform purity, makes upgrades safer, and simplifies long-term maintenance.
+
+### 7.6 Platform Enhancement Policy
+The only legal way to modify a frozen platform is through the formal enhancement lifecycle: Frozen Platform -> Enhancement Proposal -> Repository Scan -> Legacy Classification -> Impact Analysis -> Human Approval -> Implementation -> Regression -> Phase Exit -> Freeze vN+1 -> Repository Evolution Record.

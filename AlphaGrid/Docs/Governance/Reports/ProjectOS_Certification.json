@@ -1,0 +1,18 @@
+{
+    "performance": {
+        "duration_seconds": 7.176292419433594,
+        "files_scanned": 1293
+    },
+    "robustness": {
+        "status": "PASS",
+        "capabilities_loaded": 201
+    },
+    "governance": {
+        "status": "PASS"
+    },
+    "determinism": {
+        "status": "PASS",
+        "matrix_generation_seconds": 1.1262435913085938,
+        "matrix_hash": 1335578711013017242
+    }
+}

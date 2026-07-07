@@ -1,0 +1,98 @@
+# Governance/registry/state_registry.yaml
+# Authoritative registry for Phase 4 Deterministic State Objects
+
+states:
+  SessionState:
+    version: 1
+    producer: SessionState
+    family: Base Context
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    description: "Tracks intraday session open, high, low, close, and volume."
+
+  TimeState:
+    version: 1
+    producer: TimeState
+    family: Base Context
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    description: "Tracks intraday time boundaries (premarket, regular, afterhours)."
+
+  CalendarState:
+    version: 1
+    producer: CalendarState
+    family: Base Context
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    description: "Tracks calendar boundaries (holidays, expiries, day of week)."
+
+  TrendState:
+    version: 1
+    producer: TrendState
+    family: Trend
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    dependencies:
+      - EMA
+      - ADX
+    description: "Determines the deterministic trend direction, strength, and phase."
+
+  MomentumState:
+    version: 1
+    producer: MomentumState
+    family: Momentum
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    dependencies:
+      - RSI
+      - MACD
+      - ROC
+    description: "Determines the absolute momentum vector and potential exhaustion points."
+
+  VolatilityState:
+    version: 1
+    producer: VolatilityState
+    family: Volatility
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    dependencies:
+      - ATR
+      - Bollinger Bands
+    description: "Determines the current volatility regime (expansion vs compression)."
+
+  VolumeState:
+    version: 1
+    producer: VolumeState
+    family: Volume
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    dependencies:
+      - Volume
+      - VWAP
+    description: "Determines relative volume participation and absorption boundaries."
+
+  MultiTimeframeState:
+    version: 1
+    producer: MultiTimeframeState
+    family: Context
+    incremental: true
+    replayable: true
+    snapshot: true
+    deterministic: true
+    dependencies:
+      - TrendState
+    description: "Evaluates trend alignment across multiple hierarchical timeframes."

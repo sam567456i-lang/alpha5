@@ -1,0 +1,13 @@
+notification_policies:
+- channels:
+  - Telegram
+  - Dashboard
+  markets:
+  - Crypto
+  methodologies:
+  - OrderFlow
+  - ICT
+  min_confidence: 0.9
+  policy_id: crypto_high_confidence
+  quiet_hours:
+  - 22:00-06:00

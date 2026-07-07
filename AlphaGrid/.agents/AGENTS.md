@@ -1,81 +1,78 @@
-# AlphaGrid AGENTS.md (Enforcement Document)
+# AlphaGrid Permanent Governance Directive
 
-> **NON-NEGOTIABLE REQUIREMENTS**
-> This document defines the strict, non-negotiable enforcement safeguards for all agent activity in the AlphaGrid workspace. 
+## Mandatory Architecture Continuity, Change Management, and Pre-Phase Validation
 
-## 1. Repository Safeguards (Mandatory Before Write)
-Before **every** write operation, you MUST print and verify:
-1. Repository root
-2. Active workspace
-3. Current working directory
-4. Git root (or explicitly state "not a Git repository")
-5. Branch
-6. Commit (or unavailable)
-7. Target file
-8. Existing file exists? (Yes/No)
-9. Operation type (Add / Merge / Replace)
-10. Backup created? (Yes/No)
+### Purpose
+This directive is permanently active for the AlphaGrid repository. Its objective is to ensure that **no architectural decision, capability, requirement, dependency, governance rule, roadmap update, implementation detail, or design discussion is ever forgotten, silently replaced, duplicated, or bypassed** during development.
 
-If the target path is outside `C:\Users\praka\Documents\Codex\2026-06-30\alphagrid-infinity-x-5-0-master\AlphaGrid`, abort immediately.
+---
 
-## 2. Workspace Rules
-- Always work against the user's local project as the single source of truth.
-- Do not rely on Git history, previous conversations, or assumed intended designs over the local codebase.
-- The repository behavior is determined only by the current local code executing successfully.
-- Do not assume previous runtime blockers remain unresolved. Rediscover the current repository state from the code.
+# Rule 1 — Architecture Is the Source of Truth
+Before performing **any implementation**, the repository must be considered the current source of truth. No implementation may rely only on recent conversation context. The entire architecture must always be reconstructed from repository documentation before work begins.
 
-## 3. Write Protection & Anti-Simulation Rules
-- **No Simulated Evidence**: Never generate simulated backtests, estimated runtimes, fabricated fingerprints, invented statistics, inferred PASS reports, or hypothetical coverage.
-- **No Placeholders**: Never leave TODOs, FIXME comments, placeholder methods, dummy providers, fake services, or mock execution. Every write must be production-ready code.
-- **No Fast-Fail Hacks**: Never introduce a fail-fast exception, synthetic dependency, or workaround solely to advance execution. Every piece of production code must be justified by an actual runtime failure.
+# Rule 2 — Mandatory Pre-Phase Repository Review
+Before starting **every platform**, **every phase**, **every methodology wave**, **every plugin**, **every refactor**, **every audit**, or **every implementation**, the AI must perform a mandatory repository review of all core Governance, Project Bible, Roadmap, and Registry documents. Implementation is forbidden until this review is complete.
 
-## 4. Mandatory Execution Gates
-- **Continuous Runtime Recovery**: Resume from the last verified runtime state; do not blindly restart.
-- **First Failure Rule**: Stop immediately at the first runtime failure. Never patch multiple failures in one iteration. Fix only the first blocker, then execute again.
-- **Execution Policy**:
-  1. Execute the real repository.
-  2. Use the canonical production entry point.
-  3. Stop immediately at the first failure.
-  4. Fix ONLY that blocker.
-  5. Restart execution. Repeat.
+# Rule 3 — Continuous Architecture Memory
+Every architectural change must be permanently recorded. Nothing may exist only in conversation. Every decision must become repository knowledge.
 
-## 5. Required Governance Documents
-You must strictly abide by the rules defined in the following separated documents:
-1. **`architecture_bible.md`**: Architecture, Layer rules, DTO contracts, Dependency rules.
-2. **`Docs/master_ai_coding_constitution.md`**: Coding rules, Testing rules, Evidence rules, Review rules.
-3. **`Docs/master_implementation_constitution.md`**: Migration, Rollback, Release, Freeze policies.
+# Rule 4 — Architecture Change Log
+Maintain a permanent architecture history in `Docs/Governance/Architecture_Change_Log.md`. Nothing changes without an entry containing Date, Decision ID, Summary, Reason, Evidence, Files affected, Risk assessment, and Approval status.
 
-## 6. Canonical Repository Rule
+# Rule 5 — Repository Evolution Record
+Every implementation updates the Repository Evolution Record, including new/modified/deprecated capabilities, DTOs, plugins, and phase completion.
 
-The ONLY canonical project root is:
+# Rule 6 — Mandatory Impact Analysis
+Before changing anything the AI must determine dependencies, what consumes/produces it, and what downstream platforms/tests change. If impact is unknown, implementation stops.
 
-C:\Users\praka\Documents\Codex\2026-06-30\alphagrid-infinity-x-5-0-master\AlphaGrid
+# Rule 7 — Duplicate Prevention
+Before adding anything the AI must verify it doesn't partially/fully exist, have a different owner, or duplicate documentation.
 
-All project assets—including source code, documentation, registries, roadmaps, governance documents, evidence, ADRs, RFCs, templates, scripts, and tests—must be created, modified, and stored directly inside this repository.
+# Rule 8 — Missing Capability Detection
+Every implementation must compare the Current repository vs Canonical architecture. Any missing capability must be recorded.
 
-Do NOT create or maintain project copies in:
-- C:\Users\praka\.gemini\
-- C:\Users\praka\.gemini\antigravity\
-- C:\Users\praka\.gemini\antigravity\brain\
-- C:\Users\praka\.gemini\antigravity\scratch\
-- Any other temporary workspace.
+# Rule 9 — Capability Ownership
+Every capability must have exactly one owner. No capability may have multiple owners.
 
-If the active workspace is not the canonical repository, STOP and request that the correct repository be opened before making any project changes.
+# Rule 10 — Mandatory Completion Checklist
+Before every implementation complete the mandatory checklist (Architecture, Repository, Governance, Implementation, Validation, Completion).
 
-There must be exactly ONE source of truth.
+# Rule 11 — No Forgotten Changes
+Before every new task the AI must review the latest Architecture Change Log, Repository Evolution Record, Freeze, Phase Exit, Platform docs, and Registries.
 
-## 7. Strict Architectural Governance
+# Rule 12 — End-to-End Validation
+After every completed phase, the entire implemented pipeline must execute and be validated through regression testing.
 
-**Architecture Decision Record (ADR) Policy:**
-- No new architectural layer may be introduced without an approved Architecture Decision Record demonstrating why existing layers cannot satisfy the requirement.
-- The repository infrastructure is now feature-complete. Future work must deliver trading capabilities, not additional architectural layers.
+# Rule 13 — Wave Validation
+Every methodology wave follows strict progression from Planning through Implementation, Cross-Wave Regression, Documentation, and Freeze.
 
-**Dependency Hierarchy Constraint:**
-The canonical dependency graph for all components must strictly flow downwards as follows:
-`Market Data -> Math Core -> Indicator Engine -> Feature Generators -> Concepts -> Methodologies -> Signals -> Strategies`
-Strategies must never instantiate indicators directly. Strategies rely purely on semantic building blocks (concepts, methodologies, signals).
+# Rule 14 — Architecture Drift Prevention
+The AI must continuously compare Architecture, Documentation, Repository, Registries, DTOs, and Implementation. Any inconsistency must be reported immediately.
 
-**Capability Completion Rule:**
-No new capability reaches "Complete" until it satisfies all 7 mandatory gates:
-`Capability -> Registry -> Implementation -> Validation -> Documentation -> Benchmark -> Evidence -> Freeze`
-Partially implemented features without validation, documentation, and evidence are forbidden.
+# Rule 15 — Never Forget Principle
+At the beginning of every implementation the AI must assume: "I may have forgotten something." It must reconstruct repository knowledge by reviewing documentation before writing any code.
+
+# Rule 16 — Project Completion Checklist
+Maintain a living document `Docs/Governance/Master_Project_Completion_Checklist.md`. Every capability in AlphaGrid must appear exactly once.
+
+# Rule 17 — Mandatory Audit Before Every Phase
+Before beginning any new phase, ProjectOS must automatically execute all Integrity, Architecture, Duplicate Detection, and Evolution reviews.
+
+# Final Principle
+AlphaGrid evolves by **controlled extension**, never by forgotten conversations, undocumented decisions, duplicated capabilities, or silent architectural drift. Every decision is recorded. Every change is traceable. Every implementation is reviewed. Every phase begins with reconstruction of repository knowledge. Every phase ends with certification, documentation synchronization, and immutable history.
+
+# Rule 18 — Foundation Preservation & Governance
+This directive is mandatory for all future AlphaGrid development.
+
+1. **Foundation Is Permanent**: The introduction of the Ontology, Registries, and Governance Layer does NOT replace or redesign the existing Foundation Layer (API, Database, Plugin SDK, Event Bus, etc.).
+2. **Architecture Layering**:
+   - Governance Layer (Ontology, Registries, Audit, Certification, Lifecycle)
+   - Platform Layer (P0 - P22)
+   - Foundation Layer (API, Database, Plugin SDK, Event Bus, DTOs, Replay, Testing)
+3. **Plugin Framework**: The Plugin SDK remains the canonical implementation. Do not rewrite it. Only extend plugins with governance metadata (ontology_id, capability_id, version, lifecycle, certification_state, dependency_list).
+4. **API Policy**: APIs expose platform capabilities but never implement business logic.
+5. **Database Policy**: Existing database structures remain. Governance only enriches them (e.g. Audit History, Replay Runs).
+6. **Event Bus Policy**: The Event Bus implementation remains unchanged. Governance only formalizes event definitions.
+7. **Foundation Freeze**: The Foundation Layer is a governed subsystem. Modifications require an ADR, Regression Validation, and Human Approval.
+8. **Universal Audit Structure**: The repository audit must permanently contain four independent sections: Foundation Audit, Platform Audit, Capability Audit, and Integration Audit. The Foundation Audit must independently score API, Database, Plugin SDK, DTO, Event Bus, Replay, DI, Logging, Config, and Caching.
+

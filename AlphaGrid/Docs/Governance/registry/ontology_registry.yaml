@@ -1,0 +1,421 @@
+entries:
+- id: ONT-LIQ-LIQ-PDH
+  domain: Liquidity
+  category: Liquidity Objects
+  name: PDH
+  aliases:
+  - PDH
+  - PDH Concept
+- id: ONT-LIQ-LIQ-PDL
+  domain: Liquidity
+  category: Liquidity Objects
+  name: PDL
+  aliases:
+  - PDL
+  - PDL Concept
+- id: ONT-LIQ-LIQ-PWH
+  domain: Liquidity
+  category: Liquidity Objects
+  name: PWH
+  aliases:
+  - PWH
+  - PWH Concept
+- id: ONT-LIQ-LIQ-PWL
+  domain: Liquidity
+  category: Liquidity Objects
+  name: PWL
+  aliases:
+  - PWL
+  - PWL Concept
+- id: ONT-LIQ-LIQ-PMH
+  domain: Liquidity
+  category: Liquidity Objects
+  name: PMH
+  aliases:
+  - PMH
+  - PMH Concept
+- id: ONT-LIQ-LIQ-PML
+  domain: Liquidity
+  category: Liquidity Objects
+  name: PML
+  aliases:
+  - PML
+  - PML Concept
+- id: ONT-LIQ-LIQ-EQH
+  domain: Liquidity
+  category: Liquidity Objects
+  name: EQH
+  aliases:
+  - EQH
+  - EQH Concept
+- id: ONT-LIQ-LIQ-EQL
+  domain: Liquidity
+  category: Liquidity Objects
+  name: EQL
+  aliases:
+  - EQL
+  - EQL Concept
+- id: ONT-LIQ-LIQ-SWINGHIGH
+  domain: Liquidity
+  category: Liquidity Objects
+  name: Swing High
+  aliases:
+  - Swing High
+  - Swing High Concept
+- id: ONT-LIQ-LIQ-SWINGLOW
+  domain: Liquidity
+  category: Liquidity Objects
+  name: Swing Low
+  aliases:
+  - Swing Low
+  - Swing Low Concept
+- id: ONT-LIQ-LIQ-SWEEP
+  domain: Liquidity
+  category: Liquidity Events
+  name: Sweep
+  aliases:
+  - Sweep
+  - Sweep Concept
+- id: ONT-LIQ-LIQ-STOPHUNT
+  domain: Liquidity
+  category: Liquidity Events
+  name: Stop Hunt
+  aliases:
+  - Stop Hunt
+  - Stop Hunt Concept
+- id: ONT-LIQ-LIQ-MSS
+  domain: Liquidity
+  category: Liquidity Events
+  name: MSS
+  aliases:
+  - MSS
+  - MSS Concept
+- id: ONT-LIQ-LIQ-BOS
+  domain: Liquidity
+  category: Liquidity Events
+  name: BOS
+  aliases:
+  - BOS
+  - BOS Concept
+- id: ONT-LIQ-LIQ-CHOCH
+  domain: Liquidity
+  category: Liquidity Events
+  name: CHOCH
+  aliases:
+  - CHOCH
+  - CHOCH Concept
+- id: ONT-LIQ-LIQ-INDUCEMENT
+  domain: Liquidity
+  category: Liquidity Events
+  name: Inducement
+  aliases:
+  - Inducement
+  - Inducement Concept
+- id: ONT-LIQ-LIQ-JUDASSWING
+  domain: Liquidity
+  category: Liquidity Events
+  name: Judas Swing
+  aliases:
+  - Judas Swing
+  - Judas Swing Concept
+- id: ONT-LIQ-LIQ-TURTLESOUP
+  domain: Liquidity
+  category: Liquidity Events
+  name: Turtle Soup
+  aliases:
+  - Turtle Soup
+  - Turtle Soup Concept
+- id: ONT-LIQ-LIQ-FVG
+  domain: Liquidity
+  category: Liquidity Footprints
+  name: FVG
+  aliases:
+  - FVG
+  - FVG Concept
+- id: ONT-LIQ-LIQ-IFVG
+  domain: Liquidity
+  category: Liquidity Footprints
+  name: IFVG
+  aliases:
+  - IFVG
+  - IFVG Concept
+- id: ONT-LIQ-LIQ-ORDERBLOCK
+  domain: Liquidity
+  category: Liquidity Footprints
+  name: Order Block
+  aliases:
+  - Order Block
+  - Order Block Concept
+- id: ONT-LIQ-LIQ-BREAKER
+  domain: Liquidity
+  category: Liquidity Footprints
+  name: Breaker
+  aliases:
+  - Breaker
+  - Breaker Concept
+- id: ONT-LIQ-LIQ-MITIGATION
+  domain: Liquidity
+  category: Liquidity Footprints
+  name: Mitigation
+  aliases:
+  - Mitigation
+  - Mitigation Concept
+- id: ONT-LIQ-LIQ-LIQUIDITYVOID
+  domain: Liquidity
+  category: Liquidity Footprints
+  name: Liquidity Void
+  aliases:
+  - Liquidity Void
+  - Liquidity Void Concept
+- id: ONT-LIQ-LIQ-BPR
+  domain: Liquidity
+  category: Liquidity Footprints
+  name: BPR
+  aliases:
+  - BPR
+  - BPR Concept
+- id: ONT-MAR-TRE-UPTREND
+  domain: Market Structure
+  category: Trend
+  name: Uptrend
+  aliases:
+  - Uptrend
+  - Uptrend Concept
+- id: ONT-MAR-TRE-DOWNTREND
+  domain: Market Structure
+  category: Trend
+  name: Downtrend
+  aliases:
+  - Downtrend
+  - Downtrend Concept
+- id: ONT-MAR-TRE-RANGING
+  domain: Market Structure
+  category: Trend
+  name: Ranging
+  aliases:
+  - Ranging
+  - Ranging Concept
+- id: ONT-MAR-TRE-EXPANDING
+  domain: Market Structure
+  category: Trend
+  name: Expanding
+  aliases:
+  - Expanding
+  - Expanding Concept
+- id: ONT-MAR-TRE-CONTRACTING
+  domain: Market Structure
+  category: Trend
+  name: Contracting
+  aliases:
+  - Contracting
+  - Contracting Concept
+- id: ONT-MAR-VOL-HIGHVOLATILITY
+  domain: Market Structure
+  category: Volatility
+  name: High Volatility
+  aliases:
+  - High Volatility
+  - High Volatility Concept
+- id: ONT-MAR-VOL-LOWVOLATILITY
+  domain: Market Structure
+  category: Volatility
+  name: Low Volatility
+  aliases:
+  - Low Volatility
+  - Low Volatility Concept
+- id: ONT-MAR-VOL-COMPRESSION
+  domain: Market Structure
+  category: Volatility
+  name: Compression
+  aliases:
+  - Compression
+  - Compression Concept
+- id: ONT-MAR-VOL-EXPANSION
+  domain: Market Structure
+  category: Volatility
+  name: Expansion
+  aliases:
+  - Expansion
+  - Expansion Concept
+- id: ONT-MAR-SES-LONDON
+  domain: Market Structure
+  category: Sessions
+  name: London
+  aliases:
+  - London
+  - London Concept
+- id: ONT-MAR-SES-NEWYORK
+  domain: Market Structure
+  category: Sessions
+  name: New York
+  aliases:
+  - New York
+  - New York Concept
+- id: ONT-MAR-SES-ASIA
+  domain: Market Structure
+  category: Sessions
+  name: Asia
+  aliases:
+  - Asia
+  - Asia Concept
+- id: ONT-MAR-SES-LONDONCLOSE
+  domain: Market Structure
+  category: Sessions
+  name: London Close
+  aliases:
+  - London Close
+  - London Close Concept
+- id: ONT-MAR-SES-NYOPENKILLZONE
+  domain: Market Structure
+  category: Sessions
+  name: NY Open Killzone
+  aliases:
+  - NY Open Killzone
+  - NY Open Killzone Concept
+- id: ONT-ORD-IMB-BIDIMBALANCE
+  domain: Order Flow
+  category: Imbalances
+  name: Bid Imbalance
+  aliases:
+  - Bid Imbalance
+  - Bid Imbalance Concept
+- id: ONT-ORD-IMB-ASKIMBALANCE
+  domain: Order Flow
+  category: Imbalances
+  name: Ask Imbalance
+  aliases:
+  - Ask Imbalance
+  - Ask Imbalance Concept
+- id: ONT-ORD-IMB-STACKEDIMBALANCE
+  domain: Order Flow
+  category: Imbalances
+  name: Stacked Imbalance
+  aliases:
+  - Stacked Imbalance
+  - Stacked Imbalance Concept
+- id: ONT-ORD-ABS-PASSIVEBUYERS
+  domain: Order Flow
+  category: Absorption
+  name: Passive Buyers
+  aliases:
+  - Passive Buyers
+  - Passive Buyers Concept
+- id: ONT-ORD-ABS-PASSIVESELLERS
+  domain: Order Flow
+  category: Absorption
+  name: Passive Sellers
+  aliases:
+  - Passive Sellers
+  - Passive Sellers Concept
+- id: ONT-ORD-ABS-ICEBERG
+  domain: Order Flow
+  category: Absorption
+  name: Iceberg
+  aliases:
+  - Iceberg
+  - Iceberg Concept
+- id: ONT-ORD-EXH-DELTADIVERGENCE
+  domain: Order Flow
+  category: Exhaustion
+  name: Delta Divergence
+  aliases:
+  - Delta Divergence
+  - Delta Divergence Concept
+- id: ONT-ORD-EXH-VOLUMEDIVERGENCE
+  domain: Order Flow
+  category: Exhaustion
+  name: Volume Divergence
+  aliases:
+  - Volume Divergence
+  - Volume Divergence Concept
+- id: ONT-MET-DIR-TRENDFOLLOWING
+  domain: Methodologies
+  category: Directional
+  name: Trend Following
+  aliases:
+  - Trend Following
+  - Trend Following Concept
+- id: ONT-MET-DIR-MOMENTUM
+  domain: Methodologies
+  category: Directional
+  name: Momentum
+  aliases:
+  - Momentum
+  - Momentum Concept
+- id: ONT-MET-DIR-BREAKOUT
+  domain: Methodologies
+  category: Directional
+  name: Breakout
+  aliases:
+  - Breakout
+  - Breakout Concept
+- id: ONT-MET-STA-MEANREVERSION
+  domain: Methodologies
+  category: Statistical
+  name: Mean Reversion
+  aliases:
+  - Mean Reversion
+  - Mean Reversion Concept
+- id: ONT-MET-STA-STATISTICALARBITRAGE
+  domain: Methodologies
+  category: Statistical
+  name: Statistical Arbitrage
+  aliases:
+  - Statistical Arbitrage
+  - Statistical Arbitrage Concept
+- id: ONT-MET-STA-PAIRSTRADING
+  domain: Methodologies
+  category: Statistical
+  name: Pairs Trading
+  aliases:
+  - Pairs Trading
+  - Pairs Trading Concept
+- id: ONT-MET-INS-ICT
+  domain: Methodologies
+  category: Institutional
+  name: ICT
+  aliases:
+  - ICT
+  - ICT Concept
+- id: ONT-MET-INS-SMC
+  domain: Methodologies
+  category: Institutional
+  name: SMC
+  aliases:
+  - SMC
+  - SMC Concept
+- id: ONT-MET-INS-WYCKOFF
+  domain: Methodologies
+  category: Institutional
+  name: Wyckoff
+  aliases:
+  - Wyckoff
+  - Wyckoff Concept
+- id: ONT-MET-INS-AUCTIONMARKETTHEORY
+  domain: Methodologies
+  category: Institutional
+  name: Auction Market Theory
+  aliases:
+  - Auction Market Theory
+  - Auction Market Theory Concept
+- id: ONT-MET-MIC-VOLUMEPROFILE
+  domain: Methodologies
+  category: Microstructural
+  name: Volume Profile
+  aliases:
+  - Volume Profile
+  - Volume Profile Concept
+- id: ONT-MET-MIC-MARKETPROFILE
+  domain: Methodologies
+  category: Microstructural
+  name: Market Profile
+  aliases:
+  - Market Profile
+  - Market Profile Concept
+- id: ONT-MET-MIC-ORDERFLOW
+  domain: Methodologies
+  category: Microstructural
+  name: Order Flow
+  aliases:
+  - Order Flow
+  - Order Flow Concept

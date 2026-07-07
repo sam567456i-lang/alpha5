@@ -10,9 +10,9 @@ from Backend.features.base import AbstractFeature
 from Backend.features.registry import FeatureRegistry
 from Backend.features.engine import FeatureEngine
 from Backend.features.cache import FeatureCache
-from Backend.reference.legacy.features.trend import SMAFeature, EMAFeature
-from Backend.reference.legacy.features.momentum import ROCFeature, RSIFeature
-from Backend.reference.legacy.features.volatility import ATRFeature, RelativeVolumeFeature
+from Backend.features.trend import SMAFeature, EMAFeature
+from Backend.features.momentum import ROCFeature, RSIFeature
+from Backend.features.volatility import ATRFeature, RelativeVolumeFeature
 
 
 def _make_snapshot(close: float, volume: int = 1000, idx: int = 0, high: float = None, low: float = None, open_: float = None) -> MarketSnapshot:

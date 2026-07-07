@@ -1,0 +1,9 @@
+- blocker: Performance Waste
+  reason: O(N^2) loops in liquidity_engine.py
+  resolution: Implement Numba JIT
+- blocker: Ghost Core
+  reason: Base OHLCV math missing
+  resolution: Implement core features
+- blocker: Duplicate Logic
+  reason: 4x Bollinger, 4x ATR
+  resolution: Establish canonical ownership

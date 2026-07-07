@@ -1,0 +1,17 @@
+# Canonical Ownership Map
+# Defines the SINGLE authoritative implementation for every foundational capability.
+---
+schema_version: "v1.0"
+platforms:
+  P05_indicator_engine:
+    volatility:
+      bollinger: "indicator_engine/volatility/bollinger.py"
+      atr: "indicator_engine/volatility/atr.py"
+      keltner: "indicator_engine/volatility/keltner.py"
+    momentum:
+      macd: "indicator_engine/momentum/macd.py"
+      rsi: "indicator_engine/momentum/rsi.py"
+  P06_price_geometry:
+    liquidity_sweeps: "price_geometry/liquidity_engine.py"
+  P02_market_intelligence:
+    bid_ask_volume: "market_intelligence/bid_ask_volume_engine.py"

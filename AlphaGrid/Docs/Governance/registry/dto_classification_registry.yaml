@@ -1,0 +1,28 @@
+classifications:
+  internal:
+    - FeatureSetDTO
+    - ConceptSetDTO
+    - ExecutionContext
+    - EvidenceDTO
+    - ExplainabilityDTO
+    - ConfidenceFactorsDTO
+
+  boundary:
+    - MarketStateDTO
+    - MethodologyResultDTO
+    - MethodologyProfileDTO
+    - ExplainabilityReportDTO
+    - PresentationStateDTO
+    - ScannerViewDTO
+    - WorkspaceDTO
+    - WatchlistDTO
+    - UserLayoutDTO
+    - NotificationEventDTO
+    - NotificationPolicyDTO
+    - NotificationDTO
+    - NotificationHistoryDTO
+
+  persisted:
+    - LineageDTO
+    - ExecutionTraceDTO
+    - PlatformMetricsDTO

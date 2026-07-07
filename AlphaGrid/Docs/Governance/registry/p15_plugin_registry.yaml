@@ -1,0 +1,30 @@
+# Platform 15 Plugin Registry
+plugins:
+  - id: p15_pos_sizing
+    name: "Position Sizing Engine"
+    path: "Backend.Platform15.engine.position_sizing.PositionSizingEngine"
+    version: "v1.0"
+  - id: p15_exposure
+    name: "Exposure Validation Engine"
+    path: "Backend.Platform15.engine.exposure_validation.ExposureValidationEngine"
+    version: "v1.0"
+  - id: p15_port_constraint
+    name: "Portfolio Constraint Validation Engine"
+    path: "Backend.Platform15.engine.portfolio_constraint_validation.PortfolioConstraintEngine"
+    version: "v1.0"
+  - id: p15_drawdown
+    name: "Drawdown Validation Engine"
+    path: "Backend.Platform15.engine.drawdown_validation.DrawdownValidationEngine"
+    version: "v1.0"
+  - id: p15_scenario
+    name: "Scenario Analysis Engine"
+    path: "Backend.Platform15.engine.scenario_analysis.ScenarioAnalysisEngine"
+    version: "v1.0"
+  - id: p15_stress
+    name: "Stress Plugin Interface"
+    path: "Backend.Platform15.engine.stress_plugin.StressPluginInterface"
+    version: "v1.0"
+  - id: p15_decision_builder
+    name: "Decision Builder"
+    path: "Backend.Platform15.engine.decision_builder.DecisionBuilder"
+    version: "v1.0"

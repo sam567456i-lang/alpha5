@@ -1,0 +1,28 @@
+entries:
+- id: BEH-CHOCH-001
+  trigger:
+    concept: CON-LIQ-EVT-CHOCH
+  supports:
+  - CON-INS-ORDERBLOCK
+  weakens:
+  - CON-STR-PREVTREND
+  invalidates:
+  - CON-STR-CONTINUATION
+  requires:
+  - CON-STR-SWINGSTRUCTURE
+  emits:
+  - StructureShiftEvent
+  confidence_modifier: 0.15
+- id: BEH-SWEEP-001
+  trigger:
+    concept: CON-LIQ-EVT-SWEEP
+  supports:
+  - CON-LIQ-EVT-CHOCH
+  weakens: []
+  invalidates: []
+  requires:
+  - CON-LIQ-OBJ-PDH
+  - CON-LIQ-OBJ-PDL
+  emits:
+  - LiquiditySweepEvent
+  confidence_modifier: 0.2

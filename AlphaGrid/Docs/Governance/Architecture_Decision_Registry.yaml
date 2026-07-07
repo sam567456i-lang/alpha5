@@ -1,0 +1,18 @@
+# Architecture Decision Registry
+# Centralized tracking of all architectural decisions.
+
+decisions:
+  - id: "DEC-001"
+    date: "2026-07-07"
+    status: "Active"
+    category: "Governance"
+    description: "Enshrined the Permanent Governance Directive into .agents/AGENTS.md to enforce AI continuity."
+    alternatives_considered: ["Relying on manual user prompting", "Storing only in markdown"]
+    evidence: "Previous architectural drift during extended AI sessions."
+    impact: "All future AI execution is structurally bound by 17 rules."
+    owner: "Architecture Board"
+    approval: "Approved by Human"
+    supersedes: "None"
+    related_platforms: ["All"]
+    related_documents: ["AGENTS.md", "Project_Bible.md"]
+    related_freezes: ["Freeze_v3"]

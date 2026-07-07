@@ -1,0 +1,9 @@
+# Master Explainability Registry
+dto_explanations:
+  adjusted_confidence: "Confidence after penalties and supporting evidence were applied."
+  staleness_state: "Indicates whether the analytical result is still considered current based on its freshness profile."
+  derived_from: "References the upstream analytical object (Feature/Geometry) that produced this concept."
+  raw_confidence: "The base statistical probability of the methodology before external market factors are applied."
+  confidence_sources: "The specific features or concepts that actively increased the confidence score."
+  penalties: "Market conditions or conflicting concepts that reduced the confidence score."
+  freshness_class: "The expected lifetime category (e.g., Instant, Intrabar, Session, Swing) of the signal."

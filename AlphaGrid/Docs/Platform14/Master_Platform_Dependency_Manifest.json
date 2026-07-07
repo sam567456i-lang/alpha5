@@ -1,0 +1,22 @@
+{
+  "platform": "Platform 14",
+  "domain": "Recommendation Generation",
+  "consumed_dtos": [
+    "EvaluatedOpportunityCollectionDTO"
+  ],
+  "produced_dtos": [
+    "RecommendationDTO"
+  ],
+  "plugin_types": [
+    "Generator",
+    "Analyzer",
+    "Builder"
+  ],
+  "governance_gates": [
+    "Testing",
+    "Certification",
+    "Documentation",
+    "Phase Exit"
+  ],
+  "freeze_state": "Pending"
+}

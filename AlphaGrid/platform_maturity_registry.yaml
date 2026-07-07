@@ -1,0 +1,78 @@
+maturity_scores:
+  - id: platform0
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform1
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform2
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform3
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform4
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform5
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform6
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform7
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform8
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 92
+    replay: 100
+    status: FROZEN
+  - id: platform9
+    architecture: 100
+    plugins: 100
+    tests: 100
+    performance: 100
+    replay: 100
+    status: FROZEN
+  - id: platform10
+    architecture: 100
+    plugins: 35
+    tests: 0
+    performance: 0
+    replay: 0
+    status: READY

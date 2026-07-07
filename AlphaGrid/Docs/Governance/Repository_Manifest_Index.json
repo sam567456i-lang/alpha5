@@ -1,0 +1,27 @@
+{
+  "repository": "AlphaGrid",
+  "version": "1.0.0",
+  "manifests": [
+    {
+      "id": "manifest_decision_chain",
+      "path": "Docs/Governance/Decision_Chain_Manifest.json",
+      "type": "Governance",
+      "owner": "ProjectOS",
+      "status": "active"
+    },
+    {
+      "id": "manifest_p14_dependency",
+      "path": "Docs/Platform14/Master_Platform_Dependency_Manifest.json",
+      "type": "Platform",
+      "owner": "Platform14",
+      "status": "active"
+    },
+    {
+      "id": "manifest_capability_matrix",
+      "path": "Docs/Architecture/Capability_Matrix.md",
+      "type": "Architecture",
+      "owner": "ProjectOS",
+      "status": "active"
+    }
+  ]
+}

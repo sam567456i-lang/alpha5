@@ -1,0 +1,100 @@
+entries:
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-001
+  implementation_state: Planned
+  name: PDH
+  owner_platform: Platform 9
+  subcategory: Liquidity Objects
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-002
+  implementation_state: Planned
+  name: PDL
+  owner_platform: Platform 9
+  subcategory: Liquidity Objects
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-003
+  implementation_state: Planned
+  name: EQH
+  owner_platform: Platform 9
+  subcategory: Liquidity Objects
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-004
+  implementation_state: Planned
+  name: EQL
+  owner_platform: Platform 9
+  subcategory: Liquidity Objects
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-005
+  implementation_state: Planned
+  name: Sweep
+  owner_platform: Platform 9
+  subcategory: Liquidity Events
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-006
+  implementation_state: Planned
+  name: MSS
+  owner_platform: Platform 9
+  subcategory: Liquidity Events
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-007
+  implementation_state: Planned
+  name: CHOCH
+  owner_platform: Platform 9
+  subcategory: Liquidity Events
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-008
+  implementation_state: Planned
+  name: FVG
+  owner_platform: Platform 9
+  subcategory: Liquidity Footprints
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-009
+  implementation_state: Planned
+  name: Order Block
+  owner_platform: Platform 9
+  subcategory: Institutional Zones
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-010
+  implementation_state: Planned
+  name: Breaker Block
+  owner_platform: Platform 9
+  subcategory: Institutional Zones
+- category: concept
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-011
+  implementation_state: Planned
+  name: Session High
+  owner_platform: Platform 9
+  subcategory: Context Concepts

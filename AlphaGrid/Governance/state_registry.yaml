@@ -1,0 +1,94 @@
+SessionState:
+  version: 1
+  producer: market_foundation
+  dependencies:
+    - CanonicalMarketEvent
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true
+
+CalendarState:
+  version: 1
+  producer: market_foundation
+  dependencies:
+    - SessionState
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true
+
+TimeState:
+  version: 1
+  producer: market_foundation
+  dependencies:
+    - CanonicalMarketEvent
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true
+
+TrendState:
+  version: 1
+  producer: trend_plugin
+  dependencies:
+    - EMA
+    - ADX
+    - Slope
+    - Price
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true
+
+MomentumState:
+  version: 1
+  producer: momentum_plugin
+  dependencies:
+    - RSI
+    - MACD
+    - ROC
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true
+
+VolatilityState:
+  version: 1
+  producer: volatility_plugin
+  dependencies:
+    - ATR
+    - Bollinger
+    - StdDev
+    - Keltner
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true
+
+VolumeState:
+  version: 1
+  producer: volume_plugin
+  dependencies:
+    - Volume
+    - VWAP
+    - OBV
+    - Delta
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true
+
+MultiTimeframeState:
+  version: 1
+  producer: mtf_plugin
+  dependencies:
+    - 1m
+    - 5m
+    - 15m
+    - 1H
+    - 1D
+  incremental: true
+  replayable: true
+  snapshot: true
+  deterministic: true

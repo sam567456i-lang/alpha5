@@ -24,22 +24,34 @@ def register_all_strategies() -> None:
     from .definitions.stochastic_momentum import STOCHASTIC_MOMENTUM
     from .definitions.stochastic_exhaustion import STOCHASTIC_EXHAUSTION
 
-    StrategyRegistry.register(RSI_REVERSION)
-    StrategyRegistry.register(BOLLINGER_REVERSION)
-    StrategyRegistry.register(SUPERTREND_CROSS)
-    StrategyRegistry.register(MACD_MOMENTUM)
-    StrategyRegistry.register(EXHAUSTION_REVERSAL)
-    StrategyRegistry.register(RELATIVE_VOLUME_SURGE)
-    StrategyRegistry.register(VOLATILITY_EXPANSION)
-    StrategyRegistry.register(EMA_CROSS)
-    StrategyRegistry.register(SMA_CROSS)
-    StrategyRegistry.register(ROC_MOMENTUM)
-    StrategyRegistry.register(STOCHASTIC_REVERSION)
-    StrategyRegistry.register(DONCHIAN_TREND)
-    StrategyRegistry.register(KELTNER_REVERSION)
-    StrategyRegistry.register(CCI_REVERSION)
-    StrategyRegistry.register(STOCHASTIC_MOMENTUM)
-    StrategyRegistry.register(STOCHASTIC_EXHAUSTION)
+    for definition in [
+        RSI_REVERSION,
+        BOLLINGER_REVERSION,
+        SUPERTREND_CROSS,
+        MACD_MOMENTUM,
+        EXHAUSTION_REVERSAL,
+        RELATIVE_VOLUME_SURGE,
+        VOLATILITY_EXPANSION,
+        EMA_CROSS,
+        SMA_CROSS,
+        ROC_MOMENTUM,
+        STOCHASTIC_REVERSION,
+        DONCHIAN_TREND,
+        KELTNER_REVERSION,
+        CCI_REVERSION,
+        STOCHASTIC_MOMENTUM,
+        STOCHASTIC_EXHAUSTION,
+    ]:
+        try:
+            existing = StrategyRegistry.get(definition.id)
+        except KeyError:
+            StrategyRegistry.register(definition)
+            continue
+        if existing != definition:
+            raise ValueError(
+                f"StrategyDefinition with ID {definition.id} is already registered "
+                "with different metadata."
+            )
 
 __all__ = [
     'BaseResearchStrategy',

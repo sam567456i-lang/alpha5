@@ -26,7 +26,12 @@ def register_features(container: DependencyContainer) -> None:
                 module = importlib.import_module(f"{package_name}.{module_name}")
                 # Find all classes in the module that inherit from AbstractFeature
                 for name, obj in inspect.getmembers(module, inspect.isclass):
-                    if issubclass(obj, AbstractFeature) and obj is not AbstractFeature and obj.__module__ == module.__name__:
+                    if (
+                        issubclass(obj, AbstractFeature)
+                        and obj is not AbstractFeature
+                        and obj.__module__ == module.__name__
+                        and not inspect.isabstract(obj)
+                    ):
                         registry.register(obj)
             except Exception as e:
                 import logging

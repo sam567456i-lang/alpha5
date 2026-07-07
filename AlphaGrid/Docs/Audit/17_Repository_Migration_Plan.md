@@ -1,0 +1,2 @@
+# Repository Migration Plan (CANCELLED)
+*(This migration plan has been cancelled. The codebase's physical folders `Platform10-14` are structurally correct and reflect the approved architectural evolution. Moving them to P13-P21 would be a destructive regression.)*

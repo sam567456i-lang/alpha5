@@ -44,8 +44,6 @@ class ValidatorResultDTO:
     errors: List[str] = field(default_factory=list)
     artifacts: List[str] = field(default_factory=list)
     metrics: Dict[str, Any] = field(default_factory=dict)
-    max_error: float = 0.0
-    mean_error: float = 0.0
     summary: str = ""
     timestamp: str = field(default_factory=lambda: datetime.utcnow().isoformat())
     
@@ -69,8 +67,6 @@ class ValidatorResultDTO:
             "errors": self.errors,
             "artifacts": self.artifacts,
             "metrics": self.metrics,
-            "max_error": self.max_error,
-            "mean_error": self.mean_error,
             "summary": self.summary,
             "timestamp": self.timestamp
         }

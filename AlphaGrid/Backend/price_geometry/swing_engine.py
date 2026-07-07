@@ -11,7 +11,7 @@ class SwingEngine(AbstractGeometryEngine):
     """
     Detects market swings (Highs and Lows) using static or adaptive fractal strength.
     """
-    def __init__(self, mode: str = "adaptive", default_strength: int = 5):
+    def __init__(self, mode: str = "adaptive", default_strength: int = 3):
         """
         mode: 'static' or 'adaptive'.
         default_strength: Used in static mode. In adaptive mode, serves as a baseline.

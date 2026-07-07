@@ -1,0 +1,235 @@
+entries:
+- debt_id: REM-0001
+  description: P0 (Data Platform) missing LineageDTO
+  platform: P0 (Data Platform)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0002
+  description: P0 (Data Platform) has hardcoded dependencies
+  platform: P0 (Data Platform)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0003
+  description: P0 (Data Platform) missing replay certification
+  platform: P0 (Data Platform)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0004
+  description: P1 (Market Intelligence) missing LineageDTO
+  platform: P1 (Market Intelligence)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0005
+  description: P1 (Market Intelligence) has hardcoded dependencies
+  platform: P1 (Market Intelligence)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0006
+  description: P1 (Market Intelligence) missing replay certification
+  platform: P1 (Market Intelligence)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0007
+  description: P2 (Geometry) missing LineageDTO
+  platform: P2 (Geometry)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0008
+  description: P2 (Geometry) has hardcoded dependencies
+  platform: P2 (Geometry)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0009
+  description: P2 (Geometry) missing replay certification
+  platform: P2 (Geometry)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0010
+  description: P3 (Features) missing LineageDTO
+  platform: P3 (Features)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0011
+  description: P3 (Features) has hardcoded dependencies
+  platform: P3 (Features)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0012
+  description: P3 (Features) missing replay certification
+  platform: P3 (Features)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0013
+  description: P4 (Concepts) missing LineageDTO
+  platform: P4 (Concepts)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0014
+  description: P4 (Concepts) has hardcoded dependencies
+  platform: P4 (Concepts)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0015
+  description: P4 (Concepts) missing replay certification
+  platform: P4 (Concepts)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0016
+  description: P5 (Primitive Signals) missing LineageDTO
+  platform: P5 (Primitive Signals)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0017
+  description: P5 (Primitive Signals) has hardcoded dependencies
+  platform: P5 (Primitive Signals)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0018
+  description: P5 (Primitive Signals) missing replay certification
+  platform: P5 (Primitive Signals)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0019
+  description: P6 (Methodologies) missing LineageDTO
+  platform: P6 (Methodologies)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0020
+  description: P6 (Methodologies) has hardcoded dependencies
+  platform: P6 (Methodologies)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0021
+  description: P6 (Methodologies) missing replay certification
+  platform: P6 (Methodologies)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0022
+  description: P7 (Strategy Platform) missing LineageDTO
+  platform: P7 (Strategy Platform)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0023
+  description: P7 (Strategy Platform) has hardcoded dependencies
+  platform: P7 (Strategy Platform)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0024
+  description: P7 (Strategy Platform) missing replay certification
+  platform: P7 (Strategy Platform)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0025
+  description: P8 (Universal Filter Engine) missing LineageDTO
+  platform: P8 (Universal Filter Engine)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0026
+  description: P8 (Universal Filter Engine) has hardcoded dependencies
+  platform: P8 (Universal Filter Engine)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0027
+  description: P8 (Universal Filter Engine) missing replay certification
+  platform: P8 (Universal Filter Engine)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0028
+  description: P9 (Concepts/V2) missing detailed diagrams
+  platform: P9 (Concepts/V2)
+  proposed_sprint: Sprint 1
+  severity: Medium
+  status: Planned
+- debt_id: REM-0029
+  description: P11 (Composite Synthesis) missing LineageDTO
+  platform: P11 (Composite Synthesis)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0030
+  description: P11 (Composite Synthesis) has hardcoded dependencies
+  platform: P11 (Composite Synthesis)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0031
+  description: P11 (Composite Synthesis) missing replay certification
+  platform: P11 (Composite Synthesis)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0032
+  description: P12 (Opportunity Detection) missing detailed diagrams
+  platform: P12 (Opportunity Detection)
+  proposed_sprint: Sprint 1
+  severity: Medium
+  status: Planned
+- debt_id: REM-0033
+  description: P13 (Opportunity Evaluation) missing detailed diagrams
+  platform: P13 (Opportunity Evaluation)
+  proposed_sprint: Sprint 1
+  severity: Medium
+  status: Planned
+- debt_id: REM-0034
+  description: P14 (Recommendation) missing detailed diagrams
+  platform: P14 (Recommendation)
+  proposed_sprint: Sprint 1
+  severity: Medium
+  status: Planned
+- debt_id: REM-0035
+  description: P15 (Risk Intelligence) missing detailed diagrams
+  platform: P15 (Risk Intelligence)
+  proposed_sprint: Sprint 1
+  severity: Medium
+  status: Planned
+- debt_id: REM-0036
+  description: P16 (Portfolio Intelligence) missing detailed diagrams
+  platform: P16 (Portfolio Intelligence)
+  proposed_sprint: Sprint 1
+  severity: Medium
+  status: Planned
+- debt_id: REM-0037
+  description: P17 (Unknown) missing LineageDTO
+  platform: P17 (Unknown)
+  proposed_sprint: Sprint 1
+  severity: Critical
+  status: Planned
+- debt_id: REM-0038
+  description: P17 (Unknown) has hardcoded dependencies
+  platform: P17 (Unknown)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned
+- debt_id: REM-0039
+  description: P17 (Unknown) missing replay certification
+  platform: P17 (Unknown)
+  proposed_sprint: Sprint 2
+  severity: High
+  status: Planned

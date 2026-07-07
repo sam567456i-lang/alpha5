@@ -1,0 +1,13 @@
+# Master Concept Registry
+concepts:
+  - id: "concept_fvg"
+    name: "Fair Value Gap"
+    owner: "Platform9"
+    dto_version: "v1.0"
+    dependencies: ["Geometry.Candle", "Feature.Imbalance"]
+    consumers: ["Platform10.ICT"]
+    confidence_model: "Volume_Weighted"
+    freshness_model: "Intrabar"
+    lifecycle: "Certified"
+    test_coverage: 0.95
+    documentation_status: "Complete"

@@ -2,7 +2,6 @@ import argparse
 import sys
 import os
 import json
-import shutil
 from datetime import datetime
 from Backend.validation.dtos import ValidationContextDTO
 from Backend.validation.validation_registry import ValidationRegistry
@@ -47,7 +46,7 @@ def main():
     
     context = ValidationContextDTO(
         phase=args.phase,
-        family=args.family if args.profile != "repository" else "ALL",
+        family=args.family,
         git_commit="latest",
         registry_version="latest",
         dto_version="latest",
@@ -96,26 +95,7 @@ def main():
     os.makedirs(os.path.dirname(dashboard_path), exist_ok=True)
     
     with open(dashboard_path, "w") as f:
-        f.write(f"""---
-Document ID: GEN-010
-Title: "Validation Dashboard"
-Version: 1.0.0
-Governance Version: 1.0.0
-Architecture Version: 1.0.0
-Phase: 10
-Owner: ArchitectureTeam
-Category: Generated
-Maturity: "Level 5: Institutionally Frozen"
-Implementation Status: Validated
-Current Phase: 10
-Future Phase: N/A
-Last Validated Phase: 10
-Review Date: 2026-07-04
-Dependencies: []
-Referenced By: []
----
-
-# Validation Dashboard (Phase {args.phase} - {args.family})\n\n""")
+        f.write(f"# Validation Dashboard (Phase {args.phase} - {args.family})\n\n")
         f.write("| Validator | Status | Duration (ms) |\n")
         f.write("|-----------|--------|---------------|\n")
         for r in results:
@@ -138,13 +118,6 @@ Referenced By: []
         "evidence_id": os.path.basename(evidence_dir),
         "git_commit": "latest"
     }
-    
-    if args.phase == "10" and all_passed:
-        ev_10i_path = os.path.join(os.path.dirname(evidence_dir), "EV-10I-A")
-        if os.path.exists(ev_10i_path):
-            shutil.rmtree(ev_10i_path)
-        shutil.copytree(evidence_dir, ev_10i_path)
-        print(f"Evidence officially archived to: {ev_10i_path}")
     
     history = []
     if os.path.exists(history_path):

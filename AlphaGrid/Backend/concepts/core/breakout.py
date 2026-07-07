@@ -2,6 +2,7 @@ import hashlib
 import uuid
 from typing import List
 from Backend.dtos.concepts import ConceptDTO
+from Shared.dtos.execution_context import ExecutionContext
 from Backend.dtos.features import FeatureDTO
 
 
@@ -54,13 +55,15 @@ class BreakoutConceptGenerator:
         payload = f"{state}:{bullish_signals}:{bearish_signals}"
         payload_hash = hashlib.md5(payload.encode()).hexdigest()
 
+        exec_ctx = ExecutionContext(session_id="legacy", trace_id=trace_id, correlation_id=correlation_id, instrument_id="TEST/USD", environment="local", runtime_mode="test", exchange="TEST", provider="TEST", market="TEST", timezone="UTC", sequence_id=0, is_replay=True, build_version="1.0.0")
+
         return ConceptDTO(
             id=f"{self.component_id}-{uuid.uuid4().hex[:8]}",
             schema_version="1.0.0",
+            owner="Concept",
             producer=self.component_id,
-            trace_id=trace_id,
-            correlation_id=correlation_id,
-            fingerprint="breakout-concept",
+            execution_context=exec_ctx,
+            fingerprint="breakout-concept-v1",
             checksum=payload_hash,
             concept_type="BREAKOUT",
             state=state,

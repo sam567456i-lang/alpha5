@@ -1,0 +1,64 @@
+# CI Pipeline Registry
+# This registry explicitly maps the execution sequence for the AlphaGrid CI pipeline.
+# No hardcoded execution paths are permitted in ProjectOS.
+
+pipeline_sequence:
+  - name: "Repository Integrity Gate"
+    id: "gate_1_1"
+    required: true
+    plugin_path: "ProjectOS/validators/integrity_validator.py"
+
+  - name: "Registry Validation Gate"
+    id: "gate_1_2"
+    required: true
+    plugin_path: "ProjectOS/validators/registry_validator.py"
+
+  - name: "DTO Validation Gate"
+    id: "gate_1_3"
+    required: true
+    plugin_path: "ProjectOS/validators/dto_validator.py"
+
+  - name: "Plugin Certification"
+    id: "gate_3_1"
+    required: true
+    plugin_path: "ProjectOS/certification/plugin_certifier.py"
+
+  - name: "Platform Certification"
+    id: "gate_3_2"
+    required: true
+    plugin_path: "ProjectOS/certification/platform_certifier.py"
+
+  - name: "Wave Certification"
+    id: "gate_3_3"
+    required: true
+    plugin_path: "ProjectOS/certification/wave_certifier.py"
+
+  - name: "Documentation Audit Gate"
+    id: "gate_5_3"
+    required: true
+    plugin_path: "ProjectOS/validators/docs_validator.py"
+
+  - name: "Replay Validation Gate"
+    id: "gate_4_1"
+    required: true
+    plugin_path: "ProjectOS/validators/replay_validator.py"
+
+  - name: "Performance Validation"
+    id: "gate_4_3"
+    required: true
+    plugin_path: "ProjectOS/validators/performance_validator.py"
+
+  - name: "Regression Validation"
+    id: "gate_reg"
+    required: true
+    plugin_path: "ProjectOS/regression_validator.py"
+
+  - name: "Architecture Freeze Gate"
+    id: "gate_6_2"
+    required: true
+    plugin_path: "ProjectOS/freeze_vnext.py"
+
+  - name: "Phase Exit Orchestrator"
+    id: "gate_6_1"
+    required: true
+    plugin_path: "ProjectOS/certification/phase_exit.py"

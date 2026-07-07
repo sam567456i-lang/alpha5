@@ -1,0 +1,40 @@
+{
+  "TSK-01": {
+    "dependencies": []
+  },
+  "TSK-02": {
+    "dependencies": [
+      "TSK-01"
+    ]
+  },
+  "TSK-03": {
+    "dependencies": [
+      "TSK-01"
+    ]
+  },
+  "TSK-04": {
+    "dependencies": [
+      "TSK-01"
+    ]
+  },
+  "TSK-05": {
+    "dependencies": [
+      "TSK-04"
+    ]
+  },
+  "TSK-06": {
+    "dependencies": [
+      "TSK-05"
+    ]
+  },
+  "TSK-07": {
+    "dependencies": [
+      "TSK-06"
+    ]
+  },
+  "TSK-08": {
+    "dependencies": [
+      "TSK-07"
+    ]
+  }
+}

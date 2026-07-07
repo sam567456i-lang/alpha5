@@ -1,0 +1,4 @@
+Capability,Research,Experimental,Validated,Production,Status
+Breakout Signals,Yes,Yes,Yes,No,Validated
+SMC Imbalance,No,No,No,No,Ghost
+Bollinger Bands,Yes,Yes,No,No,Duplicate

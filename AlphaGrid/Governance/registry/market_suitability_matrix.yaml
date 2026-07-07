@@ -1,0 +1,27 @@
+suitability_matrix:
+  markets:
+  - NSE_Index_Options
+  - NSE_Futures
+  - NSE_Cash
+  timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1H
+  - 4H
+  - 1D
+  styles:
+  - Scalp
+  - Intraday
+  - Swing
+  - Position
+  sessions:
+  - Asian
+  - London
+  - New York
+  - India
+  regimes:
+  - Trending
+  - Ranging
+  - High Volatility
+  - Low Volatility

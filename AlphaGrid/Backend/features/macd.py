@@ -13,7 +13,7 @@ broken down into its atomic feature primitives:
 from typing import Any, Dict, List, Optional
 from Shared.models.market import MarketSnapshot
 from Backend.features.base import AbstractFeature
-from Backend.reference.legacy.features.trend import EMAFeature
+from Backend.features.trend import EMAFeature
 
 
 class EMA12Feature(EMAFeature):

@@ -1,0 +1,7 @@
+{
+    "repository_snapshot": "80d43c9f",
+    "registry_snapshot": "master_capability_registry.yaml@80d43c9f",
+    "capability_snapshot": "capability_matrix.csv@80d43c9f",
+    "dependency_snapshot": "dependency_matrix.csv@80d43c9f",
+    "universal_switch_snapshot": "universal_switch.yaml@80d43c9f"
+}

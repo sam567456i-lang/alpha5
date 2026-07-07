@@ -61,7 +61,13 @@ def create_app(
         openapi_url="/api/openapi.json",
     )
 
-    if container:
+    if container is None:
+        from Backend.foundation.application_entrypoint import create_application_context
+
+        application_context = create_application_context()
+        app.state.application_context = application_context
+        app.state.container = application_context.container
+    else:
         app.state.container = container
 
     # ------------------------------------------------------------------

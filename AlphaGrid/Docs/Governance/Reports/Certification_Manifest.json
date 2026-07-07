@@ -1,0 +1,37 @@
+{
+    "certification_version": "AlphaGrid Infinity X v25.0 Certification Suite",
+    "repository_snapshot_id": "Snapshot_v25",
+    "repository_hash_manifest": "bc8b6000ae70f2be9c2567b5069bf3426526daab212dba95c7d4e900161f81fe",
+    "registry_version_hash": "be935a8f04d909277e97a32bd5ff97ab25e3b6e673e0adf797514e46adce026d",
+    "capability_matrix_version_hash": "364cc035be4d21df472411e2b1d2b216d0730f70a8191cbb8bcbbe0ce8591af3",
+    "dependency_matrix_version_hash": "997c38957702c1ee593bfee6b632c4de164a20bada929d4a8a6b0aa758a47ff1",
+    "universal_switch_registry_version_hash": "35761d7c33580c16b5a476941859985a474bfa476920b7caf0a95087f43f803d",
+    "required_certification_domains": [
+        "Repository",
+        "Governance",
+        "Architecture",
+        "Registry",
+        "DTO",
+        "Determinism",
+        "Platform Purity",
+        "AI Boundaries"
+    ],
+    "required_test_suites": [
+        "ProjectOS.certification.certify",
+        "ProjectOS.validator.integrity_checker"
+    ],
+    "required_approval_gates": [
+        "Stage 4 Human Approval",
+        "Repository Integrity Gate",
+        "Definition of Done Gate",
+        "Project OS Acceptance Gate"
+    ],
+    "freeze_criteria": [
+        "0 Purity Violations",
+        "0 Circular Dependencies",
+        "100% Deterministic Registry Execution",
+        "Signed Certification Manifest"
+    ],
+    "_manifest_signature_hash": "e8c2f1148172b9ad4883e0762969b6e088d01cdd45be0cbc24d0479b6ec72d92",
+    "_generated_at": "2026-07-05T18:01:38.940996Z"
+}

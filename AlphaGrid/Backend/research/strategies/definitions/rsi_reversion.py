@@ -3,7 +3,7 @@
 from Backend.research.strategies.definition import StrategyDefinition, ConceptDefinition, PrimitiveSignalDefinition
 from Backend.research.strategies.base_research_strategy import BaseResearchStrategy
 from Backend.methodology.mean_reversion import MeanReversionMethodology
-from Backend.reference.legacy.features.momentum import RSIFeature
+from Backend.features.momentum import RSIFeature
 from Backend.concepts.generators.extremum import ExtremumConceptGenerator, ThresholdConfig
 from Backend.signals.primitive.generators.extremum import OverextendedSignalGenerator
 

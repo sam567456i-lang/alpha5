@@ -3,7 +3,7 @@
 from Backend.research.strategies.definition import StrategyDefinition, ConceptDefinition, PrimitiveSignalDefinition
 from Backend.research.strategies.base_research_strategy import BaseResearchStrategy
 from Backend.methodology.momentum import MomentumMethodology
-from Backend.reference.legacy.features.momentum import ROCFeature
+from Backend.features.momentum import ROCFeature
 from Backend.concepts.generators.momentum import MomentumConceptGenerator
 from Backend.signals.primitive.generators.momentum import MomentumSignalGenerator
 

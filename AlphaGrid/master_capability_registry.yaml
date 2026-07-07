@@ -1,0 +1,6736 @@
+registry_version: 2.0.0
+schema_version: 2.1.0
+taxonomy_version: 1.0.0
+architecture_version: v25
+project_os_version: '2.0'
+generator_version: '1.0'
+generated_at: '2026-07-05T16:12:48.420713Z'
+migration_version: 2
+change_id: taxonomy-expansion-002
+capabilities:
+- id: ftr-ohlcv
+  category: Feature Store
+  family: General
+  name: OHLCV
+  owner: DataEngineering
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on:
+  - Data Provider
+  shared_component: true
+  owner_layer: Feature
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: General
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  display_name: OHLCV
+  canonical_name: ohlcv
+  platform: Platform 9
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Data Provider
+  - Data Provider
+  planned_outputs:
+  - Raw Price Data
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: con-trend
+  category: Concepts
+  family: Generic
+  name: Trend
+  owner: QuantitativeResearch
+  produces: []
+  consumes: []
+  version: 1.0.0
+  architecture_status: approved
+  implementation_status: implemented
+  depends_on:
+  - Swing
+  shared_component: true
+  owner_layer: Concept
+  lifecycle_state: Frozen
+  stability: Production
+  used_by: []
+  supported_markets:
+  - Stocks
+  - Crypto
+  supported_timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 1d
+  supported_styles:
+  - Scalping
+  - Intraday
+  - Swing
+  - Position
+  supported_data:
+  - OHLCV
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Generic
+    required_dependencies: []
+    required_switches: []
+    minimum_version: 1.0.0
+    maximum_version: null
+    activation_policy: Auto
+    deactivation_policy: Graceful
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+  provides: []
+  supersedes: []
+  replaces: []
+  freeze_status: frozen
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  display_name: Trend
+  canonical_name: trend
+  platform: Platform 10
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Swing
+  - Swing
+  planned_outputs:
+  - Uptrend
+  - Downtrend
+  - Sideways
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ftr-atr
+  family: Feature Store
+  name: ATR Feature Generator
+  implementation_status: implemented
+  lifecycle_state: Implemented
+  version: 1.0.0
+  freeze_status: eligible
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  activation:
+    enabled: true
+    required_phase: 1
+    required_family: Generic
+    required_switches: []
+    requires: []
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: ATR Feature Generator
+  canonical_name: atr_feature_generator
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ftr-sr
+  family: Feature Store
+  name: Support/Resistance Feature Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Implemented
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-ohlcv
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: Support/Resistance Feature Generator
+  canonical_name: support_resistance_feature_generator
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ftr-hlbreakout
+  family: Feature Store
+  name: High/Low Breakout Feature Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Implemented
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-ohlcv
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: High/Low Breakout Feature Generator
+  canonical_name: high_low_breakout_feature_generator
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ftr-volbreakout
+  family: Feature Store
+  name: Volatility Breakout Feature Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Implemented
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 5
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-ohlcv
+    - ftr-atr
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: Volatility Breakout Feature Generator
+  canonical_name: volatility_breakout_feature_generator
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: con-breakout
+  family: Concept Engine
+  name: Breakout Concept Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Implemented
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 7
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-sr
+    - ftr-hlbreakout
+    optional_requires:
+    - ftr-volbreakout
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: Breakout Concept Generator
+  canonical_name: breakout_concept_generator
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: sig-breakout
+  family: Signal Engine
+  name: Breakout Primitive Signal Generator
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  lifecycle_state: Implemented
+  freeze_status: eligible
+  version: 1.0.0
+  activation:
+    enabled: true
+    required_phase: 9
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - meth-breakout
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: Breakout Primitive Signal Generator
+  canonical_name: breakout_primitive_signal_generator
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: strat-srbreakout
+  family: Strategy Engine
+  name: S/R Breakout Strategy
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  research_status: pending
+  blocked_by: phase13_strategy_intelligence
+  lifecycle_state: Registered
+  freeze_status: blocked
+  version: 0.1.0
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - sig-breakout
+    - ftr-sr
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: S/R Breakout Strategy
+  canonical_name: s_r_breakout_strategy
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: strat-hlbreakout
+  family: Strategy Engine
+  name: High/Low Breakout Strategy
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  research_status: pending
+  blocked_by: phase13_strategy_intelligence
+  lifecycle_state: Registered
+  freeze_status: blocked
+  version: 0.1.0
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - sig-breakout
+    - ftr-hlbreakout
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: High/Low Breakout Strategy
+  canonical_name: high_low_breakout_strategy
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: strat-volbreakout
+  family: Strategy Engine
+  name: Volatility Breakout Strategy
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  quantitative_validation_status: pending
+  research_status: pending
+  blocked_by: phase13_strategy_intelligence
+  lifecycle_state: Registered
+  freeze_status: blocked
+  version: 0.1.0
+  activation:
+    enabled: true
+    required_phase: 10
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - sig-breakout
+    - ftr-volbreakout
+    optional_requires: []
+    conflicts_with: []
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: Volatility Breakout Strategy
+  canonical_name: volatility_breakout_strategy
+  platform: Platform 0
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: repository_validated
+  dependencies: []
+  consumes: []
+  produces: []
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies: []
+  planned_outputs: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-100
+  name: Trend Analysis
+  family: Trend
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Trend Analysis
+  canonical_name: trend_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: TrendDTO
+  expected_state: TrendState
+  expected_feature: TrendFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - TrendState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-101
+  name: Momentum Analysis
+  family: Momentum
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Momentum Analysis
+  canonical_name: momentum_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: MomentumDTO
+  expected_state: MomentumState
+  expected_feature: MomentumFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - MomentumState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-102
+  name: Volume Analysis
+  family: Volume
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Volume Analysis
+  canonical_name: volume_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: VolumeDTO
+  expected_state: VolumeState
+  expected_feature: VolumeFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - VolumeState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-103
+  name: Volatility Analysis
+  family: Volatility
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Volatility Analysis
+  canonical_name: volatility_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: VolatilityDTO
+  expected_state: VolatilityState
+  expected_feature: VolatilityFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - VolatilityState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-104
+  name: Geometry Analysis
+  family: Geometry
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Geometry Analysis
+  canonical_name: geometry_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: GeometryDTO
+  expected_state: GeometryState
+  expected_feature: GeometryFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - GeometryState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-105
+  name: Price Action Analysis
+  family: Price Action
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Price Action Analysis
+  canonical_name: price_action_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: PriceActionDTO
+  expected_state: PriceActionState
+  expected_feature: PriceActionFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - PriceActionState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-106
+  name: Liquidity Analysis
+  family: Liquidity
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Liquidity Analysis
+  canonical_name: liquidity_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: LiquidityDTO
+  expected_state: LiquidityState
+  expected_feature: LiquidityFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - LiquidityState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-107
+  name: Market Structure Analysis
+  family: Market Structure
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Market Structure Analysis
+  canonical_name: market_structure_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: MarketStructureDTO
+  expected_state: MarketStructureState
+  expected_feature: MarketStructureFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - MarketStructureState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-108
+  name: Imbalance Analysis
+  family: Imbalance
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Imbalance Analysis
+  canonical_name: imbalance_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: ImbalanceDTO
+  expected_state: ImbalanceState
+  expected_feature: ImbalanceFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - ImbalanceState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-109
+  name: Institutional Zones Analysis
+  family: Institutional Zones
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Institutional Zones Analysis
+  canonical_name: institutional_zones_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: InstitutionalZonesDTO
+  expected_state: InstitutionalZonesState
+  expected_feature: InstitutionalZonesFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - InstitutionalZonesState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-110
+  name: Auction Market Theory Analysis
+  family: Auction Market Theory
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Auction Market Theory Analysis
+  canonical_name: auction_market_theory_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: AuctionMarketTheoryDTO
+  expected_state: AuctionMarketTheoryState
+  expected_feature: AuctionMarketTheoryFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - AuctionMarketTheoryState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-111
+  name: Volume Profile Analysis
+  family: Volume Profile
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Volume Profile Analysis
+  canonical_name: volume_profile_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: VolumeProfileDTO
+  expected_state: VolumeProfileState
+  expected_feature: VolumeProfileFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - VolumeProfileState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-112
+  name: Market Profile Analysis
+  family: Market Profile
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Market Profile Analysis
+  canonical_name: market_profile_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: MarketProfileDTO
+  expected_state: MarketProfileState
+  expected_feature: MarketProfileFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - MarketProfileState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-113
+  name: Wyckoff Analysis
+  family: Wyckoff Analysis
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Wyckoff Analysis
+  canonical_name: wyckoff_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: WyckoffDTO
+  expected_state: WyckoffState
+  expected_feature: WyckoffFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - WyckoffState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-114
+  name: Options Analysis
+  family: Options
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Options Analysis
+  canonical_name: options_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: OptionsDTO
+  expected_state: OptionsState
+  expected_feature: OptionsFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - OptionsState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-115
+  name: Open Interest Analysis
+  family: Open Interest
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Open Interest Analysis
+  canonical_name: open_interest_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: OpenInterestDTO
+  expected_state: OpenInterestState
+  expected_feature: OpenInterestFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - OpenInterestState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-116
+  name: Greeks Analysis
+  family: Greeks
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Greeks Analysis
+  canonical_name: greeks_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: GreeksDTO
+  expected_state: GreeksState
+  expected_feature: GreeksFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - GreeksState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-117
+  name: Implied Volatility Analysis
+  family: Implied Volatility
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Implied Volatility Analysis
+  canonical_name: implied_volatility_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: ImpliedVolatilityDTO
+  expected_state: ImpliedVolatilityState
+  expected_feature: ImpliedVolatilityFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - ImpliedVolatilityState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-118
+  name: Dealer Positioning Analysis
+  family: Dealer Positioning
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Dealer Positioning Analysis
+  canonical_name: dealer_positioning_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: DealerPositioningDTO
+  expected_state: DealerPositioningState
+  expected_feature: DealerPositioningFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - DealerPositioningState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-119
+  name: Expiry Behaviour Analysis
+  family: Expiry Behaviour
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Expiry Behaviour Analysis
+  canonical_name: expiry_behaviour_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: ExpiryBehaviourDTO
+  expected_state: ExpiryBehaviourState
+  expected_feature: ExpiryBehaviourFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - ExpiryBehaviourState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-120
+  name: Futures Build-up Analysis
+  family: Futures Build-up
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Futures Build-up Analysis
+  canonical_name: futures_build-up_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: FuturesBuild-upDTO
+  expected_state: FuturesBuild-upState
+  expected_feature: FuturesBuild-upFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - FuturesBuild-upState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-121
+  name: India VIX Analysis
+  family: India VIX
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: India VIX Analysis
+  canonical_name: india_vix_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: IndiaVIXDTO
+  expected_state: IndiaVIXState
+  expected_feature: IndiaVIXFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - IndiaVIXState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-122
+  name: Market Breadth Analysis
+  family: Market Breadth
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Market Breadth Analysis
+  canonical_name: market_breadth_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: MarketBreadthDTO
+  expected_state: MarketBreadthState
+  expected_feature: MarketBreadthFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - MarketBreadthState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-123
+  name: Macro Analysis
+  family: Macro
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Macro Analysis
+  canonical_name: macro_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: MacroDTO
+  expected_state: MacroState
+  expected_feature: MacroFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - MacroState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-124
+  name: Statistical Analysis
+  family: Statistical
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Statistical Analysis
+  canonical_name: statistical_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: StatisticalDTO
+  expected_state: StatisticalState
+  expected_feature: StatisticalFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - StatisticalState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-125
+  name: Quantitative Analysis
+  family: Quantitative
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Quantitative Analysis
+  canonical_name: quantitative_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: QuantitativeDTO
+  expected_state: QuantitativeState
+  expected_feature: QuantitativeFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - QuantitativeState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-126
+  name: Machine Learning Features Analysis
+  family: Machine Learning Features
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Machine Learning Features Analysis
+  canonical_name: machine_learning_features_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: MachineLearningFeaturesDTO
+  expected_state: MachineLearningFeaturesState
+  expected_feature: MachineLearningFeaturesFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - MachineLearningFeaturesState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-127
+  name: Session Analysis
+  family: Session
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Session Analysis
+  canonical_name: session_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: SessionDTO
+  expected_state: SessionState
+  expected_feature: SessionFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - SessionState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-128
+  name: Time Analysis
+  family: Time
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Time Analysis
+  canonical_name: time_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: TimeDTO
+  expected_state: TimeState
+  expected_feature: TimeFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - TimeState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-129
+  name: Calendar Analysis
+  family: Calendar
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Calendar Analysis
+  canonical_name: calendar_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: CalendarDTO
+  expected_state: CalendarState
+  expected_feature: CalendarFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - CalendarState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ana-130
+  name: Multi-Timeframe Analysis
+  family: Multi-Timeframe
+  category: Analysis
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Multi-Timeframe Analysis
+  canonical_name: multi-timeframe_analysis
+  platform: Platform 8
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: Multi-TimeframeDTO
+  expected_state: Multi-TimeframeState
+  expected_feature: Multi-TimeframeFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - Multi-TimeframeState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-300
+  name: Filtering Capability
+  family: Filtering
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Filtering Capability
+  canonical_name: filtering_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: FilteringFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - FilteringView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-301
+  name: Sorting Capability
+  family: Sorting
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Sorting Capability
+  canonical_name: sorting_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: SortingFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - SortingView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-302
+  name: Ranking Capability
+  family: Ranking
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Ranking Capability
+  canonical_name: ranking_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: RankingFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - RankingView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-303
+  name: Searching Capability
+  family: Searching
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Searching Capability
+  canonical_name: searching_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: SearchingFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - SearchingView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-304
+  name: Grouping Capability
+  family: Grouping
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Grouping Capability
+  canonical_name: grouping_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: GroupingFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - GroupingView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-305
+  name: Saved Views Capability
+  family: Saved Views
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Saved Views Capability
+  canonical_name: saved_views_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: SavedViewsFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - SavedViewsView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-306
+  name: Bookmarks Capability
+  family: Bookmarks
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Bookmarks Capability
+  canonical_name: bookmarks_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: BookmarksFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - BookmarksView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-307
+  name: Layouts Capability
+  family: Layouts
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Layouts Capability
+  canonical_name: layouts_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: LayoutsFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - LayoutsView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-308
+  name: Watchlists Capability
+  family: Watchlists
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Watchlists Capability
+  canonical_name: watchlists_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: WatchlistsFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - WatchlistsView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-309
+  name: Portfolio Filters Capability
+  family: Portfolio Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Portfolio Filters Capability
+  canonical_name: portfolio_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: PortfolioFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - PortfolioFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-310
+  name: Risk Filters Capability
+  family: Risk Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Risk Filters Capability
+  canonical_name: risk_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: RiskFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - RiskFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-311
+  name: Market Filters Capability
+  family: Market Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Market Filters Capability
+  canonical_name: market_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: MarketFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - MarketFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-312
+  name: Timeframe Filters Capability
+  family: Timeframe Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Timeframe Filters Capability
+  canonical_name: timeframe_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: TimeframeFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - TimeframeFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-313
+  name: Strategy Filters Capability
+  family: Strategy Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Strategy Filters Capability
+  canonical_name: strategy_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: StrategyFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - StrategyFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-315
+  name: Analysis Filters Capability
+  family: Analysis Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Analysis Filters Capability
+  canonical_name: analysis_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: AnalysisFiltersDTO
+  expected_state: AnalysisFiltersState
+  expected_feature: AnalysisFiltersFeature
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Raw Price Data
+  - Data Provider
+  planned_outputs:
+  - AnalysisFiltersState
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-316
+  name: State Filters Capability
+  family: State Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: State Filters Capability
+  canonical_name: state_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: StateFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - StateFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-317
+  name: Feature Filters Capability
+  family: Feature Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Feature Filters Capability
+  canonical_name: feature_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: FeatureFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - FeatureFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-318
+  name: Concept Filters Capability
+  family: Concept Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Concept Filters Capability
+  canonical_name: concept_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: ConceptFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - ConceptFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-319
+  name: Evidence Filters Capability
+  family: Evidence Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Evidence Filters Capability
+  canonical_name: evidence_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: EvidenceFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - EvidenceFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-320
+  name: Confidence Filters Capability
+  family: Confidence Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Confidence Filters Capability
+  canonical_name: confidence_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: ConfidenceFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - ConfidenceFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-321
+  name: Recommendation Filters Capability
+  family: Recommendation Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Recommendation Filters Capability
+  canonical_name: recommendation_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: RecommendationFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - RecommendationFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-322
+  name: Opportunity Filters Capability
+  family: Opportunity Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Opportunity Filters Capability
+  canonical_name: opportunity_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: OpportunityFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - OpportunityFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-323
+  name: Execution Filters Capability
+  family: Execution Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Execution Filters Capability
+  canonical_name: execution_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: ExecutionFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - ExecutionFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: intel-324
+  name: Explainability Filters Capability
+  family: Explainability Filters
+  category: Trading Intelligence
+  implementation_status: missing
+  lifecycle_state: Placeholder
+  version: 0.1.0
+  architecture_status: approved
+  freeze_status: planned
+  display_name: Explainability Filters Capability
+  canonical_name: explainability_filters_capability
+  platform: Platform 22
+  data_contracts: []
+  execution_context_support: false
+  explainability_support: false
+  dashboard_support: false
+  performance_budget: 10ms
+  validation_profile: Standard
+  certification_status: pending
+  dependencies: []
+  consumes: []
+  produces: []
+  expected_dto: ExplainabilityFiltersFilterDTO
+  expected_state: N/A
+  expected_feature: N/A
+  expected_concept: N/A
+  expected_methodology: N/A
+  entity_type: capability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  required_data: []
+  required_states: []
+  planned_dependencies:
+  - Opportunity
+  - Signal
+  - ExecutionState
+  - Methodology Platform
+  - Portfolio Platform
+  planned_outputs:
+  - ExplainabilityFiltersView
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.pdh
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: PDH
+  display_name: PDH
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.pdl
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: PDL
+  display_name: PDL
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.eqh
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: EQH
+  display_name: EQH
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.eql
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: EQL
+  display_name: EQL
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.timeliquidity
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: Time Liquidity
+  display_name: Time Liquidity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.swingliquidity
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: Swing Liquidity
+  display_name: Swing Liquidity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.sessionliquidity
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: Session Liquidity
+  display_name: Session Liquidity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.rangeliquidity
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: Range Liquidity
+  display_name: Range Liquidity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.trendliquidity
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: Trend Liquidity
+  display_name: Trend Liquidity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.obj.premiumdiscount
+  entity_type: capability
+  family: Liquidity
+  subcategory: Objects
+  canonical_name: Premium Discount
+  display_name: Premium Discount
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.eve.sweep
+  entity_type: capability
+  family: Liquidity
+  subcategory: Events
+  canonical_name: Sweep
+  display_name: Sweep
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.eve.stophunt
+  entity_type: capability
+  family: Liquidity
+  subcategory: Events
+  canonical_name: Stop Hunt
+  display_name: Stop Hunt
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.eve.liquiditygrab
+  entity_type: capability
+  family: Liquidity
+  subcategory: Events
+  canonical_name: Liquidity Grab
+  display_name: Liquidity Grab
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.eve.failedauction
+  entity_type: capability
+  family: Liquidity
+  subcategory: Events
+  canonical_name: Failed Auction
+  display_name: Failed Auction
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.eve.expansion
+  entity_type: capability
+  family: Liquidity
+  subcategory: Events
+  canonical_name: Expansion
+  display_name: Expansion
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.eve.compression
+  entity_type: capability
+  family: Liquidity
+  subcategory: Events
+  canonical_name: Compression
+  display_name: Compression
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.orderblocks
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: Order Blocks
+  display_name: Order Blocks
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.breakers
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: Breakers
+  display_name: Breakers
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.mitigation
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: Mitigation
+  display_name: Mitigation
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.fvg
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: FVG
+  display_name: FVG
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.ifvg
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: IFVG
+  display_name: IFVG
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.bpr
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: BPR
+  display_name: BPR
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.ce
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: CE
+  display_name: CE
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.liquidityvoid
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: Liquidity Void
+  display_name: Liquidity Void
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.foo.displacement
+  entity_type: capability
+  family: Liquidity
+  subcategory: Footprints
+  canonical_name: Displacement
+  display_name: Displacement
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.con.htfbias
+  entity_type: capability
+  family: Liquidity
+  subcategory: Context
+  canonical_name: HTF Bias
+  display_name: HTF Bias
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.con.killzones
+  entity_type: capability
+  family: Liquidity
+  subcategory: Context
+  canonical_name: Kill Zones
+  display_name: Kill Zones
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.con.session
+  entity_type: capability
+  family: Liquidity
+  subcategory: Context
+  canonical_name: Session
+  display_name: Session
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.con.marketregime
+  entity_type: capability
+  family: Liquidity
+  subcategory: Context
+  canonical_name: Market Regime
+  display_name: Market Regime
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.con.atrcontext
+  entity_type: capability
+  family: Liquidity
+  subcategory: Context
+  canonical_name: ATR Context
+  display_name: ATR Context
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: liq.con.adrcontext
+  entity_type: capability
+  family: Liquidity
+  subcategory: Context
+  canonical_name: ADR Context
+  display_name: ADR Context
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.internalstructure
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: Internal Structure
+  display_name: Internal Structure
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.externalstructure
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: External Structure
+  display_name: External Structure
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.fractalstructure
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: Fractal Structure
+  display_name: Fractal Structure
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.swingstructure
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: Swing Structure
+  display_name: Swing Structure
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.trendphase
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: Trend Phase
+  display_name: Trend Phase
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.expansionphase
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: Expansion Phase
+  display_name: Expansion Phase
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.contractionphase
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: Contraction Phase
+  display_name: Contraction Phase
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.hh
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: HH
+  display_name: HH
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.hl
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: HL
+  display_name: HL
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.lh
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: LH
+  display_name: LH
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.ll
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: LL
+  display_name: LL
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.bos
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: BOS
+  display_name: BOS
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.mss
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: MSS
+  display_name: MSS
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mar.choch
+  entity_type: capability
+  family: Market Structure
+  subcategory: General
+  canonical_name: CHOCH
+  display_name: CHOCH
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ins.supplyzone
+  entity_type: capability
+  family: Institutional Zones
+  subcategory: General
+  canonical_name: Supply Zone
+  display_name: Supply Zone
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ins.demandzone
+  entity_type: capability
+  family: Institutional Zones
+  subcategory: General
+  canonical_name: Demand Zone
+  display_name: Demand Zone
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ins.decisionpoint
+  entity_type: capability
+  family: Institutional Zones
+  subcategory: General
+  canonical_name: Decision Point
+  display_name: Decision Point
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ins.institutionalbase
+  entity_type: capability
+  family: Institutional Zones
+  subcategory: General
+  canonical_name: Institutional Base
+  display_name: Institutional Base
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ins.flipzone
+  entity_type: capability
+  family: Institutional Zones
+  subcategory: General
+  canonical_name: Flip Zone
+  display_name: Flip Zone
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ins.propulsionblock
+  entity_type: capability
+  family: Institutional Zones
+  subcategory: General
+  canonical_name: Propulsion Block
+  display_name: Propulsion Block
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ins.rejectionblock
+  entity_type: capability
+  family: Institutional Zones
+  subcategory: General
+  canonical_name: Rejection Block
+  display_name: Rejection Block
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.bullishflow
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Bullish Flow
+  display_name: Bullish Flow
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.bearishflow
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Bearish Flow
+  display_name: Bearish Flow
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.flowshift
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Flow Shift
+  display_name: Flow Shift
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.impulse
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Impulse
+  display_name: Impulse
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.correction
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Correction
+  display_name: Correction
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.continuation
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Continuation
+  display_name: Continuation
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.exhaustion
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Exhaustion
+  display_name: Exhaustion
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ord.absorption
+  entity_type: capability
+  family: Order Flow
+  subcategory: General
+  canonical_name: Absorption
+  display_name: Absorption
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.poc
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: POC
+  display_name: POC
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.vah
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: VAH
+  display_name: VAH
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.val
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: VAL
+  display_name: VAL
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.hvn
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: HVN
+  display_name: HVN
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.lvn
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: LVN
+  display_name: LVN
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.initialbalance
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: Initial Balance
+  display_name: Initial Balance
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.openingrange
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: Opening Range
+  display_name: Opening Range
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.excess
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: Excess
+  display_name: Excess
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.singleprints
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: Single Prints
+  display_name: Single Prints
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.acceptance
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: Acceptance
+  display_name: Acceptance
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: auc.rejection
+  entity_type: capability
+  family: Auction Market Theory
+  subcategory: General
+  canonical_name: Rejection
+  display_name: Rejection
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.accumulation
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: Accumulation
+  display_name: Accumulation
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.distribution
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: Distribution
+  display_name: Distribution
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.reaccumulation
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: Reaccumulation
+  display_name: Reaccumulation
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.redistribution
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: Redistribution
+  display_name: Redistribution
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.spring
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: Spring
+  display_name: Spring
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.upthrust
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: Upthrust
+  display_name: Upthrust
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.sos
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: SOS
+  display_name: SOS
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.sow
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: SOW
+  display_name: SOW
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.lps
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: LPS
+  display_name: LPS
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: wyc.lpsy
+  entity_type: capability
+  family: Wyckoff
+  subcategory: General
+  canonical_name: LPSY
+  display_name: LPSY
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.relativevolume
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Relative Volume
+  display_name: Relative Volume
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.climaxvolume
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Climax Volume
+  display_name: Climax Volume
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.dryup
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Dry Up
+  display_name: Dry Up
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.buyingpressure
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Buying Pressure
+  display_name: Buying Pressure
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.sellingpressure
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Selling Pressure
+  display_name: Selling Pressure
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.delta
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Delta
+  display_name: Delta
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.cumulativedelta
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Cumulative Delta
+  display_name: Cumulative Delta
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: vol.volumedivergence
+  entity_type: capability
+  family: Volume Analysis
+  subcategory: General
+  canonical_name: Volume Divergence
+  display_name: Volume Divergence
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.asian
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Asian
+  display_name: Asian
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.london
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: London
+  display_name: London
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.newyork
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: New York
+  display_name: New York
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.sydney
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Sydney
+  display_name: Sydney
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.killzones
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Kill Zones
+  display_name: Kill Zones
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.powerhour
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Power Hour
+  display_name: Power Hour
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.lunch
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Lunch
+  display_name: Lunch
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.dailyopen
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Daily Open
+  display_name: Daily Open
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.weeklyopen
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Weekly Open
+  display_name: Weekly Open
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.monthlyopen
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Monthly Open
+  display_name: Monthly Open
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ses.midnightopen
+  entity_type: capability
+  family: Session Framework
+  subcategory: General
+  canonical_name: Midnight Open
+  display_name: Midnight Open
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mul.htfbias
+  entity_type: capability
+  family: Multi-Timeframe
+  subcategory: General
+  canonical_name: HTF Bias
+  display_name: HTF Bias
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mul.ltfconfirmation
+  entity_type: capability
+  family: Multi-Timeframe
+  subcategory: General
+  canonical_name: LTF Confirmation
+  display_name: LTF Confirmation
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mul.topdownanalysis
+  entity_type: capability
+  family: Multi-Timeframe
+  subcategory: General
+  canonical_name: Top Down Analysis
+  display_name: Top Down Analysis
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mul.timeframealignment
+  entity_type: capability
+  family: Multi-Timeframe
+  subcategory: General
+  canonical_name: Timeframe Alignment
+  display_name: Timeframe Alignment
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mul.timeframeconflict
+  entity_type: capability
+  family: Multi-Timeframe
+  subcategory: General
+  canonical_name: Timeframe Conflict
+  display_name: Timeframe Conflict
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: mul.fractalalignment
+  entity_type: capability
+  family: Multi-Timeframe
+  subcategory: General
+  canonical_name: Fractal Alignment
+  display_name: Fractal Alignment
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: sta.expectancy
+  entity_type: capability
+  family: Statistical Context
+  subcategory: General
+  canonical_name: Expectancy
+  display_name: Expectancy
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: sta.winprobability
+  entity_type: capability
+  family: Statistical Context
+  subcategory: General
+  canonical_name: Win Probability
+  display_name: Win Probability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: sta.confidence
+  entity_type: capability
+  family: Statistical Context
+  subcategory: General
+  canonical_name: Confidence
+  display_name: Confidence
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: sta.volatilitypercentile
+  entity_type: capability
+  family: Statistical Context
+  subcategory: General
+  canonical_name: Volatility Percentile
+  display_name: Volatility Percentile
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: sta.trendprobability
+  entity_type: capability
+  family: Statistical Context
+  subcategory: General
+  canonical_name: Trend Probability
+  display_name: Trend Probability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: sta.regimeprobability
+  entity_type: capability
+  family: Statistical Context
+  subcategory: General
+  canonical_name: Regime Probability
+  display_name: Regime Probability
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.mae
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: MAE
+  display_name: MAE
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.mfe
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: MFE
+  display_name: MFE
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.dynamicstops
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: Dynamic Stops
+  display_name: Dynamic Stops
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.partialexit
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: Partial Exit
+  display_name: Partial Exit
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.breakeven
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: Breakeven
+  display_name: Breakeven
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.exposure
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: Exposure
+  display_name: Exposure
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.portfolioheat
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: Portfolio Heat
+  display_name: Portfolio Heat
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: ris.drawdown
+  entity_type: capability
+  family: Risk Intelligence
+  subcategory: General
+  canonical_name: Drawdown
+  display_name: Drawdown
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.fundingrate
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Funding Rate
+  display_name: Funding Rate
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.exchangeflow
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Exchange Flow
+  display_name: Exchange Flow
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.whaleactivity
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Whale Activity
+  display_name: Whale Activity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.stablecoinflow
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Stablecoin Flow
+  display_name: Stablecoin Flow
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.walletactivity
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Wallet Activity
+  display_name: Wallet Activity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.mineractivity
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Miner Activity
+  display_name: Miner Activity
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.mempool
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Mempool
+  display_name: Mempool
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: cry.openinterest
+  entity_type: capability
+  family: Crypto
+  subcategory: General
+  canonical_name: Open Interest
+  display_name: Open Interest
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: for.dxy
+  entity_type: capability
+  family: Forex
+  subcategory: General
+  canonical_name: DXY
+  display_name: DXY
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: for.currencystrength
+  entity_type: capability
+  family: Forex
+  subcategory: General
+  canonical_name: Currency Strength
+  display_name: Currency Strength
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: for.carrytrade
+  entity_type: capability
+  family: Forex
+  subcategory: General
+  canonical_name: Carry Trade
+  display_name: Carry Trade
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: for.interestratedifferential
+  entity_type: capability
+  family: Forex
+  subcategory: General
+  canonical_name: Interest Rate Differential
+  display_name: Interest Rate Differential
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: for.centralbankevents
+  entity_type: capability
+  family: Forex
+  subcategory: General
+  canonical_name: Central Bank Events
+  display_name: Central Bank Events
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: for.sessionoverlap
+  entity_type: capability
+  family: Forex
+  subcategory: General
+  canonical_name: Session Overlap
+  display_name: Session Overlap
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: for.correlation
+  entity_type: capability
+  family: Forex
+  subcategory: General
+  canonical_name: Correlation
+  display_name: Correlation
+  lifecycle_status: Placeholder
+  supported_markets: []
+  supported_styles: []
+  supported_timeframes: []
+  planned_dependencies: []
+  planned_outputs: []
+  consumes: []
+  produces: []
+  dependencies: []
+  dto:
+    inputs: []
+    outputs: []
+  execution_context:
+    requires_state: false
+    requires_history: false
+- id: svc.capabilityorchestrator
+  entity_type: service
+  canonical_name: Capability Orchestrator
+  display_name: Capability Orchestrator
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.confidenceengine
+  entity_type: service
+  canonical_name: Confidence Engine
+  display_name: Confidence Engine
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.evidenceengine
+  entity_type: service
+  canonical_name: Evidence Engine
+  display_name: Evidence Engine
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.dependencyresolver
+  entity_type: service
+  canonical_name: Dependency Resolver
+  display_name: Dependency Resolver
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.executionplanner
+  entity_type: service
+  canonical_name: Execution Planner
+  display_name: Execution Planner
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.replayengine
+  entity_type: service
+  canonical_name: Replay Engine
+  display_name: Replay Engine
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.cachemanager
+  entity_type: service
+  canonical_name: Cache Manager
+  display_name: Cache Manager
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.validationengine
+  entity_type: service
+  canonical_name: Validation Engine
+  display_name: Validation Engine
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: svc.explainabilityengine
+  entity_type: service
+  canonical_name: Explainability Engine
+  display_name: Explainability Engine
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: infra.dashboard
+  entity_type: infrastructure
+  canonical_name: Dashboard
+  display_name: Dashboard
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: infra.api
+  entity_type: infrastructure
+  canonical_name: API
+  display_name: API
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: infra.reporting
+  entity_type: infrastructure
+  canonical_name: Reporting
+  display_name: Reporting
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: infra.notifications
+  entity_type: infrastructure
+  canonical_name: Notifications
+  display_name: Notifications
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: infra.ailayer
+  entity_type: infrastructure
+  canonical_name: AI Layer
+  display_name: AI Layer
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: infra.knowledgebase
+  entity_type: infrastructure
+  canonical_name: Knowledge Base
+  display_name: Knowledge Base
+  lifecycle_status: Placeholder
+  consumes: []
+  produces: []
+  dependencies: []
+- id: cap_platform10_framework
+  name: Methodology Framework Core
+  description: Core Methodology Framework including Plugin Loader and Evaluator
+  entity_type: capability
+  platform: Platform 10
+  lifecycle_status: experimental
+  dependencies: []
+  dto: MethodologyResultDTO
+  execution_context: Sync
+- id: cap_meth_trend_core
+  name: Core Trend Methodology Plugin
+  description: Capability-driven Trend methodology evaluating abstract states
+  entity_type: capability
+  platform: Platform 10
+  lifecycle_status: experimental
+  dependencies:
+  - cap_platform10_framework
+  dto: MethodologyResultDTO
+  execution_context: Sync
+  version: 1.0.0
+  author: Project OS Architecture
+  category: Core Price-Based
+  supported_markets:
+  - Equities
+  - Crypto
+  supported_asset_classes:
+  - Spot
+  - Futures
+  supported_timeframes:
+  - 1H
+  - 4H
+  - 1D
+  required_features:
+  - TrendStructure
+  - TrendDirection
+  - TrendPersistence
+  - MarketRegime
+  - Momentum
+  required_concepts:
+  - TrendStructure
+  required_market_states:
+  - Trending
+  - Consolidating
+  required_evidence:
+  - MovingAverageAlignment
+  - MomentumConfirmation
+  output_type: MethodologyResultDTO
+  confidence_model: LinearDecay
+  switch_id: switch_meth_trend_core
+  compatible_with:
+  - Momentum
+  - Breakout
+  - ICT
+  - Wyckoff
+- id: cap_meth_momentum_core
+  entity_type: capability
+  platform: Platform 10
+  category: Core Price-Based
+  name: Core Momentum Methodology Plugin
+  description: Capability-driven Momentum methodology evaluating multi-dimensional
+    abstract momentum states
+  version: 1.0.0
+  author: Project OS Architecture
+  lifecycle_status: experimental
+  dependencies:
+  - cap_platform10_framework
+  switch_id: switch_meth_momentum_core
+  required_features:
+  - MomentumDirection>=1.0.0
+  - MomentumVelocity>=1.0.0
+  - MomentumAcceleration>=1.0.0
+  - MomentumPersistence>=1.0.0
+  - MomentumDivergence>=1.0.0
+  - TrendState>=1.0.0
+  - MarketRegime>=1.1.0
+  required_concepts: []
+  required_evidence: []
+  required_market_states:
+  - Trending
+  - Transition
+  supported_markets:
+  - Equities
+  - Forex
+  - Crypto
+  - Futures
+  supported_asset_classes:
+  - Spot
+  - Futures
+  supported_timeframes:
+  - 1H
+  - 4H
+  - 1D
+  execution_context: Sync
+  scheduler_cadence: Every Candle
+  dto: MethodologyResultDTO
+  output_type: MethodologyResultDTO
+  confidence_model: LinearDecay
+  interaction_model:
+    enhances:
+    - Trend
+    - Breakout
+    - Continuation
+    weakens:
+    - Mean Reversion (Trending Regime)
+    requires:
+    - Trend State
+    neutral:
+    - Order Flow
+    independent: []
+- id: cap_meth_mean_reversion_core
+  entity_type: capability
+  platform: Platform 10
+  category: Core Price-Based
+  name: Core Mean Reversion Methodology Plugin
+  description: Capability-driven Mean Reversion methodology evaluating statistical
+    deviation and structure
+  version: 1.0.0
+  author: Project OS Architecture
+  lifecycle_status: experimental
+  dependencies:
+  - cap_platform10_framework
+  switch_id: switch_meth_mean_reversion_core
+  required_features:
+  - ReferenceValueDeviation>=1.0.0
+  - RejectionQuality>=1.0.0
+  - LiquidityReaction>=1.0.0
+  - VolatilityCompression>=1.0.0
+  - TrendState>=1.0.0
+  - MarketRegime>=1.1.0
+  required_concepts: []
+  required_evidence: []
+  required_market_states:
+  - Ranging
+  - Transition
+  supported_markets:
+  - Equities
+  - Forex
+  - Crypto
+  - Futures
+  supported_asset_classes:
+  - Spot
+  - Futures
+  supported_timeframes:
+  - 1H
+  - 4H
+  - 1D
+  execution_context: Sync
+  scheduler_cadence: Every Candle
+  dto: MethodologyResultDTO
+  output_type: MethodologyResultDTO
+  confidence_model: LinearDecay
+  interaction_model:
+    enhances:
+    - capability: Continuation
+      condition: Trend Pullback
+    weakens:
+    - capability: Momentum
+      condition: Trending Regime
+    - capability: Breakout
+      condition: Any
+    requires:
+    - VolatilityState
+    neutral:
+    - Order Flow
+    independent: []
+- id: cap_meth_breakout_core
+  family: Methodology Engine
+  name: Breakout Core Methodology v1
+  implementation_status: implemented
+  technical_validation_status: repository_validated
+  metadata:
+    enabled: true
+    required_phase: 10
+    required_family: Breakout
+    required_switches:
+    - breakout_family
+    requires:
+    - ftr-volbreakout
+    optional_requires: []
+    conflicts_with: []
+    interaction_model:
+      enhances:
+      - capability: Trend
+        condition: Trending Regime
+      - capability: Momentum
+        condition: Strong Momentum
+      weakens:
+      - capability: Mean Reversion
+        condition: Breakout Confirmed
+      requires:
+      - capability: Breakout Concept
+        condition: Any
+    minimum_version: 1.0.0
+    maximum_version: null
+  display_name: Breakout Core Methodology v1
+  canonical_name: breakout_core_methodology
+  platform: Platform 10
+  data_contracts:
+  - MethodologyProfileDTO
+- id: cap_meth_price_action_core
+  name: Price Action Core Methodology v1
+  family: Methodology Engine
+  platform: Platform 10
+  version: 1.0.0
+  description: Evaluates abstract Price Action concepts from Platform 9 to determine
+    structural confidence, applicability, and strategic direction.
+  lifecycle_status: production
+  canonical_name: meth_price_action_core
+  dependencies:
+  - cap_con_price_action
+  metadata:
+    interaction_model:
+      enhances:
+      - target: Trend
+        condition: Pullback Complete
+      - target: Mean Reversion
+        condition: Climactic Reversal
+      weakens:
+      - target: Breakout
+        condition: Exhaustion Confirmed
+- id: cap_engine_composite_synthesis
+  category: Synthesis
+  family: Institutional Synthesis
+  name: Composite Methodology Synthesis Engine
+  platform: Platform 11
+  version: 1.0.0
+  implementation_status: implemented
+  lifecycle_state: Frozen
+  activation:
+    enabled: true
+    required_phase: 11
+  metadata:
+    interaction_policies:
+    - Increase Weight
+    - Reduce Uncertainty
+    - Increase Reliability
+    - Add Supporting Evidence
+    - Suppress
+    - Reduce Applicability
+    - Increase Conflict
+    pipeline:
+    - stage: Normalizer
+      priority: 1
+      dependencies: []
+      failure_policy: continue
+      retry_policy: none
+      output_contract: NormalizedMethodologyDict
+    - stage: Compatibility
+      priority: 2
+      dependencies:
+      - Normalizer
+      failure_policy: continue
+      retry_policy: none
+      output_contract: CompatibilityMatrix
+    - stage: Interaction
+      priority: 3
+      dependencies:
+      - Normalizer
+      - Compatibility
+      failure_policy: continue
+      retry_policy: none
+      output_contract: InteractionGraph
+    - stage: Conflict
+      priority: 4
+      dependencies:
+      - Interaction
+      failure_policy: continue
+      retry_policy: none
+      output_contract: ContradictionGraph
+    - stage: Consensus
+      priority: 5
+      dependencies:
+      - Conflict
+      failure_policy: continue
+      retry_policy: none
+      output_contract: ConsensusMetrics
+    - stage: Evidence
+      priority: 6
+      dependencies:
+      - Consensus
+      failure_policy: continue
+      retry_policy: none
+      output_contract: EvidenceDTO
+    - stage: Explainability
+      priority: 7
+      dependencies:
+      - Evidence
+      failure_policy: continue
+      retry_policy: none
+      output_contract: ExplainabilityDTO
+    - stage: Intent
+      priority: 8
+      dependencies:
+      - Consensus
+      failure_policy: fail_fast
+      retry_policy: none
+      output_contract: NumericalIntentVector
+
+- id: cap_platform_opportunity_detection
+  name: Opportunity Detection Platform
+  description: Consumes composite market intent and detects valid structural opportunities via registered evaluators.
+  domain: Opportunity
+  layer: Decision
+  platform: Platform 12
+  version: 1.0.0
+  implementation_status: candidate
+  lifecycle_state: Development
+  activation:
+    enabled: true
+    required_phase: 12
+  metadata:
+    opportunity_profiles:
+      - profile_id: opp_profile_trend_continuation
+        name: Trend Continuation Profile
+        version: 1.0.0
+        schema_version: 1.0
+        compatibility_version: 1.0
+        required_methodologies: [Trend, Momentum]
+        required_regimes: [Trending, HighVolatility]
+        required_consensus: 0.7
+        required_reliability: 0.6
+        required_applicability: 0.8
+        required_evidence: true
+        execution_policies: [standard_trend]
+      - profile_id: opp_profile_mean_reversion
+        name: Mean Reversion Profile
+        version: 1.0.0
+        schema_version: 1.0
+        compatibility_version: 1.0
+        required_methodologies: [MeanReversion]
+        required_regimes: [Ranging, VolatilityCompression]
+        required_consensus: 0.8
+        required_reliability: 0.7
+        required_applicability: 0.8
+        required_evidence: true
+        execution_policies: [fade_extremes]
+    opportunity_evaluators:
+      - evaluator_id: cap_evaluator_trend_opportunity
+        name: Trend Opportunity Evaluator
+        version: 1.0.0
+        required_methodologies: [Trend]
+        produces_opportunity_types: [Trend Continuation]
+        performance_budget: 10ms
+        replay_compatibility: strict
+      - evaluator_id: cap_evaluator_reversion_opportunity
+        name: Mean Reversion Opportunity Evaluator
+        version: 1.0.0
+        required_methodologies: [MeanReversion]
+        produces_opportunity_types: [Mean Reversion]
+        performance_budget: 10ms
+        replay_compatibility: strict
+    pipeline:
+    - stage: Eligibility Filter
+      priority: 1
+      dependencies: []
+      failure_policy: fail_fast
+      output_contract: EligibleCandidatesDTO
+    - stage: Market Context Filter
+      priority: 2
+      dependencies: [Eligibility Filter]
+      failure_policy: continue
+      output_contract: ContextFilteredCandidatesDTO
+    - stage: Session Filter
+      priority: 3
+      dependencies: [Market Context Filter]
+      failure_policy: continue
+      output_contract: SessionFilteredCandidatesDTO
+    - stage: Instrument Filter
+      priority: 4
+      dependencies: [Session Filter]
+      failure_policy: continue
+      output_contract: InstrumentFilteredCandidatesDTO
+    - stage: Liquidity Filter
+      priority: 5
+      dependencies: [Instrument Filter]
+      failure_policy: fail_fast
+      output_contract: LiquidityFilteredCandidatesDTO
+    - stage: Classification
+      priority: 6
+      dependencies: [Liquidity Filter]
+      failure_policy: continue
+      output_contract: ClassifiedOpportunitiesDTO
+    - stage: Opportunity Strength
+      priority: 7
+      dependencies: [Classification]
+      failure_policy: continue
+      output_contract: ScoredOpportunitiesDTO
+    - stage: Opportunity Evidence
+      priority: 8
+      dependencies: [Opportunity Strength]
+      failure_policy: continue
+      output_contract: EvidenceBackedOpportunitiesDTO
+    - stage: Opportunity Trace
+      priority: 9
+      dependencies: [Opportunity Evidence]
+      failure_policy: fail_fast
+      output_contract: OpportunityDetectionDTO
+
+
+- id: cap_platform_opportunity_evaluation
+  name: Opportunity Evaluation and Prioritization Platform
+  description: Evaluates, scores, and prioritizes detected opportunities.
+  domain: Opportunity
+  layer: Decision
+  platform: Platform 13
+  version: 1.0.0
+  implementation_status: candidate
+  lifecycle_state: Development
+  activation:
+    enabled: true
+    required_phase: 13
+  metadata:
+    evaluation_profiles:
+      - profile_id: eval_profile_standard
+        name: Standard Evaluation Profile
+        version: 1.0.0
+        required_policies: [standard_scoring, strict_competition, standard_queue]
+    scoring_policies:
+      - policy_id: standard_scoring
+        weights:
+          quality: 0.4
+          reliability: 0.3
+          applicability: 0.2
+          structural_risk_penalty: 0.1
+    ranking_policies:
+      - policy_id: strict_ranking
+        sort_by: [composite_score, urgency]
+        order: descending
+    competition_policies:
+      - policy_id: strict_competition
+        resolution: highest_score_wins
+        allow_nested: true
+    queue_policies:
+      - policy_id: standard_queue
+        max_active_duration: 3600
+        promotion_threshold: 0.8
+    plugins:
+      - id: plugin_quality_assessor
+        type: Assessment
+        name: Standard Quality Assessor
+      - id: plugin_structural_risk_estimator
+        type: Assessment
+        name: Structural Risk Estimator
+      - id: plugin_competition_resolver
+        type: Policy
+        name: Strict Competition Resolver
+      - id: plugin_composite_scorer
+        type: Builder
+        name: Composite Score Builder
+      - id: plugin_queue_manager
+        type: Lifecycle
+        name: Opportunity Queue Manager
+    pipeline:
+    - stage: Assessment
+      priority: 1
+      dependencies: []
+      failure_policy: continue
+      output_contract: AssessedOpportunitiesDTO
+    - stage: Competition
+      priority: 2
+      dependencies: [Assessment]
+      failure_policy: continue
+      output_contract: CompetitionGraphDTO
+    - stage: Scoring
+      priority: 3
+      dependencies: [Competition]
+      failure_policy: fail_fast
+      output_contract: ScoredOpportunitiesDTO
+    - stage: Ranking
+      priority: 4
+      dependencies: [Scoring]
+      failure_policy: fail_fast
+      output_contract: RankedOpportunitiesDTO
+    - stage: Queue
+      priority: 5
+      dependencies: [Ranking]
+      failure_policy: continue
+      output_contract: EvaluatedOpportunityCollectionDTO
+
+
+- id: cap_platform_recommendation_generation
+  name: Recommendation Generation Platform
+  description: Converts evaluated opportunities into actionable execution recommendations.
+  domain: Recommendation
+  layer: Decision
+  platform: Platform 14
+  version: 1.0.0
+  implementation_status: candidate
+  lifecycle_state: Development
+  activation:
+    enabled: true
+    required_phase: 14
+  metadata:
+    recommendation_profiles:
+      - profile_id: rec_profile_standard
+        name: Standard Recommendation Profile
+        version: 1.0.0
+        required_policies: [zone_entry, structural_stop, fixed_target]
+    entry_policies:
+      - policy_id: zone_entry
+        type: zone
+        buffer_percent: 0.1
+    stop_policies:
+      - policy_id: structural_stop
+        type: structural
+        buffer_percent: 0.2
+    target_policies:
+      - policy_id: fixed_target
+        type: fixed_rr
+        target_rr: 2.0
+    plugins:
+      - id: plugin_entry_generator
+        type: Generator
+        name: Zone Entry Generator
+      - id: plugin_stop_generator
+        type: Generator
+        name: Structural Stop Generator
+      - id: plugin_target_generator
+        type: Generator
+        name: Fixed R:R Target Generator
+      - id: plugin_structure_analyzer
+        type: Analyzer
+        name: Trade Structure Analyzer
+      - id: plugin_recommendation_builder
+        type: Builder
+        name: Recommendation Builder
+    pipeline:
+    - stage: EntryGeneration
+      priority: 1
+      dependencies: []
+      failure_policy: fail_fast
+    - stage: StopGeneration
+      priority: 2
+      dependencies: [EntryGeneration]
+      failure_policy: fail_fast
+    - stage: TargetGeneration
+      priority: 3
+      dependencies: [StopGeneration]
+      failure_policy: fail_fast
+    - stage: StructureAnalysis
+      priority: 4
+      dependencies: [TargetGeneration]
+      failure_policy: fail_fast
+    - stage: RecommendationBuilding
+      priority: 5
+      dependencies: [StructureAnalysis]
+      failure_policy: fail_fast
+
+governance:
+  phase_exit_gates:
+  - name: Architecture Gate
+    module: ProjectOS.validator.architecture
+  - name: Governance Gate
+    module: ProjectOS.validator.governance
+  - name: Registry Gate
+    module: ProjectOS.validator.registry
+  - name: Documentation Gate
+    module: ProjectOS.validator.documentation
+  - name: Testing Gate
+    module: ProjectOS.validator.testing
+  - name: Certification Gate
+    module: ProjectOS.validator.certification
+  - name: Replay Gate
+    module: ProjectOS.validator.replay
+  - name: Performance Gate
+    module: ProjectOS.validator.performance
+
+
+recommendation_registry:
+  profiles:
+    - profile_id: rec_profile_trend_continuation
+      name: Trend Continuation Recommendation
+      required_opportunity_types: [trend_continuation]
+      required_confidence: 0.8
+      entry_policy: zone_entry
+      stop_policy: atr_stop
+      target_policy: dynamic_trail
+      scaling_policy: scale_out_halves
+      exit_policy: trailing_stop_hit
+      validation_policy: strict_rr_validation
+      lifecycle_policy: standard_lifecycle
+
+recommendation_policy_registry:
+  entry_policies:
+    - id: zone_entry
+      type: zone
+      buffer_percent: 0.1
+    - id: twap_entry
+      type: time_weighted
+      duration_minutes: 60
+  stop_policies:
+    - id: atr_stop
+      type: volatility
+      multiplier: 2.0
+    - id: structural_stop
+      type: structural
+  target_policies:
+    - id: dynamic_trail
+      type: trailing
+      activation_rr: 1.0
+    - id: liquidity_target
+      type: liquidity_pool
+  scaling_policies:
+    - id: scale_out_halves
+      type: partial_exit
+      fractions: [0.5, 0.5]
+  exit_policies:
+    - id: trailing_stop_hit
+      type: automatic
+  validation_policies:
+    - id: strict_rr_validation
+      min_rr: 2.0
+      ensure_entry_before_stop: true
+  expiration_policies:
+    - id: standard_expiration
+      time_in_force_minutes: 120

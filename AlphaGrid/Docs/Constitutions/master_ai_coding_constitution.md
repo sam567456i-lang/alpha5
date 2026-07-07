@@ -169,3 +169,26 @@ Exit criteria must strictly verify:
 Regressions must mathematically scale across the entire architecture. The matrix is strictly defined as:
 `Current Family × All Implemented Families × All Supported Markets × Representative Timeframes`
 *(e.g., Breakout × Trend × Mean Reversion × Stocks × Crypto × Forex × 1m × 15m × 1h × 1d)*
+
+### 34. Legacy Component Preservation & Classification Workflow
+Existing production code (Features, Concepts, Methodologies) must not be rewritten simply because a new platform is introduced.
+Project OS must classify existing components via the following pipeline:
+`Repository Scan -> Component Discovery -> Evidence Collection -> Classification [Retain, Reuse, Extend, Migrate, Deprecate, Remove] -> Impact Analysis -> Documentation Impact -> Certification Plan -> Human Approval -> Implementation -> Certification -> Freeze`
+
+### 35. Legacy First Principle
+Before implementing any new capability, Project OS shall determine whether an equivalent or partially equivalent implementation already exists. Existing implementations shall be reused or extended whenever practical. New implementations shall only be created when repository evidence demonstrates that no suitable implementation exists.
+
+### 36. No Silent Replacement
+No AI agent or developer may silently replace, rewrite, or bypass an existing production component. Any replacement requires:
+- Repository evidence
+- Classification report
+- Change Impact Report
+- Human approval
+- Successful certification
+- Documentation synchronization
+
+### 37. Architecture Evolution Principle
+Architecture evolves by extension, not replacement. Existing certified production components are assets. The burden of proof lies with the proposed change, not with the existing implementation.
+
+### Rule 19 � Comprehensive Context Initialization
+Before initiating any new implementation phase, the AI agent MUST conduct a comprehensive review of the core architecture files, roadmaps, and master plans. The AI must never lose sight of the holistic project architecture; it must review the required files for all planned phases, not just the single phase currently in focus, to maintain and update its contextual memory continually.

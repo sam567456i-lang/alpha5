@@ -1,0 +1,114 @@
+platforms:
+  - id: platform0
+    name: Governance & Configuration
+    consumes: []
+    produces:
+      - registries
+      - OS_rules
+    allowed_imports: []
+    forbidden_imports: ["*"]
+
+  - id: platform1
+    name: Data Platform
+    consumes:
+      - external_feeds
+    produces:
+      - raw_ticks
+    allowed_imports: ["platform0"]
+    forbidden_imports: ["platform2", "platform3", "platform4", "platform5", "platform6", "platform7", "platform8", "platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform2
+    name: Universe & Screening
+    consumes:
+      - platform0.registries
+    produces:
+      - universe_definition
+    allowed_imports: ["platform0"]
+    forbidden_imports: ["platform3", "platform4", "platform5", "platform6", "platform7", "platform8", "platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform3
+    name: Asset Intelligence
+    consumes:
+      - universe_definition
+    produces:
+      - static_metadata
+    allowed_imports: ["platform0", "platform2"]
+    forbidden_imports: ["platform4", "platform5", "platform6", "platform7", "platform8", "platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform4
+    name: Market Data Processing
+    consumes:
+      - raw_ticks
+    produces:
+      - normalized_bars
+      - replay_events
+    allowed_imports: ["platform0", "platform1", "platform3"]
+    forbidden_imports: ["platform5", "platform6", "platform7", "platform8", "platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform5
+    name: Mathematical Core
+    consumes:
+      - numeric_series
+    produces:
+      - math_results
+    allowed_imports: ["platform0"]
+    forbidden_imports: ["platform6", "platform7", "platform8", "platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform6
+    name: State Engine
+    consumes:
+      - raw_events
+    produces:
+      - incremental_state
+    allowed_imports: ["platform0"]
+    forbidden_imports: ["platform7", "platform8", "platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform7
+    name: Indicator Engine
+    consumes:
+      - normalized_bars
+      - math_results
+    produces:
+      - indicator_values
+    allowed_imports: ["platform0", "platform4", "platform5", "platform6"]
+    forbidden_imports: ["platform8", "platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform8
+    name: Analysis Framework
+    consumes:
+      - indicator_values
+      - incremental_state
+    produces:
+      - analysis_states
+    allowed_imports: ["platform0", "platform4", "platform5", "platform6", "platform7"]
+    forbidden_imports: ["platform9", "platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform9
+    name: Feature Platform
+    consumes:
+      - analysis_states
+    produces:
+      - boolean_features
+      - float_features
+    allowed_imports: ["platform0", "platform6", "platform8"]
+    forbidden_imports: ["platform10", "platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform10
+    name: Concept Platform
+    consumes:
+      - boolean_features
+      - analysis_states
+    produces:
+      - semantic_concepts
+    allowed_imports: ["platform0", "platform6", "platform8", "platform9"]
+    forbidden_imports: ["platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]
+
+  - id: platform11
+    name: Market State Platform
+    consumes:
+      - semantic_concepts
+      - analysis_states
+    produces:
+      - MarketState
+    allowed_imports: ["platform0", "platform6", "platform8", "platform9", "platform10"]
+    forbidden_imports: ["platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18", "platform19", "platform20", "platform21", "platform22", "platform23", "platform24"]

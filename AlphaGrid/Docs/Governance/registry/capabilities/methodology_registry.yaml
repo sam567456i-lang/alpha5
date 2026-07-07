@@ -1,0 +1,64 @@
+entries:
+- category: methodology
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-012
+  implementation_state: Planned
+  name: Trend Following
+  owner_platform: Platform 10
+  subcategory: Directional
+- category: methodology
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-013
+  implementation_state: Planned
+  name: Momentum
+  owner_platform: Platform 10
+  subcategory: Velocity
+- category: methodology
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-014
+  implementation_state: Planned
+  name: Mean Reversion
+  owner_platform: Platform 10
+  subcategory: Statistical
+- category: methodology
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-015
+  implementation_state: Planned
+  name: ICT
+  owner_platform: Platform 10
+  subcategory: Institutional
+- category: methodology
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-016
+  implementation_state: Planned
+  name: Wyckoff
+  owner_platform: Platform 10
+  subcategory: Structural
+- category: methodology
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-017
+  implementation_state: Planned
+  name: Order Flow
+  owner_platform: Platform 10
+  subcategory: Microstructural
+- category: methodology
+  certified: false
+  dependencies: []
+  frozen: false
+  id: CAP-018
+  implementation_state: Planned
+  name: Volume Profile
+  owner_platform: Platform 10
+  subcategory: Auction

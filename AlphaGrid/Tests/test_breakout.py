@@ -1,8 +1,8 @@
 import pytest
 import numpy as np
 import pandas as pd
-from Backend.reference.legacy.features.support_resistance import SupportResistanceFeatureGenerator
-from Backend.reference.legacy.features.high_low_breakout import HighLowBreakoutFeatureGenerator
+from Backend.features.support_resistance import SupportResistanceFeatureGenerator
+from Backend.features.high_low_breakout import HighLowBreakoutFeatureGenerator
 from Backend.features.volatility_breakout import VolatilityBreakoutFeatureGenerator
 from Backend.concepts.core.breakout import BreakoutConceptGenerator
 from Backend.methodologies.breakout import BreakoutMethodology

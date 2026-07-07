@@ -90,63 +90,55 @@ Instead of isolated implementations, every phase MUST organically traverse the f
 
 The repository architecture dictates that the single canonical runtime entry point must execute the following chain sequentially:
 
-Configuration
+Platform 0: Governance & Configuration
     ↓
-Foundation
+Platform 1: Data Platform
     ↓
-ApplicationContext
+Platform 2: Universe & Screening
     ↓
-Dependency Container
+Platform 3: Asset Intelligence
     ↓
-Factories
+Platform 4: Market Data Processing
     ↓
-Plugin Manager
+Platform 5: Mathematical Core
     ↓
-Registries
+Platform 6: State Engine
     ↓
-Provider Plugin
-    ├── `SyntheticDatasetProvider` *(Deterministic, repeatable, CI, development, architecture verification)*
-    ├── `YFinanceProvider` *(Live network, research, exploratory)*
-    ├── `BinanceProvider` *(Live production)*
-    └── `PolygonProvider` *(Institutional production)*
+Platform 7: Indicator Engine
     ↓
-Raw Data
+Platform 8: Analysis Framework (Plugins)
     ↓
-Normalization
+Platform 9: Feature Platform
     ↓
-Corporate Actions
+Platform 10: Concept Platform
     ↓
-Session Alignment
+Platform 11: Market State Platform (Singularity Point)
     ↓
-Gap Filling
+Platform 12: Capability Orchestrator
     ↓
-Data Quality
+Platform 13: Methodology Platform
     ↓
-Dataset Versioning
+Platform 14: Signal Platform
     ↓
-Market Intelligence
+Platform 15: Opportunity Platform
     ↓
-Feature Engine
+Platform 16: Evidence Platform
     ↓
-Concept Engine
+Platform 17: Explainability Platform
     ↓
-Primitive Signals
+Platform 18: Confidence Platform
     ↓
-Methodology Engine
+Platform 19: Risk Platform
     ↓
-Strategy Engine
+Platform 20: Portfolio Intelligence Platform
     ↓
-Research Engine
+Platform 21: Recommendation Platform
     ↓
-Evidence Engine
+Platform 22: Trading Intelligence Layer
     ↓
-Portfolio Engine
+Platform 23: Dashboard Platform
     ↓
-Recommendation Engine
-    ↓
-API
-    ↓
-Dashboard
+Platform 24: Notification Platform
 
 ---
 

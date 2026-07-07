@@ -1,0 +1,9 @@
+{
+    "status": "HEALTHY",
+    "capabilities_registered": 205,
+    "files_scanned": 1337,
+    "_meta": {
+        "timestamp": "2026-07-05T19:04:35.189340Z",
+        "generator": "Project OS Report Engine v6"
+    }
+}

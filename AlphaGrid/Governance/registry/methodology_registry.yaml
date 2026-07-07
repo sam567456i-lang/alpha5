@@ -1,291 +1,91 @@
 methodologies:
-- methodology_id: METH_ICT
-  name: ICT
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_SMART_MONEY_CONCEPTS
-  name: Smart Money Concepts
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_WYCKOFF
-  name: Wyckoff
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_TREND_FOLLOWING
-  name: Trend Following
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_BREAKOUT_TRADING
-  name: Breakout Trading
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_MEAN_REVERSION
+- methodology_id: METH_ICT_2022_MODEL
+  family: ICT
+  name: 2022 Model
+  platform: P12
+  maturity: planned
+- methodology_id: METH_ICT_2023_MODEL
+  family: ICT
+  name: 2023 Model
+  platform: P12
+  maturity: planned
+- methodology_id: METH_ICT_SILVER_BULLET
+  family: ICT
+  name: Silver Bullet
+  platform: P12
+  maturity: planned
+- methodology_id: METH_ICT_OTE
+  family: ICT
+  name: OTE
+  platform: P12
+  maturity: planned
+- methodology_id: METH_ICT_UNICORN
+  family: ICT
+  name: Unicorn
+  platform: P12
+  maturity: planned
+- methodology_id: METH_SMC_BOS_CONTINUATION
+  family: SMC
+  name: BOS Continuation
+  platform: P12
+  maturity: planned
+- methodology_id: METH_SMC_OB_REVERSAL
+  family: SMC
+  name: OB Reversal
+  platform: P12
+  maturity: planned
+- methodology_id: METH_SMC_FVG_MITIGATION
+  family: SMC
+  name: FVG Mitigation
+  platform: P12
+  maturity: planned
+- methodology_id: METH_WYCKOFF_SPRING
+  family: Wyckoff
+  name: Spring
+  platform: P12
+  maturity: planned
+- methodology_id: METH_WYCKOFF_LPS
+  family: Wyckoff
+  name: LPS
+  platform: P12
+  maturity: planned
+- methodology_id: METH_WYCKOFF_SIGN_OF_STRENGTH
+  family: Wyckoff
+  name: Sign of Strength
+  platform: P12
+  maturity: planned
+- methodology_id: METH_TREND_EMA_PULLBACK
+  family: Trend
+  name: EMA Pullback
+  platform: P12
+  maturity: planned
+- methodology_id: METH_TREND_DONCHIAN_BREAKOUT
+  family: Trend
+  name: Donchian Breakout
+  platform: P12
+  maturity: planned
+- methodology_id: METH_BREAKOUT_ORB
+  family: Breakout
+  name: ORB
+  platform: P12
+  maturity: planned
+- methodology_id: METH_BREAKOUT_NR7
+  family: Breakout
+  name: NR7
+  platform: P12
+  maturity: planned
+- methodology_id: METH_VWAP_MEAN_REVERSION
+  family: VWAP
   name: Mean Reversion
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_AUCTION_MARKET_THEORY
-  name: Auction Market Theory
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_VOLUME_SPREAD_ANALYSIS
-  name: Volume Spread Analysis
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_STATISTICAL_ARBITRAGE
-  name: Statistical Arbitrage
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
-- methodology_id: METH_QUANTITATIVE
-  name: Quantitative
-  platform: P12_Methodology
-  supported_markets:
-  - all
-  supported_assets:
-  - all
-  supported_sessions:
-  - all
-  supported_timeframes:
-  - all
-  supported_styles:
-  - all
-  supported_methodologies:
-  - all
-  required_data: []
-  required_indicators: []
-  required_analyses: []
-  required_features: []
-  required_concepts: []
-  required_validators: []
-  required_dashboard_widgets: []
-  required_ai_agents: []
-  streaming_support: true
-  cache_support: true
-  incremental_support: true
-  performance_profile: O(N)
-  maturity: research
-  implementation_status: planned
+  platform: P12
+  maturity: planned
+- methodology_id: METH_QUANT_KALMAN_FILTER
+  family: Quant
+  name: Kalman Filter
+  platform: P12
+  maturity: planned
+- methodology_id: METH_QUANT_COINTEGRATION
+  family: Quant
+  name: Cointegration
+  platform: P12
+  maturity: planned

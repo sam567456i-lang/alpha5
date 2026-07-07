@@ -40,6 +40,7 @@ from Backend.api.services.market_service import MarketService
 from Backend.market_intelligence.session_engine import SessionEngine
 from Backend.market_intelligence.universe_manager import UniverseManager
 from Backend.market_intelligence.normalization_engine import NormalizationEngine
+from Backend.market_intelligence.symbol_metadata_registry import SymbolMetadataRegistry
 
 def get_container(request: Request) -> DependencyContainer:
     """Retrieve the Foundation DependencyContainer attached to the FastAPI application state."""
@@ -58,12 +59,19 @@ def get_market_service(container: DependencyContainer = Depends(get_container)) 
     # Resolve the orchestrated pipeline
     from Backend.market_intelligence.historical_market_pipeline import HistoricalMarketPipeline
     pipeline = container.resolve("historical_market_pipeline", HistoricalMarketPipeline)
+    symbol_metadata_registry = None
+    if container.contains("symbol_metadata_registry"):
+        symbol_metadata_registry = container.resolve(
+            "symbol_metadata_registry",
+            SymbolMetadataRegistry,
+        )
     
     return MarketService(
         session_engine=session_engine,
         universe_manager=universe_manager,
         normalization_engine=normalization_engine,
         historical_market_pipeline=pipeline,
+        symbol_metadata_registry=symbol_metadata_registry,
     )
 
 from Backend.api.services.features_service import FeaturesService

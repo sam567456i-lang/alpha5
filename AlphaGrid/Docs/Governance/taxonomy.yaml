@@ -1,0 +1,152 @@
+Liquidity:
+  Objects:
+  - PDH
+  - PDL
+  - EQH
+  - EQL
+  - Time Liquidity
+  - Swing Liquidity
+  - Session Liquidity
+  - Range Liquidity
+  - Trend Liquidity
+  - Premium Discount
+  Events:
+  - Sweep
+  - Stop Hunt
+  - Liquidity Grab
+  - Failed Auction
+  - Expansion
+  - Compression
+  Footprints:
+  - Order Blocks
+  - Breakers
+  - Mitigation
+  - FVG
+  - IFVG
+  - BPR
+  - CE
+  - Liquidity Void
+  - Displacement
+  Context:
+  - HTF Bias
+  - Kill Zones
+  - Session
+  - Market Regime
+  - ATR Context
+  - ADR Context
+Market Structure:
+- Internal Structure
+- External Structure
+- Fractal Structure
+- Swing Structure
+- Trend Phase
+- Expansion Phase
+- Contraction Phase
+- HH
+- HL
+- LH
+- LL
+- BOS
+- MSS
+- CHOCH
+Institutional Zones:
+- Supply Zone
+- Demand Zone
+- Decision Point
+- Institutional Base
+- Flip Zone
+- Propulsion Block
+- Rejection Block
+Order Flow:
+- Bullish Flow
+- Bearish Flow
+- Flow Shift
+- Impulse
+- Correction
+- Continuation
+- Exhaustion
+- Absorption
+Auction Market Theory:
+- POC
+- VAH
+- VAL
+- HVN
+- LVN
+- Initial Balance
+- Opening Range
+- Excess
+- Single Prints
+- Acceptance
+- Rejection
+Wyckoff:
+- Accumulation
+- Distribution
+- Reaccumulation
+- Redistribution
+- Spring
+- Upthrust
+- SOS
+- SOW
+- LPS
+- LPSY
+Volume Analysis:
+- Relative Volume
+- Climax Volume
+- Dry Up
+- Buying Pressure
+- Selling Pressure
+- Delta
+- Cumulative Delta
+- Volume Divergence
+Session Framework:
+- Asian
+- London
+- New York
+- Sydney
+- Kill Zones
+- Power Hour
+- Lunch
+- Daily Open
+- Weekly Open
+- Monthly Open
+- Midnight Open
+Multi-Timeframe:
+- HTF Bias
+- LTF Confirmation
+- Top Down Analysis
+- Timeframe Alignment
+- Timeframe Conflict
+- Fractal Alignment
+Statistical Context:
+- Expectancy
+- Win Probability
+- Confidence
+- Volatility Percentile
+- Trend Probability
+- Regime Probability
+Risk Intelligence:
+- MAE
+- MFE
+- Dynamic Stops
+- Partial Exit
+- Breakeven
+- Exposure
+- Portfolio Heat
+- Drawdown
+Crypto:
+- Funding Rate
+- Exchange Flow
+- Whale Activity
+- Stablecoin Flow
+- Wallet Activity
+- Miner Activity
+- Mempool
+- Open Interest
+Forex:
+- DXY
+- Currency Strength
+- Carry Trade
+- Interest Rate Differential
+- Central Bank Events
+- Session Overlap
+- Correlation

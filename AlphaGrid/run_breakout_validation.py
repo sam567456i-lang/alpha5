@@ -12,6 +12,25 @@ from Backend.concepts.core.breakout import BreakoutConceptGenerator
 from Backend.methodologies.breakout import BreakoutMethodology
 from Backend.signals.primitive.generators.breakout_signals import BreakoutPrimitiveSignalGenerator
 from Backend.strategy.strategies.breakout_strategies import VolatilityBreakoutStrategy
+from Shared.dtos.execution_context import ExecutionContext
+from Backend.dtos.base import BaseObject
+
+# --- MONKEY PATCH BASEOBJECT FOR LEGACY SCRIPTS ---
+original_init = BaseObject.__init__
+def patched_init(self, **kwargs):
+    if 'execution_context' not in kwargs:
+        kwargs['execution_context'] = ExecutionContext(
+            session_id='legacy', trace_id=kwargs.get('trace_id', 'trace'),
+            correlation_id=kwargs.get('correlation_id', 'cor'), instrument_id='TEST',
+            environment='local', runtime_mode='test', exchange='TEST',
+            provider='TEST', market='TEST', timezone='UTC', sequence_id=0,
+            is_replay=True, build_version='1.0.0'
+        )
+    if 'owner' not in kwargs:
+        kwargs['owner'] = 'Legacy'
+    original_init(self, **kwargs)
+BaseObject.__init__ = patched_init
+# ---------------------------------------------------
 
 
 def generate_market_data(rows: int) -> pd.DataFrame:

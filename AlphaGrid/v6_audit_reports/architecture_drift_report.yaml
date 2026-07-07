@@ -1,0 +1,14 @@
+hallucinated_domains:
+- Geometry
+- Methodology (SMC, Wyckoff)
+ghost_core:
+- ftr-ohlcv
+- ftr-candlebody
+- ftr-upperwick
+testing_deficit:
+- Mean Reversion
+- RSI
+- VWAP
+- Stochastic
+yaml_capabilities_declared: 400
+python_capabilities_found: 2

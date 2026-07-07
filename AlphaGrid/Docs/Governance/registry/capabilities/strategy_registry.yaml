@@ -1,0 +1,31 @@
+entries:
+- category: strategy
+  certified: false
+  dependencies:
+  - Trend Following
+  frozen: false
+  id: CAP-019
+  implementation_state: Planned
+  name: EMA Pullback
+  owner_platform: Platform 11
+  subcategory: Trend Following
+- category: strategy
+  certified: false
+  dependencies:
+  - Trend Following
+  frozen: false
+  id: CAP-020
+  implementation_state: Planned
+  name: Donchian Breakout
+  owner_platform: Platform 11
+  subcategory: Breakout
+- category: strategy
+  certified: false
+  dependencies:
+  - Mean Reversion
+  frozen: false
+  id: CAP-021
+  implementation_state: Planned
+  name: RSI-2
+  owner_platform: Platform 11
+  subcategory: Mean Reversion

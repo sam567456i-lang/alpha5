@@ -1,0 +1,634 @@
+scopes:
+  capabilities:
+    ana-100:
+      lifecycle: placeholder
+      state: disabled
+    ana-101:
+      lifecycle: placeholder
+      state: disabled
+    ana-102:
+      lifecycle: placeholder
+      state: disabled
+    ana-103:
+      lifecycle: placeholder
+      state: disabled
+    ana-104:
+      lifecycle: placeholder
+      state: disabled
+    ana-105:
+      lifecycle: placeholder
+      state: disabled
+    ana-106:
+      lifecycle: placeholder
+      state: disabled
+    ana-107:
+      lifecycle: placeholder
+      state: disabled
+    ana-108:
+      lifecycle: placeholder
+      state: disabled
+    ana-109:
+      lifecycle: placeholder
+      state: disabled
+    ana-110:
+      lifecycle: placeholder
+      state: disabled
+    ana-111:
+      lifecycle: placeholder
+      state: disabled
+    ana-112:
+      lifecycle: placeholder
+      state: disabled
+    ana-113:
+      lifecycle: placeholder
+      state: disabled
+    ana-114:
+      lifecycle: placeholder
+      state: disabled
+    ana-115:
+      lifecycle: placeholder
+      state: disabled
+    ana-116:
+      lifecycle: placeholder
+      state: disabled
+    ana-117:
+      lifecycle: placeholder
+      state: disabled
+    ana-118:
+      lifecycle: placeholder
+      state: disabled
+    ana-119:
+      lifecycle: placeholder
+      state: disabled
+    ana-120:
+      lifecycle: placeholder
+      state: disabled
+    ana-121:
+      lifecycle: placeholder
+      state: disabled
+    ana-122:
+      lifecycle: placeholder
+      state: disabled
+    ana-123:
+      lifecycle: placeholder
+      state: disabled
+    ana-124:
+      lifecycle: placeholder
+      state: disabled
+    ana-125:
+      lifecycle: placeholder
+      state: disabled
+    ana-126:
+      lifecycle: placeholder
+      state: disabled
+    ana-127:
+      lifecycle: placeholder
+      state: disabled
+    ana-128:
+      lifecycle: placeholder
+      state: disabled
+    ana-129:
+      lifecycle: placeholder
+      state: disabled
+    ana-130:
+      lifecycle: placeholder
+      state: disabled
+    auc.acceptance:
+      lifecycle: placeholder
+      state: disabled
+    auc.excess:
+      lifecycle: placeholder
+      state: disabled
+    auc.hvn:
+      lifecycle: placeholder
+      state: disabled
+    auc.initialbalance:
+      lifecycle: placeholder
+      state: disabled
+    auc.lvn:
+      lifecycle: placeholder
+      state: disabled
+    auc.openingrange:
+      lifecycle: placeholder
+      state: disabled
+    auc.poc:
+      lifecycle: placeholder
+      state: disabled
+    auc.rejection:
+      lifecycle: placeholder
+      state: disabled
+    auc.singleprints:
+      lifecycle: placeholder
+      state: disabled
+    auc.vah:
+      lifecycle: placeholder
+      state: disabled
+    auc.val:
+      lifecycle: placeholder
+      state: disabled
+    cap_meth_mean_reversion_core:
+      lifecycle: experimental
+      state: enabled
+    cap_meth_momentum_core:
+      lifecycle: experimental
+      state: enabled
+    cap_meth_trend_core:
+      lifecycle: experimental
+      state: enabled
+    cap_platform10_framework:
+      lifecycle: experimental
+      state: enabled
+    con-breakout:
+      lifecycle: placeholder
+      state: disabled
+    con-trend:
+      lifecycle: placeholder
+      state: disabled
+    cry.exchangeflow:
+      lifecycle: placeholder
+      state: disabled
+    cry.fundingrate:
+      lifecycle: placeholder
+      state: disabled
+    cry.mempool:
+      lifecycle: placeholder
+      state: disabled
+    cry.mineractivity:
+      lifecycle: placeholder
+      state: disabled
+    cry.openinterest:
+      lifecycle: placeholder
+      state: disabled
+    cry.stablecoinflow:
+      lifecycle: placeholder
+      state: disabled
+    cry.walletactivity:
+      lifecycle: placeholder
+      state: disabled
+    cry.whaleactivity:
+      lifecycle: placeholder
+      state: disabled
+    for.carrytrade:
+      lifecycle: placeholder
+      state: disabled
+    for.centralbankevents:
+      lifecycle: placeholder
+      state: disabled
+    for.correlation:
+      lifecycle: placeholder
+      state: disabled
+    for.currencystrength:
+      lifecycle: placeholder
+      state: disabled
+    for.dxy:
+      lifecycle: placeholder
+      state: disabled
+    for.interestratedifferential:
+      lifecycle: placeholder
+      state: disabled
+    for.sessionoverlap:
+      lifecycle: placeholder
+      state: disabled
+    ftr-atr:
+      lifecycle: placeholder
+      state: disabled
+    ftr-hlbreakout:
+      lifecycle: placeholder
+      state: disabled
+    ftr-ohlcv:
+      lifecycle: placeholder
+      state: disabled
+    ftr-sr:
+      lifecycle: placeholder
+      state: disabled
+    ftr-volbreakout:
+      lifecycle: placeholder
+      state: disabled
+    ins.decisionpoint:
+      lifecycle: placeholder
+      state: disabled
+    ins.demandzone:
+      lifecycle: placeholder
+      state: disabled
+    ins.flipzone:
+      lifecycle: placeholder
+      state: disabled
+    ins.institutionalbase:
+      lifecycle: placeholder
+      state: disabled
+    ins.propulsionblock:
+      lifecycle: placeholder
+      state: disabled
+    ins.rejectionblock:
+      lifecycle: placeholder
+      state: disabled
+    ins.supplyzone:
+      lifecycle: placeholder
+      state: disabled
+    intel-300:
+      lifecycle: placeholder
+      state: disabled
+    intel-301:
+      lifecycle: placeholder
+      state: disabled
+    intel-302:
+      lifecycle: placeholder
+      state: disabled
+    intel-303:
+      lifecycle: placeholder
+      state: disabled
+    intel-304:
+      lifecycle: placeholder
+      state: disabled
+    intel-305:
+      lifecycle: placeholder
+      state: disabled
+    intel-306:
+      lifecycle: placeholder
+      state: disabled
+    intel-307:
+      lifecycle: placeholder
+      state: disabled
+    intel-308:
+      lifecycle: placeholder
+      state: disabled
+    intel-309:
+      lifecycle: placeholder
+      state: disabled
+    intel-310:
+      lifecycle: placeholder
+      state: disabled
+    intel-311:
+      lifecycle: placeholder
+      state: disabled
+    intel-312:
+      lifecycle: placeholder
+      state: disabled
+    intel-313:
+      lifecycle: placeholder
+      state: disabled
+    intel-315:
+      lifecycle: placeholder
+      state: disabled
+    intel-316:
+      lifecycle: placeholder
+      state: disabled
+    intel-317:
+      lifecycle: placeholder
+      state: disabled
+    intel-318:
+      lifecycle: placeholder
+      state: disabled
+    intel-319:
+      lifecycle: placeholder
+      state: disabled
+    intel-320:
+      lifecycle: placeholder
+      state: disabled
+    intel-321:
+      lifecycle: placeholder
+      state: disabled
+    intel-322:
+      lifecycle: placeholder
+      state: disabled
+    intel-323:
+      lifecycle: placeholder
+      state: disabled
+    intel-324:
+      lifecycle: placeholder
+      state: disabled
+    liq.con.adrcontext:
+      lifecycle: placeholder
+      state: disabled
+    liq.con.atrcontext:
+      lifecycle: placeholder
+      state: disabled
+    liq.con.htfbias:
+      lifecycle: placeholder
+      state: disabled
+    liq.con.killzones:
+      lifecycle: placeholder
+      state: disabled
+    liq.con.marketregime:
+      lifecycle: placeholder
+      state: disabled
+    liq.con.session:
+      lifecycle: placeholder
+      state: disabled
+    liq.eve.compression:
+      lifecycle: placeholder
+      state: disabled
+    liq.eve.expansion:
+      lifecycle: placeholder
+      state: disabled
+    liq.eve.failedauction:
+      lifecycle: placeholder
+      state: disabled
+    liq.eve.liquiditygrab:
+      lifecycle: placeholder
+      state: disabled
+    liq.eve.stophunt:
+      lifecycle: placeholder
+      state: disabled
+    liq.eve.sweep:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.bpr:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.breakers:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.ce:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.displacement:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.fvg:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.ifvg:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.liquidityvoid:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.mitigation:
+      lifecycle: placeholder
+      state: disabled
+    liq.foo.orderblocks:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.eqh:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.eql:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.pdh:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.pdl:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.premiumdiscount:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.rangeliquidity:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.sessionliquidity:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.swingliquidity:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.timeliquidity:
+      lifecycle: placeholder
+      state: disabled
+    liq.obj.trendliquidity:
+      lifecycle: placeholder
+      state: disabled
+    mar.bos:
+      lifecycle: placeholder
+      state: disabled
+    mar.choch:
+      lifecycle: placeholder
+      state: disabled
+    mar.contractionphase:
+      lifecycle: placeholder
+      state: disabled
+    mar.expansionphase:
+      lifecycle: placeholder
+      state: disabled
+    mar.externalstructure:
+      lifecycle: placeholder
+      state: disabled
+    mar.fractalstructure:
+      lifecycle: placeholder
+      state: disabled
+    mar.hh:
+      lifecycle: placeholder
+      state: disabled
+    mar.hl:
+      lifecycle: placeholder
+      state: disabled
+    mar.internalstructure:
+      lifecycle: placeholder
+      state: disabled
+    mar.lh:
+      lifecycle: placeholder
+      state: disabled
+    mar.ll:
+      lifecycle: placeholder
+      state: disabled
+    mar.mss:
+      lifecycle: placeholder
+      state: disabled
+    mar.swingstructure:
+      lifecycle: placeholder
+      state: disabled
+    mar.trendphase:
+      lifecycle: placeholder
+      state: disabled
+    mul.fractalalignment:
+      lifecycle: placeholder
+      state: disabled
+    mul.htfbias:
+      lifecycle: placeholder
+      state: disabled
+    mul.ltfconfirmation:
+      lifecycle: placeholder
+      state: disabled
+    mul.timeframealignment:
+      lifecycle: placeholder
+      state: disabled
+    mul.timeframeconflict:
+      lifecycle: placeholder
+      state: disabled
+    mul.topdownanalysis:
+      lifecycle: placeholder
+      state: disabled
+    ord.absorption:
+      lifecycle: placeholder
+      state: disabled
+    ord.bearishflow:
+      lifecycle: placeholder
+      state: disabled
+    ord.bullishflow:
+      lifecycle: placeholder
+      state: disabled
+    ord.continuation:
+      lifecycle: placeholder
+      state: disabled
+    ord.correction:
+      lifecycle: placeholder
+      state: disabled
+    ord.exhaustion:
+      lifecycle: placeholder
+      state: disabled
+    ord.flowshift:
+      lifecycle: placeholder
+      state: disabled
+    ord.impulse:
+      lifecycle: placeholder
+      state: disabled
+    ris.breakeven:
+      lifecycle: placeholder
+      state: disabled
+    ris.drawdown:
+      lifecycle: placeholder
+      state: disabled
+    ris.dynamicstops:
+      lifecycle: placeholder
+      state: disabled
+    ris.exposure:
+      lifecycle: placeholder
+      state: disabled
+    ris.mae:
+      lifecycle: placeholder
+      state: disabled
+    ris.mfe:
+      lifecycle: placeholder
+      state: disabled
+    ris.partialexit:
+      lifecycle: placeholder
+      state: disabled
+    ris.portfolioheat:
+      lifecycle: placeholder
+      state: disabled
+    ses.asian:
+      lifecycle: placeholder
+      state: disabled
+    ses.dailyopen:
+      lifecycle: placeholder
+      state: disabled
+    ses.killzones:
+      lifecycle: placeholder
+      state: disabled
+    ses.london:
+      lifecycle: placeholder
+      state: disabled
+    ses.lunch:
+      lifecycle: placeholder
+      state: disabled
+    ses.midnightopen:
+      lifecycle: placeholder
+      state: disabled
+    ses.monthlyopen:
+      lifecycle: placeholder
+      state: disabled
+    ses.newyork:
+      lifecycle: placeholder
+      state: disabled
+    ses.powerhour:
+      lifecycle: placeholder
+      state: disabled
+    ses.sydney:
+      lifecycle: placeholder
+      state: disabled
+    ses.weeklyopen:
+      lifecycle: placeholder
+      state: disabled
+    sig-breakout:
+      lifecycle: placeholder
+      state: disabled
+    sta.confidence:
+      lifecycle: placeholder
+      state: disabled
+    sta.expectancy:
+      lifecycle: placeholder
+      state: disabled
+    sta.regimeprobability:
+      lifecycle: placeholder
+      state: disabled
+    sta.trendprobability:
+      lifecycle: placeholder
+      state: disabled
+    sta.volatilitypercentile:
+      lifecycle: placeholder
+      state: disabled
+    sta.winprobability:
+      lifecycle: placeholder
+      state: disabled
+    strat-hlbreakout:
+      lifecycle: placeholder
+      state: disabled
+    strat-srbreakout:
+      lifecycle: placeholder
+      state: disabled
+    strat-volbreakout:
+      lifecycle: placeholder
+      state: disabled
+    vol.buyingpressure:
+      lifecycle: placeholder
+      state: disabled
+    vol.climaxvolume:
+      lifecycle: placeholder
+      state: disabled
+    vol.cumulativedelta:
+      lifecycle: placeholder
+      state: disabled
+    vol.delta:
+      lifecycle: placeholder
+      state: disabled
+    vol.dryup:
+      lifecycle: placeholder
+      state: disabled
+    vol.relativevolume:
+      lifecycle: placeholder
+      state: disabled
+    vol.sellingpressure:
+      lifecycle: placeholder
+      state: disabled
+    vol.volumedivergence:
+      lifecycle: placeholder
+      state: disabled
+    wyc.accumulation:
+      lifecycle: placeholder
+      state: disabled
+    wyc.distribution:
+      lifecycle: placeholder
+      state: disabled
+    wyc.lps:
+      lifecycle: placeholder
+      state: disabled
+    wyc.lpsy:
+      lifecycle: placeholder
+      state: disabled
+    wyc.reaccumulation:
+      lifecycle: placeholder
+      state: disabled
+    wyc.redistribution:
+      lifecycle: placeholder
+      state: disabled
+    wyc.sos:
+      lifecycle: placeholder
+      state: disabled
+    wyc.sow:
+      lifecycle: placeholder
+      state: disabled
+    wyc.spring:
+      lifecycle: placeholder
+      state: disabled
+    wyc.upthrust:
+      lifecycle: placeholder
+      state: disabled
+  platforms:
+    Platform 0:
+      lifecycle: beta
+      state: enabled
+    Platform 10:
+      lifecycle: beta
+      state: enabled
+    Platform 22:
+      lifecycle: beta
+      state: enabled
+    Platform 8:
+      lifecycle: beta
+      state: enabled
+    Platform 9:
+      lifecycle: beta
+      state: enabled
+version: '1.0'

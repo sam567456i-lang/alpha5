@@ -4,56 +4,57 @@ from .base import AbstractFeature
 from .registry import FeatureRegistry
 from .engine import FeatureEngine
 from .cache import FeatureCache
-
-# Old unmigrated features
+from .trend import SMAFeature, EMAFeature
+from .momentum import ROCFeature, RSIFeature
+from .volatility import ATRFeature, RelativeVolumeFeature
+from .macd import EMA12Feature, EMA26Feature, MACDLineFeature, MACDSignalFeature, MACDHistogramFeature
+from .bollinger import BollingerBandsFeature, BollingerMetricsFeature
 from .adx import ADXFeature
 from .cci import CCIFeature
+from .donchian import Donchian20Feature
+from .keltner import KeltnerChannelFeature
 from .stochastic import StochasticFeature
 from .supertrend import SuperTrendFeature
+from .atr import ATRFeatureGenerator
+from .bollinger_bands import BollingerBandsFeatureGenerator
+from .high_low_breakout import HighLowBreakoutFeatureGenerator
+from .keltner_channels import KeltnerChannelFeatureGenerator
+from .rsi import RSIFeatureGenerator
 from .stochastic_generator import StochasticFeatureGenerator
+from .support_resistance import SupportResistanceFeatureGenerator
 from .volatility_breakout import VolatilityBreakoutFeatureGenerator
-
-# Migrated Generators
-from .sma_generator import SMAFeatureGenerator
-from .ema_generator import EMAFeatureGenerator
-from .wma_generator import WMAFeatureGenerator
-from .ma_cross_generator import MACrossFeatureGenerator
-from .macd_generator import MACDFeatureGenerator
-from .roc_generator import ROCFeatureGenerator
-from .rsi_generator import RSIFeatureGenerator
-from .vwap_generator import VWAPFeatureGenerator
-from .relative_volume_generator import RelativeVolumeFeatureGenerator
-from .atr_generator import ATRFeatureGenerator
-from .bollinger_generator import BollingerFeatureGenerator
-from .keltner_generator import KeltnerFeatureGenerator
-from .donchian_generator import DonchianFeatureGenerator
-from .high_low_generator import HighLowFeatureGenerator
-from .support_resistance_generator import SupportResistanceFeatureGenerator
-
+from .vwap import VWAPFeatureGenerator
 __all__ = [
+    'ADXFeature',
+    'ATRFeature',
+    'ATRFeatureGenerator',
     'AbstractFeature',
+    'BollingerBandsFeature',
+    'BollingerBandsFeatureGenerator',
+    'BollingerMetricsFeature',
+    'CCIFeature',
+    'Donchian20Feature',
+    'EMA12Feature',
+    'EMA26Feature',
+    'EMAFeature',
     'FeatureCache',
     'FeatureEngine',
     'FeatureRegistry',
-    'ADXFeature',
+    'HighLowBreakoutFeatureGenerator',
+    'KeltnerChannelFeature',
+    'KeltnerChannelFeatureGenerator',
+    'MACDHistogramFeature',
+    'MACDLineFeature',
+    'MACDSignalFeature',
+    'ROCFeature',
+    'RSIFeature',
+    'RSIFeatureGenerator',
+    'RelativeVolumeFeature',
+    'SMAFeature',
     'StochasticFeature',
     'StochasticFeatureGenerator',
     'SuperTrendFeature',
+    'SupportResistanceFeatureGenerator',
     'VWAPFeatureGenerator',
-    'RelativeVolumeFeatureGenerator',
-    'VolatilityBreakoutFeatureGenerator',
-    'CCIFeature',
-    'SMAFeatureGenerator',
-    'EMAFeatureGenerator',
-    'WMAFeatureGenerator',
-    'MACrossFeatureGenerator',
-    'MACDFeatureGenerator',
-    'ROCFeatureGenerator',
-    'RSIFeatureGenerator',
-    'ATRFeatureGenerator',
-    'BollingerFeatureGenerator',
-    'KeltnerFeatureGenerator',
-    'DonchianFeatureGenerator',
-    'HighLowFeatureGenerator',
-    'SupportResistanceFeatureGenerator'
+    'VolatilityBreakoutFeatureGenerator'
 ]

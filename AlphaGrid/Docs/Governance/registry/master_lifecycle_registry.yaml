@@ -1,0 +1,67 @@
+# Master Lifecycle Registry
+# Defines the exact progression stage of every core capability across the repository.
+# Lifecycle Stages: Draft -> Planned -> Scaffolded -> Implemented -> Unit Tested -> Integrated -> Certified -> Frozen -> Deprecated -> Archived
+
+capabilities:
+  - id: "cap_platform10_methodology"
+    name: "Platform 10: Methodology Engine"
+    lifecycle_stage: "Scaffolded"
+    owner: "Architecture Team"
+    environment: "Production"
+    blocking_items: ["Missing complete unit tests", "Pending Methodology plugins"]
+
+  - id: "cap_platform11_composite"
+    name: "Platform 11: Composite Synthesis"
+    lifecycle_stage: "Implemented"
+    owner: "Core Backend"
+    environment: "Production"
+    blocking_items: ["Pending Integration tests with P12"]
+
+  - id: "cap_platform12_detection"
+    name: "Platform 12: Opportunity Detection"
+    lifecycle_stage: "Implemented"
+    owner: "Core Backend"
+    environment: "Production"
+    blocking_items: ["Pending Integration tests with P11"]
+
+  - id: "cap_platform13_evaluation"
+    name: "Platform 13: Opportunity Evaluation"
+    lifecycle_stage: "Implemented"
+    owner: "Core Backend"
+    environment: "Production"
+    blocking_items: ["Missing statistical confidence logic"]
+
+  - id: "cap_platform14_recommendation"
+    name: "Platform 14: Recommendation Generation"
+    lifecycle_stage: "Scaffolded"
+    owner: "Core Backend"
+    environment: "Production"
+    blocking_items: ["Missing ExecutionContext mapping"]
+
+  - id: "cap_platform15_risk"
+    name: "Platform 15: Risk Management"
+    lifecycle_stage: "Planned"
+    owner: "Risk Team"
+    environment: "Production"
+    blocking_items: ["Awaiting specification from Platform 14 outputs"]
+
+  - id: "cap_research_volatility"
+    name: "Research: Advanced Volatility Modeling"
+    lifecycle_stage: "Draft"
+    owner: "Research Team"
+    environment: "Research"
+    blocking_items: ["Data ingestion pipeline incomplete"]
+
+  - id: "cap_experimental_ai"
+    name: "Experimental AI Agent"
+    lifecycle_stage: "Experimental"
+    owner: "AI Team"
+    environment: "Experimental"
+    blocking_items: ["Not certified for production"]
+
+  - id: "cap_legacy_strategy"
+    name: "Legacy Monolithic Strategy Engine"
+    lifecycle_stage: "Deprecated"
+    owner: "Architecture Team"
+    environment: "Archive"
+    blocking_items: ["Replaced by P10-P15 pipeline"]

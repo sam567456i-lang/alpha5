@@ -1,7 +1,5 @@
-from __future__ import annotations
-from typing import Protocol, runtime_checkable, TYPE_CHECKING
-if TYPE_CHECKING:
-    import pandas as pd
+from typing import Protocol, runtime_checkable
+import pandas as pd
 from Backend.dtos.features import FeatureDTO
 
 @runtime_checkable
@@ -17,6 +15,9 @@ class MomentumFeatureInterface(Protocol):
         
     def generate(self, data: pd.DataFrame, trace_id: str, correlation_id: str) -> FeatureDTO:
         """
-        Must return a FeatureDTO containing numerical indicator outputs.
+        Must return a FeatureDTO where the `values` dict contains:
+        - momentum_strength (float): Magnitude of the momentum
+        - momentum_direction (float): 1.0 (Up), -1.0 (Down)
+        - momentum_acceleration (float): Rate of change of momentum (optional, 0.0 if not supported)
         """
         ...

@@ -1,0 +1,47 @@
+governance_documents:
+  - id: doc_master_roadmap
+    path: Docs/master_roadmap.md
+    category: Governance
+  - id: doc_project_bible
+    path: Docs/Project_Bible.md
+    category: Governance
+  - id: doc_master_constitution
+    path: Docs/Constitutions/master_implementation_constitution.md
+    category: Governance
+  - id: doc_gov_workflow
+    path: Docs/Governance/master_phase_checklist.md
+    category: Governance
+
+architecture_documents:
+  - id: doc_platform_contract
+    path: Docs/Platform10/Platform10_Architecture_v1.md
+    category: Architecture
+
+registries:
+  - id: doc_capability_registry
+    path: master_capability_registry.yaml
+    category: Registries
+  - id: doc_universal_switch
+    path: Docs/Governance/universal_switches.yaml
+    category: Registries
+
+contracts:
+  - id: doc_dto_documentation
+    path: Docs/api_contracts.md
+    category: Contracts
+
+development:
+  - id: doc_coding_standards
+    path: Docs/Constitutions/master_ai_coding_constitution.md
+    category: Development
+
+reports:
+  - id: doc_capability_matrix
+    path: Docs/Governance/master_capability_matrix.md
+    category: Reports
+  - id: doc_dependency_matrix
+    path: Docs/dependency_map.md
+    category: Reports
+  - id: doc_freeze_report
+    path: Docs/Platform10/Platform10_Freeze_Report.md
+    category: Reports

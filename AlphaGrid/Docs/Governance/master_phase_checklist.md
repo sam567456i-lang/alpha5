@@ -23,6 +23,23 @@ Referenced By: []
 Every phase MUST finish with this immutable sequence defined by **Category A** of the Institutional Validation Framework:
 ✓ Unit Tests -> ✓ End-to-End (Implemented Layers) -> ✓ Cross-Family Regression -> ✓ Repository Regression -> ✓ Registry Validation -> ✓ DTO Validation -> ✓ Import Validation -> ✓ Dependency Validation -> ✓ Numerical Robustness -> ✓ Deterministic Replay -> ✓ Performance Benchmark -> ✓ Memory Benchmark -> ✓ Stress Test -> ✓ Freeze
 
+### Definition of Done (14 Requirements)
+A stage cannot be marked complete until all 14 of the following requirements are met:
+- `[ ]` Implementation complete
+- `[ ]` Architecture unchanged
+- `[ ]` Documentation synchronized
+- `[ ]` Registry synchronized
+- `[ ]` Unit tests
+- `[ ]` Integration tests
+- `[ ]` Performance benchmark
+- `[ ]` Determinism verified
+- `[ ]` CLI validated
+- `[ ]` JSON validated
+- `[ ]` Markdown validated
+- `[ ]` Error recovery verified
+- `[ ]` Repository integrity passed
+- `[ ]` Documentation Audit passed
+
 *(Note: Category B and Category C validations are deferred until their prerequisite infrastructure phases are complete).*
 
 ---
