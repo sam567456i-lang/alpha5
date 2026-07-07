@@ -4,7 +4,7 @@ taxonomy_version: 1.0.0
 architecture_version: v25
 project_os_version: '2.0'
 generator_version: '1.0'
-generated_at: '2026-07-05T16:12:48.420713Z'
+generated_at: '2026-07-07T18:53:49.534872+00:00'
 migration_version: 2
 change_id: taxonomy-expansion-002
 capabilities:
@@ -6415,10 +6415,10 @@ capabilities:
       failure_policy: fail_fast
       retry_policy: none
       output_contract: NumericalIntentVector
-
 - id: cap_platform_opportunity_detection
   name: Opportunity Detection Platform
-  description: Consumes composite market intent and detects valid structural opportunities via registered evaluators.
+  description: Consumes composite market intent and detects valid structural opportunities
+    via registered evaluators.
   domain: Opportunity
   layer: Decision
   platform: Platform 12
@@ -6430,45 +6430,58 @@ capabilities:
     required_phase: 12
   metadata:
     opportunity_profiles:
-      - profile_id: opp_profile_trend_continuation
-        name: Trend Continuation Profile
-        version: 1.0.0
-        schema_version: 1.0
-        compatibility_version: 1.0
-        required_methodologies: [Trend, Momentum]
-        required_regimes: [Trending, HighVolatility]
-        required_consensus: 0.7
-        required_reliability: 0.6
-        required_applicability: 0.8
-        required_evidence: true
-        execution_policies: [standard_trend]
-      - profile_id: opp_profile_mean_reversion
-        name: Mean Reversion Profile
-        version: 1.0.0
-        schema_version: 1.0
-        compatibility_version: 1.0
-        required_methodologies: [MeanReversion]
-        required_regimes: [Ranging, VolatilityCompression]
-        required_consensus: 0.8
-        required_reliability: 0.7
-        required_applicability: 0.8
-        required_evidence: true
-        execution_policies: [fade_extremes]
+    - profile_id: opp_profile_trend_continuation
+      name: Trend Continuation Profile
+      version: 1.0.0
+      schema_version: 1.0
+      compatibility_version: 1.0
+      required_methodologies:
+      - Trend
+      - Momentum
+      required_regimes:
+      - Trending
+      - HighVolatility
+      required_consensus: 0.7
+      required_reliability: 0.6
+      required_applicability: 0.8
+      required_evidence: true
+      execution_policies:
+      - standard_trend
+    - profile_id: opp_profile_mean_reversion
+      name: Mean Reversion Profile
+      version: 1.0.0
+      schema_version: 1.0
+      compatibility_version: 1.0
+      required_methodologies:
+      - MeanReversion
+      required_regimes:
+      - Ranging
+      - VolatilityCompression
+      required_consensus: 0.8
+      required_reliability: 0.7
+      required_applicability: 0.8
+      required_evidence: true
+      execution_policies:
+      - fade_extremes
     opportunity_evaluators:
-      - evaluator_id: cap_evaluator_trend_opportunity
-        name: Trend Opportunity Evaluator
-        version: 1.0.0
-        required_methodologies: [Trend]
-        produces_opportunity_types: [Trend Continuation]
-        performance_budget: 10ms
-        replay_compatibility: strict
-      - evaluator_id: cap_evaluator_reversion_opportunity
-        name: Mean Reversion Opportunity Evaluator
-        version: 1.0.0
-        required_methodologies: [MeanReversion]
-        produces_opportunity_types: [Mean Reversion]
-        performance_budget: 10ms
-        replay_compatibility: strict
+    - evaluator_id: cap_evaluator_trend_opportunity
+      name: Trend Opportunity Evaluator
+      version: 1.0.0
+      required_methodologies:
+      - Trend
+      produces_opportunity_types:
+      - Trend Continuation
+      performance_budget: 10ms
+      replay_compatibility: strict
+    - evaluator_id: cap_evaluator_reversion_opportunity
+      name: Mean Reversion Opportunity Evaluator
+      version: 1.0.0
+      required_methodologies:
+      - MeanReversion
+      produces_opportunity_types:
+      - Mean Reversion
+      performance_budget: 10ms
+      replay_compatibility: strict
     pipeline:
     - stage: Eligibility Filter
       priority: 1
@@ -6477,46 +6490,52 @@ capabilities:
       output_contract: EligibleCandidatesDTO
     - stage: Market Context Filter
       priority: 2
-      dependencies: [Eligibility Filter]
+      dependencies:
+      - Eligibility Filter
       failure_policy: continue
       output_contract: ContextFilteredCandidatesDTO
     - stage: Session Filter
       priority: 3
-      dependencies: [Market Context Filter]
+      dependencies:
+      - Market Context Filter
       failure_policy: continue
       output_contract: SessionFilteredCandidatesDTO
     - stage: Instrument Filter
       priority: 4
-      dependencies: [Session Filter]
+      dependencies:
+      - Session Filter
       failure_policy: continue
       output_contract: InstrumentFilteredCandidatesDTO
     - stage: Liquidity Filter
       priority: 5
-      dependencies: [Instrument Filter]
+      dependencies:
+      - Instrument Filter
       failure_policy: fail_fast
       output_contract: LiquidityFilteredCandidatesDTO
     - stage: Classification
       priority: 6
-      dependencies: [Liquidity Filter]
+      dependencies:
+      - Liquidity Filter
       failure_policy: continue
       output_contract: ClassifiedOpportunitiesDTO
     - stage: Opportunity Strength
       priority: 7
-      dependencies: [Classification]
+      dependencies:
+      - Classification
       failure_policy: continue
       output_contract: ScoredOpportunitiesDTO
     - stage: Opportunity Evidence
       priority: 8
-      dependencies: [Opportunity Strength]
+      dependencies:
+      - Opportunity Strength
       failure_policy: continue
       output_contract: EvidenceBackedOpportunitiesDTO
     - stage: Opportunity Trace
       priority: 9
-      dependencies: [Opportunity Evidence]
+      dependencies:
+      - Opportunity Evidence
       failure_policy: fail_fast
       output_contract: OpportunityDetectionDTO
-
-
 - id: cap_platform_opportunity_evaluation
   name: Opportunity Evaluation and Prioritization Platform
   description: Evaluates, scores, and prioritizes detected opportunities.
@@ -6531,45 +6550,50 @@ capabilities:
     required_phase: 13
   metadata:
     evaluation_profiles:
-      - profile_id: eval_profile_standard
-        name: Standard Evaluation Profile
-        version: 1.0.0
-        required_policies: [standard_scoring, strict_competition, standard_queue]
+    - profile_id: eval_profile_standard
+      name: Standard Evaluation Profile
+      version: 1.0.0
+      required_policies:
+      - standard_scoring
+      - strict_competition
+      - standard_queue
     scoring_policies:
-      - policy_id: standard_scoring
-        weights:
-          quality: 0.4
-          reliability: 0.3
-          applicability: 0.2
-          structural_risk_penalty: 0.1
+    - policy_id: standard_scoring
+      weights:
+        quality: 0.4
+        reliability: 0.3
+        applicability: 0.2
+        structural_risk_penalty: 0.1
     ranking_policies:
-      - policy_id: strict_ranking
-        sort_by: [composite_score, urgency]
-        order: descending
+    - policy_id: strict_ranking
+      sort_by:
+      - composite_score
+      - urgency
+      order: descending
     competition_policies:
-      - policy_id: strict_competition
-        resolution: highest_score_wins
-        allow_nested: true
+    - policy_id: strict_competition
+      resolution: highest_score_wins
+      allow_nested: true
     queue_policies:
-      - policy_id: standard_queue
-        max_active_duration: 3600
-        promotion_threshold: 0.8
+    - policy_id: standard_queue
+      max_active_duration: 3600
+      promotion_threshold: 0.8
     plugins:
-      - id: plugin_quality_assessor
-        type: Assessment
-        name: Standard Quality Assessor
-      - id: plugin_structural_risk_estimator
-        type: Assessment
-        name: Structural Risk Estimator
-      - id: plugin_competition_resolver
-        type: Policy
-        name: Strict Competition Resolver
-      - id: plugin_composite_scorer
-        type: Builder
-        name: Composite Score Builder
-      - id: plugin_queue_manager
-        type: Lifecycle
-        name: Opportunity Queue Manager
+    - id: plugin_quality_assessor
+      type: Assessment
+      name: Standard Quality Assessor
+    - id: plugin_structural_risk_estimator
+      type: Assessment
+      name: Structural Risk Estimator
+    - id: plugin_competition_resolver
+      type: Policy
+      name: Strict Competition Resolver
+    - id: plugin_composite_scorer
+      type: Builder
+      name: Composite Score Builder
+    - id: plugin_queue_manager
+      type: Lifecycle
+      name: Opportunity Queue Manager
     pipeline:
     - stage: Assessment
       priority: 1
@@ -6578,26 +6602,28 @@ capabilities:
       output_contract: AssessedOpportunitiesDTO
     - stage: Competition
       priority: 2
-      dependencies: [Assessment]
+      dependencies:
+      - Assessment
       failure_policy: continue
       output_contract: CompetitionGraphDTO
     - stage: Scoring
       priority: 3
-      dependencies: [Competition]
+      dependencies:
+      - Competition
       failure_policy: fail_fast
       output_contract: ScoredOpportunitiesDTO
     - stage: Ranking
       priority: 4
-      dependencies: [Scoring]
+      dependencies:
+      - Scoring
       failure_policy: fail_fast
       output_contract: RankedOpportunitiesDTO
     - stage: Queue
       priority: 5
-      dependencies: [Ranking]
+      dependencies:
+      - Ranking
       failure_policy: continue
       output_contract: EvaluatedOpportunityCollectionDTO
-
-
 - id: cap_platform_recommendation_generation
   name: Recommendation Generation Platform
   description: Converts evaluated opportunities into actionable execution recommendations.
@@ -6612,38 +6638,41 @@ capabilities:
     required_phase: 14
   metadata:
     recommendation_profiles:
-      - profile_id: rec_profile_standard
-        name: Standard Recommendation Profile
-        version: 1.0.0
-        required_policies: [zone_entry, structural_stop, fixed_target]
+    - profile_id: rec_profile_standard
+      name: Standard Recommendation Profile
+      version: 1.0.0
+      required_policies:
+      - zone_entry
+      - structural_stop
+      - fixed_target
     entry_policies:
-      - policy_id: zone_entry
-        type: zone
-        buffer_percent: 0.1
+    - policy_id: zone_entry
+      type: zone
+      buffer_percent: 0.1
     stop_policies:
-      - policy_id: structural_stop
-        type: structural
-        buffer_percent: 0.2
+    - policy_id: structural_stop
+      type: structural
+      buffer_percent: 0.2
     target_policies:
-      - policy_id: fixed_target
-        type: fixed_rr
-        target_rr: 2.0
+    - policy_id: fixed_target
+      type: fixed_rr
+      target_rr: 2.0
     plugins:
-      - id: plugin_entry_generator
-        type: Generator
-        name: Zone Entry Generator
-      - id: plugin_stop_generator
-        type: Generator
-        name: Structural Stop Generator
-      - id: plugin_target_generator
-        type: Generator
-        name: Fixed R:R Target Generator
-      - id: plugin_structure_analyzer
-        type: Analyzer
-        name: Trade Structure Analyzer
-      - id: plugin_recommendation_builder
-        type: Builder
-        name: Recommendation Builder
+    - id: plugin_entry_generator
+      type: Generator
+      name: Zone Entry Generator
+    - id: plugin_stop_generator
+      type: Generator
+      name: Structural Stop Generator
+    - id: plugin_target_generator
+      type: Generator
+      name: Fixed R:R Target Generator
+    - id: plugin_structure_analyzer
+      type: Analyzer
+      name: Trade Structure Analyzer
+    - id: plugin_recommendation_builder
+      type: Builder
+      name: Recommendation Builder
     pipeline:
     - stage: EntryGeneration
       priority: 1
@@ -6651,21 +6680,192 @@ capabilities:
       failure_policy: fail_fast
     - stage: StopGeneration
       priority: 2
-      dependencies: [EntryGeneration]
+      dependencies:
+      - EntryGeneration
       failure_policy: fail_fast
     - stage: TargetGeneration
       priority: 3
-      dependencies: [StopGeneration]
+      dependencies:
+      - StopGeneration
       failure_policy: fail_fast
     - stage: StructureAnalysis
       priority: 4
-      dependencies: [TargetGeneration]
+      dependencies:
+      - TargetGeneration
       failure_policy: fail_fast
     - stage: RecommendationBuilding
       priority: 5
-      dependencies: [StructureAnalysis]
+      dependencies:
+      - StructureAnalysis
       failure_policy: fail_fast
-
+- id: str.obj.swing
+  name: Swing Structure
+  display_name: Swing Structure
+  description: Generic Structure definition for Swing Structure
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: OBJECT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREOBJECT
+- id: str.obj.internal
+  name: Internal Structure
+  display_name: Internal Structure
+  description: Generic Structure definition for Internal Structure
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: OBJECT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREOBJECT
+- id: str.obj.external
+  name: External Structure
+  display_name: External Structure
+  description: Generic Structure definition for External Structure
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: OBJECT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREOBJECT
+- id: str.obj.fractal
+  name: Fractal Structure
+  display_name: Fractal Structure
+  description: Generic Structure definition for Fractal Structure
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: OBJECT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREOBJECT
+- id: str.eve.bos
+  name: Break of Structure (BOS)
+  display_name: Break of Structure (BOS)
+  description: Generic Structure definition for Break of Structure (BOS)
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: EVENT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREEVENT
+- id: str.eve.ibos
+  name: Internal BOS
+  display_name: Internal BOS
+  description: Generic Structure definition for Internal BOS
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: EVENT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREEVENT
+- id: str.eve.ebos
+  name: External BOS
+  display_name: External BOS
+  description: Generic Structure definition for External BOS
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: EVENT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREEVENT
+- id: str.eve.mss
+  name: Market Structure Shift (MSS)
+  display_name: Market Structure Shift (MSS)
+  description: Generic Structure definition for Market Structure Shift (MSS)
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: EVENT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREEVENT
+- id: str.eve.choch
+  name: Change of Character (CHOCH)
+  display_name: Change of Character (CHOCH)
+  description: Generic Structure definition for Change of Character (CHOCH)
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: EVENT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTUREEVENT
+- id: str.con.htfbias
+  name: Higher Timeframe Bias
+  display_name: Higher Timeframe Bias
+  description: Generic Structure definition for Higher Timeframe Bias
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: CONTEXT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTURECONTEXT
+- id: str.con.itrend
+  name: Internal Trend
+  display_name: Internal Trend
+  description: Generic Structure definition for Internal Trend
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: CONTEXT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTURECONTEXT
+- id: str.con.etrend
+  name: External Trend
+  display_name: External Trend
+  description: Generic Structure definition for External Trend
+  family: Structure
+  lifecycle_state: Implemented
+  version: '1.0'
+  config:
+    detector: GenericStructureDetector
+    detection_type: CONTEXT
+  consumes:
+  - ANA_PRICE_ACTION_SWING
+  produces:
+  - ANA_MARKET_STRUCTURE_STRUCTURECONTEXT
 governance:
   phase_exit_gates:
   - name: Architecture Gate
@@ -6684,53 +6884,53 @@ governance:
     module: ProjectOS.validator.replay
   - name: Performance Gate
     module: ProjectOS.validator.performance
-
-
 recommendation_registry:
   profiles:
-    - profile_id: rec_profile_trend_continuation
-      name: Trend Continuation Recommendation
-      required_opportunity_types: [trend_continuation]
-      required_confidence: 0.8
-      entry_policy: zone_entry
-      stop_policy: atr_stop
-      target_policy: dynamic_trail
-      scaling_policy: scale_out_halves
-      exit_policy: trailing_stop_hit
-      validation_policy: strict_rr_validation
-      lifecycle_policy: standard_lifecycle
-
+  - profile_id: rec_profile_trend_continuation
+    name: Trend Continuation Recommendation
+    required_opportunity_types:
+    - trend_continuation
+    required_confidence: 0.8
+    entry_policy: zone_entry
+    stop_policy: atr_stop
+    target_policy: dynamic_trail
+    scaling_policy: scale_out_halves
+    exit_policy: trailing_stop_hit
+    validation_policy: strict_rr_validation
+    lifecycle_policy: standard_lifecycle
 recommendation_policy_registry:
   entry_policies:
-    - id: zone_entry
-      type: zone
-      buffer_percent: 0.1
-    - id: twap_entry
-      type: time_weighted
-      duration_minutes: 60
+  - id: zone_entry
+    type: zone
+    buffer_percent: 0.1
+  - id: twap_entry
+    type: time_weighted
+    duration_minutes: 60
   stop_policies:
-    - id: atr_stop
-      type: volatility
-      multiplier: 2.0
-    - id: structural_stop
-      type: structural
+  - id: atr_stop
+    type: volatility
+    multiplier: 2.0
+  - id: structural_stop
+    type: structural
   target_policies:
-    - id: dynamic_trail
-      type: trailing
-      activation_rr: 1.0
-    - id: liquidity_target
-      type: liquidity_pool
+  - id: dynamic_trail
+    type: trailing
+    activation_rr: 1.0
+  - id: liquidity_target
+    type: liquidity_pool
   scaling_policies:
-    - id: scale_out_halves
-      type: partial_exit
-      fractions: [0.5, 0.5]
+  - id: scale_out_halves
+    type: partial_exit
+    fractions:
+    - 0.5
+    - 0.5
   exit_policies:
-    - id: trailing_stop_hit
-      type: automatic
+  - id: trailing_stop_hit
+    type: automatic
   validation_policies:
-    - id: strict_rr_validation
-      min_rr: 2.0
-      ensure_entry_before_stop: true
+  - id: strict_rr_validation
+    min_rr: 2.0
+    ensure_entry_before_stop: true
   expiration_policies:
-    - id: standard_expiration
-      time_in_force_minutes: 120
+  - id: standard_expiration
+    time_in_force_minutes: 120

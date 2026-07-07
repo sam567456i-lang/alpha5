@@ -26,3 +26,41 @@ entries:
   emits:
   - LiquiditySweepEvent
   confidence_modifier: 0.2
+- id: BEH-STR-001
+  trigger:
+    concept: str.eve.bos
+  supports:
+  - str.con.continuation
+  weakens:
+  - str.con.reversal
+  invalidates: []
+  requires:
+  - str.obj.swing
+  emits:
+  - StructureContinuationEvent
+  confidence_modifier: 0.2
+- id: BEH-STR-002
+  trigger:
+    concept: str.eve.choch
+  supports:
+  - str.con.reversal
+  weakens: []
+  invalidates:
+  - str.con.prevtrend
+  requires:
+  - str.obj.swing
+  emits:
+  - StructureReversalEvent
+  confidence_modifier: 0.3
+- id: BEH-STR-003
+  trigger:
+    concept: str.eve.mss
+  supports:
+  - str.eve.choch
+  weakens: []
+  invalidates: []
+  requires:
+  - str.obj.swing
+  emits:
+  - StructureShiftEvent
+  confidence_modifier: 0.15
