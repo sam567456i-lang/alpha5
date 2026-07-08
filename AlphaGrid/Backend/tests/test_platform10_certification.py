@@ -1,12 +1,12 @@
 import pytest
 from datetime import datetime
-from Backend.platforms.platform10_concepts.concept_base import (
+from Backend.platforms.platform9_concepts.concept_base import (
     ConceptID, ConceptCategory, ConceptType, ConceptSeverity, BaseConcept
 )
-from Backend.platforms.platform10_concepts.concept_registry import ConceptRegistry
-from Backend.platforms.platform10_concepts.concept_framework import ConceptCompiler
-from Backend.platforms.platform10_concepts.plugins.market_structure_concepts import MarketRegimeConcept
-from Backend.platforms.platform9_features.feature_base import FloatFeature, BaseFeature, FeatureType
+from Backend.platforms.platform9_concepts.concept_registry import ConceptRegistry
+from Backend.platforms.platform9_concepts.concept_framework import ConceptCompiler
+from Backend.platforms.platform10_methodologies.plugins.market_structure_concepts import MarketRegimeConcept
+from Backend.platforms.platform9_concepts.feature_base import FloatFeature, BaseFeature, FeatureType
 from Backend.core.state import ExecutionContext
 
 class MockConcept(BaseConcept):

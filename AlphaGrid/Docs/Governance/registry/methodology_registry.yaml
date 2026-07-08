@@ -1,67 +1,25 @@
-# Master Methodology Registry
+version: 1.1.0
+last_updated: 2026-07-08
+description: "Master catalog of analytical methodology semantics (pure meaning, no implementation)."
+
 methodologies:
-  - id: p10_trend
-    name: "Trend Core"
-    path: "Backend.Platform10.plugins.trend_core.TrendCore"
-    wave: 1
-    version: "v0.9" # Legacy
+  - id: M_ICT
+    name: "Inner Circle Trader (ICT) Methodology"
+    definition_file: "definitions/ict_methodology.yaml"
+    owner: "Platform 10 Team"
+    status: "Planned"
+    complexity: "High"
 
-  - id: p10_momentum
-    name: "Momentum Core"
-    path: "Backend.Platform10.plugins.momentum_core.MomentumCore"
-    wave: 1
-    version: "v0.9" # Legacy
+  - id: M_SMC
+    name: "Smart Money Concepts (SMC)"
+    definition_file: "definitions/smc_methodology.yaml"
+    owner: "Platform 10 Team"
+    status: "Planned"
+    complexity: "Medium"
 
-  - id: p10_mean_reversion
-    name: "Mean Reversion Core"
-    path: "Backend.Platform10.plugins.mean_reversion_core.MeanReversionCore"
-    wave: 1
-    version: "v0.9" # Legacy
-
-  - id: p10_ict
-    name: "Inner Circle Trader"
-    path: "Backend.Platform10.plugins.ict_core.ICTCore"
-    wave: 2
-    version: "v1.0" # Modern SDK
-
-  - id: p10_wyckoff
-    name: "Wyckoff Cycles"
-    path: "Backend.Platform10.plugins.wyckoff_core.WyckoffCore"
-    wave: 2
-    version: "v1.0" # Modern SDK
-
-  - id: p10_order_flow
-    name: "Order Flow Core"
-    path: "Backend.Platform10.plugins.order_flow_core.OrderFlowCore"
-    wave: 3
-    version: "v1.0"
-    performance_budget:
-      max_latency_ms: 10
-      memory_budget_mb: 512
-      cache_policy: "LRU"
-      parallelization_support: true
-      incremental_update: true
-
-  - id: p10_volume_profile
-    name: "Volume Profile Core"
-    path: "Backend.Platform10.plugins.volume_profile_core.VolumeProfileCore"
-    wave: 3
-    version: "v1.0"
-    performance_budget:
-      max_latency_ms: 50
-      memory_budget_mb: 256
-      cache_policy: "Session"
-      parallelization_support: true
-      incremental_update: true
-
-  - id: p10_macro
-    name: "Macro Core"
-    path: "Backend.Platform10.plugins.macro_core.MacroCore"
-    wave: 4
-    version: "v1.0"
-    performance_budget:
-      max_latency_ms: 100
-      memory_budget_mb: 512
-      cache_policy: "Daily"
-      parallelization_support: false
-      incremental_update: false
+  - id: M_WYCKOFF
+    name: "Wyckoff Methodology"
+    definition_file: "definitions/wyckoff_methodology.yaml"
+    owner: "Platform 10 Team"
+    status: "Planned"
+    complexity: "High"

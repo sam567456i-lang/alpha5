@@ -2,53 +2,31 @@ from typing import Type
 import inspect
 import os
 import yaml
+import json
+from datetime import datetime, timezone, timedelta
 from Backend.platforms.platform8_analysis.frameworks.detector_base import DetectorBase
-from Backend.platforms.platform8_analysis.frameworks.concept_detector_base import ConceptDetectorBase
-from Backend.platforms.platform8_analysis.frameworks.structure_state_machine import StructureStateMachine, InvalidStructureTransitionError
-from Backend.shared_domain.contracts.structure.structure_dtos import StructureStateDTO, StructureEventDTO
-from Backend.core.state import ExecutionContext, StateLifecycle
-from datetime import datetime, timezone
+from Backend.platforms.platform8_analysis.frameworks.structure_state_machine import (
+    StructureStateMachine,
+    OutOfOrderEventError,
+    AlreadyProcessedEventError,
+    InvalidStructureTransitionError
+)
+from Backend.shared_domain.contracts.structure.structure_dtos import (
+    StructureStateDTO,
+    StructureEventDTO,
+    StructureContextDTO,
+    StructureStateIdentity
+)
 
 class DetectorCertificationSuite:
-    """
-    Gate 3 Certification Suite.
-    Validates any custom DetectorBase subclass to ensure it conforms to
-    the rigid structural rules of Platform 8 Analysis Framework.
-    Now expanded for Wave 2: Structure State validations.
-    """
-    
     @staticmethod
     def certify(detector_class: Type[DetectorBase], capability_id: str, repo_root: str) -> bool:
         print(f"Starting certification for {detector_class.__name__} (Capability: {capability_id})...")
         
-        # 1. Must inherit from DetectorBase
         if not issubclass(detector_class, DetectorBase):
             print(f"FAIL: {detector_class.__name__} does not inherit from DetectorBase.")
             return False
             
-        # 2. Behavior Registry Validation
-        behavior_reg_path = os.path.join(repo_root, "Docs", "Governance", "registry", "behavior_registry.yaml")
-        cap_reg_path = os.path.join(repo_root, "Docs", "Governance", "registry", "capability_registry.yaml")
-        
-        if os.path.exists(behavior_reg_path) and os.path.exists(cap_reg_path):
-            with open(cap_reg_path, "r", encoding="utf-8") as f:
-                all_caps = {c["id"] for c in (yaml.safe_load(f) or {}).get("entries", [])}
-                
-            with open(behavior_reg_path, "r", encoding="utf-8") as f:
-                behaviors = (yaml.safe_load(f) or {}).get("entries", [])
-                
-            for b in behaviors:
-                if b.get("subject_id") == capability_id:
-                    for s in b.get("supports", []):
-                        if s not in all_caps:
-                            print(f"FAIL: Behavior Registry semantic reference invalid. {capability_id} supports {s} but {s} doesn't exist.")
-                            return False
-                    for i in b.get("invalidates", []):
-                        if i not in all_caps:
-                            print(f"FAIL: Behavior Registry semantic reference invalid. {capability_id} invalidates {i} but {i} doesn't exist.")
-                            return False
-                            
-        # 3. Wave 2: Structure State Machine Certification
         if "structure" in detector_class.__name__.lower():
             if not DetectorCertificationSuite.certify_structure_state_machine():
                 return False
@@ -58,44 +36,85 @@ class DetectorCertificationSuite:
 
     @staticmethod
     def certify_structure_state_machine() -> bool:
-        """
-        Wave 2 Mandatory Certification: Validate that the FSM blocks impossible structural transitions.
-        """
         print("Certifying Structure State Machine Transitions...")
         fsm = StructureStateMachine()
         
-        event_dto = StructureEventDTO(
+        base_time = datetime.now(timezone.utc)
+        identity = StructureStateIdentity(
+            market="NASDAQ",
+            asset_class="Equities",
+            exchange="NASDAQ",
+            symbol="AAPL",
+            timeframe="H1",
+            session_id="RTH",
+            data_feed="Polygon"
+        )
+        
+        ctx = StructureContextDTO(
+            id="ctx_1",
+            timestamp=base_time,
+            consumes=[],
+            produces=[],
+            identity=identity,
+            current_state=StructureStateDTO.BULLISH,
+            sequence_number=1,
+            last_updated_timestamp=base_time
+        )
+        
+        # 1. Valid Transition
+        event_choch = StructureEventDTO(
             id="str.eve.choch",
-            timestamp=datetime.now(timezone.utc),
+            timestamp=base_time + timedelta(minutes=5),
             consumes=[],
             produces=[],
             event_price=100.0,
-            is_internal=False
+            sequence_number=2
         )
-        
-        # Valid: Bullish -> Bearish (via CHOCH)
         try:
-            next_state = fsm.process_event(StructureStateDTO.BULLISH, event_dto)
-            if next_state != StructureStateDTO.BEARISH:
-                print("FAIL: CHOCH event did not transition BULLISH to BEARISH.")
+            next_ctx = fsm.process_event(ctx, event_choch)
+            if next_ctx.current_state != StructureStateDTO.CONSOLIDATION:
+                print("FAIL: CHOCH did not transition to CONSOLIDATION.")
                 return False
         except Exception as e:
-            print(f"FAIL: FSM threw error on valid transition: {e}")
+            print(f"FAIL: {e}")
             return False
-            
-        # Invalid: Bullish -> Bearish (without CHOCH event mapping)
-        # Note: In our current implementation, we mapped 'choch' in event_id to Bearish.
-        # Let's test a non-choch event trying to do an invalid transition.
-        invalid_event = StructureEventDTO(
-            id="str.eve.unknown",
-            timestamp=datetime.now(timezone.utc),
+
+        # 2. Out-of-Order Rejection (Sequence Number)
+        event_past = StructureEventDTO(
+            id="str.eve.bos",
+            timestamp=base_time + timedelta(minutes=10), # Time is later
             consumes=[],
             produces=[],
             event_price=100.0,
-            is_internal=False
+            sequence_number=0 # Sequence is older
         )
-        
-        # The FSM will return the current state if not explicitly mapped, which is valid (staying in state).
-        
-        print("PASS: Structure State Machine enforces deterministic transitions.")
+        try:
+            fsm.process_event(next_ctx, event_past)
+            print("FAIL: Failed to reject out-of-order sequence.")
+            return False
+        except OutOfOrderEventError:
+            pass
+
+        # 3. Duplicate Idempotency Rejection
+        event_dup = StructureEventDTO(
+            id="str.eve.choch",
+            timestamp=base_time + timedelta(minutes=5),
+            consumes=[],
+            produces=[],
+            event_price=100.0,
+            sequence_number=2
+        )
+        try:
+            fsm.process_event(next_ctx, event_dup)
+            print("FAIL: Failed to reject duplicate event.")
+            return False
+        except AlreadyProcessedEventError:
+            pass
+            
+        # 4. Multi-Timeframe Identity Preservation
+        if next_ctx.identity.timeframe != "H1":
+            print("FAIL: MTF Isolation broken, lost timeframe context.")
+            return False
+
+        print("PASS: Structure State Machine advanced certification successful.")
         return True

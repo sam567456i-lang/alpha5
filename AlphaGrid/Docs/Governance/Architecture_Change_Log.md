@@ -15,4 +15,7 @@
 | 2026-07-07 | v3.0 | `DEC-010` | Platform 18 & Governance Manifest | Executed final strict P10 audit. Locked the Decision Intelligence Manifest defining the exact input/output capabilities of every platform. Built Platform 18 to consume Dual-Level Lineage and generate deterministic Presentation-Model-based ExplainabilityReports. | Approved |
 | 2026-07-07 | v3.0 | `DEC-011` | Platform 19 Presentation Intelligence | Built Platform 19 to strictly own Semantic Filtering, grouping, and default ranking via `PresentationQueryEngine` and standard subsystems (Scanner, Workspace, Watchlist, Layout). Formalized the `PresentationQueryDTO` to decouple business logic from the frontend (React/iOS). | Approved |
 
+| 2026-07-08 | v5.0 | `DEC-012` | Roadmap Trisection | Separated the monolithic roadmap into `framework_roadmap.yaml`, `capability_expansion_roadmap.yaml`, and `release_roadmap.yaml` to decouple framework stability from analytical scale. | Approved |
+| 2026-07-08 | v5.0 | `DEC-013` | Platform 10 Plugin Sandbox Contract & 16-Point Freeze Gate | Replaced hardcoded methodologies with a pure Plugin architecture managed by `methodology_plugin_registry.yaml` and `MethodologySDK`. Enshrined the Sandbox Contract prohibiting external I/O from plugins, enforced via a strict 16-point Freeze Gate validation suite. | Approved |
+
 *(New entries must be appended here prior to any architectural modification)*

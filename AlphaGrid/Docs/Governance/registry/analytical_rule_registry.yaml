@@ -1,0 +1,1483 @@
+rules:
+- id: RULE-T0-001
+  name: Geometry Rule
+  tier: 0
+  ontology_id: ONT-T0-001
+  capability_id: CAP-T0-001
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - GeometryEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Geometry evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-002
+  name: Distance Rule
+  tier: 0
+  ontology_id: ONT-T0-002
+  capability_id: CAP-T0-002
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - DistanceEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Distance evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-003
+  name: Range Rule
+  tier: 0
+  ontology_id: ONT-T0-003
+  capability_id: CAP-T0-003
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - RangeEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Range evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-004
+  name: Proximity Rule
+  tier: 0
+  ontology_id: ONT-T0-004
+  capability_id: CAP-T0-004
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - ProximityEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Proximity evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-005
+  name: Time Rule
+  tier: 0
+  ontology_id: ONT-T0-005
+  capability_id: CAP-T0-005
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - TimeEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Time evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-006
+  name: Session Rule
+  tier: 0
+  ontology_id: ONT-T0-006
+  capability_id: CAP-T0-006
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - SessionEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Session evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-007
+  name: Calendar Rule
+  tier: 0
+  ontology_id: ONT-T0-007
+  capability_id: CAP-T0-007
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - CalendarEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Calendar evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-008
+  name: Multi-Timeframe Alignment Rule
+  tier: 0
+  ontology_id: ONT-T0-008
+  capability_id: CAP-T0-008
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - Multi-TimeframeAlignmentEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Multi-Timeframe Alignment evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-009
+  name: Liquidity Rule
+  tier: 0
+  ontology_id: ONT-T0-009
+  capability_id: CAP-T0-009
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - LiquidityEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Liquidity evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-010
+  name: Structure Rule
+  tier: 0
+  ontology_id: ONT-T0-010
+  capability_id: CAP-T0-010
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - StructureEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Structure evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-011
+  name: Trend Rule
+  tier: 0
+  ontology_id: ONT-T0-011
+  capability_id: CAP-T0-011
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - TrendEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Trend evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-012
+  name: Volatility Rule
+  tier: 0
+  ontology_id: ONT-T0-012
+  capability_id: CAP-T0-012
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - VolatilityEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Volatility evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-013
+  name: Premium/Discount Rule
+  tier: 0
+  ontology_id: ONT-T0-013
+  capability_id: CAP-T0-013
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - PremiumDiscountEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Premium/Discount evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-014
+  name: Freshness Rule
+  tier: 0
+  ontology_id: ONT-T0-014
+  capability_id: CAP-T0-014
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - FreshnessEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Freshness evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-015
+  name: Quality Rule
+  tier: 0
+  ontology_id: ONT-T0-015
+  capability_id: CAP-T0-015
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - QualityEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Quality evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T0-016
+  name: Context Alignment Rule
+  tier: 0
+  ontology_id: ONT-T0-016
+  capability_id: CAP-T0-016
+  consumes:
+    dto_inputs:
+    - ConceptDTO
+    evidence_inputs: []
+  produces:
+    primary:
+    - ContextAlignmentEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 1
+  priority: 100
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Context Alignment evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 5
+    max_memory_kb: 512
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-001
+  name: Fair Value Gap (FVG) Rule
+  tier: 1
+  ontology_id: ONT-T1-001
+  capability_id: CAP-T1-001
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - FairValueGap(FVG)Evidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Fair Value Gap (FVG) evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-002
+  name: Inversion FVG (IFVG) Rule
+  tier: 1
+  ontology_id: ONT-T1-002
+  capability_id: CAP-T1-002
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - InversionFVG(IFVG)Evidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Inversion FVG (IFVG) evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-003
+  name: Balanced Price Range (BPR) Rule
+  tier: 1
+  ontology_id: ONT-T1-003
+  capability_id: CAP-T1-003
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - BalancedPriceRange(BPR)Evidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Balanced Price Range (BPR) evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-004
+  name: Liquidity Void Rule
+  tier: 1
+  ontology_id: ONT-T1-004
+  capability_id: CAP-T1-004
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - LiquidityVoidEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Liquidity Void evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-005
+  name: Consequent Encroachment (CE) Rule
+  tier: 1
+  ontology_id: ONT-T1-005
+  capability_id: CAP-T1-005
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - ConsequentEncroachment(CE)Evidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Consequent Encroachment (CE) evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-006
+  name: Volume Imbalance Rule
+  tier: 1
+  ontology_id: ONT-T1-006
+  capability_id: CAP-T1-006
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - VolumeImbalanceEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Volume Imbalance evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-007
+  name: Order Block Rule
+  tier: 1
+  ontology_id: ONT-T1-007
+  capability_id: CAP-T1-007
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - OrderBlockEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Order Block evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-008
+  name: Breaker Block Rule
+  tier: 1
+  ontology_id: ONT-T1-008
+  capability_id: CAP-T1-008
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - BreakerBlockEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Breaker Block evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-009
+  name: Mitigation Block Rule
+  tier: 1
+  ontology_id: ONT-T1-009
+  capability_id: CAP-T1-009
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - MitigationBlockEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Mitigation Block evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-010
+  name: Rejection Block Rule
+  tier: 1
+  ontology_id: ONT-T1-010
+  capability_id: CAP-T1-010
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - RejectionBlockEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Rejection Block evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-011
+  name: Propulsion Block Rule
+  tier: 1
+  ontology_id: ONT-T1-011
+  capability_id: CAP-T1-011
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - PropulsionBlockEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Propulsion Block evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T1-012
+  name: Flip Zone Rule
+  tier: 1
+  ontology_id: ONT-T1-012
+  capability_id: CAP-T1-012
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - FlipZoneEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 2
+  priority: 90
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Flip Zone evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 10
+    max_memory_kb: 1024
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-001
+  name: Market Context Rule
+  tier: 2
+  ontology_id: ONT-T2-001
+  capability_id: CAP-T2-001
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - MarketContextEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Market Context evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-002
+  name: Market Regime Rule
+  tier: 2
+  ontology_id: ONT-T2-002
+  capability_id: CAP-T2-002
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - MarketRegimeEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Market Regime evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-003
+  name: Order Flow Context Rule
+  tier: 2
+  ontology_id: ONT-T2-003
+  capability_id: CAP-T2-003
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - OrderFlowContextEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Order Flow Context evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-004
+  name: Auction Context Rule
+  tier: 2
+  ontology_id: ONT-T2-004
+  capability_id: CAP-T2-004
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - AuctionContextEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Auction Context evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-005
+  name: Session Context Rule
+  tier: 2
+  ontology_id: ONT-T2-005
+  capability_id: CAP-T2-005
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - SessionContextEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Session Context evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-006
+  name: Kill Zone Context Rule
+  tier: 2
+  ontology_id: ONT-T2-006
+  capability_id: CAP-T2-006
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - KillZoneContextEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Kill Zone Context evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-007
+  name: HTF Bias Rule
+  tier: 2
+  ontology_id: ONT-T2-007
+  capability_id: CAP-T2-007
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - HTFBiasEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: HTF Bias evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-008
+  name: Volatility Regime Rule
+  tier: 2
+  ontology_id: ONT-T2-008
+  capability_id: CAP-T2-008
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - VolatilityRegimeEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Volatility Regime evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-009
+  name: Liquidity Context Rule
+  tier: 2
+  ontology_id: ONT-T2-009
+  capability_id: CAP-T2-009
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - LiquidityContextEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Liquidity Context evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD
+- id: RULE-T2-010
+  name: Confluence Context Rule
+  tier: 2
+  ontology_id: ONT-T2-010
+  capability_id: CAP-T2-010
+  consumes:
+    dto_inputs: []
+    evidence_inputs:
+    - <PLACEHOLDER_LOWER_TIER_EVIDENCE>
+  produces:
+    primary:
+    - ConfluenceContextEvidence
+    supporting: []
+    metadata:
+    - FreshnessMetrics
+    - QualityMetrics
+  dependencies: []
+  execution_stage: 3
+  priority: 80
+  required_execution_modes:
+  - Standard
+  - Replay
+  - Simulation
+  required_context: []
+  supported_markets:
+  - ALL
+  supported_assets:
+  - ALL
+  supported_timeframes:
+  - ALL
+  quality_model: StrictDeterministic
+  freshness_model: Bar
+  explanation_template: Confluence Context evaluated yielding standard evidence.
+  performance_budget:
+    max_latency_ms: 15
+    max_memory_kb: 1536
+  certification_status: Draft
+  version: 1.0.0
+  checksum: TBD

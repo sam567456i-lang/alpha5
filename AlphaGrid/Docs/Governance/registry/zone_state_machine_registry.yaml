@@ -1,0 +1,39 @@
+version:
+  schema: "1.0.0"
+  model: "1.0.0"
+  adr_reference: "ADR-007"
+
+zone_lifecycle:
+  states:
+    PENDING:
+      timeout_bars: 20
+      str.zone.confirm:
+        next: CONFIRMED
+      str.zone.invalidate:
+        next: INVALIDATED
+    DETECTED:
+      timeout_bars: 10
+      str.zone.confirm:
+        next: CONFIRMED
+    CONFIRMED:
+      invalidation_triggers:
+        - "price_close"
+      str.zone.activate:
+        next: ACTIVE
+    ACTIVE:
+      aging_triggers:
+        - "exponential"
+      str.zone.mitigate:
+        next: MITIGATED
+      str.zone.invalidate:
+        next: INVALIDATED
+    MITIGATED:
+      str.zone.archive:
+        next: ARCHIVED
+    INVALIDATED:
+      str.zone.archive:
+        next: ARCHIVED
+  terminal_states:
+    - ARCHIVED
+  recovery_states:
+    - INVALIDATED

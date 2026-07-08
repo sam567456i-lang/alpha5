@@ -1,0 +1,135 @@
+registry_metadata:
+  name: Evidence Schema Registry
+  version: 1.0.0
+  description: Canonical definition of all evidence types produced by Tier 0 Analytical
+    Rules.
+  last_updated: '2026-07-08'
+evidence_types:
+  GeometryEvidence:
+    description: Spatial relationships and structural geometry.
+    classification: PRIMITIVE
+    producer: CAP-T0-001
+    required_fields:
+    - is_fractal
+    - swing_type
+    temporal_type: State
+  DistanceEvidence:
+    description: Distance metrics.
+    classification: PRIMITIVE
+    producer: CAP-T0-002
+    required_fields:
+    - distance_pips
+    - is_significant
+    temporal_type: State
+  RangeEvidence:
+    description: Price range metrics.
+    classification: PRIMITIVE
+    producer: CAP-T0-003
+    required_fields:
+    - price_range
+    - is_expanded
+    temporal_type: State
+  ProximityEvidence:
+    description: Proximity to key levels.
+    classification: PRIMITIVE
+    producer: CAP-T0-004
+    required_fields:
+    - is_touching
+    - is_overlapping
+    temporal_type: State
+  TimeEvidence:
+    description: Temporal constraints.
+    classification: PRIMITIVE
+    producer: CAP-T0-005
+    required_fields:
+    - is_market_open
+    temporal_type: State
+  SessionEvidence:
+    description: Session data.
+    classification: PRIMITIVE
+    producer: CAP-T0-006
+    required_fields:
+    - current_session
+    - session_overlap
+    temporal_type: State
+  CalendarEvidence:
+    description: Macro events.
+    classification: PRIMITIVE
+    producer: CAP-T0-007
+    required_fields:
+    - is_holiday
+    temporal_type: State
+  MultiTimeframeEvidence:
+    description: Alignment across timeframes.
+    classification: PRIMITIVE
+    producer: CAP-T0-008
+    required_fields:
+    - is_aligned
+    temporal_type: State
+  TrendEvidence:
+    description: Trend direction.
+    classification: PRIMITIVE
+    producer: CAP-T0-009
+    required_fields:
+    - trend_direction
+    - trend_strength
+    temporal_type: State
+  StructureEvidence:
+    description: Market structure states.
+    classification: PRIMITIVE
+    producer: CAP-T0-010
+    required_fields:
+    - structure_state
+    temporal_type: State
+  VolatilityEvidence:
+    description: Volatility metrics.
+    classification: PRIMITIVE
+    producer: CAP-T0-011
+    required_fields:
+    - volatility_state
+    temporal_type: State
+  LiquidityEvidence:
+    description: Liquidity levels.
+    classification: PRIMITIVE
+    producer: CAP-T0-012
+    required_fields:
+    - liquidity_pool_active
+    temporal_type: State
+  ValuationEvidence:
+    description: Valuation rules (Premium, Discount, Eq, MR).
+    classification: PRIMITIVE
+    producer:
+    - CAP-T0-013
+    - CAP-T0-014
+    - CAP-T0-015
+    - CAP-T0-016
+    required_fields: []
+    temporal_type: State
+  FreshnessEvidence:
+    description: Freshness and decay.
+    classification: PRIMITIVE
+    producer: CAP-T0-017
+    required_fields:
+    - untouched
+    temporal_type: State
+  QualityEvidence:
+    description: Quality dimensions.
+    classification: PRIMITIVE
+    producer: CAP-T0-018
+    required_fields:
+    - completeness
+    temporal_type: State
+  ContextAlignmentEvidence:
+    description: Context alignment.
+    classification: PRIMITIVE
+    producer: CAP-T0-019
+    required_fields:
+    - alignment_score
+    temporal_type: State
+  ConfluenceEvidence:
+    description: Overall confluence.
+    classification: PRIMITIVE
+    producer: CAP-T0-020
+    required_fields:
+    - number_of_confirmations
+    temporal_type: State

@@ -1,0 +1,98 @@
+version:
+  schema: "1.0.0"
+  model: "1.0.0"
+  checksum: "TBD" # To be replaced by freeze script
+
+relationships:
+  overlaps:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  overlaps_partially:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  overlaps_fully:
+    symmetric: false
+    terminal: false
+    inverse: contained_by
+
+  contains:
+    symmetric: false
+    terminal: false
+    inverse: contained_by
+
+  contained_by:
+    symmetric: false
+    terminal: false
+    inverse: contains
+
+  coincident:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  encloses:
+    symmetric: false
+    terminal: false
+    inverse: null
+
+  crosses:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  touches:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  within_distance:
+    symmetric: true
+    terminal: false
+    inverse: null
+    requires_parameter: true # e.g. distance threshold
+
+  shares_boundary:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  merged_into:
+    symmetric: false
+    terminal: true
+    inverse: null
+
+  derived_from:
+    symmetric: false
+    terminal: false
+    inverse: null
+
+  adjacent_to:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  intersects:
+    symmetric: true
+    terminal: false
+    inverse: null
+
+  invalidates:
+    symmetric: false
+    terminal: true
+    confidence_penalty: 1.0
+    inverse: null
+
+  confirms:
+    symmetric: false
+    terminal: false
+    confidence_boost: 0.5
+    inverse: null
+
+  supersedes:
+    symmetric: false
+    terminal: true
+    inverse: null

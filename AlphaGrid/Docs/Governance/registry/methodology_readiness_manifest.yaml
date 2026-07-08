@@ -1,0 +1,28 @@
+registry_metadata:
+  name: "Methodology Readiness Manifest"
+  version: "1.0.0"
+  description: "Tracks the readiness status of methodology orchestration."
+  last_updated: "2026-07-08"
+
+methodologies:
+  ICT:
+    requires:
+      - "OrderBlockEvidence"
+      - "LiquiditySweepEvidence"
+      - "FVGEvidence"
+      - "StructureEvidence"
+    status: "Waiting"
+
+  SMC:
+    requires:
+      - "StructureEvidence"
+      - "OrderBlockEvidence"
+      - "LiquidityEvidence"
+    status: "Waiting"
+
+  Wyckoff:
+    requires:
+      - "StructureEvidence"
+      - "VolumeEvidence"
+      - "WyckoffPhaseEvidence"
+    status: "Waiting"

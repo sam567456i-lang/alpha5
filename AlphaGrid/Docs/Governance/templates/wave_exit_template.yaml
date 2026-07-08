@@ -1,0 +1,44 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Mandatory deterministic checklist template that every execution wave must formally satisfy before being declared 'Frozen'."
+
+wave_exit_checklist:
+  - id: GATE-01
+    name: "Registry Compatibility"
+    description: "All new or modified registries conform to the master schema and are successfully validated by the RegistryBootValidator."
+    mandatory: true
+
+  - id: GATE-02
+    name: "Backward Compatibility"
+    description: "No existing DTO structures, public API interfaces, or stored event schemas have been broken. If breaking changes occurred, explicit migration paths are documented."
+    mandatory: true
+
+  - id: GATE-03
+    name: "Performance Regression"
+    description: "The execution latency, memory allocation, and CPU utilization of the newly implemented wave do not exceed established baseline tolerances."
+    mandatory: true
+
+  - id: GATE-04
+    name: "Replay Regression"
+    description: "The entire system maintains 100% byte-for-byte determinism when replayed against historical tick datasets."
+    mandatory: true
+
+  - id: GATE-05
+    name: "Memory Regression"
+    description: "No new memory leaks or uncollected object references have been introduced across the state engines."
+    mandatory: true
+
+  - id: GATE-06
+    name: "Dependency Regression"
+    description: "All imported dependencies conform strictly to the platform_dependency_registry.yaml definitions. No cross-platform cyclic dependencies have been introduced."
+    mandatory: true
+
+  - id: GATE-07
+    name: "Documentation Completeness"
+    description: "All ADRs, capability definitions, and architecture knowledge base updates associated with this wave have been fully written and committed."
+    mandatory: true
+
+  - id: GATE-08
+    name: "Certification Suite Passed"
+    description: "The wave-specific platform certification suite (e.g., test_platform9_plugin_certification.py) successfully passes 100% of tests."
+    mandatory: true

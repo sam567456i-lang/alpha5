@@ -1,0 +1,14 @@
+registry_metadata:
+  name: "Rule Migration Registry"
+  version: "1.0.0"
+  description: "Governs migrations and breaking changes across rule versions."
+  last_updated: "2026-07-08"
+
+migrations:
+  OrderBlockRule:
+    from_version: "1.0.0"
+    to_version: "1.1.0"
+    breaking_change: true
+    migration_script: "scripts/migrations/migrate_ob_v1_v2.py"
+    replay_compatible: false
+    description: "Renamed mitigation flag to invalidation flag."

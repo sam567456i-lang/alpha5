@@ -1,0 +1,113 @@
+version:
+  schema: "1.0.0"
+  model: "1.0.0"
+  checksum: "TBD" # Replace via freeze script
+  adr_reference: "ADR-007"
+
+global_policies:
+  performance_budget:
+    max_zones_per_symbol: 1000
+    prune_archived_after_days: 30
+
+engines:
+  - OverlapEngine
+  - MergeEngine
+  - SplitEngine
+  - LifecycleEngine
+  - FreshnessEngine
+  - ConfidenceEngine
+  - ReplayEngine
+  
+zone_types:
+  GAP_ZONE:
+    capabilities: ["CAP-001"]
+    feature_flag: "production"
+    required_inputs: ["GeometryDTO", "LiquidityDTO", "StructureDTO"]
+    optional_inputs: ["VolumeProfileDTO"]
+    compatibility_policy:
+      compatible_with: ["BLOCK_ZONE"]
+      requires: []
+      conflicts_with: []
+    performance_budget:
+      max_latency_ms: 1.0
+      max_memory_kb: 5.0
+      merge_complexity: "O(1)"
+    fingerprint_fields:
+      - geometry
+      - capability_id
+      - ontology_id
+    creation_policy:
+      requires_geometry: true
+      min_ticks: 1
+    confirmation_policy:
+      requires_structure: false
+      auto_confirm: true
+    aging_policy:
+      decay_rate: 0.1
+      max_age_bars: 200
+    merge_policy:
+      allow_merge: true
+      strategy: ["prefer_stronger", "union"]
+      max_distance_percent: 0.05
+    split_policy:
+      allow_split: false
+    replay_policy:
+      reconstruct_stream: true
+      supported_modes: ["Snapshot", "Incremental", "Streaming"]
+    freshness_policy:
+      strategy: "time_decay"
+    confidence_policy:
+      strategy: "volume_weighted"
+    visualization_policy:
+      presentation_hint: "FILLED"
+      opacity: 0.3
+      priority: 50
+
+  BLOCK_ZONE:
+    capabilities: ["CAP-002"]
+    feature_flag: "beta"
+    required_inputs: ["GeometryDTO", "StructureDTO"]
+    optional_inputs: ["OrderFlowDTO"]
+    compatibility_policy:
+      compatible_with: ["GAP_ZONE"]
+      requires: ["GAP_ZONE"]
+      conflicts_with: []
+    performance_budget:
+      max_latency_ms: 2.0
+      max_memory_kb: 10.0
+      merge_complexity: "O(N)"
+    fingerprint_fields:
+      - geometry
+      - capability_id
+      - ontology_id
+      - supporting_events
+    creation_policy:
+      requires_geometry: true
+      requires_structure: true
+    confirmation_policy:
+      requires_structure: true
+      auto_confirm: false
+    aging_policy:
+      decay_rate: 0.05
+      max_age_bars: 500
+    merge_policy:
+      allow_merge: false
+    split_policy:
+      allow_split: true
+      split_on_mitigation: true
+      minimum_width: 0.1
+      confidence_inheritance: "proportional"
+      freshness_inheritance: "copy"
+    replay_policy:
+      reconstruct_stream: true
+      supported_modes: ["Snapshot", "Incremental", "Streaming"]
+    freshness_policy:
+      strategy: "mitigation_decay"
+    confidence_policy:
+      strategy: "structural_confluence"
+    visualization_policy:
+      presentation_hint: "OUTLINED"
+      opacity: 0.8
+      priority: 80
+
+

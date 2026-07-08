@@ -2,7 +2,7 @@ import os
 import ast
 import pytest
 
-PLATFORM9_DIR = "C:/Users/praka/Documents/Codex/2026-06-30/alphagrid-infinity-x-5-0-master/AlphaGrid/Backend/platforms/platform9_features"
+PLATFORM9_DIR = "C:/Users/praka/Documents/Codex/2026-06-30/alphagrid-infinity-x-5-0-master/AlphaGrid/Backend/platforms/platform9_concepts"
 
 def get_python_files(directory):
     for root, _, files in os.walk(directory):
@@ -23,7 +23,7 @@ def test_p9_purity_no_forbidden_imports():
         "platform5_time",
         "platform6_indicators",
         "platform7_methodology",
-        "platform10_concepts",
+        "platform10_methodologies",
         "platform11_signals",
         "platform12_opportunities",
         "platform13_evidence",
@@ -82,7 +82,7 @@ def test_p9_purity_consumes_produces_registry():
     """
     Ensure all registered features declare what they consume and produce.
     """
-    from Backend.platforms.platform9_features.feature_registry import feature_registry
+    from Backend.platforms.platform9_concepts.feature_registry import feature_registry
     
     for fid in feature_registry.list_features():
         meta = feature_registry.get_metadata(fid)

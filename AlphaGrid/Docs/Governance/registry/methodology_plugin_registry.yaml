@@ -1,0 +1,34 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Authoritative registry tracking installed methodology plugin implementations and capabilities."
+
+plugins:
+  - plugin_id: p10_ict_v1
+    methodology_id: M_ICT
+    implementation_class: "Backend.platforms.platform10_methodologies.plugins.ict.ICTPlugin"
+    sdk_version: "1.0.0"
+    supported_execution_modes: ["REPLAY", "STREAMING", "SNAPSHOT", "HISTORICAL"]
+    supported_markets: ["Equities", "Futures", "Forex", "Crypto"]
+    supported_asset_classes: ["Index", "Currency", "Commodity"]
+    supported_timeframes: ["1m", "5m", "15m", "1h", "4h", "1d"]
+    required_concepts: ["FVG", "BOS"]
+    optional_concepts: ["OrderBlock", "LiquiditySweep"]
+    certification_status: "Certified"
+    lifecycle_state: "Certified"
+    frozen: true
+    registry_version: "1.0.0"
+
+  - plugin_id: p10_smc_v1
+    methodology_id: M_SMC
+    implementation_class: "Backend.platforms.platform10_methodologies.plugins.smc.SMCPlugin"
+    sdk_version: "1.0.0"
+    supported_execution_modes: ["REPLAY", "STREAMING", "SNAPSHOT", "HISTORICAL"]
+    supported_markets: ["Equities", "Futures", "Forex"]
+    supported_asset_classes: ["Index", "Currency"]
+    supported_timeframes: ["5m", "15m", "1h", "4h"]
+    required_concepts: ["BOS", "CHoCH"]
+    optional_concepts: ["FVG"]
+    certification_status: "Certified"
+    lifecycle_state: "Certified"
+    frozen: true
+    registry_version: "1.0.0"

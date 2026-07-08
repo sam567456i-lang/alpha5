@@ -1,0 +1,38 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Master release definitions with cross-references to waves and platforms."
+
+releases:
+  - id: R0.1
+    name: "Foundation & Execution Scaffolding"
+    status: "Completed"
+    waves: ["Wave 1", "Wave 2"]
+    platforms: ["platform1", "platform2", "platform3", "platform4", "platform5", "platform6", "platform7"]
+    blocking: false
+    adr_references: ["ADR-001", "ADR-002", "ADR-003", "ADR-004", "ADR-005"]
+
+  - id: R0.2
+    name: "Analytical Framework & Concept Mapping"
+    status: "Active"
+    waves: ["Wave 3", "Wave 4.5", "Wave 4.6", "Wave 5A"]
+    platforms: ["platform8", "platform9", "platform10"]
+    blocking: true
+    adr_references: ["ADR-006", "ADR-007"]
+
+  - id: R1.0
+    name: "Full Composite Intelligence Platform"
+    status: "Planned"
+    waves: ["Wave 5B", "Wave 5C", "Wave 5D", "Wave 6"]
+    platforms: ["platform11", "platform12", "platform13", "platform14", "platform15", "platform16", "platform17", "platform18"]
+    blocking: false
+    adr_references: []
+    deliverables:
+      - "Architecture Knowledge Base (Principles, Patterns, Anti-Patterns, Decision Records, Reference Architectures, Cookbook, Glossary)"
+
+  - id: R2.0
+    name: "AlphaGrid Machine Learning & Portfolio Scale"
+    status: "Planned"
+    waves: ["Wave 7", "Wave 8", "Wave 9"]
+    platforms: ["platform19", "platform20", "platform21", "platform22"]
+    blocking: false
+    adr_references: []

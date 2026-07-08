@@ -1,0 +1,627 @@
+version: 1.0.0
+last_updated: '2026-07-08'
+description: Master backlog for AlphaGrid Framework infrastructure (Registries, SDKs,
+  DTOs, Certification). Progresses slowly to guarantee stability.
+framework_capabilities:
+- id: CAP-FUT-0182
+  domain: AlphaGrid Meta-Governance
+  name: Capability Coverage
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0183
+  domain: AlphaGrid Meta-Governance
+  name: Registry Health
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0184
+  domain: AlphaGrid Meta-Governance
+  name: Plugin Health
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0185
+  domain: AlphaGrid Meta-Governance
+  name: Dependency Health
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0186
+  domain: AlphaGrid Meta-Governance
+  name: Replay Health
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0187
+  domain: AlphaGrid Meta-Governance
+  name: Audit Findings
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0188
+  domain: AlphaGrid Meta-Governance
+  name: ADR Status
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0189
+  domain: AlphaGrid Meta-Governance
+  name: Certification Status
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0190
+  domain: AlphaGrid Meta-Governance
+  name: Technical Debt
+  priority: Low
+  owner_platform: ProjectOS
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_P10_PLUGIN_REGISTRY
+  name: Methodology Plugin Registry
+  domain: Platform 10 Methodologies
+  priority: Medium
+  stage: Architecture
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - registry_manifest.yaml
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_P10_CAPABILITY_MAPPING
+  name: Methodology Capability Mapping Registry
+  domain: Platform 10 Methodologies
+  priority: Medium
+  stage: Architecture
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - concept_registry.yaml
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_P10_VERSION_PINNING
+  name: Methodology Version Pinning
+  domain: Platform 10 Methodologies
+  priority: High
+  stage: Architecture
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - MethodologyDTO
+  estimated_effort: Low
+  research_required: false
+- id: CAP_P10_CONSENSUS_PROVENANCE
+  name: Consensus Provenance Tracing
+  domain: Platform 10 Methodologies
+  priority: Medium
+  stage: Architecture
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - MethodologyConsensusDTO
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_P10_RUNTIME_METRICS
+  name: Methodology Runtime Metrics DTO
+  domain: Platform 10 Methodologies
+  priority: Low
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - MethodologyRuntime
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_P10_BOOT_VALIDATION
+  name: Boot Validation for Plugin/Capability Registries
+  domain: Governance
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform Core
+  dependencies:
+  - registry_boot_validator.py
+  estimated_effort: Low
+  research_required: false
+- id: CAP_FW_METH_SCHEMA
+  name: Methodology Definition Schema
+  domain: Governance
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - methodology_definition.schema.yaml
+  estimated_effort: Low
+  research_required: false
+- id: CAP_FW_METH_VALIDATOR
+  name: Methodology Definition Validator
+  domain: Governance
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - methodology_definition_validator.py
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_FW_REG_MIGRATION
+  name: Registry Migration Metadata Support
+  domain: Governance
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform Core
+  dependencies: []
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_FW_PLUGIN_SANDBOX
+  name: Plugin Sandbox Contract Verification
+  domain: Architecture
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - platform10_boundary_contract.md
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_FW_CONSENSUS_REG
+  name: Consensus Confidence Policy Registry
+  domain: Governance
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - consensus_registry.yaml
+  estimated_effort: Low
+  research_required: false
+- id: CAP_FW_PLUGIN_BUDGETS
+  name: Plugin Resource Budgets
+  domain: Governance
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies: []
+  estimated_effort: Low
+  research_required: false
+- id: CAP_FW_PLUGIN_DEPS
+  name: Plugin Dependency Declarations
+  domain: Architecture
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies: []
+  estimated_effort: Low
+  research_required: false
+- id: CAP_FW_GOLDEN_DATASET
+  name: Methodology Golden Regression Dataset
+  domain: Certification
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies: []
+  estimated_effort: High
+  research_required: false
+- id: CAP_FW_CERT_ARTIFACTS
+  name: Machine-Readable Methodology Certification Artifacts
+  domain: Certification
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies: []
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_FW_RULE_REGISTRY
+  name: Analytical Rule Registry
+  domain: Rule Framework
+  priority: Critical
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_FSM
+  name: Rule State Machine Registry
+  domain: Rule Framework
+  priority: Critical
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_FACTORY
+  name: Rule Factory & Builder
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_VALIDATION
+  name: Rule Validation Engine
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_RESOLVER
+  name: Rule Registry Resolver
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_EXEC_REGISTRY
+  name: Rule Execution Registry
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_PROVENANCE
+  name: Rule Provenance DTO
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_FINGERPRINT
+  name: Rule Fingerprinting
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_CERT_REGISTRY
+  name: Rule Certification Registry
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_BOOT_VALIDATION
+  name: Rule Boot Validation
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_COVERAGE_AUDIT
+  name: Rule Coverage Audit
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_DEP_VALIDATOR
+  name: Rule Dependency Validator
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_BUDGETS
+  name: Rule Performance Budgets
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_EXPLAINABILITY
+  name: Rule Explainability Templates
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_VERSION_PIN
+  name: Rule Version Pinning
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_DEV_SDK
+  name: Rule Development SDK Helper
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_TAXONOMY
+  name: Tiered Rule Taxonomy
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_BOUNDARY
+  name: Platform Boundary Clarification (Universal Usage)
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_REG_MANIFEST
+  name: Rule Registry Manifest
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_EVENTS
+  name: Rule Event Model
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_METRICS
+  name: Rule Metrics DTO
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_DATASET
+  name: Rule Replay Golden Dataset
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_EVOLUTION
+  name: Rule Evolution Policy
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_SDK_GEN
+  name: Rule SDK Generator
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: Low
+  research_required: false
+- id: CAP_FW_EVIDENCE_REG
+  name: Evidence Registry
+  domain: Rule Framework
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_EVIDENCE_FSM
+  name: Evidence State Machine
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_BENCHMARKS
+  name: Rule Benchmark Suite
+  domain: Rule Framework
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_RULE_GRAPH_VIS
+  name: Rule Graph Visualization
+  domain: Rule Framework
+  priority: Low
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+- id: CAP_FW_EVIDENCE_FLOW_VIS
+  name: Evidence Flow Visualization
+  domain: Rule Framework
+  priority: Low
+  stage: Backlog
+  scheduled_wave: Wave 5B.x
+  owner_platform: Shared Framework
+  dependencies: []
+  estimated_effort: TBD
+  research_required: false
+
+  - id: FRM-BACKLOG-006
+    name: rule_evidence_registry.yaml
+    description: Create a central registry for all evidence types to prevent drift across rules.
+    status: BACKLOG
+
+  - id: FRM-BACKLOG-007
+    name: rule_capability_registry.yaml
+    description: Map rules to capabilities, and capabilities to rules. Track versions, deprecations, and coverage.
+    status: BACKLOG

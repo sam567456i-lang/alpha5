@@ -1,0 +1,30 @@
+registry_metadata:
+  name: "Golden Dataset Coverage Matrix"
+  version: "1.0.0"
+  description: "Maps regression coverage of canonical datasets."
+  last_updated: "2026-07-08"
+
+datasets:
+  TrendingBull:
+    description: "Classic structurally unbroken bull trend."
+    expected_rules:
+      - TrendRule
+      - LiquidityRule
+      - StructureRule
+      - FVGRule
+    expected_methodologies:
+      - ICT
+      - SMC
+    not_expected_methodologies:
+      - WyckoffDistribution
+
+  RangingMarket:
+    description: "Equilibrium bound range market without directional displacement."
+    expected_rules:
+      - RangeRule
+      - LiquidityRule
+      - SweepRule
+    expected_methodologies:
+      - AMT
+    not_expected_methodologies:
+      - TrendFollowing

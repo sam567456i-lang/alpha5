@@ -1,0 +1,25 @@
+registry_metadata:
+  name: "Evidence State Machine Registry"
+  version: "1.0.0"
+  description: "Governs the lifecycle of an evidence instance."
+  last_updated: "2026-07-08"
+
+states:
+  Generated:
+    description: "Evidence has been emitted by the rule."
+    allowed_transitions: ["Validated", "Archived"]
+  Validated:
+    description: "Evidence passes strict schema validation."
+    allowed_transitions: ["Certified", "Superseded", "Archived"]
+  Certified:
+    description: "Evidence passes all governance bounds and is cleared for methodology consumption."
+    allowed_transitions: ["Consumed", "Superseded", "Archived"]
+  Consumed:
+    description: "Evidence has been acted upon by a downstream rule or methodology."
+    allowed_transitions: ["Superseded", "Archived"]
+  Superseded:
+    description: "Evidence is no longer active (e.g. mitigated block)."
+    allowed_transitions: ["Archived"]
+  Archived:
+    description: "Evidence is retired to historical storage."
+    allowed_transitions: []

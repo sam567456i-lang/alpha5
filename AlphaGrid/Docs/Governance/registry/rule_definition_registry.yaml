@@ -1,0 +1,40 @@
+registry_metadata:
+  name: "Rule Definition Registry"
+  version: "1.0.0"
+  description: "Canonical definition of all analytical rules in the AlphaGrid framework."
+  last_updated: "2026-07-08"
+
+# Example placeholder structure, we will populate this with actual rules later or real Tier 0 rules
+rules:
+  StructureRule:
+    identity: "RULE-T0-010"
+    version: "1.0.0"
+    tier: "0"
+    owner_platform: "Core"
+    owner_tier: "Analytical Rule Framework"
+    sdk_version: "2.1.0"
+    minimum_runtime_version: "1.0.0"
+    minimum_registry_version: "1.0.0"
+    execution_modes_supported:
+      - "Standard"
+      - "Historical"
+      - "Sandbox"
+    deterministic: true
+    replay_supported: true
+    sandbox_level: "Strict"
+    evidence_required:
+      - "TrendEvidence"
+      - "GeometryEvidence"
+      - "RangeEvidence"
+    evidence_optional: []
+    evidence_produced:
+      - "StructureEvidence"
+    capability_mappings:
+      - "CAP-T0-010"
+    ontology_mappings:
+      - "ONT-T0-010"
+    certification_requirements:
+      - "test_tier0_functional"
+      - "test_tier0_sandbox"
+    deprecated_by: null
+    replacement_rule: null

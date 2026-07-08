@@ -1,0 +1,27 @@
+registry_metadata:
+  name: "Rule Output Registry"
+  version: "1.0.0"
+  description: "Strict enforcement of allowed and forbidden rule outputs."
+  last_updated: "2026-07-08"
+
+rule_outputs:
+  OrderBlockRule:
+    allowed_outputs:
+      - "OrderBlockEvidence"
+      - "OrderBlockMetadata"
+    forbidden_outputs:
+      - "TradeSignal"
+      - "MethodologyEvidence"
+      - "Position"
+      - "Entry"
+      - "Exit"
+
+  FVGRule:
+    allowed_outputs:
+      - "FVGEvidence"
+      - "FVGMetadata"
+    forbidden_outputs:
+      - "TradeSignal"
+      - "MethodologyEvidence"
+      - "Entry"
+      - "Exit"

@@ -1,0 +1,30 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Explicit tracker for methodology plugin certification results."
+
+certifications:
+  - plugin_id: p10_ict_v1
+    certification_version: "1.0.0"
+    last_certification: "2026-07-08T12:00:00Z"
+    status: "Pass"
+    checks:
+      determinism: "Pass"
+      replay: "Pass"
+      serialization: "Pass"
+      performance: "Pass"
+      explainability: "Pass"
+      regression: "Pass"
+      cross_plugin_isolation: "Pass"
+
+  - plugin_id: p10_smc_v1
+    certification_version: "1.0.0"
+    last_certification: "2026-07-08T12:00:00Z"
+    status: "Pass"
+    checks:
+      determinism: "Pass"
+      replay: "Pass"
+      serialization: "Pass"
+      performance: "Pass"
+      explainability: "Pass"
+      regression: "Pass"
+      cross_plugin_isolation: "Pass"

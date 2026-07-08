@@ -1,0 +1,22 @@
+registry_metadata:
+  name: "Rule Version Compatibility Registry"
+  version: "1.0.0"
+  description: "Directional compatibility matrix for rules across the execution environment."
+  last_updated: "2026-07-08"
+
+compatibility_matrices:
+  FVGRule:
+    rule_version: "1.0.0"
+    compatible_with:
+      runtime:
+        min: "2.0.0"
+        max: "3.0.0"
+      sdk:
+        min: "2.1.0"
+        max: "3.0.0"
+      planner:
+        min: "1.5.0"
+        max: "2.0.0"
+      registry:
+        min: "5.0.0"
+        max: "6.0.0"

@@ -2,8 +2,8 @@ import pytest
 from datetime import datetime, timezone
 
 from Backend.core.state import ExecutionContext, BaseState, StateLifecycle
-from Backend.platforms.platform9_features.feature_framework import FeatureCompiler
-from Backend.platforms.platform9_features.feature_registry import feature_registry
+from Backend.platforms.platform9_concepts.feature_framework import FeatureCompiler
+from Backend.platforms.platform9_concepts.feature_registry import feature_registry
 
 # Mock State for testing
 class MockState(BaseState):
@@ -29,14 +29,14 @@ class MockState(BaseState):
         pass
 
 # Ensure all modules are loaded to populate registry
-import Backend.platforms.platform9_features.geometry_features
-import Backend.platforms.platform9_features.price_action_features
-import Backend.platforms.platform9_features.liquidity_features
-import Backend.platforms.platform9_features.market_structure_features
-import Backend.platforms.platform9_features.trend_features
-import Backend.platforms.platform9_features.momentum_features
-import Backend.platforms.platform9_features.volume_features
-import Backend.platforms.platform9_features.volatility_features
+import Backend.platforms.platform9_concepts.geometry_features
+import Backend.platforms.platform9_concepts.price_action_features
+import Backend.platforms.platform9_concepts.liquidity_features
+import Backend.platforms.platform9_concepts.market_structure_features
+import Backend.platforms.platform9_concepts.trend_features
+import Backend.platforms.platform9_concepts.momentum_features
+import Backend.platforms.platform9_concepts.volume_features
+import Backend.platforms.platform9_concepts.volatility_features
 
 @pytest.fixture
 def compiler():

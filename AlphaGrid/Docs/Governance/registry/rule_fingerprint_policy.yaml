@@ -1,0 +1,32 @@
+registry_metadata:
+  name: "Rule Fingerprint Policy Registry"
+  version: "1.0.0"
+  description: "Defines the profiles for cryptographic fingerprint construction of rules."
+  last_updated: "2026-07-08"
+
+policies:
+  default:
+    description: "Standard fingerprinting for development and regular execution."
+    include:
+      - "capability_id"
+      - "evidence_inputs"
+      - "schema_version"
+      
+  strict:
+    description: "Rigorous fingerprinting for certified institutional execution."
+    include:
+      - "capability_id"
+      - "evidence_inputs"
+      - "registry_checksum"
+      - "execution_mode"
+      - "rule_version"
+      - "sdk_version"
+      
+  replay:
+    description: "Fingerprinting geared toward historical replication parity."
+    include:
+      - "capability_id"
+      - "evidence_inputs"
+      - "registry_checksum"
+      - "rule_version"
+      - "planner_version"

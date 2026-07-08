@@ -1,0 +1,32 @@
+# concept_confidence_registry.yaml
+# Defines confidence scoring rules for concepts decoupled from plugins
+
+version: 1.0.0
+last_updated: 2026-07-08
+
+confidence_models:
+  CAP-FVG-01:
+    required:
+      imbalance: 0.40
+      displacement: 0.40
+    optional:
+      HTF_confirmation: 0.10
+      session_alignment: 0.10
+    minimum_confidence: 0.70
+
+  CAP-OB-01:
+    required:
+      structural_break: 0.50
+      volume_node_support: 0.30
+    optional:
+      liquidity_sweep: 0.10
+      time_of_day_alignment: 0.10
+    minimum_confidence: 0.80
+
+  CAP-BRK-01:
+    required:
+      failed_block: 0.50
+      explosive_shift: 0.40
+    optional:
+      origin_liquidity_sweep: 0.10
+    minimum_confidence: 0.80

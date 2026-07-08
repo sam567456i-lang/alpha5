@@ -1,0 +1,39 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Master sequence of all platforms P0 through P22."
+
+platforms:
+  - id: P0
+    name: "Governance & Configuration"
+    status: "Production"
+    release: "R0.1"
+
+  - id: P8
+    name: "Analysis Framework"
+    status: "Frozen"
+    release: "R0.2"
+
+  - id: P9
+    name: "Feature Platform (Concepts)"
+    status: "Frozen"
+    release: "R0.2"
+
+  - id: P10
+    name: "Concept Platform (Methodologies)"
+    status: "Scaffolded"
+    release: "R0.2"
+
+  - id: P11
+    name: "Market State Platform"
+    status: "Planned"
+    release: "R1.0"
+    
+  - id: P18
+    name: "Explainability Platform"
+    status: "Planned"
+    release: "R1.0"
+    
+  - id: P22
+    name: "AI Research Platform"
+    status: "Research"
+    release: "R2.0"

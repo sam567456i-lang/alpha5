@@ -1,0 +1,31 @@
+registry_metadata:
+  name: "Rule State Machine Registry"
+  version: "1.0.0"
+  description: "Governs the lifecycle of an analytical rule."
+  last_updated: "2026-07-08"
+
+states:
+  Draft:
+    description: "Concept proposed but not fully designed."
+    allowed_transitions: ["Designed", "Archived"]
+  Designed:
+    description: "Requirements, evidence, and benchmarks specified."
+    allowed_transitions: ["Implemented", "Draft", "Archived"]
+  Implemented:
+    description: "Code is written but lacks full certification."
+    allowed_transitions: ["Validated", "Designed", "Archived"]
+  Validated:
+    description: "Passes functional tests and basic regressions."
+    allowed_transitions: ["Certified", "Implemented"]
+  Certified:
+    description: "Passes all strict certification gates."
+    allowed_transitions: ["Frozen", "Implemented"]
+  Frozen:
+    description: "Locked in production. Changes require migration."
+    allowed_transitions: ["Deprecated"]
+  Deprecated:
+    description: "Slated for removal. Replaced by another rule."
+    allowed_transitions: ["Archived"]
+  Archived:
+    description: "Removed from active execution."
+    allowed_transitions: []

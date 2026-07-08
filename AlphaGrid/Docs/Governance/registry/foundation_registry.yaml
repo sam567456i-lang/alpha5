@@ -1,0 +1,113 @@
+components:
+  - component: api_framework
+    owner: Foundation Team
+    required_tests:
+      - api_contract
+      - auth
+      - replay
+    required_certifications:
+      - deterministic
+      - replay
+    required_docs:
+      - developer
+      - architecture
+
+  - component: database_layer
+    owner: Foundation Team
+    required_tests:
+      - persistence
+      - transaction
+      - rollback
+    required_certifications:
+      - acid_compliance
+    required_docs:
+      - schema
+      - architecture
+
+  - component: plugin_sdk
+    owner: Platform Architecture Team
+    required_tests:
+      - instantiation
+      - interface_compliance
+    required_certifications:
+      - stateless
+      - deterministic
+    required_docs:
+      - developer
+      - examples
+
+  - component: dto_framework
+    owner: Platform Architecture Team
+    required_tests:
+      - serialization
+      - immutability
+    required_certifications:
+      - memory_safe
+    required_docs:
+      - schema
+      - developer
+
+  - component: event_bus
+    owner: Foundation Team
+    required_tests:
+      - pub_sub
+      - ordering
+      - throughput
+    required_certifications:
+      - exactly_once_delivery
+    required_docs:
+      - architecture
+      - topics
+
+  - component: replay_framework
+    owner: Foundation Team
+    required_tests:
+      - time_travel
+      - snapshot_restore
+    required_certifications:
+      - deterministic
+      - byte_perfect
+    required_docs:
+      - user_guide
+      - architecture
+
+  - component: dependency_injection
+    owner: Foundation Team
+    required_tests:
+      - resolution
+      - scope_management
+    required_certifications:
+      - cycle_free
+    required_docs:
+      - architecture
+
+  - component: logging
+    owner: Foundation Team
+    required_tests:
+      - format
+      - latency
+    required_certifications:
+      - non_blocking
+    required_docs:
+      - standard_operating_procedure
+
+  - component: configuration
+    owner: Foundation Team
+    required_tests:
+      - override
+      - validation
+    required_certifications:
+      - secure_secrets
+    required_docs:
+      - schema
+      - user_guide
+
+  - component: caching
+    owner: Foundation Team
+    required_tests:
+      - eviction
+      - hit_rate
+    required_certifications:
+      - thread_safe
+    required_docs:
+      - architecture

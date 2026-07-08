@@ -419,3 +419,133 @@ entries:
   aliases:
   - Order Flow
   - Order Flow Concept
+- id: ONT-RES-001
+  name: AuctionProfile
+  description: Analyzes market profile and auction theory.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-002
+  name: InitialBalance
+  description: Calculates the initial balance of the session.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-003
+  name: OpeningDrive
+  description: Identifies opening drive momentum.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-004
+  name: ResponsiveBuyingSelling
+  description: Identifies responsive market participation.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-005
+  name: InitiativeBuyingSelling
+  description: Identifies initiative market participation.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-006
+  name: PoorHighLow
+  description: Detects poor highs and lows.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-007
+  name: SinglePrints
+  description: Detects single print zones.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-008
+  name: CompositeProfile
+  description: Calculates composite volume profiles.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-009
+  name: QueueImbalance
+  description: Detects order book queue imbalance.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-010
+  name: Icebergs
+  description: Detects iceberg orders.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-011
+  name: Spoofing
+  description: Detects spoofing patterns.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-012
+  name: OrderBookPressure
+  description: Measures total order book pressure.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-013
+  name: GammaExposure
+  description: Calculates GEX levels.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-014
+  name: DealerPositioning
+  description: Estimates aggregate dealer positioning.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-015
+  name: IVRank
+  description: Calculates Implied Volatility Rank.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-016
+  name: MaxPain
+  description: Calculates option max pain levels.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-017
+  name: EconomicCalendar
+  description: Ingests economic calendar events.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-018
+  name: CentralBankEvents
+  description: Tracks central bank announcements.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-019
+  name: YieldCurve
+  description: Analyzes yield curve spread changes.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-020
+  name: HurstExponent
+  description: Calculates the Hurst exponent for mean reversion/trending.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-021
+  name: Entropy
+  description: Measures market entropy.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-022
+  name: Cointegration
+  description: Analyzes asset cointegration.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-023
+  name: KalmanFilter
+  description: Applies Kalman filtering for state estimation.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-024
+  name: FeatureImportance
+  description: Extracts real-time feature importance.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-025
+  name: SHAP
+  description: Calculates SHAP values for model predictions.
+  domain: Reserved
+  relationships: []
+- id: ONT-RES-026
+  name: DriftDetection
+  description: Detects concept drift in live models.
+  domain: Reserved
+  relationships: []

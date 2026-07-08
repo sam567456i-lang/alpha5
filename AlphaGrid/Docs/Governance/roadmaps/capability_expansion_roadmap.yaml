@@ -1,0 +1,3285 @@
+version: 1.0.0
+last_updated: '2026-07-08'
+description: Permanent future capability backlog tracking. These items are non-blocking
+  and do not affect the current maturity score.
+future_capabilities:
+- id: CAP-FUT-0001
+  domain: Execution Microstructure
+  name: Queue Position
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0002
+  domain: Execution Microstructure
+  name: Queue Imbalance
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0003
+  domain: Execution Microstructure
+  name: Hidden Liquidity
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0004
+  domain: Execution Microstructure
+  name: Iceberg Orders
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0005
+  domain: Execution Microstructure
+  name: Spoofing
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0006
+  domain: Execution Microstructure
+  name: Layering
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0007
+  domain: Execution Microstructure
+  name: Quote Stuffing
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0008
+  domain: Execution Microstructure
+  name: Bid/Ask Spread
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0009
+  domain: Execution Microstructure
+  name: Market Impact
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0010
+  domain: Execution Microstructure
+  name: Order Book Resiliency
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0011
+  domain: Execution Microstructure
+  name: Book Pressure
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0012
+  domain: Execution Microstructure
+  name: Liquidity Consumption
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0013
+  domain: Execution Microstructure
+  name: Sweep-to-Fill
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0014
+  domain: Execution Microstructure
+  name: Aggressive/Passive Buyers & Sellers
+  priority: Critical
+  owner_platform: Future Order Book Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0015
+  domain: Expanded Market Profile
+  name: Developing POC
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0016
+  domain: Expanded Market Profile
+  name: Naked POC
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0017
+  domain: Expanded Market Profile
+  name: Virgin POC
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0018
+  domain: Expanded Market Profile
+  name: Composite Profile
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0019
+  domain: Expanded Market Profile
+  name: Composite POC
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0020
+  domain: Expanded Market Profile
+  name: Session/Weekly/Monthly Profiles
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0021
+  domain: Expanded Market Profile
+  name: Poor High
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0022
+  domain: Expanded Market Profile
+  name: Poor Low
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0023
+  domain: Expanded Market Profile
+  name: Single Prints
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0024
+  domain: Expanded Market Profile
+  name: Tail Buying
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0025
+  domain: Expanded Market Profile
+  name: Tail Selling
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0026
+  domain: Expanded Market Profile
+  name: Distribution Shapes
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0027
+  domain: Expanded Market Profile
+  name: P Profile
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0028
+  domain: Expanded Market Profile
+  name: b Profile
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0029
+  domain: Expanded Market Profile
+  name: D Profile
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0030
+  domain: Expanded Market Profile
+  name: Double Distribution
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0031
+  domain: Expanded Auction Market Theory
+  name: Balance Area
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0032
+  domain: Expanded Auction Market Theory
+  name: Balance Rules
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0033
+  domain: Expanded Auction Market Theory
+  name: Initial Balance Extension
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0034
+  domain: Expanded Auction Market Theory
+  name: Opening Drive
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0035
+  domain: Expanded Auction Market Theory
+  name: Opening Test Drive
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0036
+  domain: Expanded Auction Market Theory
+  name: Open Auction
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0037
+  domain: Expanded Auction Market Theory
+  name: Open Rejection Reverse
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0038
+  domain: Expanded Auction Market Theory
+  name: Excess High
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0039
+  domain: Expanded Auction Market Theory
+  name: Excess Low
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0040
+  domain: Expanded Auction Market Theory
+  name: Initiative Buying
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0041
+  domain: Expanded Auction Market Theory
+  name: Initiative Selling
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0042
+  domain: Expanded Auction Market Theory
+  name: Responsive Buying
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0043
+  domain: Expanded Auction Market Theory
+  name: Responsive Selling
+  priority: Critical
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0044
+  domain: Market Regime Intelligence
+  name: Mean Reversion Regime
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0045
+  domain: Market Regime Intelligence
+  name: Crisis Regime
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0046
+  domain: Market Regime Intelligence
+  name: Liquidity Crisis
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0047
+  domain: Market Regime Intelligence
+  name: Risk-On
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0048
+  domain: Market Regime Intelligence
+  name: Risk-Off
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0049
+  domain: Market Regime Intelligence
+  name: Correlation Breakdown
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0050
+  domain: Market Regime Intelligence
+  name: Structural Break
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0051
+  domain: Market Regime Intelligence
+  name: High/Low Volatility Regimes
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0052
+  domain: Market Regime Intelligence
+  name: Compression Regime
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0053
+  domain: Market Regime Intelligence
+  name: Expansion Regime
+  priority: Low
+  owner_platform: Platform 11
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0054
+  domain: Statistical Intelligence
+  name: Z Score
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0055
+  domain: Statistical Intelligence
+  name: Rolling Statistics
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0056
+  domain: Statistical Intelligence
+  name: Entropy
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0057
+  domain: Statistical Intelligence
+  name: Hurst
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0058
+  domain: Statistical Intelligence
+  name: Cointegration
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0059
+  domain: Statistical Intelligence
+  name: Stationarity
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0060
+  domain: Statistical Intelligence
+  name: Bayesian Models
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0061
+  domain: Statistical Intelligence
+  name: Kalman Filters
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0062
+  domain: Statistical Intelligence
+  name: Monte Carlo
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0063
+  domain: Statistical Intelligence
+  name: Hidden Markov Models
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0064
+  domain: Correlation Intelligence
+  name: Asset Correlation
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0065
+  domain: Correlation Intelligence
+  name: Sector Correlation
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0066
+  domain: Correlation Intelligence
+  name: Index Correlation
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0067
+  domain: Correlation Intelligence
+  name: Currency Strength Matrix
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0068
+  domain: Correlation Intelligence
+  name: Relative Strength Matrix
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0069
+  domain: Correlation Intelligence
+  name: Lead/Lag
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0070
+  domain: Correlation Intelligence
+  name: Pair Divergence
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0071
+  domain: Correlation Intelligence
+  name: Intermarket Confirmation
+  priority: High
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0072
+  domain: Options Intelligence
+  name: Open Interest
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0073
+  domain: Options Intelligence
+  name: OI Change
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0074
+  domain: Options Intelligence
+  name: Gamma Exposure
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0075
+  domain: Options Intelligence
+  name: Delta Exposure
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0076
+  domain: Options Intelligence
+  name: Dealer Positioning
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0077
+  domain: Options Intelligence
+  name: Gamma Flip
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0078
+  domain: Options Intelligence
+  name: IV Rank
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0079
+  domain: Options Intelligence
+  name: IV Percentile
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0080
+  domain: Options Intelligence
+  name: Max Pain
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0081
+  domain: Options Intelligence
+  name: Volatility Surface
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0082
+  domain: Options Intelligence
+  name: Smile
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0083
+  domain: Options Intelligence
+  name: Skew
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0084
+  domain: Options Intelligence
+  name: Term Structure
+  priority: Critical
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0085
+  domain: Futures Intelligence
+  name: COT Report
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0086
+  domain: Futures Intelligence
+  name: Commercial Positioning
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0087
+  domain: Futures Intelligence
+  name: Large Speculators
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0088
+  domain: Futures Intelligence
+  name: Small Speculators
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0089
+  domain: Futures Intelligence
+  name: Basis
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0090
+  domain: Futures Intelligence
+  name: Contango
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0091
+  domain: Futures Intelligence
+  name: Backwardation
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0092
+  domain: Futures Intelligence
+  name: Roll Yield
+  priority: Low
+  owner_platform: Derivatives Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0093
+  domain: Macro Intelligence
+  name: Economic Calendar
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0094
+  domain: Macro Intelligence
+  name: CPI
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0095
+  domain: Macro Intelligence
+  name: PPI
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0096
+  domain: Macro Intelligence
+  name: GDP
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0097
+  domain: Macro Intelligence
+  name: PMI
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0098
+  domain: Macro Intelligence
+  name: Retail Sales
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0099
+  domain: Macro Intelligence
+  name: Consumer Confidence
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0100
+  domain: Macro Intelligence
+  name: NFP
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0101
+  domain: Macro Intelligence
+  name: FOMC
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0102
+  domain: Macro Intelligence
+  name: ECB
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0103
+  domain: Macro Intelligence
+  name: BOJ
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0104
+  domain: Macro Intelligence
+  name: BOE
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0105
+  domain: Macro Intelligence
+  name: Yield Curve
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0106
+  domain: Macro Intelligence
+  name: Bond Market
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0107
+  domain: Macro Intelligence
+  name: Inflation Regime
+  priority: Critical
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0108
+  domain: Sentiment Intelligence
+  name: News Sentiment
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0109
+  domain: Sentiment Intelligence
+  name: Social Sentiment
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0110
+  domain: Sentiment Intelligence
+  name: ETF Flows
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0111
+  domain: Sentiment Intelligence
+  name: Stablecoin Flows
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0112
+  domain: Sentiment Intelligence
+  name: Fear & Greed
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0113
+  domain: Sentiment Intelligence
+  name: Funding Rate
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0114
+  domain: Sentiment Intelligence
+  name: Liquidations
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0115
+  domain: Sentiment Intelligence
+  name: Insider Transactions
+  priority: Low
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0116
+  domain: Machine Learning
+  name: Feature Importance
+  priority: Low
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0117
+  domain: Machine Learning
+  name: SHAP
+  priority: Low
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0118
+  domain: Machine Learning
+  name: Drift Detection
+  priority: Low
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0119
+  domain: Machine Learning
+  name: Model Confidence
+  priority: Low
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0120
+  domain: Machine Learning
+  name: Ensemble Voting
+  priority: Low
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0121
+  domain: Machine Learning
+  name: Forecast Confidence
+  priority: Low
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0122
+  domain: Machine Learning
+  name: Anomaly Detection
+  priority: Low
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0123
+  domain: Portfolio Intelligence
+  name: Portfolio Beta
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0124
+  domain: Portfolio Intelligence
+  name: Exposure Analysis
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0125
+  domain: Portfolio Intelligence
+  name: Correlation Matrix
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0126
+  domain: Portfolio Intelligence
+  name: Diversification Score
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0127
+  domain: Portfolio Intelligence
+  name: Country Exposure
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0128
+  domain: Portfolio Intelligence
+  name: Currency Exposure
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0129
+  domain: Portfolio Intelligence
+  name: Sector Exposure
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0130
+  domain: Portfolio Intelligence
+  name: Heat Map
+  priority: High
+  owner_platform: Portfolio Intelligence
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0131
+  domain: Execution Intelligence
+  name: Smart Order Routing
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0132
+  domain: Execution Intelligence
+  name: Scale In
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0133
+  domain: Execution Intelligence
+  name: Scale Out
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0134
+  domain: Execution Intelligence
+  name: Execution Quality
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0135
+  domain: Execution Intelligence
+  name: Slippage
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0136
+  domain: Execution Intelligence
+  name: Fill Rate
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0137
+  domain: Execution Intelligence
+  name: ATR Stops
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0138
+  domain: Execution Intelligence
+  name: Volatility Stops
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0139
+  domain: Execution Intelligence
+  name: Time Stops
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0140
+  domain: Execution Intelligence
+  name: Trailing Stops
+  priority: Low
+  owner_platform: Execution Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0141
+  domain: Pattern Intelligence
+  name: Harmonic
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0142
+  domain: Pattern Intelligence
+  name: Elliott
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0143
+  domain: Pattern Intelligence
+  name: Wolfe
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0144
+  domain: Pattern Intelligence
+  name: Wedge
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0145
+  domain: Pattern Intelligence
+  name: Triangle
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0146
+  domain: Pattern Intelligence
+  name: Rectangle
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0147
+  domain: Pattern Intelligence
+  name: Cup & Handle
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0148
+  domain: Pattern Intelligence
+  name: Flag
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0149
+  domain: Pattern Intelligence
+  name: Pennant
+  priority: Medium
+  owner_platform: Platform 9-10 Extensions
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0150
+  domain: Seasonality
+  name: Monday Effect
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0151
+  domain: Seasonality
+  name: Friday Effect
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0152
+  domain: Seasonality
+  name: Holiday Effect
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0153
+  domain: Seasonality
+  name: Triple Witching
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0154
+  domain: Seasonality
+  name: Options Expiry
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0155
+  domain: Seasonality
+  name: Futures Expiry
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0156
+  domain: Seasonality
+  name: Turn of Month
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0157
+  domain: Seasonality
+  name: Turn of Quarter
+  priority: Medium
+  owner_platform: Research Platform (P21)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0158
+  domain: Crypto Intelligence
+  name: Whale Wallets
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0159
+  domain: Crypto Intelligence
+  name: Exchange Flows
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0160
+  domain: Crypto Intelligence
+  name: On-chain Volume
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0161
+  domain: Crypto Intelligence
+  name: SOPR
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0162
+  domain: Crypto Intelligence
+  name: MVRV
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0163
+  domain: Crypto Intelligence
+  name: Realized Price
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0164
+  domain: Crypto Intelligence
+  name: Dormancy
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0165
+  domain: Crypto Intelligence
+  name: Long Liquidations
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0166
+  domain: Crypto Intelligence
+  name: Short Liquidations
+  priority: Low
+  owner_platform: Crypto Platform
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0167
+  domain: Data Quality Intelligence
+  name: Missing Bars
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0168
+  domain: Data Quality Intelligence
+  name: Duplicate Bars
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0169
+  domain: Data Quality Intelligence
+  name: Bad Ticks
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0170
+  domain: Data Quality Intelligence
+  name: Time Gaps
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0171
+  domain: Data Quality Intelligence
+  name: Feed Health
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0172
+  domain: Data Quality Intelligence
+  name: Latency
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0173
+  domain: Data Quality Intelligence
+  name: Split Detection
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0174
+  domain: Data Quality Intelligence
+  name: Dividend Adjustment
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0175
+  domain: Data Quality Intelligence
+  name: Stale Feed
+  priority: Critical
+  owner_platform: Foundation / P0
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Planned
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: false
+- id: CAP-FUT-0176
+  domain: AI Research (Future Platform 22)
+  name: Research Hypothesis
+  priority: Research
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Research
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: true
+- id: CAP-FUT-0177
+  domain: AI Research (Future Platform 22)
+  name: Counterfactual Analysis
+  priority: Research
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Research
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: true
+- id: CAP-FUT-0178
+  domain: AI Research (Future Platform 22)
+  name: AI Explanation
+  priority: Research
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Research
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: true
+- id: CAP-FUT-0179
+  domain: AI Research (Future Platform 22)
+  name: Evidence Ranking
+  priority: Research
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Research
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: true
+- id: CAP-FUT-0180
+  domain: AI Research (Future Platform 22)
+  name: Confidence Calibration
+  priority: Research
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Research
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: true
+- id: CAP-FUT-0181
+  domain: AI Research (Future Platform 22)
+  name: Strategy Recommendation
+  priority: Research
+  owner_platform: AI Platform (P22)
+  required_data:
+  - TBD
+  dependencies: []
+  estimated_implementation_wave: TBD
+  implementation_state: Planned
+  status: Backlog
+  blocking: false
+  adr_reference: N/A
+  ontology_reference: N/A
+  stage: Research
+  scheduled_wave: TBD
+  estimated_effort: TBD
+  research_required: true
+- id: CAP_P10_DEPENDENCY_GRAPH
+  name: Methodology Dependency Graph Output
+  domain: Platform 10 Methodologies
+  priority: Medium
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - MethodologyDTO
+  estimated_effort: Medium
+  research_required: false
+- id: CAP_P10_CERT_EXPANSION
+  name: Certification Suite Expansion (P10)
+  domain: Platform 10 Methodologies
+  priority: High
+  stage: Backlog
+  scheduled_wave: Wave 6+
+  owner_platform: Platform 10
+  dependencies:
+  - test_methodology_certification_suite.py
+  estimated_effort: High
+  research_required: false

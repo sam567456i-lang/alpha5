@@ -1,0 +1,36 @@
+registry_metadata:
+  name: "Rule Execution Policy Registry"
+  version: "1.0.0"
+  description: "Governs runtime behavior policies for the execution environment."
+  last_updated: "2026-07-08"
+
+policies:
+  standard_execution:
+    retry_policy:
+      max_retries: 0
+    timeout_policy:
+      max_duration_ms: 100
+    batching_policy:
+      enabled: true
+      max_batch_size: 50
+    execution_priority: "Normal"
+    parallel_eligibility: false
+    replay_policy: "Standard"
+    cache_policy:
+      enabled: true
+      ttl_seconds: 3600
+
+  strict_execution:
+    retry_policy:
+      max_retries: 3
+      backoff_ms: 50
+    timeout_policy:
+      max_duration_ms: 500
+    batching_policy:
+      enabled: true
+      max_batch_size: 20
+    execution_priority: "High"
+    parallel_eligibility: true
+    replay_policy: "Deterministic"
+    cache_policy:
+      enabled: false

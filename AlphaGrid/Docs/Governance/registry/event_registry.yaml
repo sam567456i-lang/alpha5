@@ -1,0 +1,50 @@
+version:
+  schema: "1.0.0"
+  model: "1.0.0"
+
+events:
+  # Spatial Zone Lifecycle Events
+  ZoneCreated:
+    description: "Emitted when a new zone is detected and geometry is established."
+    category: "spatial"
+  ZoneConfirmed:
+    description: "Emitted when a zone passes confidence and structure validation."
+    category: "spatial"
+  ZoneActivated:
+    description: "Emitted when a confirmed zone intersects current price action."
+    category: "spatial"
+  ZoneMerged:
+    description: "Emitted when two overlapping zones are unioned or aggregated."
+    category: "spatial"
+  ZoneSplit:
+    description: "Emitted when a zone is split into fragments due to mitigation."
+    category: "spatial"
+  ZoneMitigated:
+    description: "Emitted when a zone's structural value has been fully consumed."
+    category: "spatial"
+  ZoneInvalidated:
+    description: "Emitted when a zone's geometry is violated structurally."
+    category: "spatial"
+  ZoneArchived:
+    description: "Emitted when a zone is no longer relevant for the current epoch."
+    category: "spatial"
+  ZoneVersionCreated:
+    description: "Emitted when an immutable DTO copy of a zone is versioned."
+    category: "spatial"
+
+  # Concept Lifecycle Events
+  ConceptCreated:
+    description: "Emitted when a new concept is extracted and instantiated."
+    category: "concept"
+  ConceptUpdated:
+    description: "Emitted when a concept's evidence or confidence is updated."
+    category: "concept"
+  ConceptConfirmed:
+    description: "Emitted when a concept passes consistency validation."
+    category: "concept"
+  ConceptInvalidated:
+    description: "Emitted when a concept's rules are violated."
+    category: "concept"
+  ConceptArchived:
+    description: "Emitted when a concept is consumed or deprecated."
+    category: "concept"

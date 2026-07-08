@@ -1,0 +1,74 @@
+version:
+  schema: 1.0.0
+  transition_model: 1.0.0
+
+event_priority:
+  # Higher number wins if timestamps are identical
+  str.eve.mss: 100
+  str.eve.choch: 80
+  str.eve.bos.major: 60
+  str.eve.bos.external: 50
+  str.eve.bos.internal: 40
+  str.eve.bos.minor: 30
+  str.eve.bos: 25
+
+states:
+  BULLISH:
+    str.eve.bos:
+      guards:
+        minimum_strength: 0.5
+      next: BULLISH
+    str.eve.bos.major:
+      guards:
+        minimum_strength: 0.5
+      next: BULLISH
+    str.eve.bos.internal:
+      next: BULLISH
+    str.eve.choch:
+      guards:
+        confirmation_count: 1
+      next: CONSOLIDATION
+    str.eve.mss:
+      next: BEARISH
+
+  BEARISH:
+    str.eve.bos:
+      guards:
+        minimum_strength: 0.5
+      next: BEARISH
+    str.eve.bos.major:
+      guards:
+        minimum_strength: 0.5
+      next: BEARISH
+    str.eve.bos.internal:
+      next: BEARISH
+    str.eve.choch:
+      guards:
+        confirmation_count: 1
+      next: CONSOLIDATION
+    str.eve.mss:
+      next: BULLISH
+
+  CONSOLIDATION:
+    str.eve.mss:
+      next: BULLISH # or Bearish depending on context, FSM logic must handle
+    str.eve.bos.external:
+      next: BULLISH # Simplification for now
+
+  PULLBACK:
+    str.eve.bos.internal:
+      next: PULLBACK
+    str.eve.choch:
+      next: CONSOLIDATION
+
+terminal_states:
+  UNKNOWN: true
+
+illegal_transitions:
+  - BULLISH -> BEARISH # Explicitly disallowed without CHOCH/MSS
+  - BEARISH -> BULLISH # Explicitly disallowed without CHOCH/MSS
+
+recovery_states:
+  UNKNOWN:
+    event: str.eve.bos.major
+    next: BULLISH # Needs context to determine direction, but this defines a valid recovery path

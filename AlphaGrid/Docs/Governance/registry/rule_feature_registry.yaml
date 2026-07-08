@@ -1,0 +1,27 @@
+registry_metadata:
+  name: "Rule Feature Registry"
+  version: "1.0.0"
+  description: "Feature flag management for analytical rules."
+  last_updated: "2026-07-08"
+
+features:
+  IFVGRule:
+    enabled: true
+    experimental: true
+    beta: false
+    deprecated: false
+    archived: false
+
+  CERule:
+    enabled: false
+    experimental: true
+    beta: false
+    deprecated: false
+    archived: false
+
+  BPRRule:
+    enabled: true
+    experimental: false
+    beta: true
+    deprecated: false
+    archived: false

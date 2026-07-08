@@ -6207,3 +6207,237 @@ entries:
   status:
     design: Approved
     implementation: Planned
+- id: CAP-RES-001
+  name: AuctionProfile
+  description: Analyzes market profile and auction theory.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-002
+  name: InitialBalance
+  description: Calculates the initial balance of the session.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-003
+  name: OpeningDrive
+  description: Identifies opening drive momentum.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-004
+  name: ResponsiveBuyingSelling
+  description: Identifies responsive market participation.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-005
+  name: InitiativeBuyingSelling
+  description: Identifies initiative market participation.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-006
+  name: PoorHighLow
+  description: Detects poor highs and lows.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-007
+  name: SinglePrints
+  description: Detects single print zones.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-008
+  name: CompositeProfile
+  description: Calculates composite volume profiles.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-009
+  name: QueueImbalance
+  description: Detects order book queue imbalance.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-010
+  name: Icebergs
+  description: Detects iceberg orders.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-011
+  name: Spoofing
+  description: Detects spoofing patterns.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-012
+  name: OrderBookPressure
+  description: Measures total order book pressure.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-013
+  name: GammaExposure
+  description: Calculates GEX levels.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-014
+  name: DealerPositioning
+  description: Estimates aggregate dealer positioning.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-015
+  name: IVRank
+  description: Calculates Implied Volatility Rank.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-016
+  name: MaxPain
+  description: Calculates option max pain levels.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-017
+  name: EconomicCalendar
+  description: Ingests economic calendar events.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-018
+  name: CentralBankEvents
+  description: Tracks central bank announcements.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-019
+  name: YieldCurve
+  description: Analyzes yield curve spread changes.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-020
+  name: HurstExponent
+  description: Calculates the Hurst exponent for mean reversion/trending.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-021
+  name: Entropy
+  description: Measures market entropy.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-022
+  name: Cointegration
+  description: Analyzes asset cointegration.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-023
+  name: KalmanFilter
+  description: Applies Kalman filtering for state estimation.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-024
+  name: FeatureImportance
+  description: Extracts real-time feature importance.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-025
+  name: SHAP
+  description: Calculates SHAP values for model predictions.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown
+- id: CAP-RES-026
+  name: DriftDetection
+  description: Detects concept drift in live models.
+  domain: Reserved
+  tier: Future
+  status: Backlog
+  implementation_state: Backlog
+  blocking: false
+  complexity: Unknown

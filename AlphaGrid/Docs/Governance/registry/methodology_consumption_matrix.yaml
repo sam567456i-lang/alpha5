@@ -1,0 +1,66 @@
+registry_metadata:
+  name: "Methodology Consumption Matrix"
+  version: "1.0.0"
+  description: "Governs which rules/evidence types each methodology is allowed or forbidden to consume."
+  last_updated: "2026-07-08"
+
+methodologies:
+  ICT:
+    allowed:
+      - "FVGEvidence"
+      - "IFVGEvidence"
+      - "BPREvidence"
+      - "OrderBlockEvidence"
+      - "BreakerEvidence"
+      - "MitigationBlockEvidence"
+      - "LiquidityEvidence"
+      - "SweepEvidence"
+      - "IRLEvidence"
+      - "ERLEvidence"
+      - "StructureEvidence"
+      - "SessionEvidence"
+      - "TimeContextEvidence"
+      - "PremiumDiscountEvidence"
+    forbidden:
+      - "WyckoffPhaseEvidence"
+      - "AuctionProfileEvidence"
+      - "ElliotWaveEvidence"
+
+  SMC:
+    allowed:
+      - "StructureEvidence"
+      - "OrderBlockEvidence"
+      - "LiquidityEvidence"
+      - "PremiumDiscountEvidence"
+      - "SupplyDemandEvidence"
+    forbidden:
+      - "WyckoffPhaseEvidence"
+      - "AuctionProfileEvidence"
+      - "IRLEvidence"
+      - "ERLEvidence"
+
+  Wyckoff:
+    allowed:
+      - "StructureEvidence"
+      - "VolumeEvidence"
+      - "TrendEvidence"
+      - "MarketContextEvidence"
+      - "WyckoffPhaseEvidence"
+      - "SpringEvidence"
+      - "UpthrustEvidence"
+    forbidden:
+      - "FVGEvidence"
+      - "OrderBlockEvidence"
+
+  AuctionMarketTheory:
+    allowed:
+      - "AuctionProfileEvidence"
+      - "ValueAreaEvidence"
+      - "PointOfControlEvidence"
+      - "SinglePrintEvidence"
+      - "InitialBalanceEvidence"
+      - "VolumeEvidence"
+      - "MarketContextEvidence"
+    forbidden:
+      - "WyckoffPhaseEvidence"
+      - "FVGEvidence"

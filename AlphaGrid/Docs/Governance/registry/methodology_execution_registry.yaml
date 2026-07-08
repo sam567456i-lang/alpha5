@@ -1,0 +1,28 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Master catalog of Methodology execution policies, routing, and scaling configurations."
+
+execution_policies:
+  - id: exec_ict
+    methodology_ref: "p10_ict"
+    evaluation_order: 1
+    timeout_ms: 50
+    streaming_support: true
+    replay_support: true
+    aggregation_policy: "exponential_decay"
+
+  - id: exec_wyckoff
+    methodology_ref: "p10_wyckoff"
+    evaluation_order: 2
+    timeout_ms: 75
+    streaming_support: true
+    replay_support: true
+    aggregation_policy: "linear"
+
+  - id: exec_smc
+    methodology_ref: "p10_order_flow"
+    evaluation_order: 1
+    timeout_ms: 25
+    streaming_support: true
+    replay_support: true
+    aggregation_policy: "step"

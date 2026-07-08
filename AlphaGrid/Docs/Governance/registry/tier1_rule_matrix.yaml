@@ -1,0 +1,169 @@
+registry_metadata:
+  name: "Tier 1 Rule Matrix"
+  version: "1.0.0"
+  description: "Design contract and coverage matrix for Tier 1 institutional rules."
+  last_updated: "2026-07-08"
+
+# 1A - Imbalance
+imbalance_rules:
+  FVGRule:
+    tier: "1A"
+    required_evidence: ["StructureEvidence", "RangeEvidence", "TrendEvidence"]
+    optional_evidence: ["VolumeEvidence", "SessionEvidence"]
+    produced_evidence: ["FVGEvidence"]
+    capability_id: "CAP-T1-100"
+    ontology_id: "ONT-T1-100"
+    rule_id: "RULE-T1-100"
+    dependencies: ["StructureRule", "RangeRule", "TrendRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  IFVGRule:
+    tier: "1A"
+    required_evidence: ["FVGEvidence", "StructureEvidence"]
+    optional_evidence: ["VolumeEvidence"]
+    produced_evidence: ["IFVGEvidence"]
+    capability_id: "CAP-T1-101"
+    ontology_id: "ONT-T1-101"
+    rule_id: "RULE-T1-101"
+    dependencies: ["FVGRule", "StructureRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  BPRRule:
+    tier: "1A"
+    required_evidence: ["FVGEvidence"]
+    optional_evidence: []
+    produced_evidence: ["BPREvidence"]
+    capability_id: "CAP-T1-102"
+    ontology_id: "ONT-T1-102"
+    rule_id: "RULE-T1-102"
+    dependencies: ["FVGRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  LiquidityVoidRule:
+    tier: "1A"
+    required_evidence: ["RangeEvidence", "VolatilityEvidence"]
+    optional_evidence: []
+    produced_evidence: ["LiquidityVoidEvidence"]
+    capability_id: "CAP-T1-103"
+    ontology_id: "ONT-T1-103"
+    rule_id: "RULE-T1-103"
+    dependencies: ["RangeRule", "VolatilityRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+# 1B - Institutional Zones
+institutional_zones_rules:
+  OrderBlockRule:
+    tier: "1B"
+    required_evidence: ["LiquidityEvidence", "StructureEvidence", "TrendEvidence"]
+    optional_evidence: ["VolumeEvidence", "SessionEvidence"]
+    produced_evidence: ["OrderBlockEvidence"]
+    capability_id: "CAP-T1-200"
+    ontology_id: "ONT-T1-200"
+    rule_id: "RULE-T1-200"
+    dependencies: ["LiquidityRule", "StructureRule", "TrendRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  BreakerRule:
+    tier: "1B"
+    required_evidence: ["OrderBlockEvidence", "StructureEvidence"]
+    optional_evidence: []
+    produced_evidence: ["BreakerEvidence"]
+    capability_id: "CAP-T1-201"
+    ontology_id: "ONT-T1-201"
+    rule_id: "RULE-T1-201"
+    dependencies: ["OrderBlockRule", "StructureRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  MitigationBlockRule:
+    tier: "1B"
+    required_evidence: ["StructureEvidence", "RangeEvidence"]
+    optional_evidence: []
+    produced_evidence: ["MitigationBlockEvidence"]
+    capability_id: "CAP-T1-202"
+    ontology_id: "ONT-T1-202"
+    rule_id: "RULE-T1-202"
+    dependencies: ["StructureRule", "RangeRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  RejectionBlockRule:
+    tier: "1B"
+    required_evidence: ["StructureEvidence", "LiquidityEvidence"]
+    optional_evidence: []
+    produced_evidence: ["RejectionBlockEvidence"]
+    capability_id: "CAP-T1-203"
+    ontology_id: "ONT-T1-203"
+    rule_id: "RULE-T1-203"
+    dependencies: ["StructureRule", "LiquidityRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  PropulsionBlockRule:
+    tier: "1B"
+    required_evidence: ["OrderBlockEvidence", "StructureEvidence"]
+    optional_evidence: []
+    produced_evidence: ["PropulsionBlockEvidence"]
+    capability_id: "CAP-T1-204"
+    ontology_id: "ONT-T1-204"
+    rule_id: "RULE-T1-204"
+    dependencies: ["OrderBlockRule", "StructureRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  FlipZoneRule:
+    tier: "1B"
+    required_evidence: ["StructureEvidence"]
+    optional_evidence: []
+    produced_evidence: ["FlipZoneEvidence"]
+    capability_id: "CAP-T1-205"
+    ontology_id: "ONT-T1-205"
+    rule_id: "RULE-T1-205"
+    dependencies: ["StructureRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+# 1C - Liquidity Interaction
+liquidity_interaction_rules:
+  SweepRule:
+    tier: "1C"
+    required_evidence: ["LiquidityEvidence", "StructureEvidence"]
+    optional_evidence: []
+    produced_evidence: ["SweepEvidence"]
+    capability_id: "CAP-T1-300"
+    ontology_id: "ONT-T1-300"
+    rule_id: "RULE-T1-300"
+    dependencies: ["LiquidityRule", "StructureRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+# 1D - Range Logic
+range_logic_rules:
+  IRLRule:
+    tier: "1D"
+    required_evidence: ["RangeEvidence", "LiquidityEvidence"]
+    optional_evidence: []
+    produced_evidence: ["IRLEvidence"]
+    capability_id: "CAP-T1-400"
+    ontology_id: "ONT-T1-400"
+    rule_id: "RULE-T1-400"
+    dependencies: ["RangeRule", "LiquidityRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"
+
+  ERLRule:
+    tier: "1D"
+    required_evidence: ["RangeEvidence", "LiquidityEvidence"]
+    optional_evidence: []
+    produced_evidence: ["ERLEvidence"]
+    capability_id: "CAP-T1-401"
+    ontology_id: "ONT-T1-401"
+    rule_id: "RULE-T1-401"
+    dependencies: ["RangeRule", "LiquidityRule"]
+    certification_status: "Draft"
+    performance_profile: "strict_execution"

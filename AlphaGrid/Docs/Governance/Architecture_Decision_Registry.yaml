@@ -1,18 +1,73 @@
-# Architecture Decision Registry
-# Centralized tracking of all architectural decisions.
-
 decisions:
-  - id: "DEC-001"
-    date: "2026-07-07"
-    status: "Active"
-    category: "Governance"
-    description: "Enshrined the Permanent Governance Directive into .agents/AGENTS.md to enforce AI continuity."
-    alternatives_considered: ["Relying on manual user prompting", "Storing only in markdown"]
-    evidence: "Previous architectural drift during extended AI sessions."
-    impact: "All future AI execution is structurally bound by 17 rules."
-    owner: "Architecture Board"
-    approval: "Approved by Human"
-    supersedes: "None"
-    related_platforms: ["All"]
-    related_documents: ["AGENTS.md", "Project_Bible.md"]
-    related_freezes: ["Freeze_v3"]
+- id: DEC-001
+  date: '2026-07-07'
+  status: Active
+  category: Governance
+  description: Enshrined the Permanent Governance Directive into .agents/AGENTS.md
+    to enforce AI continuity.
+  alternatives_considered:
+  - Relying on manual user prompting
+  - Storing only in markdown
+  evidence: Previous architectural drift during extended AI sessions.
+  impact: All future AI execution is structurally bound by 17 rules.
+  owner: Architecture Board
+  approval: Approved by Human
+  supersedes: None
+  related_platforms:
+  - All
+  related_documents:
+  - AGENTS.md
+  - Project_Bible.md
+  related_freezes:
+  - Freeze_v3
+- id: DEC-012
+  date: '2026-07-08'
+  status: Active
+  category: Governance
+  description: Bisection of monolithic roadmap into framework_roadmap.yaml, capability_expansion_roadmap.yaml,
+    and release_roadmap.yaml.
+  alternatives_considered:
+  - Keeping all items in capability roadmap
+  evidence: Risk of confusing framework stability with analytical delivery milestones.
+  impact: Framework infrastructure progresses slowly, capability milestones progress
+    independently.
+  owner: Architecture Board
+  approval: Approved by Human
+  supersedes: None
+  related_platforms:
+  - All
+  related_documents:
+  - framework_roadmap.yaml
+  related_freezes:
+  - Wave5B
+- id: DEC-013
+  date: '2026-07-08'
+  status: Active
+  category: Architecture
+  description: Implementation of Methodology SDK Plugin Sandbox Contract, 16-point
+    Freeze Gate, and discrete Plugin Registry.
+  alternatives_considered:
+  - Hardcoded execution
+  - Single yaml methodology registry
+  evidence: Need to prevent plugin IO pollution and methodology definitions becoming
+    unmaintainable.
+  impact: Methodology definitions are pure. Plugins are pre-flight validated, strongly
+    isolated, and sandbox-bound. External I/O strictly prohibited inside plugins.
+  owner: Architecture Board
+  approval: Approved by Human
+  supersedes: None
+  related_platforms:
+  - Platform 10
+  related_documents:
+  - platform10_boundary_contract.md
+  - methodology_plugin_registry.yaml
+  - methodology_sdk.py
+  related_freezes:
+  - Wave5B
+
+  - id: ADR-028
+    title: Tier 0 Freeze Gate and Certification
+    date: 2026-07-08
+    status: ACCEPTED
+    description: Enforces a strict 16-point certification gate (Functional, Contract, Dependency, Planner, Sandbox, Replay, Migration, Serialization, etc.) before any Tier 1 logic can be authored. Elevates RuleEvidenceDTO to a strictly governed registry contract. Introduces Golden Datasets for deterministic baseline validation.
+

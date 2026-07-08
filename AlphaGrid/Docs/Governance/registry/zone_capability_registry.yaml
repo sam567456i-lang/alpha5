@@ -1,0 +1,35 @@
+version:
+  schema: "1.0.0"
+  model: "1.0.0"
+
+capabilities:
+  CAP-OB-01:
+    name: "Order Block"
+    description: "An institutional order block based on structural breaks and volume nodes."
+    base_zone_type: "BLOCK_ZONE"
+    dependencies:
+      - "CAP-002"
+    mappings:
+      Bullish: "BULLISH_ORDER_BLOCK"
+      Bearish: "BEARISH_ORDER_BLOCK"
+
+  CAP-FVG-01:
+    name: "Fair Value Gap"
+    description: "A three-bar imbalance gap."
+    base_zone_type: "GAP_ZONE"
+    dependencies:
+      - "CAP-001"
+    mappings:
+      Bullish: "BULLISH_FVG"
+      Bearish: "BEARISH_FVG"
+
+  CAP-BRK-01:
+    name: "Breaker Block"
+    description: "A failed order block that leads to an explosive structural shift."
+    base_zone_type: "BLOCK_ZONE"
+    dependencies:
+      - "CAP-OB-01"
+      - "CAP-002"
+    mappings:
+      Bullish: "BULLISH_BREAKER"
+      Bearish: "BEARISH_BREAKER"

@@ -1,0 +1,32 @@
+registry_metadata:
+  name: "Rule Metrics Registry"
+  version: "1.0.0"
+  description: "Declares required telemetry and metric tracing fields."
+  last_updated: "2026-07-08"
+
+metric_categories:
+  runtime:
+    - "Execution Time"
+    - "Planner Time"
+    - "Queue Time"
+    - "Memory"
+    - "CPU"
+    
+  quality:
+    - "Evidence Count"
+    - "Skipped"
+    - "Blocked"
+    - "Dependency Depth"
+    - "Coverage"
+    
+  replay:
+    - "Replay Match"
+    - "Fingerprint Match"
+    - "Determinism"
+    - "Serialization Match"
+    
+  explainability:
+    - "Evidence Trace Length"
+    - "Explanation Completeness"
+    - "Dependency Trace"
+    - "Confidence Contributors"

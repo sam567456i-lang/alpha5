@@ -1,31 +1,35 @@
-# AlphaGrid Master Roadmap (v25)
+# AlphaGrid Master Roadmap (v26)
 
-## Current Status: Governance Frozen, E2E Certification Pending (Stage 1)
-*As of the latest repository audit, the Governance and Taxonomy layers are strictly implemented. We are currently executing the Universal Switch System and E2E Certification gates before any further platform logic is implemented.*
+## Current Status: Wave 4.5 Execution
+*Platform 9 (Concept Generation) is completing its final Governance and Lifecycle certification phase before being explicitly frozen. All subsequent concepts will rely on this registry-driven, deterministically hashed methodology layer.*
 
-## Stage 0: Repository Audit
-✅ **Completed**: Detected 216 capabilities, missing Universal Switches, missing E2E tests, and 230 open TODOs.
+## Wave 1: Liquidity
+✅ **Completed & Frozen**
 
-## Stage 1: Master Checklist & Roadmap Update
-✅ **Completed**: You are reading the updated roadmap based on factual repository evidence.
+## Wave 2: Structure
+✅ **Completed & Frozen**
 
-## Stage 2: Universal Switch System (Next)
-Create the centralized, registry-driven configuration `Docs/Governance/universal_switches.yaml`. This controls the execution lifecycle for every platform, family, capability, methodology, and research module dynamically.
+## Wave 3: Universal Zones (Platform 8)
+✅ **Completed & Frozen**
 
-## Stage 3: E2E Certification Framework
-Establish the absolute CI exit gates. Scaffold the 30 defined certification domains. These tests must run successfully with actual data up to the newly implemented layers before any phase can be frozen.
+## Wave 4: Concept Generation (Platform 9)
+✅ **Completed Core Implementations**: ZoneFeature immutability, Semantic Evidence, FVG, Order Block, Breaker Block plugins.
 
-## Stage 4: Research & AI Laboratory
-Create the `Research/` directory. Strictly enforce the isolation rules: no production logic can ever depend on this directory. Implement the validation lifecycle (Experiment -> Validate -> Certify).
+## Wave 4.5: Platform 9 Concept Generation Freeze Gate (Current)
+Implement absolute concept governance:
+- Universal Registry Boot Validator
+- Concept Confidence Registry
+- Concept State Machine Registry
+- Formal Concept SDK
+- Concept Factory & Validation Engine
 
-## Stage 5: Governance Validation & Explicit Unlock
-Execute the final validation of switches, E2E tests, and isolation. Generate `Platform10_Unlock_Report.md`.
+## Wave 5: Methodologies (Platform 10)
+Map extracted deterministic concepts (e.g., FVG, Order Block) into high-level Methodologies (e.g., ICT, SMC, Wyckoff).
 
-## Stage 6+: Execution (Platforms 10-24)
-*Platform 10 (Concept Platform)*
-- Concept Engine (Trend Exhaustion, Premium Market, Liquidity Grab)
-*Platform 11 (Market State)*
-- Master Market State snapshot generation.
-*Platform 12 (Capability Orchestrator)*
-- Dynamic execution planning.
-*(See detailed architectural design for Platforms 13-24)*
+## Long-Term Platform Goals (Future)
+- **Explainability Registry**: Standardize required explanatory logic for concepts.
+- **Platform OS Services**:
+  - Ontology Migration Engine
+  - Registry Diff Engine
+  - Automatic Registry Upgrade
+  - Backward Compatibility Checker

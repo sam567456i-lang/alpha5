@@ -1,0 +1,18 @@
+version: 1.0.0
+methodology: M_ICT
+name: Inner Circle Trader
+
+rules:
+  required_concepts:
+    - FVG
+    - BOS
+  
+  optional_concepts:
+    - OrderBlock
+    - LiquiditySweep
+
+  invalidates:
+    - Distribution
+
+  aggregation_model: weighted
+  confidence_threshold: 0.70

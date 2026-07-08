@@ -1,0 +1,34 @@
+registry_metadata:
+  name: "Rule Capability Registry"
+  version: "1.0.0"
+  description: "Canonical mapping between capabilities and rule implementations."
+  last_updated: "2026-07-08"
+
+mappings:
+  CAP-LIQUIDITY-SWEEP:
+    rules:
+      - LiquiditySweepRule
+    produces:
+      - LiquiditySweepEvidence
+    tier: "1"
+    status: "Draft"
+    ontology_id: "ONT-LIQUIDITY-SWEEP"
+    domain: "Liquidity"
+    family: "Liquidity Interaction"
+    owner_platform: "Core"
+    introduced_wave: "Wave 6"
+    deprecated_wave: null
+
+  CAP-T1-100:
+    rules:
+      - FVGRule
+    produces:
+      - FVGEvidence
+    tier: "1A"
+    status: "Draft"
+    ontology_id: "ONT-T1-100"
+    domain: "Imbalance"
+    family: "Imbalance"
+    owner_platform: "Core"
+    introduced_wave: "Wave 6"
+    deprecated_wave: null

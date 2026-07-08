@@ -1,0 +1,33 @@
+# semantic_evidence_registry.yaml
+# Defines the required and optional evidence fields for platform 9 concepts.
+# This registry prevents plugins from returning arbitrary or incomplete evidence.
+
+version: 1.0.0
+last_updated: 2026-07-08
+
+evidence_requirements:
+  CAP-FVG-01:
+    concept_type: FAIR_VALUE_GAP
+    required:
+      - imbalance
+      - displacement
+    optional:
+      - HTF_confirmation
+      - session_alignment
+
+  CAP-OB-01:
+    concept_type: ORDER_BLOCK
+    required:
+      - structural_break
+      - volume_node_support
+    optional:
+      - liquidity_sweep
+      - time_of_day_alignment
+
+  CAP-BRK-01:
+    concept_type: BREAKER_BLOCK
+    required:
+      - failed_block
+      - explosive_shift
+    optional:
+      - origin_liquidity_sweep

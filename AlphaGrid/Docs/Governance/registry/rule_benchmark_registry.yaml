@@ -1,0 +1,28 @@
+registry_metadata:
+  name: "Rule Benchmark Registry"
+  version: "1.0.0"
+  description: "Declarative performance budgets for rule execution."
+  last_updated: "2026-07-08"
+
+benchmarks:
+  StructureRule:
+    time_complexity_target: "O(n)"
+    target_latency_ms: 2.0
+    p95_latency_ms: 5.0
+    p99_latency_ms: 10.0
+    peak_memory_kb: 512
+    allocation_budget_bytes: 102400
+    evidence_throughput_per_sec: 10000
+    replay_throughput_per_sec: 50000
+    maximum_dependency_depth: 3
+
+  PremiumDiscountRule:
+    time_complexity_target: "O(1)"
+    target_latency_ms: 0.5
+    p95_latency_ms: 1.0
+    p99_latency_ms: 2.0
+    peak_memory_kb: 128
+    allocation_budget_bytes: 5120
+    evidence_throughput_per_sec: 100000
+    replay_throughput_per_sec: 500000
+    maximum_dependency_depth: 2

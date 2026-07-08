@@ -1,0 +1,18 @@
+# concept_methodology_registry.yaml
+# Defines methodology mappings for Concepts to bridge to Platform 10 Methodologies
+
+version: 1.0.0
+last_updated: 2026-07-08
+
+methodology_mappings:
+  CAP-FVG-01:
+    - ICT
+    - SMC
+    - Liquidity
+  CAP-OB-01:
+    - ICT
+    - SMC
+    - SupplyDemand
+  CAP-BRK-01:
+    - ICT
+    - SMC

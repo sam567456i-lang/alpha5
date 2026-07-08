@@ -17,12 +17,12 @@ def check_imports_in_file(filepath):
 
     violations = []
     # Platform 10 is allowed to import from:
-    # Backend.foundation, Backend.core, Backend.platforms.platform9_features, Backend.platforms.platform10_concepts
+    # Backend.foundation, Backend.core, Backend.platforms.platform9_concepts, Backend.platforms.platform10_methodologies
     allowed_prefixes = (
         "Backend.foundation",
         "Backend.core",
-        "Backend.platforms.platform9_features",
-        "Backend.platforms.platform10_concepts"
+        "Backend.platforms.platform9_concepts",
+        "Backend.platforms.platform10_methodologies"
     )
 
     for node in ast.walk(tree):
@@ -45,7 +45,7 @@ def test_platform10_purity():
     Platform 10 must NOT import from Platform 11-14 or Platform 1-8.
     """
     # Assuming tests are run from the project root
-    p10_dir = os.path.join("Backend", "platforms", "platform10_concepts")
+    p10_dir = os.path.join("Backend", "platforms", "platform10_methodologies")
     
     if not os.path.exists(p10_dir):
         pytest.skip("Platform 10 directory not found. Assuming not yet implemented.")

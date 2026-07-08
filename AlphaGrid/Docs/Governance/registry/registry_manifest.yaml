@@ -1,0 +1,257 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Master registry manifest that dictates dynamic load order, dependencies, checksums, and migrations across all decoupled governance registries."
+
+registries:
+  # Base Identifiers
+  - name: ontology_registry
+    file: ontology_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Platform Architecture Team"
+    validator: OntologyRegistryValidator
+    load_priority: 1
+    depends_on: []
+    required: true
+    migration_strategy: strict
+
+  # Foundational Capability
+  - name: capability_registry
+    file: ../../../master_capability_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Platform Architecture Team"
+    validator: CapabilityRegistryValidator
+    load_priority: 2
+    depends_on: ["ontology_registry"]
+    required: true
+    migration_strategy: backward_compatible
+
+  # Spatial & Analysis Definitions
+  - name: zone_capability_registry
+    file: zone_capability_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Wave 3 Maintainers"
+    validator: ZoneRegistryValidator
+    load_priority: 3
+    depends_on: ["capability_registry", "ontology_registry"]
+    required: true
+    migration_strategy: strict
+
+  - name: zone_registry
+    file: zone_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Wave 3 Maintainers"
+    validator: ZoneRegistryValidator
+    load_priority: 4
+    depends_on: ["zone_capability_registry"]
+    required: true
+    migration_strategy: strict
+
+  # Concept Definitions
+  - name: semantic_evidence_registry
+    file: semantic_evidence_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Wave 4 Maintainers"
+    validator: ConceptRegistryValidator
+    load_priority: 5
+    depends_on: ["zone_capability_registry"]
+    required: true
+    - name: framework_roadmap
+    file: roadmaps/framework_roadmap.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Wave 4 Maintainers"
+    validator: RoadmapValidator
+    load_priority: 7
+    depends_on: []
+    required: true
+    migration_strategy: safe_replace
+
+  # Platform 10 Methodologies
+  - name: concept_methodology_registry
+    file: concept_methodology_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Platform 10 Team"
+    validator: ConceptMethodologyRegistryValidator
+    load_priority: 7
+    depends_on: ["semantic_evidence_registry"]
+    required: true
+    migration_strategy: safe_replace
+
+  - name: methodology_execution_registry
+    file: methodology_execution_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Platform 10 Team"
+    validator: MethodologyExecutionRegistryValidator
+    load_priority: 8
+    depends_on: ["concept_methodology_registry"]
+    required: true
+    migration_strategy: backward_compatible
+
+  - name: methodology_state_machine_registry
+    file: methodology_state_machine_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Platform 10 Team"
+    validator: StateMachineRegistryValidator
+    load_priority: 8
+    depends_on: ["concept_methodology_registry"]
+    required: true
+    migration_strategy: safe_replace
+
+  - name: concept_confidence_registry
+    file: concept_confidence_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Wave 4 Maintainers"
+    validator: ConceptRegistryValidator
+    load_priority: 7
+    depends_on: ["concept_methodology_registry"]
+    required: true
+    migration_strategy: strict
+
+  - name: concept_state_machine_registry
+    file: concept_state_machine_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Wave 4 Maintainers"
+    validator: ConceptRegistryValidator
+    load_priority: 8
+    depends_on: []
+    required: true
+    migration_strategy: strict
+
+  - name: event_registry
+    file: event_registry.yaml
+    version: 1.0.0
+    checksum: "TBD"
+    owner: "Platform Foundation Team"
+    validator: EventRegistryValidator
+    load_priority: 9
+    depends_on: []
+    required: true
+    migration_strategy: strict
+  - id: rule_definition_registry.yaml
+    load_order: 37
+    dependency_order: 37
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_state_machine_registry.yaml
+    load_order: 38
+    dependency_order: 38
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_fingerprint_policy.yaml
+    load_order: 39
+    dependency_order: 39
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_benchmark_registry.yaml
+    load_order: 40
+    dependency_order: 40
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_execution_policy_registry.yaml
+    load_order: 41
+    dependency_order: 41
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: tier1_rule_matrix.yaml
+    load_order: 42
+    dependency_order: 42
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: methodology_consumption_matrix.yaml
+    load_order: 43
+    dependency_order: 43
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_capability_registry.yaml
+    load_order: 44
+    dependency_order: 44
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_version_compatibility_registry.yaml
+    load_order: 45
+    dependency_order: 45
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_dependency_manifest.yaml
+    load_order: 46
+    dependency_order: 46
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_feature_registry.yaml
+    load_order: 47
+    dependency_order: 47
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_migration_registry.yaml
+    load_order: 48
+    dependency_order: 48
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_metrics_registry.yaml
+    load_order: 49
+    dependency_order: 49
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: methodology_readiness_manifest.yaml
+    load_order: 50
+    dependency_order: 50
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: evidence_state_machine_registry.yaml
+    load_order: 51
+    dependency_order: 51
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: golden_dataset_coverage_matrix.yaml
+    load_order: 52
+    dependency_order: 52
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true
+
+  - id: rule_output_registry.yaml
+    load_order: 53
+    dependency_order: 53
+    compatibility_version: "1.0.0"
+    checksum: "TBD"
+    migration_support: true

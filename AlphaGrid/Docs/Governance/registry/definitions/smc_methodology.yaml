@@ -1,0 +1,17 @@
+version: 1.0.0
+methodology: M_SMC
+name: Smart Money Concepts
+
+rules:
+  required_concepts:
+    - BOS
+    - CHoCH
+  
+  optional_concepts:
+    - FVG
+
+  invalidates:
+    - Accumulation
+
+  aggregation_model: linear
+  confidence_threshold: 0.65

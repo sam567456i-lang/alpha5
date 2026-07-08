@@ -1,0 +1,32 @@
+registry_metadata:
+  name: "Rule Dependency Manifest"
+  version: "1.0.0"
+  description: "Single source of truth for the rule DAG."
+  last_updated: "2026-07-08"
+
+dependencies:
+  OrderBlockRule:
+    hard_dependencies:
+      - "StructureEvidence"
+      - "LiquidityEvidence"
+    soft_dependencies:
+      - "SessionEvidence"
+    optional_dependencies:
+      - "HTFBiasEvidence"
+    conflicting_evidence:
+      - "InvalidatedOrderBlockEvidence"
+    provides:
+      - "OrderBlockEvidence"
+
+  FVGRule:
+    hard_dependencies:
+      - "StructureEvidence"
+      - "RangeEvidence"
+    soft_dependencies:
+      - "SessionEvidence"
+    optional_dependencies:
+      - "VolumeEvidence"
+    conflicting_evidence:
+      - "IFVGEvidence"
+    provides:
+      - "FVGEvidence"

@@ -1,0 +1,33 @@
+# concept_state_machine_registry.yaml
+# Defines the lifecycle state transitions for Platform 9 Concepts
+
+version: 1.0.0
+last_updated: 2026-07-08
+
+states:
+  DETECTED: 
+    description: "Concept extracted by factory but unconfirmed"
+  CANDIDATE:
+    description: "Concept has passed all capability and evidence validation"
+  CONFIRMED:
+    description: "Concept has passed all consistency checks"
+  ACTIVE:
+    description: "Concept is valid and actively tracking price/time"
+  INVALIDATED:
+    description: "Concept logic violated (e.g. FVG fully closed without reaction)"
+  ARCHIVED:
+    description: "Concept is historical or consumed"
+
+transitions:
+  DETECTED:
+    - CANDIDATE
+    - INVALIDATED
+  CANDIDATE:
+    - CONFIRMED
+    - INVALIDATED
+  CONFIRMED:
+    - ACTIVE
+    - INVALIDATED
+  ACTIVE:
+    - INVALIDATED
+    - ARCHIVED

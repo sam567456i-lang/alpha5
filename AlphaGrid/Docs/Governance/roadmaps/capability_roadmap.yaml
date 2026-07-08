@@ -1,0 +1,34 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Master roadmap mapping capability domains across platforms and releases."
+
+capability_domains:
+  - domain: "Liquidity"
+    status: "Frozen"
+    platform: "P8"
+    release: "R0.1"
+    wave: "Wave 1"
+
+  - domain: "Structure"
+    status: "Frozen"
+    platform: "P8"
+    release: "R0.1"
+    wave: "Wave 2"
+
+  - domain: "Zones"
+    status: "Frozen"
+    platform: "P8"
+    release: "R0.2"
+    wave: "Wave 3"
+
+  - domain: "Concepts"
+    status: "Frozen"
+    platform: "P9"
+    release: "R0.2"
+    wave: "Wave 4.5"
+
+  - domain: "Methodologies"
+    status: "Designed"
+    platform: "P10"
+    release: "R0.2"
+    wave: "Wave 5A"

@@ -1,0 +1,36 @@
+version: 1.0.0
+last_updated: 2026-07-08
+description: "Master state machine catalog governing the lifecycle transitions of a Methodology assessment."
+
+state_machines:
+  - id: sm_methodology_default
+    initial_state: "PENDING_EVALUATION"
+    terminal_states: ["FROZEN", "INVALIDATED", "REJECTED_DUE_TO_CONFLICT"]
+    transitions:
+      - from: "PENDING_EVALUATION"
+        to: "GATHERING_CONTEXT"
+        guard: "has_valid_context"
+      
+      - from: "GATHERING_CONTEXT"
+        to: "ANALYZING_CONCEPTS"
+        guard: "all_required_concepts_present"
+
+      - from: "ANALYZING_CONCEPTS"
+        to: "CONFLICT_RESOLUTION"
+        guard: "analysis_complete"
+
+      - from: "CONFLICT_RESOLUTION"
+        to: "BUILDING_PROVENANCE"
+        guard: "conflict_cleared"
+
+      - from: "BUILDING_PROVENANCE"
+        to: "FROZEN"
+        guard: "provenance_generated"
+
+      - from: "ANALYZING_CONCEPTS"
+        to: "INVALIDATED"
+        guard: "context_drift_detected"
+
+      - from: "CONFLICT_RESOLUTION"
+        to: "REJECTED_DUE_TO_CONFLICT"
+        guard: "subordinate_in_dominance_matrix"
