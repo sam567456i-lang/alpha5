@@ -1,0 +1,7 @@
+from enum import Enum
+
+class StructureTransitionType(Enum):
+    STATE_CREATED = "STATE_CREATED"
+    STATE_UPDATED = "STATE_UPDATED"
+    STATE_ARCHIVED = "STATE_ARCHIVED"
+    STATE_SUPERSEDED = "STATE_SUPERSEDED"

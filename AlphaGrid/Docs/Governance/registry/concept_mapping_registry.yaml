@@ -1,0 +1,33 @@
+registry_metadata:
+  name: "Concept Mapping Registry"
+  version: "1.0.0"
+  description: "Maps objective market evidence to methodology-specific interpretations and labels."
+  last_updated: "2026-07-08"
+
+methodologies:
+  ICT:
+    mappings:
+      TrendReversalEvent:
+        concept: "CHOCH"
+        interpretation: "Change of Character"
+      StructuralShiftEvent:
+        concept: "MSS"
+        interpretation: "Market Structure Shift"
+      InternalSwingBreakEvent:
+        concept: "Internal BOS"
+        interpretation: "Internal Break of Structure"
+      ExternalSwingBreakEvent:
+        concept: "External BOS"
+        interpretation: "External Break of Structure"
+        
+  Wyckoff:
+    mappings:
+      TrendReversalEvent:
+        concept: "Sign of Weakness / Sign of Strength"
+        interpretation: "Early indication of trend exhaustion."
+
+  AMT:
+    mappings:
+      TrendReversalEvent:
+        concept: "Auction Rejection"
+        interpretation: "Failed auction leading to a reversal."

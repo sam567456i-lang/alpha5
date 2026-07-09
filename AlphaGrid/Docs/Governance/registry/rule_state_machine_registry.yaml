@@ -13,7 +13,10 @@ states:
     allowed_transitions: ["Implemented", "Draft", "Archived"]
   Implemented:
     description: "Code is written but lacks full certification."
-    allowed_transitions: ["Validated", "Designed", "Archived"]
+    allowed_transitions: ["Accepted", "Designed", "Archived"]
+  Accepted:
+    description: "Registry, ontology, golden dataset, expected outputs, and dependencies are verified."
+    allowed_transitions: ["Validated", "Implemented", "Archived"]
   Validated:
     description: "Passes functional tests and basic regressions."
     allowed_transitions: ["Certified", "Implemented"]

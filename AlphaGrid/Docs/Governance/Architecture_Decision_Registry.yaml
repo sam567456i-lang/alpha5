@@ -71,3 +71,26 @@ decisions:
     status: ACCEPTED
     description: Enforces a strict 16-point certification gate (Functional, Contract, Dependency, Planner, Sandbox, Replay, Migration, Serialization, etc.) before any Tier 1 logic can be authored. Elevates RuleEvidenceDTO to a strictly governed registry contract. Introduces Golden Datasets for deterministic baseline validation.
 
+  ADR-029:
+    title: "Phase 1 Framework Freeze & Capability Shift"
+    date: "2026-07-08"
+    status: "Accepted"
+    context: "The analytical framework infrastructure has reached maturity. All DTO hierarchies, governance registries, and planning mechanisms are in place."
+    decision: "Freeze the framework. Shift all focus to capability development (Tier 1 Rules)."
+    consequences: "No further generic scaffolding will be added unless proven necessary by an implementation blocker."
+
+  ADR-030:
+    title: "Framework Evolution Policy"
+    date: "2026-07-08"
+    status: "Accepted"
+    context: "To prevent framework creep during Tier 1 development, we need strict rules on when to expand infrastructure."
+    decision: "Framework changes are exception-based. Capability development is the default. New capabilities must not introduce framework abstractions unless a demonstrated implementation blocker exists."
+    consequences: "Framework changes require evidence from at least one implemented capability that cannot be expressed using the existing contracts."
+
+  ADR-031:
+    title: "Terminology Agnosticism"
+    date: "2026-07-08"
+    status: "Accepted"
+    context: "Defining core capabilities using methodology-specific terms (like CHOCH or MSS) tightly couples the analytical core to one narrative, limiting reuse."
+    decision: "The analytical core must only emit objective, geometric facts (e.g. TrendReversalEvent). It must not use interpretive labels. Methodology Plugins are responsible for mapping these objective facts into their own terminology using the concept_mapping_registry."
+    consequences: "Core capabilities are decoupled from subjective methodologies, enhancing reuse across ICT, Wyckoff, and AMT."

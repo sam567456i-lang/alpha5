@@ -13,6 +13,7 @@ evidence_types:
     - is_fractal
     - swing_type
     temporal_type: State
+    interpretation_level: objective
   DistanceEvidence:
     description: Distance metrics.
     classification: PRIMITIVE
@@ -21,6 +22,7 @@ evidence_types:
     - distance_pips
     - is_significant
     temporal_type: State
+    interpretation_level: objective
   RangeEvidence:
     description: Price range metrics.
     classification: PRIMITIVE
@@ -29,6 +31,7 @@ evidence_types:
     - price_range
     - is_expanded
     temporal_type: State
+    interpretation_level: objective
   ProximityEvidence:
     description: Proximity to key levels.
     classification: PRIMITIVE
@@ -37,6 +40,7 @@ evidence_types:
     - is_touching
     - is_overlapping
     temporal_type: State
+    interpretation_level: objective
   TimeEvidence:
     description: Temporal constraints.
     classification: PRIMITIVE
@@ -44,6 +48,7 @@ evidence_types:
     required_fields:
     - is_market_open
     temporal_type: State
+    interpretation_level: objective
   SessionEvidence:
     description: Session data.
     classification: PRIMITIVE
@@ -52,6 +57,7 @@ evidence_types:
     - current_session
     - session_overlap
     temporal_type: State
+    interpretation_level: objective
   CalendarEvidence:
     description: Macro events.
     classification: PRIMITIVE
@@ -59,6 +65,7 @@ evidence_types:
     required_fields:
     - is_holiday
     temporal_type: State
+    interpretation_level: objective
   MultiTimeframeEvidence:
     description: Alignment across timeframes.
     classification: PRIMITIVE
@@ -66,6 +73,7 @@ evidence_types:
     required_fields:
     - is_aligned
     temporal_type: State
+    interpretation_level: objective
   TrendEvidence:
     description: Trend direction.
     classification: PRIMITIVE
@@ -74,6 +82,7 @@ evidence_types:
     - trend_direction
     - trend_strength
     temporal_type: State
+    interpretation_level: objective
   StructureEvidence:
     description: Market structure states.
     classification: PRIMITIVE
@@ -81,6 +90,7 @@ evidence_types:
     required_fields:
     - structure_state
     temporal_type: State
+    interpretation_level: objective
   VolatilityEvidence:
     description: Volatility metrics.
     classification: PRIMITIVE
@@ -88,6 +98,7 @@ evidence_types:
     required_fields:
     - volatility_state
     temporal_type: State
+    interpretation_level: objective
   LiquidityEvidence:
     description: Liquidity levels.
     classification: PRIMITIVE
@@ -95,6 +106,7 @@ evidence_types:
     required_fields:
     - liquidity_pool_active
     temporal_type: State
+    interpretation_level: objective
   ValuationEvidence:
     description: Valuation rules (Premium, Discount, Eq, MR).
     classification: PRIMITIVE
@@ -105,6 +117,7 @@ evidence_types:
     - CAP-T0-016
     required_fields: []
     temporal_type: State
+    interpretation_level: objective
   FreshnessEvidence:
     description: Freshness and decay.
     classification: PRIMITIVE
@@ -112,6 +125,7 @@ evidence_types:
     required_fields:
     - untouched
     temporal_type: State
+    interpretation_level: objective
   QualityEvidence:
     description: Quality dimensions.
     classification: PRIMITIVE
@@ -119,6 +133,7 @@ evidence_types:
     required_fields:
     - completeness
     temporal_type: State
+    interpretation_level: objective
   ContextAlignmentEvidence:
     description: Context alignment.
     classification: PRIMITIVE
@@ -126,6 +141,7 @@ evidence_types:
     required_fields:
     - alignment_score
     temporal_type: State
+    interpretation_level: objective
   ConfluenceEvidence:
     description: Overall confluence.
     classification: PRIMITIVE
@@ -133,3 +149,4 @@ evidence_types:
     required_fields:
     - number_of_confirmations
     temporal_type: State
+    interpretation_level: objective

@@ -1,0 +1,49 @@
+interactions:
+  - type: "APPROACH"
+    required_evidence: ["PoolState", "PriceObservationDTO"]
+    produced_evidence: "PoolInteractionEventDTO"
+    allowed_transition_types: ["UPDATED", "UNCHANGED"]
+    interpretation_level: "OBJECTIVE"
+    certification_requirements: ["Determinism"]
+
+  - type: "TOUCH"
+    required_evidence: ["PoolState", "PriceObservationDTO"]
+    produced_evidence: "PoolInteractionEventDTO"
+    allowed_transition_types: ["UPDATED", "UNCHANGED"]
+    interpretation_level: "OBJECTIVE"
+    certification_requirements: ["Determinism"]
+
+  - type: "ENTER"
+    required_evidence: ["PoolState", "PriceObservationDTO"]
+    produced_evidence: "PoolInteractionEventDTO"
+    allowed_transition_types: ["UPDATED", "UNCHANGED"]
+    interpretation_level: "OBJECTIVE"
+    certification_requirements: ["Determinism"]
+
+  - type: "EXIT"
+    required_evidence: ["PoolState", "PriceObservationDTO"]
+    produced_evidence: "PoolInteractionEventDTO"
+    allowed_transition_types: ["UPDATED", "UNCHANGED"]
+    interpretation_level: "OBJECTIVE"
+    certification_requirements: ["Determinism"]
+
+  - type: "PENETRATE"
+    required_evidence: ["PoolState", "PriceObservationDTO"]
+    produced_evidence: "PoolInteractionEventDTO"
+    allowed_transition_types: ["UPDATED", "UNCHANGED"]
+    interpretation_level: "OBJECTIVE"
+    certification_requirements: ["Determinism", "BoundaryMonotonicity"]
+
+  - type: "REJECT"
+    required_evidence: ["PoolState", "PriceObservationDTO"]
+    produced_evidence: "PoolInteractionEventDTO"
+    allowed_transition_types: ["UPDATED", "UNCHANGED"]
+    interpretation_level: "OBJECTIVE"
+    certification_requirements: ["Determinism"]
+
+  - type: "COMPLETE_TRAVERSAL"
+    required_evidence: ["PoolState", "PriceObservationDTO"]
+    produced_evidence: "PoolInteractionEventDTO"
+    allowed_transition_types: ["INVALIDATED", "CONSUMED", "UPDATED", "UNCHANGED"]
+    interpretation_level: "OBJECTIVE"
+    certification_requirements: ["Determinism", "BoundaryMonotonicity"]

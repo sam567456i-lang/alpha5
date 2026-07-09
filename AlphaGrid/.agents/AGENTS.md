@@ -76,3 +76,31 @@ This directive is mandatory for all future AlphaGrid development.
 7. **Foundation Freeze**: The Foundation Layer is a governed subsystem. Modifications require an ADR, Regression Validation, and Human Approval.
 8. **Universal Audit Structure**: The repository audit must permanently contain four independent sections: Foundation Audit, Platform Audit, Capability Audit, and Integration Audit. The Foundation Audit must independently score API, Database, Plugin SDK, DTO, Event Bus, Replay, DI, Logging, Config, and Caching.
 
+
+# Rule 19 — The Framework Change Test
+Never modify the framework unless completely blocked.
+1. Can this be implemented using the existing framework? -> YES -> Do not modify framework. Implement capability only.
+2. Can this be implemented using the existing framework? -> NO -> Document concrete blocker -> Create ADR -> Framework modification approved.
+
+# Rule 20 — Never Interpret Evidence
+Rules only detect facts. Do not embed subjective interpretations (e.g. is_manipulation, is_bullish) inside Tier 1 rules.
+Correct: Detect LiquiditySweepEvent with price_returned and 	imestamp.
+Incorrect: Detect BearishInducementEvent.
+
+# Rule 21 — Never Mutate StateEvidenceDTO
+Persistent evidence (like OrderBlockState) must never be mutated directly in place. Emit EventEvidenceDTO (like MitigationEvent) to trigger state transitions cleanly.
+
+# Rule 22 — Never Compute Confidence
+Never calculate flat confidence percentages in Tier 1. Emit confidence_inputs arrays containing the contextual factors contributing to the state (e.g. ["Structure Confirmation", "HTF Alignment"]). Platform 11 computes confidence.
+
+# Rule 23 — Never Call Another Rule Directly
+Rules do not invoke other rules. They consume certified evidence from the DAG only.
+
+# Rule 24 — Exhaustive Artifact Requirement
+Every rule requires four synchronized elements before completion:
+1. Registry (Definition)
+2. Implementation (Code)
+3. Golden Dataset (JSON)
+4. Certification (Test Specification)
+If one is missing, the rule is not complete.
+25. **Registry Proliferation Constraint**: A new registry must have at least two independent consumers and contain declarative information that cannot be deterministically derived from existing registries. Stop unnecessary registry proliferation.
