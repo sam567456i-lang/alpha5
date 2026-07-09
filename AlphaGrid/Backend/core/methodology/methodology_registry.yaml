@@ -1,0 +1,60 @@
+plugins:
+  - name: "ICTPlugin"
+    methodology: "ICT"
+    enabled: true
+    version: "1.0.0"
+    module: "Backend.core.methodology.ict.plugin"
+    class: "ICTMethodologyPlugin"
+    description: "Inner Circle Trader methodology interpretation."
+    consumes:
+      - "Structure"
+      - "Liquidity"
+      - "Regions"
+    produces:
+      - "BIAS"
+      - "POI"
+      - "LIQUIDITY_TARGET"
+      - "CHOCH"
+      - "MSS"
+
+  - name: "SMCPlugin"
+    methodology: "SMC"
+    enabled: false
+    version: "1.0.0"
+    module: "Backend.core.methodology.smc.plugin"
+    class: "SMCMethodologyPlugin"
+    description: "Smart Money Concepts methodology interpretation."
+    consumes:
+      - "Structure"
+      - "Liquidity"
+    produces:
+      - "BIAS"
+      - "CHOCH"
+      - "ENTRY"
+
+  - name: "WyckoffPlugin"
+    methodology: "WYCKOFF"
+    enabled: false
+    version: "1.0.0"
+    module: "Backend.core.methodology.wyckoff.plugin"
+    class: "WyckoffMethodologyPlugin"
+    description: "Wyckoff Accumulation/Distribution interpretation."
+    consumes:
+      - "Structure"
+      - "Range"
+    produces:
+      - "ACCUMULATION"
+      - "DISTRIBUTION"
+
+  - name: "AMTPlugin"
+    methodology: "AMT"
+    enabled: false
+    version: "1.0.0"
+    module: "Backend.core.methodology.amt.plugin"
+    class: "AMTMethodologyPlugin"
+    description: "Auction Market Theory profiling."
+    consumes:
+      - "Auction"
+      - "Delivery"
+    produces:
+      - "POI"

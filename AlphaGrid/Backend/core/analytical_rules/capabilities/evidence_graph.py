@@ -29,6 +29,11 @@ class EvidenceGraph:
     auction_metrics: Dict[str, AuctionMetricsDTO] = field(default_factory=dict)
     delivery_metrics: Dict[str, DeliveryMetricsDTO] = field(default_factory=dict)
     
+    # Cross-Market & Context Analytics
+    relationship_evidence: Dict[str, Any] = field(default_factory=dict)
+    regime_evidence: Dict[str, Any] = field(default_factory=dict)
+    event_evidence: Dict[str, Any] = field(default_factory=dict)
+    
     # Core API Extensions
     def query(self, query_params: Dict[str, Any]) -> List[Any]:
         # Stub for semantic querying across graph

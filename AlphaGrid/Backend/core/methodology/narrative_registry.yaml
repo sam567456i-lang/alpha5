@@ -1,0 +1,49 @@
+nodes:
+  - type: "BIAS"
+    description: "Evidence-backed directional bias."
+    methodologies: ["ICT", "SMC", "WYCKOFF"]
+    required: []
+    optional: []
+    required_evidence: ["Structure", "Liquidity"]
+
+  - type: "MARKET_CONTEXT"
+    description: "Aggregates contextual references (Bias, POIs, Dealing Range)."
+    methodologies: ["ICT", "SMC", "WYCKOFF", "AMT"]
+    required: ["BIAS"]
+    optional: ["POI"]
+    required_evidence: []
+
+  - type: "POI"
+    description: "Generic Region filtered through methodology lens."
+    methodologies: ["ICT", "SMC", "WYCKOFF", "AMT"]
+    required: ["BIAS"]
+    optional: []
+    required_evidence: ["Regions"]
+
+  - type: "LIQUIDITY_TARGET"
+    description: "Sequenced draw on liquidity (Priority Score)."
+    methodologies: ["ICT", "SMC"]
+    required: ["MARKET_CONTEXT"]
+    optional: []
+    required_evidence: ["Liquidity"]
+
+  - type: "STRUCTURE_NARRATIVE"
+    description: "Methodology-specific interpretation of a structural break (e.g., CHOCH, BOS, MSS)."
+    methodologies: ["ICT", "SMC", "WYCKOFF"]
+    required: ["MARKET_CONTEXT"]
+    optional: ["POI", "LIQUIDITY_TARGET"]
+    required_evidence: ["Structure"]
+
+  - type: "ENTRY"
+    description: "Executable trigger condition."
+    methodologies: ["ICT", "SMC"]
+    required: ["MARKET_CONTEXT", "LIQUIDITY_TARGET", "STRUCTURE_NARRATIVE"]
+    optional: ["SessionNarrative", "SMTNarrative", "PO3Narrative"]
+    required_evidence: ["Structure", "Regions"]
+
+  - type: "INVALIDATION"
+    description: "Condition where trade hypothesis is voided."
+    methodologies: ["ICT", "SMC"]
+    required: ["ENTRY"]
+    optional: []
+    required_evidence: ["Structure"]
