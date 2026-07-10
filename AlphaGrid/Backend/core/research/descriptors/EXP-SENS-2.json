@@ -1,0 +1,14 @@
+{
+  "ExperimentID": "EXP-SENS-2",
+  "DatasetPath": "Backend/core/research/data/WF-BTCUSDT-2024Q1.csv",
+  "RuleConfig": {
+    "WindowBars": 11
+  },
+  "LabelPolicy": {
+    "Type": "ATR_MULTIPLIER",
+    "ATRLength": 21,
+    "Multiplier": 1.0,
+    "ReactionWindow": 20
+  },
+  "CodeCommit": "HEAD"
+}

@@ -1,0 +1,13 @@
+{
+  "ExperimentID": "EXP-000003",
+  "DatasetPath": "Backend/core/research/data/WF-BTCUSDT-2024Q1.csv",
+  "RuleConfig": {
+    "WindowBars": 21
+  },
+  "LabelPolicy": {
+    "Type": "STATIC",
+    "Threshold": 500.0,
+    "ReactionWindow": 20
+  },
+  "CodeCommit": "HEAD"
+}

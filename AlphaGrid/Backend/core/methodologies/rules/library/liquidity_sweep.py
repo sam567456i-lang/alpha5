@@ -9,6 +9,11 @@ class LiquiditySweepRule(BaseEvidenceRule):
     Does NOT assign subjective claims like 'Wyckoff Spring' or 'SMC Stop Hunt'.
     """
     
+    # Rule DAG Declarations
+    CONSUMES = ["Platform10.SwingObjects", "LiquidityLevelEvidence"]
+    PUBLISHES = ["LiquiditySweepEvidence"]
+    CONSUMERS = ["MarketStructureShiftRule", "ChangeOfCharacterRule", "WyckoffMethodology", "SMCMethodology"]
+    
     def __init__(self, version: str = "1.0.0"):
         super().__init__(rule_id="LiquiditySweep", version=version)
         

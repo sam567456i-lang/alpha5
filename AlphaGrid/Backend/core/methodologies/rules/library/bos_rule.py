@@ -11,13 +11,17 @@ class BreakOfStructureRule(BaseEvidenceRule):
     Requires validated Swing Highs/Lows to function.
     """
     
-    def __init__(self, policy: BOSPolicy, version: str = "1.0.0"):
+    # Rule DAG Declarations
+    CONSUMES = ["Platform10.SwingObjects", "LiquidityLevelEvidence"]
+    PUBLISHES = ["BOSEvidence"]
+    CONSUMERS = ["MarketStructureShiftRule", "TrendMethodology", "SMCMethodology"]
+    
+    def __init__(self, policy: BOSPolicy, version: str = "1.1.0"):
         super().__init__(rule_id="BOSRule", version=version)
         self.policy = policy
         
     def _detect(self, context: RuleContext) -> RuleResult:
-        # Stub logic relying purely on OHLC and Swing objects
-        # 1. Fetch nearest relevant Swing Object from Platform 10
+        # 1. Fetch nearest relevant LiquidityLevel or Swing Object from Platform 10
         # 2. Assert minimum penetration beyond swing extreme
         # 3. Assert confirmation method (e.g., bar closed beyond)
         
@@ -27,11 +31,14 @@ class BreakOfStructureRule(BaseEvidenceRule):
         
         if is_bos:
             payload = {
-                "broken_swing_uuid": str(uuid.uuid4()),
-                "break_price": break_price,
-                "break_depth": 1.25, # $1.25 beyond swing level
-                "break_depth_atr": 0.8,
+                "broken_structure_uuid": str(uuid.uuid4()),
+                "broken_level": 424.25,
+                "break_extent": 1.25, # $1.25 beyond swing level
+                "break_extent_atr": 0.8,
                 "confirmation_method": self.policy.confirmation_method.value,
+                "confirmation_bar": "timestamp_or_index",
+                "confirmation_policy": "CLOSE",
+                "policy_version": "v1.0",
                 "invalidation_level": 420.00
             }
             
@@ -40,7 +47,7 @@ class BreakOfStructureRule(BaseEvidenceRule):
                 rule_version=self.version,
                 confidence=1.0, # Objective structural fact
                 latency_ms=0.0,
-                quality_score=1.0,
+                quality_score=1.0, # Clean break
                 provenance_hash="",
                 payload=payload
             )

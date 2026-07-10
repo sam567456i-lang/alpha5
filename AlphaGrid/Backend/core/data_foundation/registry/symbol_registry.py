@@ -1,40 +1,30 @@
 from dataclasses import dataclass
-from typing import Dict, Optional, List
-from enum import Enum
-
-class AssetClass(Enum):
-    EQUITY = "EQUITY"
-    CRYPTO = "CRYPTO"
-    FOREX = "FOREX"
-    FUTURES = "FUTURES"
-    OPTIONS = "OPTIONS"
+from typing import Dict, Optional
+from Backend.core.data_foundation.registry.market_registry import RegistryException
 
 @dataclass(frozen=True)
-class SymbolMetadata:
-    """Canonical mapping for an individual asset across all vendors."""
-    canonical_id: str
-    exchange: str
-    venue: str
-    currency: str
-    tick_size: float
-    lot_size: float
-    multiplier: float
-    contract_type: str
-    expiration: Optional[str]
-    asset_class: AssetClass
-    underlying: Optional[str]
-    sector: Optional[str]
-    industry: Optional[str]
+class SymbolDefinition:
+    """Canonical mapping for an individual asset referencing the MarketRegistry."""
+    internal_symbol_id: str
+    market_id: str  # References MarketMetadata in MarketRegistry
+    vendor_symbol: str
+    base_asset: str
+    quote_asset: str
+    expiration: Optional[str] = None
+    strike_price: Optional[float] = None
+    option_type: Optional[str] = None # "CALL", "PUT"
 
 class SymbolRegistry:
-    """Stores the canonical definition of all tradable assets."""
+    """Stores the programmatic definition of all tradable assets."""
     def __init__(self):
-        self._symbols: Dict[str, SymbolMetadata] = {}
+        self._items: Dict[str, SymbolDefinition] = {}
         
-    def register_symbol(self, metadata: SymbolMetadata):
-        self._symbols[metadata.canonical_id] = metadata
+    def register(self, definition: SymbolDefinition):
+        if definition.internal_symbol_id in self._items:
+            raise RegistryException(f"Symbol {definition.internal_symbol_id} already registered.")
+        self._items[definition.internal_symbol_id] = definition
         
-    def get_symbol(self, canonical_id: str) -> SymbolMetadata:
-        if canonical_id not in self._symbols:
-            raise KeyError(f"Symbol {canonical_id} not found in Registry.")
-        return self._symbols[canonical_id]
+    def get(self, id: str) -> SymbolDefinition:
+        if id not in self._items:
+            raise RegistryException(f"Symbol {id} not found.")
+        return self._items[id]
