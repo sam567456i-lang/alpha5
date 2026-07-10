@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import os
 import json
 import pytest
@@ -48,6 +49,7 @@ def create_initial_state():
         interpretation_level=InterpretationLevel.OBJECTIVE,
         validity_status=ValidityStatus.ACTIVE,
         evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
         state_id="init_state",
         created_at="now",
         valid_from="2026-01-01T00:00:00Z",

@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import pytest
 from Backend.core.analytical_rules.dto.regions.region_identity import RegionIdentityDTO, RegionType
 from Backend.core.analytical_rules.dto.regions.region_geometry import RegionBoundsDTO, RegionGeometryDTO

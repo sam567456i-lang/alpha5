@@ -1,6 +1,19 @@
 import hashlib
 import json
 from typing import Dict, Any, Optional, TypeVar, Generic, List
+from enum import Enum
+
+class CRL(Enum):
+    CRL0_CONCEPT = 0
+    CRL1_ARCHITECTURE = 1
+    CRL2_SPECIFICATION = 2
+    CRL3_PROTOTYPE = 3
+    CRL4_IMPLEMENTED = 4
+    CRL5_VERIFIED = 5
+    CRL6_PRODUCTION_READY = 6
+    CRL7_CERTIFIED = 7
+    CRL8_FROZEN = 8
+from typing import Dict, Any, Optional, TypeVar, Generic, List
 
 T = TypeVar('T')
 
@@ -18,6 +31,8 @@ class BaseRegistry(Generic[T]):
         self.version = version
         self._items: Dict[str, T] = {}
         self._fingerprints: Dict[str, str] = {}
+        self._crls: Dict[str, CRL] = {}
+        self._versions: Dict[str, Dict[str, str]] = {}
         
     def _generate_fingerprint(self, item: Any) -> str:
         """Generates a deterministic fingerprint for an item."""
@@ -34,11 +49,17 @@ class BaseRegistry(Generic[T]):
         # Sort keys to ensure determinism
         encoded = json.dumps(item_dict, sort_keys=True, default=str).encode('utf-8')
         return hashlib.sha256(encoded).hexdigest()
-
-    def register(self, key: str, item: T) -> None:
+    def register(self, key: str, item: T, crl: CRL = CRL.CRL0_CONCEPT, versions: Dict[str, str] = None) -> None:
         """
-        Registers an item. Enforces uniqueness and duplicate detection.
+        Registers an item with explicit CRL and version tracking.
         """
+        if versions is None:
+            versions = {
+                "specification": "0.0.0",
+                "architecture": "0.0.0",
+                "implementation": "0.0.0",
+                "certification": "0.0.0"
+            }
         if not key:
             raise RegistryError(f"[{self.name}] Registration key cannot be empty.")
             
@@ -53,6 +74,8 @@ class BaseRegistry(Generic[T]):
             
         self._items[key] = item
         self._fingerprints[key] = fingerprint
+        self._crls[key] = crl
+        self._versions[key] = versions
 
     def get(self, key: str) -> Optional[T]:
         """Retrieves an item by key."""
@@ -80,5 +103,7 @@ class BaseRegistry(Generic[T]):
             "registry_name": self.name,
             "version": self.version,
             "count": len(self._items),
-            "fingerprints": self._fingerprints
+            "items": list(self._items.keys()),
+            "crl_states": {k: v.name for k, v in self._crls.items()},
+            "versions": self._versions
         }

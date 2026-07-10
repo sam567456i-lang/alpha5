@@ -1,0 +1,14 @@
+{
+    "scenario": "GAP_UP",
+    "description": "Overnight gap up.",
+    "ticks": [
+        {
+            "timestamp": "2026-07-09T10:00:00",
+            "price": 100.0
+        },
+        {
+            "timestamp": "2026-07-10T10:00:00",
+            "price": 150.0
+        }
+    ]
+}

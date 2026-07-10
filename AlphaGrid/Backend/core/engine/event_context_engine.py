@@ -9,6 +9,7 @@ class EventContextEngine:
         return [
             ScheduledEventEvidenceDTO(
                 identity=None, metadata=None, provenance=None, classification=None, interpretation_level=None, validity_status=None, evidence_data={},
+                quality=None, superseded_by=None,
                 event_name="FOMC Statement",
                 impact_level="HIGH",
                 affected_symbols=symbols

@@ -32,6 +32,7 @@ class TimeDomain:
         """
         return DataQualityEvidenceDTO(
             identity=None, metadata=None, provenance=None, classification=None, interpretation_level=None, validity_status=None, evidence_data={},
+            quality=None, superseded_by=None,
             symbol_id=symbol,
             coverage_percentage=1.0,
             missing_percentage=0.0,

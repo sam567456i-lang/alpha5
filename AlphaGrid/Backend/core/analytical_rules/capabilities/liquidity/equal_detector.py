@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 from typing import List, Dict, Any, Optional
 from Backend.core.analytical_rules.dto.liquidity.liquidity_anchor import LiquidityAnchor
 from Backend.core.analytical_rules.dto.liquidity.equal_primitives import EqualHighState, EqualLowState
@@ -105,6 +106,8 @@ class EqualHighDetector:
                         interpretation_level=InterpretationLevel.OBJECTIVE,
                         validity_status=ValidityStatus.ACTIVE,
                         evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+            superseded_by=None,
                         event_id=event_id,
                         event_timestamp=current_cluster[-1].timestamp,
                         trigger_rule="EqualHighDetector",
@@ -198,6 +201,8 @@ class EqualLowDetector:
                         interpretation_level=InterpretationLevel.OBJECTIVE,
                         validity_status=ValidityStatus.ACTIVE,
                         evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+            superseded_by=None,
                         event_id=event_id,
                         event_timestamp=current_cluster[-1].timestamp,
                         trigger_rule="EqualLowDetector",

@@ -1,0 +1,14 @@
+{
+    "scenario": "MALFORMED",
+    "description": "Out of order and negative prices.",
+    "ticks": [
+        {
+            "timestamp": "2026-07-09T10:00:00",
+            "price": -50.0
+        },
+        {
+            "timestamp": "2026-07-08T10:00:00",
+            "price": 100.0
+        }
+    ]
+}

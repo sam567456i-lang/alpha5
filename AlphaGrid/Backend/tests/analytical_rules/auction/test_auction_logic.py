@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import pytest
 from Backend.core.analytical_rules.dto.liquidity.price_observation import PriceObservationDTO
 from Backend.core.analytical_rules.dto.regions.region_state import RegionState, RegionLifecycleState

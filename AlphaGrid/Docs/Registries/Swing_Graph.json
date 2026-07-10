@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "identity": "P10-SWING-PIVOT-001",
+      "domain": "Primitives",
+      "family": "Swing",
+      "engine": "PivotEngine",
+      "dependencies": [
+        "P10-DATA-PRICE-001",
+        "P10-STAT-VOL-001"
+      ],
+      "evidence_produced": [
+        "PivotEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-SWING-PERSIST-001",
+      "domain": "Primitives",
+      "family": "Swing",
+      "engine": "PersistenceEngine",
+      "dependencies": [
+        "P10-SWING-PIVOT-001"
+      ],
+      "evidence_produced": [
+        "PivotLifecycleEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-SWING-CLASS-001",
+      "domain": "Primitives",
+      "family": "Swing",
+      "engine": "ClassificationEngine",
+      "dependencies": [
+        "P10-SWING-PERSIST-001"
+      ],
+      "evidence_produced": [
+        "SwingClassificationEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-SWING-REL-001",
+      "domain": "Primitives",
+      "family": "Swing",
+      "engine": "RelationshipEngine",
+      "dependencies": [
+        "P10-SWING-PERSIST-001"
+      ],
+      "evidence_produced": [
+        "SwingRelationshipEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-SWING-HIER-001",
+      "domain": "Primitives",
+      "family": "Swing",
+      "engine": "HierarchyEngine",
+      "dependencies": [
+        "P10-SWING-CLASS-001",
+        "P10-SWING-REL-001"
+      ],
+      "evidence_produced": [
+        "SwingHierarchyEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-SWING-QUAL-001",
+      "domain": "Primitives",
+      "family": "Swing",
+      "engine": "QualityEngine",
+      "dependencies": [
+        "P10-SWING-HIER-001",
+        "P10-STAT-VOL-001"
+      ],
+      "evidence_produced": [
+        "SwingQualityEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    }
+  ]
+}

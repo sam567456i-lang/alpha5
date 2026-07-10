@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import pytest
 from Backend.core.analytical_rules.dto.liquidity.equal_primitives import EqualHighState, EqualLowState
 from Backend.core.analytical_rules.capabilities.liquidity.pool_detector import BuySidePoolDetector, SellSidePoolDetector, PoolDetectionPolicy
@@ -37,6 +38,7 @@ def _create_mock_equal_high_state(state_id: str, count: int, price: float, price
         interpretation_level=InterpretationLevel.OBJECTIVE,
         validity_status=ValidityStatus.ACTIVE,
         evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
         state_id=state_id,
         created_at="T0",
         valid_from="T0",
@@ -83,6 +85,7 @@ def _create_mock_equal_low_state(state_id: str, count: int, price: float, price_
         interpretation_level=InterpretationLevel.OBJECTIVE,
         validity_status=ValidityStatus.ACTIVE,
         evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
         state_id=state_id,
         created_at="T0",
         valid_from="T0",

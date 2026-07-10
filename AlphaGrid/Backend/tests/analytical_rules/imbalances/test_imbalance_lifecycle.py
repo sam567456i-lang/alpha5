@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import pytest
 from Backend.core.analytical_rules.dto.regions.region_identity import RegionIdentityDTO, RegionType
 from Backend.core.analytical_rules.dto.regions.region_geometry import RegionBoundsDTO
@@ -36,6 +37,8 @@ def _create_mock_detected_event(region_id: str) -> RegionDetectedEventDTO:
         interpretation_level=InterpretationLevel.OBJECTIVE,
         validity_status=ValidityStatus.ACTIVE,
         evidence_data={},
+        quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+        superseded_by=None,
         region_identity=identity,
         bounds=bounds,
         width=3.0,
@@ -59,6 +62,8 @@ def _create_mock_interaction_event(region_id: str, ref_type: RegionReferenceType
         interpretation_level=InterpretationLevel.OBJECTIVE,
         validity_status=ValidityStatus.ACTIVE,
         evidence_data={},
+        quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+        superseded_by=None,
         region_identity=identity,
         reference_type=ref_type,
         interaction_price=105.0,

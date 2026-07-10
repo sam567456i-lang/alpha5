@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import uuid
 from typing import List, Optional
 
@@ -72,6 +73,8 @@ class AuctionMetricsRule:
             interpretation_level=InterpretationLevel.OBJECTIVE,
             validity_status=ValidityStatus.ACTIVE,
             evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+            superseded_by=None,
             region_id=region.region_identity.region_id,
             time_inside_region=total_time_inside,
             volume_inside_region=total_volume,

@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 from typing import List, Optional
 from Backend.core.analytical_rules.dto.liquidity.pool_policy import PoolLifecyclePolicy
 from Backend.core.analytical_rules.dto.liquidity.pool_events import PoolDetectedEventDTO
@@ -53,6 +54,7 @@ class PoolLifecycleEngine:
             interpretation_level=InterpretationLevel.OBJECTIVE,
             validity_status=ValidityStatus.ACTIVE,
             evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
             pool_identity=event.pool_identity,
             center_price=event.center_price,
             upper_bound=event.upper_bound,
@@ -66,7 +68,6 @@ class PoolLifecycleEngine:
             active=True,
             parent_pool_id=None,
             derived_pool_ids=[],
-            superseded_by=None,
             invalidated_by=None,
             consumed_by=None,
             supporting_evidence_ids=event.supporting_evidence_ids,
@@ -120,6 +121,7 @@ class PoolLifecycleEngine:
             interpretation_level=current_state.interpretation_level,
             validity_status=ValidityStatus.INVALIDATED if transition_type == PoolTransitionType.INVALIDATED else ValidityStatus.ACTIVE,
             evidence_data=current_state.evidence_data,
+            quality=current_state.quality,
             pool_identity=current_state.pool_identity,
             center_price=current_state.center_price,
             upper_bound=current_state.upper_bound,

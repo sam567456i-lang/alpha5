@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import pytest
 from Backend.core.analytical_rules.dto.liquidity.pool_events import PoolDetectedEventDTO
 from Backend.core.analytical_rules.dto.liquidity.pool_identity import PoolIdentityDTO, PoolSide
@@ -50,6 +51,8 @@ def test_pool_lifecycle_creation():
         interpretation_level=InterpretationLevel.OBJECTIVE,
         validity_status=ValidityStatus.ACTIVE,
         evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+        superseded_by=None,
         event_id="event_1",
         event_timestamp="T0",
         trigger_rule="test",

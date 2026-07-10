@@ -1,6 +1,6 @@
 from typing import Dict, Any, List
 from dataclasses import dataclass
-from Backend.core.interfaces.core_interfaces import IConfigurationProvider
+from Backend.foundation.base_registry import BaseRegistry
 
 @dataclass(frozen=True)
 class ConfigurationSnapshot:
@@ -10,39 +10,27 @@ class ConfigurationSnapshot:
     plugins: Dict[str, Any]
     capabilities: List[str]
 
-class RuntimeConfiguration(IConfigurationProvider):
-    """Read-only configuration available during execution."""
-    def __init__(self, snapshot: ConfigurationSnapshot):
-        self._snapshot = snapshot
-        
-    def get_config(self, key: str) -> Any:
-        # Simplistic dot-notation or flat key lookup
-        if key == "policies": return self._snapshot.policies
-        if key == "features": return self._snapshot.features
-        if key == "plugins": return self._snapshot.plugins
-        if key == "capabilities": return self._snapshot.capabilities
-        return None
-
-class ConfigurationBuilder:
-    """Builder pattern to construct a mutable configuration before freezing."""
+class ConfigurationRegistry(BaseRegistry[ConfigurationSnapshot]):
+    """
+    Active Configuration Registry.
+    Responsible for active configurations, version lookup, profile lookup, and runtime access.
+    """
     def __init__(self):
-        self._policies: Dict[str, Any] = {}
-        self._features: Dict[str, Any] = {}
-        self._plugins: Dict[str, Any] = {}
-        self._capabilities: List[str] = []
+        super().__init__("ConfigurationRegistry")
+        self._active_profile: str = "default"
         
-    def add_policy(self, name: str, config: Any):
-        self._policies[name] = config
-        return self
-        
-    def add_capability(self, name: str):
-        self._capabilities.append(name)
-        return self
-        
-    def build(self) -> ConfigurationSnapshot:
-        return ConfigurationSnapshot(
-            policies=dict(self._policies),
-            features=dict(self._features),
-            plugins=dict(self._plugins),
-            capabilities=list(self._capabilities)
-        )
+    def set_active_profile(self, profile_name: str):
+        if not self.get(profile_name):
+            raise ValueError(f"Profile {profile_name} is not registered in ConfigurationRegistry.")
+        self._active_profile = profile_name
+
+    def get_active(self) -> ConfigurationSnapshot:
+        active = self.get(self._active_profile)
+        if not active:
+            raise RuntimeError("No active configuration profile found.")
+        return active
+
+    def resolve_dependency_config(self, dependency_name: str) -> Any:
+        """Looks up the configuration specifically tailored for a requested dependency."""
+        active = self.get_active()
+        return active.plugins.get(dependency_name, {})

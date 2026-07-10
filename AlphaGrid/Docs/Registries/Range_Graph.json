@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "identity": "P10-RANGE-BOUND-001",
+      "domain": "Primitives",
+      "family": "Range",
+      "engine": "BoundaryEngine",
+      "dependencies": [
+        "P10-SWING-REL-001",
+        "P10-SWING-PERSIST-001",
+        "P10-DATA-PRICE-001"
+      ],
+      "evidence_produced": [
+        "RangeBoundaryEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-RANGE-TEMP-001",
+      "domain": "Primitives",
+      "family": "Range",
+      "engine": "TemporalEngine",
+      "dependencies": [
+        "P10-DATA-TIME-001",
+        "P10-DATA-PRICE-001"
+      ],
+      "evidence_produced": [
+        "TemporalRangeEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-RANGE-GEOM-001",
+      "domain": "Primitives",
+      "family": "Range",
+      "engine": "GeometryEngine",
+      "dependencies": [
+        "P10-RANGE-BOUND-001",
+        "P10-RANGE-TEMP-001"
+      ],
+      "evidence_produced": [
+        "RangeGeometryEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-RANGE-STATE-001",
+      "domain": "Primitives",
+      "family": "Range",
+      "engine": "StateEngine",
+      "dependencies": [
+        "P10-RANGE-GEOM-001",
+        "P10-STAT-VOL-001"
+      ],
+      "evidence_produced": [
+        "RangeStateEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-RANGE-HIER-001",
+      "domain": "Primitives",
+      "family": "Range",
+      "engine": "HierarchyEngine",
+      "dependencies": [
+        "P10-RANGE-BOUND-001"
+      ],
+      "evidence_produced": [
+        "RangeHierarchyEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    }
+  ]
+}

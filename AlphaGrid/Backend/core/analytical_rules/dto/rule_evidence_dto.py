@@ -10,3 +10,9 @@ class RuleEvidenceDTO(EvidenceDTO):
     status: RuleResultStatus
     quality: RuleQualityDTO
     explanation: str
+    evidence_type: str = ""
+    schema_version: str = ""
+    registry_version: str = ""
+    compatibility_version: str = ""
+    fingerprint: str = ""
+    timestamp: str = ""

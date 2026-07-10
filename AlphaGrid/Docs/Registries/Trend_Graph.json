@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "identity": "P10-TREND-DIR-001",
+      "domain": "Trend",
+      "family": "Trend",
+      "engine": "DirectionEngine",
+      "dependencies": [
+        "P10-STAT-ROLL-001",
+        "P10-STAT-VOL-001"
+      ],
+      "evidence_produced": [
+        "TrendDirectionEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-TREND-STR-001",
+      "domain": "Trend",
+      "family": "Trend",
+      "engine": "StrengthEngine",
+      "dependencies": [
+        "P10-DATA-PRICE-001",
+        "P10-STAT-VOL-001"
+      ],
+      "evidence_produced": [
+        "TrendStrengthEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-TREND-GEO-001",
+      "domain": "Trend",
+      "family": "Trend",
+      "engine": "GeometryEngine",
+      "dependencies": [
+        "P10-STAT-ROLL-001"
+      ],
+      "evidence_produced": [
+        "TrendSlopeEvidence",
+        "TrendAccelerationEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-TREND-STATE-001",
+      "domain": "Trend",
+      "family": "Trend",
+      "engine": "StateEngine",
+      "dependencies": [
+        "P10-TREND-DIR-001",
+        "P10-TREND-STR-001",
+        "P10-TREND-GEO-001",
+        "P10-STAT-VOL-001"
+      ],
+      "evidence_produced": [
+        "TrendStateEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-TREND-PER-001",
+      "domain": "Trend",
+      "family": "Trend",
+      "engine": "PersistenceEngine",
+      "dependencies": [
+        "P10-TREND-DIR-001",
+        "P10-DATA-TIME-001"
+      ],
+      "evidence_produced": [
+        "TrendPersistenceEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    }
+  ]
+}

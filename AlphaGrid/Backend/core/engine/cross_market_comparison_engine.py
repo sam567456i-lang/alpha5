@@ -18,6 +18,7 @@ class CrossMarketComparisonEngine:
         # Dummy structural comparison result
         comp_ev = ComparisonEvidenceDTO(
             identity=None, metadata=None, provenance=None, classification=None, interpretation_level=None, validity_status=None, evidence_data={},
+            quality=None, superseded_by=None,
             comparison_id=f"comp_{uuid.uuid4().hex[:8]}",
             symbols=symbols,
             window=20,

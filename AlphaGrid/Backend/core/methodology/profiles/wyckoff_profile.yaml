@@ -1,0 +1,24 @@
+id: "WYCKOFF_CLASSIC"
+version: "1.0.0"
+author: "Research Team"
+compatibility: ">=11.0.0"
+
+description: "Wyckoff methodology profile."
+
+policies:
+  sequence_policy:
+    sequences:
+      # Accumulation Schematic #1
+      # PS (omitted for brevity) -> SC -> AR -> ST -> Spring -> SOS
+      - pattern: "wyckoff-accumulation-type-1"
+        requires: ["climax_down", "reversal_up", "test_low", "sweep_low", "expansion_up"]
+        
+      # Distribution Schematic #1
+      # BC -> AR -> ST -> Upthrust (UTAD) -> SOW
+      - pattern: "wyckoff-distribution-type-1"
+        requires: ["climax_up", "reversal_down", "test_high", "sweep_high", "expansion_down"]
+
+projections:
+  SequenceInterpretation:
+    "wyckoff-accumulation-type-1": "Wyckoff Accumulation (Phase C Spring)"
+    "wyckoff-distribution-type-1": "Wyckoff Distribution (Phase C UTAD)"

@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import uuid
 from typing import Optional
 
@@ -42,6 +43,8 @@ class DominanceChangeRule:
             interpretation_level=InterpretationLevel.OBJECTIVE,
             validity_status=ValidityStatus.ACTIVE,
             evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+            superseded_by=None,
             source_region_id=validating_region.region_identity.region_id,
             target_region_id=invalidated_region.region_identity.region_id,
             relationship_type=RegionRelationshipType.DOMINANCE_CHANGE,

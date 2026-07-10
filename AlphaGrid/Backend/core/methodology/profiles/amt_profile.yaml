@@ -1,0 +1,16 @@
+id: "AMT_CLASSIC"
+version: "1.0.0"
+author: "Research Team"
+compatibility: ">=11.0.0"
+
+description: "Auction Market Theory (AMT) methodology profile."
+
+policies:
+  auction_policy:
+    min_time_accepted: 300
+    min_rotations_accepted: 3
+
+projections:
+  AuctionInterpretation:
+    "ACCEPTED": "Value Area Established (Accepted)"
+    "REJECTED": "Excess / Responsive Activity (Rejected)"

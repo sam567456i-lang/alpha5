@@ -91,11 +91,29 @@ def calculate_ema(
         }
     )
 
-def update_ema(bar: Any, state: Dict[str, Any]) -> Any:
+from dataclasses import dataclass
+
+@dataclass
+class EMAState:
+    period: int
+    prev_ema: float = np.nan
+
+def update_ema(value: float, state: EMAState) -> float:
     """
     Reserved streaming API for live execution.
     """
-    raise NotImplementedError("Streaming API reserved for future implementation.")
+    if np.isnan(value):
+        return np.nan
+        
+    alpha = 2.0 / (state.period + 1.0)
+    
+    if np.isnan(state.prev_ema):
+        state.prev_ema = value
+        return value
+        
+    ema = (value * alpha) + (state.prev_ema * (1.0 - alpha))
+    state.prev_ema = ema
+    return ema
 
 def _build_empty_result(values: np.ndarray, timestamps: np.ndarray, period: int, col: str, reason: str) -> IndicatorResult:
     return IndicatorResult(

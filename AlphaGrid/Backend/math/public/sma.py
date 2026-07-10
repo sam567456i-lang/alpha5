@@ -78,5 +78,26 @@ def calculate_sma(
     )
 
 
-def update_sma(bar: Any, state: Dict[str, Any]) -> Any:
-    raise NotImplementedError("Streaming API reserved for future implementation.")
+from dataclasses import dataclass, field
+from collections import deque
+
+@dataclass
+class SMAState:
+    period: int
+    window: deque = field(default_factory=deque)
+    window_sum: float = 0.0
+
+def update_sma(value: float, state: SMAState) -> float:
+    if np.isnan(value):
+        return np.nan
+
+    state.window.append(value)
+    state.window_sum += value
+
+    if len(state.window) > state.period:
+        state.window_sum -= state.window.popleft()
+
+    if len(state.window) == state.period:
+        return state.window_sum / state.period
+    
+    return np.nan

@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 from typing import List, Dict, Any, Optional
 import uuid
 from datetime import datetime
@@ -89,6 +90,8 @@ class SwingDetector:
             interpretation_level=InterpretationLevel.OBJECTIVE,
             validity_status=ValidityStatus.GENERATED,
             evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+            superseded_by=None,
             event_id=event_id,
             event_timestamp=timestamp,
             trigger_rule="SwingDetector",

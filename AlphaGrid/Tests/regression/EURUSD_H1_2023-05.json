@@ -1,0 +1,9 @@
+{
+  "dataset_id": "EURUSD_H1_2023-05",
+  "evidence_snapshot": {
+    "nodes": [],
+    "edges": []
+  },
+  "expected_interpretations": [],
+  "expected_narrative": "Placeholder for regression expectations."
+}

@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 from dataclasses import replace
 import uuid
 from datetime import datetime
@@ -120,6 +121,7 @@ class StructureLifecycleEngine:
             interpretation_level=InterpretationLevel.OBJECTIVE,
             validity_status=ValidityStatus.ACTIVE,
             evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
             state_id=new_state_id,
             created_at=timestamp,
             valid_from=event.event_timestamp,

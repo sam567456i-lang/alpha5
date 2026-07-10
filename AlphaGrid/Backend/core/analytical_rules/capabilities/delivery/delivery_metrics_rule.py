@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import uuid
 from typing import Optional
 
@@ -79,6 +80,8 @@ class DeliveryMetricsRule:
             interpretation_level=InterpretationLevel.OBJECTIVE,
             validity_status=ValidityStatus.ACTIVE,
             evidence_data={},
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+            superseded_by=None,
             traversal_id=f"TRAVERSAL-{traversal.start_point_id}-{traversal.end_point_id}",
             velocity=velocity,
             acceleration=0.0, # Derivative of velocity, hard to mock without full context

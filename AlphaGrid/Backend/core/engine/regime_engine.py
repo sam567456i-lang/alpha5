@@ -10,6 +10,7 @@ class RegimeEngine:
         return [
             TrendRegimeEvidenceDTO(
                 identity=None, metadata=None, provenance=None, classification=None, interpretation_level=None, validity_status=None, evidence_data={},
+                quality=None, superseded_by=None,
                 symbol_id=symbol_id,
                 trend_type="BULLISH",
                 confidence=0.9

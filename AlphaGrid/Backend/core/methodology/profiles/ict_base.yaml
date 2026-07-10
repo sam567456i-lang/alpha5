@@ -1,0 +1,20 @@
+id: "ICT_Base"
+version: "1.0.0"
+author: "Research Team"
+compatibility: ">=1.0.0"
+
+methodology: "ICT"
+description: "Base configurations and standard definitions for the Inner Circle Trader methodology."
+
+policies:
+  liquidity_policy:
+    enabled: true
+    lookback_periods: 20
+    sweep_threshold_ticks: 2
+  structure_policy:
+    enabled: true
+    require_close_beyond_wick: false
+
+projections:
+  SequenceInterpretation:
+    'ict-pattern': 'ICT Pattern'

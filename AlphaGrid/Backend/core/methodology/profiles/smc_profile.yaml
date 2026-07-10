@@ -1,0 +1,40 @@
+id: "SMC_2024"
+version: "1.0.0"
+author: "Research Team"
+compatibility: ">=11.0.0"
+
+description: "Smart Money Concepts (SMC) methodology profile."
+
+policies:
+  liquidity_policy:
+    # SMC often requires stronger evidence of sweeps, like wicks breaching by a certain percentage
+    sweep_threshold_ticks: 2 
+    internal_liquidity_emphasis: false # Focus more on external structural liquidity
+  
+  structure_policy:
+    # SMC typically requires a full candle body close to confirm BOS, whereas ICT sometimes accepts wicks for certain concepts
+    require_close_beyond_wick: true 
+    
+  entry_policy:
+    enabled: true
+    # SMC traders often look for Order Blocks (OB) and mitigate at the 50% mark (EQ) rather than FVG body close
+    fvg_mitigation_type: "50_PERCENT_RETRACE"
+    
+  sequence_policy:
+    sequences:
+      # SMC Sequence: Sweep -> Break of Structure -> Retrace to OB (Order Block)
+      - pattern: "smc-sweep-bos-retrace"
+        requires: ["sweep", "expansion", "retrace"]
+        
+      # SMC Sequence: Inducement Sweep -> CHOCH -> Entry
+      - pattern: "smc-inducement-choch-entry"
+        requires: ["inducement", "expansion", "entry"]
+
+projections:
+  SequenceInterpretation:
+    "smc-sweep-bos-retrace": "SMC Structural Shift"
+    "smc-inducement-choch-entry": "SMC Liquidity Inducement Setup"
+    
+  CrossMarketInterpretation:
+    "HIGHER_HIGH_VS_LOWER_HIGH": "SMC SMT Divergence"
+    "LOWER_LOW_VS_HIGHER_LOW": "SMC SMT Divergence"

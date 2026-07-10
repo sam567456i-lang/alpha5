@@ -7,7 +7,7 @@ from pathlib import Path
 import logging
 from typing import Mapping
 
-from .configuration_loader import AppConfig, load_config
+from .configuration_loader import load_config
 from .database_manager import DatabaseManager
 from .dependency_injection_container import DependencyContainer
 from .event_bus import EventBus

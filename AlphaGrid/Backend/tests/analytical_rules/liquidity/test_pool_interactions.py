@@ -1,3 +1,4 @@
+from Backend.core.engine.evidence_quality import EvidenceQualityMetadata
 import pytest
 from Backend.core.analytical_rules.dto.liquidity.pool_state import PoolState
 from Backend.core.analytical_rules.dto.liquidity.pool_identity import PoolIdentityDTO, PoolSide
@@ -50,14 +51,15 @@ def _create_mock_buyside_pool(lower: float, upper: float) -> PoolState:
         interpretation_level=InterpretationLevel.OBJECTIVE,
         validity_status=ValidityStatus.ACTIVE,
         evidence_data={},
-        pool_identity=pool_identity,
+            quality=EvidenceQualityMetadata(confidence=1.0, coverage=1.0, freshness=0.0, latency=0.0, source_quality=1.0, sample_size=1, stability=1.0),
+            superseded_by=None,
+            pool_identity=pool_identity,
         lower_bound=lower,
         upper_bound=upper,
         active=True,
         created_at="T0",
         valid_from="T0",
-        invalidated_by="null",
-        superseded_by="null"
+        invalidated_by="null"
     )
 
 def test_interaction_determinism():

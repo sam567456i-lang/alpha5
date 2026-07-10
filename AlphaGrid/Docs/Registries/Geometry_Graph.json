@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "identity": "P10-GEOM-DIST-001",
+      "domain": "Primitives",
+      "family": "Geometry",
+      "engine": "DistanceEngine",
+      "dependencies": [
+        "P10-SWING-PERSIST-001",
+        "P10-RANGE-BOUND-001",
+        "P10-DATA-TIME-001"
+      ],
+      "evidence_produced": [
+        "DistanceEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-GEOM-ANGLE-001",
+      "domain": "Primitives",
+      "family": "Geometry",
+      "engine": "AngleVectorEngine",
+      "dependencies": [
+        "P10-SWING-PERSIST-001",
+        "P10-TREND-001"
+      ],
+      "evidence_produced": [
+        "VectorEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-GEOM-INTERSECT-001",
+      "domain": "Primitives",
+      "family": "Geometry",
+      "engine": "IntersectionEngine",
+      "dependencies": [
+        "P10-SWING-PERSIST-001",
+        "P10-RANGE-BOUND-001"
+      ],
+      "evidence_produced": [
+        "IntersectionEvidence",
+        "ContainmentEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    },
+    {
+      "identity": "P10-GEOM-PROJ-001",
+      "domain": "Primitives",
+      "family": "Geometry",
+      "engine": "ProjectionEngine",
+      "dependencies": [
+        "P10-SWING-PERSIST-001",
+        "P10-RANGE-GEOM-001"
+      ],
+      "evidence_produced": [
+        "ProjectionEvidence"
+      ],
+      "crl": "CRL3_PROTOTYPE"
+    }
+  ]
+}

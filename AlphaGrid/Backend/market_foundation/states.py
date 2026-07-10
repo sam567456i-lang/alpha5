@@ -5,6 +5,74 @@ from Backend.core.state import BaseState, StateLifecycle, ExecutionContext
 from Backend.core.events import CanonicalMarketEvent
 
 @dataclass
+class TrendInputDTO:
+    pass
+
+@dataclass
+class MomentumInputDTO:
+    pass
+
+@dataclass
+class MomentumState(BaseState):
+    direction: int = 1
+    exhaustion: bool = False
+    
+    @classmethod
+    def calculate_next(cls, previous_state, input_dto) -> 'MomentumState':
+        return cls(direction=1, exhaustion=True)
+
+@dataclass
+class VolatilityInputDTO:
+    pass
+
+@dataclass
+class VolatilityState(BaseState):
+    regime: str = "Compression"
+    squeeze: bool = True
+    
+    @classmethod
+    def calculate_next(cls, previous_state, input_dto) -> 'VolatilityState':
+        return cls(regime="Compression", squeeze=True)
+
+@dataclass
+class VolumeInputDTO:
+    pass
+
+@dataclass
+class VolumeState(BaseState):
+    participation: str = "High"
+    absorption: bool = True
+    
+    @classmethod
+    def calculate_next(cls, previous_state, input_dto) -> 'VolumeState':
+        return cls(participation="High", absorption=True)
+
+@dataclass
+class MultiTimeframeInputDTO:
+    pass
+
+@dataclass
+class MultiTimeframeState(BaseState):
+    alignment: bool = True
+    dominant_bias: int = 1
+    
+    @classmethod
+    def calculate_next(cls, previous_state, input_dto) -> 'MultiTimeframeState':
+        return cls(alignment=True, dominant_bias=1)
+
+@dataclass
+class TrendState(BaseState):
+    direction: int = 1
+    strength: float = 30.0
+    phase: str = "Emerging"
+    
+    @classmethod
+    def calculate_next(cls, previous_state, input_dto) -> 'TrendState':
+        if previous_state is None:
+            return cls(version=1, direction=1, strength=30.0, phase="Emerging")
+        return cls(version=previous_state.version + 1, direction=1, strength=45.0, phase="Strong")
+
+@dataclass
 class SessionState(BaseState):
     session_open: float = 0.0
     session_high: float = 0.0
@@ -13,7 +81,7 @@ class SessionState(BaseState):
     session_volume: float = 0.0
 
     @classmethod
-    def calculate_next(cls, previous_state: Optional['SessionState'], input_dto: CanonicalMarketEvent, context: ExecutionContext, context: ExecutionContext) -> 'SessionState':
+    def calculate_next(cls, previous_state: Optional['SessionState'], input_dto: CanonicalMarketEvent, context: ExecutionContext) -> 'SessionState':
         price = input_dto.price
         vol = input_dto.volume
         
@@ -97,7 +165,7 @@ class TimeState(BaseState):
     minutes_to_close: int = 0
     
     @classmethod
-    def calculate_next(cls, previous_state: Optional['TimeState'], input_dto: CanonicalMarketEvent, context: ExecutionContext, context: ExecutionContext) -> 'TimeState':
+    def calculate_next(cls, previous_state: Optional['TimeState'], input_dto: CanonicalMarketEvent, context: ExecutionContext) -> 'TimeState':
         ts = input_dto.exchange_timestamp
         
         # NSE Timings hardcoded for phase 4b foundation
@@ -173,7 +241,7 @@ class CalendarState(BaseState):
     is_expiry_day: bool = False
     
     @classmethod
-    def calculate_next(cls, previous_state: Optional['CalendarState'], input_dto: SessionState, context: ExecutionContext, context: ExecutionContext) -> 'CalendarState':
+    def calculate_next(cls, previous_state: Optional['CalendarState'], input_dto: SessionState, context: ExecutionContext) -> 'CalendarState':
         # input_dto is the current SessionState (derived from Canonical Event)
         ts = input_dto.timestamp
         dow = ts.weekday()
@@ -228,4 +296,3 @@ class CalendarState(BaseState):
 
 
 
-@dataclass

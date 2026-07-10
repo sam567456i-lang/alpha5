@@ -20,6 +20,7 @@ class CrossMarketAnalyticsEngine:
             # Emit Correlation Evidence
             corr_ev = CorrelationEvidenceDTO(
                 identity=None, metadata=None, provenance=None, classification=None, interpretation_level=None, validity_status=None, evidence_data={},
+                quality=None, superseded_by=None,
                 primary_symbol_id=primary_symbol,
                 secondary_symbol_id=secondary,
                 correlation_coefficient=0.85 * edge.weight, # dummy calculation
@@ -31,6 +32,7 @@ class CrossMarketAnalyticsEngine:
             # Emit Lead/Lag Evidence
             ll_ev = LeadLagEvidenceDTO(
                 identity=None, metadata=None, provenance=None, classification=None, interpretation_level=None, validity_status=None, evidence_data={},
+                quality=None, superseded_by=None,
                 primary_symbol_id=primary_symbol,
                 secondary_symbol_id=secondary,
                 leader_symbol_id=primary_symbol,

@@ -1,0 +1,20 @@
+id: "ICT_2022"
+parent: "ict_base.yaml"
+version: "1.0.0"
+author: "Research Team"
+compatibility: ">=1.0.0"
+
+description: "Specific settings for the ICT 2022 Mentorship methodology."
+
+policies:
+  liquidity_policy:
+    sweep_threshold_ticks: 1 # Override parent
+  structure_policy:
+    require_close_beyond_wick: true # Override parent
+  entry_policy:
+    enabled: true
+    fvg_mitigation_type: "BODY_CLOSE"
+
+projections:
+  SequenceInterpretation:
+    'ict-pattern': 'ICT Pattern'
